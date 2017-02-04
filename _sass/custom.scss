@@ -38,6 +38,11 @@
 	}
 }
 
+.post-list li + li {
+	border-top: 1px #ddd solid;
+	padding-top: 20px;
+}
+
 .accessible-name {
 	border: 0;
     clip: rect(0 0 0 0);
