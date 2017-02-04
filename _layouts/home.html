@@ -11,7 +11,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d-%m-%Y" }}</time>{% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/feeds/{{ post.categories }}.xml">{{ post.categories }}</a>
+        <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>{% if post.author %} • {{ post.author }}{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/feeds/{{ post.categories }}.xml">{{ post.categories }}</a>
 
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
