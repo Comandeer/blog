@@ -1,0 +1,51 @@
+.site-title {
+	line-height: 96px;
+	height: 96px;
+	padding-left: 100px;
+	background: url( logo.png ) no-repeat top left;
+	transition: background .5s ease-in-out;
+}
+.site-title:hover, .site-title:focus {
+	background-position: 0 -96px;
+}
+.site-nav {
+	line-height: 96px;
+}
+.site-nav .trigger {
+	list-style: none;
+	margin: 0;
+}
+@media screen and ( min-width: 601px ) {
+	.trigger li {
+		display: inline-block;
+	}
+	.trigger li + li::before {
+		content: '|';
+		padding: 0 10px;
+	}
+}
+
+
+@media screen and ( max-width: 600px ) {
+	.site-nav:hover .trigger {
+	    display: none;
+	    padding:0;
+	}
+
+	.site-nav .trigger:target, .site-nav .trigger--opened.trigger--opened {
+		display: block;
+		padding-bottom: 5px;
+	}
+}
+
+.accessible-name {
+	border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
