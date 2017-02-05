@@ -3,9 +3,9 @@
 	<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>{% if post.author %} • {{ post.author }}{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ post.categories | url_encode }}">{{ post.category_name }}</a>
 </p>
 
-<h2>
+<h3>
     <a class="post-link" href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
-</h2>
+</h3>
 
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160 | escape }}</p>
 <p>

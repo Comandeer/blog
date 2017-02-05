@@ -1,8 +1,10 @@
-<header class="site-header" role="banner">
+<header class="site-header">
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    <h1>
+      <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    </h1>
 
     {% comment %}
       Ultimate hack to include menu only if there is at least one page *with title*
