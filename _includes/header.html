@@ -4,6 +4,12 @@
 
     <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
 
+    {% comment %}
+      Ultimate hack to include menu only if there is at least one page *with title*
+    {% endcomment %}
+    {% assign pages_titles = site.pages | map: 'title' | join: '' %}
+
+    {% if pages_titles.size > 0 %}
     <nav class="site-nav">
       <a href="#menu" class="menu-icon">
         <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -24,7 +30,7 @@
         {% endfor %}
       </ul>
     </nav>
-
+    {% endif %}
   </div>
 
 </header>
