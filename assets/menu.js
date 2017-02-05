@@ -1,6 +1,14 @@
 ( function( toggler ) {
+	if ( !toggler ) {
+		return;
+	}
+
 	var id = toggler.getAttribute( 'href' ).substr( 1 ),
 		menu = document.getElementById( id );
+
+	if ( !menu ) {
+		return;
+	}
 
 	function isMenuVisible( menu ) {
 		return menu.classList.contains( 'trigger--opened' ) || location.hash === '#' + menu.id;
