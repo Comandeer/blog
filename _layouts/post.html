@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" typeof="BlogPosting">
 
   <header class="post-header">
-    <h2 class="post-title" itemprop="name headline">{{ page.title | escape }}</h2>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d-%m-%Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ page.categories | url_encode }}">{{ page.category_name }}</a></p>
+    <h2 class="post-title" property="name headline">{{ page.title | escape }}</h2>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" property="datePublished">{{ page.date | date: "%d-%m-%Y" }}</time>{% if page.author %} • <span property="author" typeof="Person"><span property="name">{{ page.author }}</span></span>{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ page.categories | url_encode }}">{{ page.category_name }}</a></p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content" property="articleBody">
     {{ content }}
   </div>
 
