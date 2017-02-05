@@ -8,19 +8,7 @@ layout: default
 
   {{ content }}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>{% if post.author %} • {{ post.author }}{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/feeds/{{ post.categories }}.xml">{{ post.categories }}</a>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-
-        <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160 | escape }}</p>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include post-list.html posts=site.posts %}
 
   <p class="rss-subscribe">
     <a href="{{ "/feeds/feed.xml" | relative_url }}">

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="home">
+
+  <h1 class="page-heading">Wpisy z kategorii {{ page.category_name }}</h1>
+
+  {{ content }}
+  {% assign posts = site.categories[page.category] %}
+  {% include post-list.html posts=posts %}
+
+  <p class="rss-subscribe">
+    {% capture rss_link %}/feeds/{{ page.category | url_encode }}.xml{% endcapture %}
+    <a href="{{ rss_link | relative_url }}">
+      <img src="{{ "/assets/rss.png" | relative_url }}" alt="Subskrybuj blog" title="Subskrybuj kategorię {{ page.category_name | escape }}">
+    </a>
+  </p>
+
+</div>

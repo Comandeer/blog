@@ -1,5 +1,5 @@
 ---
-layout: feed
+layout: category
 category: "javascript"
 category_name: "JavaScript"
 ---
