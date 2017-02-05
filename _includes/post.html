@@ -7,7 +7,7 @@
     <a class="post-link" href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
 </h3>
 
-<p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160 | escape }}</p>
+<p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160, "…" | escape }}</p>
 <p>
 	<a href="{{ post.url | relative_url }}">Czytaj całość <span class="accessible-name">postu {{ post.title | escape }}</span> <span aria-hidden="true">»</span></a>
 </p>

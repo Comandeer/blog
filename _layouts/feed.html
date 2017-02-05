@@ -21,7 +21,7 @@
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ site.baseurl }}{{ post.url }}</id>
-    <summary>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160 | xml_escape }}</summary>
+    <summary>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160, "…" | xml_escape }}</summary>
     <content type="html" xml:base="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.content | xml_escape }}</content>
   </entry>
   {% endfor %}
