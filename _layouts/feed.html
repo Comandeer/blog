@@ -5,11 +5,11 @@
   <link href="{{ site.url }}{{ site.baseurl }}/{{ page.category | url_encode }}" rel="alternate" type="text/html" />
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}{{ site.baseurl }}/{{page.category | url_encode }}</id>
-  <category term="{{ page.category_name}}" />
+  <category term="{{ site.categories_names[ page.category ] | xml_escape }}" />
   <title type="html">Comandeer’s blog</title>
-  <subtitle>Kategoria '{{ page.category_name | xml_escape }}'</subtitle>
+  <subtitle>Kategoria '{{ site.categories_names[ page.category ] | xml_escape }}'</subtitle>
 
-  {% for post in site.categories[page.category] limit:10 %}
+  {% for post in site.categories[ page.category ] limit:10 %}
   <entry>
     <title type="html">{{ post.title | xml_escape }}</title>
     {% if post.author %}

@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <h2 class="post-title" property="name headline">{{ page.title | escape }}</h2>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" property="datePublished">{{ page.date | date: "%d-%m-%Y" }}</time>{% if page.author %} • <span property="author" typeof="Person"><span property="name">{{ page.author }}</span></span>{% endif %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ page.categories | url_encode }}">{{ page.category_name }}</a></p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" property="datePublished">{{ page.date | date: "%d-%m-%Y" }}</time>{% if page.author %} • <span property="author" typeof="Person"><span property="name">{{ page.author }}</span></span>{% endif %}{% for category in page.categories %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ category | url_encode }}">{{ site.categories_names[ category ] }}</a>{% endfor %}</p>
   </header>
 
   <div class="post-content" property="articleBody">

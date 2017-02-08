@@ -26,6 +26,12 @@ disqus:
   shortname: comandeers-blog
 feed:
   path: "feeds/feed.xml"
+categories_names:
+  'na-luzie': "Na luzie"
+  'javascript': "Javascript"
+  'a11y': "Dostępność"
+  'html-css': "HTML i CSS"
+  'daj-sie-poznac-2017': "Daj się poznać 2017"
 
 # Build settings
 markdown: kramdown
