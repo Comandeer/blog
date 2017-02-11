@@ -2,7 +2,6 @@ h1 {
 	margin: 0;
 }
 .site-title {
-	line-height: 96px;
 	height: 96px;
 	padding-left: 100px;
 	background: url( logo.png ) no-repeat top left;
@@ -11,8 +10,13 @@ h1 {
 .site-title:hover, .site-title:focus {
 	background-position: 0 -96px;
 }
-.site-nav {
-	line-height: 96px;
+@media screen and ( min-width: 400px ) {
+	.site-title {
+		line-height: 96px;
+	}
+	.site-nav {
+		line-height: 96px;
+	}
 }
 .site-nav .trigger {
 	list-style: none;
