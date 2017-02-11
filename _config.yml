@@ -31,6 +31,7 @@ categories_names:
   'javascript': "Javascript"
   'a11y': "Dostępność"
   'html-css': "HTML i CSS"
+  'eksperymenty': "Eksperymenty"
   'daj-sie-poznac-2017': "Daj się poznać 2017"
 
 # Build settings
