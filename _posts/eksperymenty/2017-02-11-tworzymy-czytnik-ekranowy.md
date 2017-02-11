@@ -33,7 +33,7 @@ Gdy przyjrzymy się powyższej liście elementów, możemy podzielić je na 3 gr
 Nas interesują tylke te ostatnie, resztę możemy sobie podarować. W tym celu najłatwiej będzie pobrać wszystkie elementy z `body`, które nie mają atrybutu `[aria-hidden=true]`, a następnie przefiltrować tak uzyskaną kolekcję i wyrzucić wszystkie elementy, które się nie pokazują na stronie. Właśnie to robi funkcja `createFocusList`:
 
 ```javascript
-const focusList = [];
+let focusList = [];
 
 function createFocusList() {
 	focusList.push( ...document.querySelectorAll( 'html, body >:not( [aria-hidden=true] )' ) );
