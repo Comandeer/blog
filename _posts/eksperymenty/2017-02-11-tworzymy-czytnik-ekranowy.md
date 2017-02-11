@@ -132,7 +132,7 @@ I znów: naiwne podejście, ale sprawdza się, o dziwo, bardzo dobrze.
 
 ## Czytanie elementu
 
-Przy czytaniu elementów największym problemem jest to, w jaki sposób dany element przeczytać. W końcu doszedłem do wniosku, że… najlepiej nie czytać elementów. Nie, nie oszalałem – podeszłem do sprawy tak, jak powinno się podejść!
+Przy czytaniu elementów największym problemem jest to, w jaki sposób dany element przeczytać. W końcu doszedłem do wniosku, że… najlepiej nie czytać elementów. Nie, nie oszalałem – podszedłem do sprawy tak, jak powinno się podejść!
 
 A mianowicie: elementy zastąpiłem rolami. [Standard ARIA](http://w3c.github.io/aria/aria/aria.html) definiuje [wiele ról](http://w3c.github.io/aria/aria/aria.html#role_definitions), które mogą przyjąć elementy HTML. Wśród nich znajdziemy m.in. `banner` (nagłówek strony), `navigation` (nawigacja), `main` (główna treść strony) czy bardziej prozaiczne `button` (przycisk) i `link` (no zgadnijcie…). Innymi słowy: wszystkie elementy ciekawe z punktu widzenia dostępności są reprezentowane przez odpowiednią rolę w [drzewku dostępności](https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree). Inne nieciekawe elementy po prostu są przezroczyste (Chrome prezentuje je jako `group` – najbardziej podstawową rolę) i prezentują swoją treść. Istnieje też [dokładny spis domyślnych ról dla poszczególnych elementów HTML](https://w3c.github.io/html-aria/#docconformance).
 
