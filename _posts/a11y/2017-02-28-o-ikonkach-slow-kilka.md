@@ -8,7 +8,7 @@ comments: true
 ---
 Każdy z nas na pewno choć raz w życiu użył icon fontów – czy to [Fontello](http://fontello.com/), czy [Font Awesome](http://fontawesome.io/). Jednak nie każdy z nas zastanawiał się, jaki jest idealny sposób na wstawianie ich na stronę.
 
-## Tradycyjne sposoby
+### Tradycyjne sposoby
 
 Zacznijmy od tego, że ikonki nie są jakimiś semantycznymi elementami – to _co najwyżej_ obrazki, więc `i` jest z założenia złe, co [W3C już dawno ustaliło](https://github.com/w3c/html/issues/732). Zatem nie ma co słuchać [poradnika na Font Awesome](http://fontawesome.io/examples/) i lepiej zostać przy `span`
 
@@ -50,7 +50,7 @@ W jeszcze idealniejszym świecie wszystko wyglądałoby jakoś tak:
 
 [Przykładowa implementacja](https://jsfiddle.net/Comandeer/yocqmvet/), oparta na… [image replacement](http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/). Chyba jedyny problem z tym to fakt, jak się dowiedzieć, czy icon font się wczytał i kiedy pokazać ikonę zamiast etykiety. Niemniej tego typu kod radzi sobie z większością scenariuszów, jakie wyżej opisałem.
 
-## A może by tak SVG?
+### A może by tak SVG?
 
 Ale to wciąż wszystko hacki – bo przecież tym jest sama idea icon fontów. A prawda jest taka, że mamy rok 2017 i aż się prosi, żeby po prostu [stosować SVG](https://css-tricks.com/svg-fragment-identifiers-work/). Wówczas ikonki wyglądają tak:
 
@@ -60,7 +60,7 @@ Ale to wciąż wszystko hacki – bo przecież tym jest sama idea icon fontów. 
 
 Oczywiście `[alt]` jak dla normalnego obrazka: jeśli ikonka to ozdobnik – pusty, jeśli niesie treść – wiadomo. Można nawet [używać sprite'ów](http://betravis.github.io/icon-methods/svg-sprite-sheets.html) i – jak widać – wsparcie jest zadziwiająco dobre.
 
-## Casus `[title]`
+### Casus `[title]`
 
 Ktoś pewnie jeszcze zapyta: "A co z `[title]`? Przecież dostarcza informacji o ikonce użytkownikom myszki!". No i właśnie tutaj jest największy problem: **tylko** użytkownikom myszki. Jeślibyśmy chcieli zrobić _naprawdę_ dobry tooltip dla ikonek, który by działał np. też dla użytkowników klawiatury, [warto rozważyć oskryptowane alternatywy](https://sarasoueidan.com//blog/accessible-tooltips/).
 
