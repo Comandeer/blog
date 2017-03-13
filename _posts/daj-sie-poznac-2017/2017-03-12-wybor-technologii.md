@@ -2,7 +2,7 @@
 layout: post
 title:  "Wybór technologii"
 author: Comandeer
-date:   2017-03-04 22:50:00 +0100
+date:   2017-03-12 22:50:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
 ---
