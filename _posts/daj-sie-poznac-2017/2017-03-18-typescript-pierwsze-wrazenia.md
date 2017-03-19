@@ -11,7 +11,7 @@ Od rozpoczęcia konkursu minęło już trochę czasu, więc miałem go nieco, by
 
 ### Typowanie, typowanie wszędzie…
 
-Jeśli mówimy o TypeScripcie, w wyobraźni w dużej mierze mamy po prostu obraz JS-a z dołożoną składnią do wyrażania typów. Tylko tyle i aż tyle. Pomysł nowy nie jest i [swego czasu mógł się nawet pojawić w przeglądarkach](http://2ality.com/2015/02/soundscript.html), niemniej ostatecznie skończyło się na preprocesorze. Co prawda TypeScript ma konkurencję (np. [Flow](https://flowtype.org/)), ale i tak to on dierży palmę pierwszeństwa wśród JS-ów z typowaniem.
+Jeśli mówimy o TypeScripcie, w wyobraźni w dużej mierze mamy po prostu obraz JS-a z dołożoną składnią do wyrażania typów. Tylko tyle i aż tyle. Pomysł nowy nie jest i [swego czasu mógł się nawet pojawić w przeglądarkach](http://2ality.com/2015/02/soundscript.html), niemniej ostatecznie skończyło się na preprocesorze. Co prawda TypeScript ma konkurencję (np. [Flow](https://flowtype.org/)), ale i tak to on dzierży palmę pierwszeństwa wśród JS-ów z typowaniem.
 
 Nic zatem dziwnego, że TypeScript tak naprawdę nie istnieje bez typowania i nie ma żadnego sensu w pisaniu kodu przy użyciu tego narzędzia, jeśli typowania chcemy uniknąć.
 
@@ -27,7 +27,7 @@ Niemniej typowanie w TS ma jedną, zasadniczą wadę: istnieje tylko na poziomie
 
 ### Bundle'owanie to jakaś porażka
 
-O tym [wspominałem w jednym z poprzednich wpisie](https://comandeer.github.io/blog/daj-sie-poznac-2017/2017/03/12/wybor-technologii.html). TypeScript nie potrafi w bundle'owanie i każdy przerobiony plik wypluwa do wskazanego katalogu. I robi to na tyle nieudolnie, że nawet pliki, które po transpilacji są puste, znajdują się w `dist/`. Słabo. Stąd potrzeba używania np. rollupa (stwarzającego inne problemy, ale o tym inną razą).
+O tym [wspominałem w jednym z poprzednich wpisów](https://comandeer.github.io/blog/daj-sie-poznac-2017/2017/03/12/wybor-technologii.html). TypeScript nie potrafi w bundle'owanie i każdy przerobiony plik wypluwa do wskazanego katalogu. I robi to na tyle nieudolnie, że nawet pliki, które po transpilacji są puste, znajdują się w `dist/`. Słabo. Stąd potrzeba używania np. rollupa (stwarzającego inne problemy, ale o tym inną razą).
 
 I zanim ktoś zwróci uwagę na to, że TypeScript potrafi wypluwać jeden plik: nie, zwracanie jednego pliku dla modułów AMD czy System.js to nie ficzer.
 
