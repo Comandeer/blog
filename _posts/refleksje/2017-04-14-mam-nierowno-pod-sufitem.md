@@ -54,7 +54,7 @@ Ten skrypt jest wręcz zbrodnią – zarówno jeśli chodzi o UX strony, jak i o
 
 ```javascript
 $( '#spis a' ).click( function( evt ) {
-  $.scrollTo( $( evt.target.getAttribute( 'href') ), 500 );
+  $.scrollTo( $( evt.target.getAttribute( 'href' ) ), 500 );
 } );
 ```
 
@@ -69,7 +69,7 @@ Te dwie linijki **ZABIJAJĄ** jakikolwiek sens istnienia przycisku "Wstecz" w pr
 
 I takie praktyki, stanowiące książkowy antyprzykład tworzenia zarówno łatwego w utrzymaniu kodu jak i przyjaznej użytkownikowi strony, są propagowane w polskiej Sieci. Co więcej: istnieje ciche przyzwolenie na to, a każdego, kto się ośmieli to skrytykować, wyzywa się od wariatów i męskiego narządu płciowego. Więc się pytam: czemu jako społeczność webdevowa nie tylko po cichu przyzwalamy na patologię, lecz wręcz oczerniamy tych, którzy tę patologię próbują zwalczać _merytoryczną_ krytyką?
 
-Powtórzę to, co powtarzałem wielokrotnie: nie mam nic do sposobu prowadzenia kursów Mirosława Zelenta. Ba, sam przyznałem w krytyce, że miło się go słucha (więc nie, panie stranger13, nie przyczepiłem się do wszystkiego)… tylko, że tego typu dwie linijki sprawiają, że nie mogę takich kursów polecić. Co więcej, jako siedzący w tym nieco odczuwam moralny obowiązek piętnowania tego typu praktyk.
+Powtórzę to, co powtarzałem wielokrotnie: nie mam nic do sposobu prowadzenia kursów Mirosława Zelenta. Ba, sam przyznałem w krytyce, że miło się go słucha (więc nie, panie stranger13, nie przyczepiłem się do wszystkiego)… tylko, że tego typu dwie linijki sprawiają, że nie mogę takich kursów polecić. Co więcej, jako siedzący w tym nieco, odczuwam moralny obowiązek piętnowania tego typu praktyk.
 
 I nie, powtarzanie jak mantry argumentu, że "początkujący sięgną do innych źródeł w celu weryfikacji" nie sprawi, że ta bujda stanie się prawdą. Nie sięgają i efekty tego doskonale widać po stronach prezentowanych np. [na grupach dla początkujących](https://www.facebook.com/groups/742940452405327/) czy [forach dyskusyjnych](https://forum.pasja-informatyki.pl/236206/blad-nie-dziala-scroll).
 
