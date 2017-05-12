@@ -7,6 +7,8 @@ categories: html-css javascript daj-sie-poznac-2017
 comments: true
 ---
 
+<small>[This article is also available in English!](https://medium.com/content-uneditable/we-need-behaviors-not-inheritance-978484dfec24)</small>
+
 Choć tydzień temu [obwieściłem śmierć Web Components](https://comandeer.github.io/blog/html-css/javascript/daj-sie-poznac-2017/2017/04/02/web-components-koszmar-minionego-lata.html), nie byłbym sobą, gdybym nie usiadł na chwilę i nie zaczął myśleć, czemu pewne rzeczy nie działały tak jak powinny i co się schrzaniło. Najbardziej interesowała mnie [kwestia owego nieszczęsnego atrybutu `[is]`](https://github.com/w3c/webcomponents/issues/509), o który toczone są zażarte boje. I wówczas zrozumiałem, że W3C po prostu źle podeszło do tematu.
 
 ### OOP a DOM
