@@ -266,7 +266,7 @@ function formatString( source, template, separator = ' ' ) {
 
 			return input[ property ];
 		} );
-	}, [] ).join( separator );
+	} ).join( separator );
 }
 ```
 
