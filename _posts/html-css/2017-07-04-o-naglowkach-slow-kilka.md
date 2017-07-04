@@ -15,7 +15,7 @@ Na sam początek warto zastanowić się, czym są nagłówki. Jeśli ktoś o nic
 
 Treść na stronie internetowej powinna być podzielona na sensowne części. Na najbardziej podstawowym poziomie będą to oczywiście akapity, niemniej taki podział jest najczęściej niewystarczający. Dlatego też poszczególne akapity grupuje się w <i>sekcje</i>. Wyznacznikiem sekcji jest właśnie nagłówek.
 
-W jaki sposób poznać, czy strona jest poprawnie podzielona na sekcje, a tym samym – czy nagłówki są wykorzystane poprawnie? To proste: nagłówki powinny stworzyć <i>hierarchię treści</i> (ang. <i lang="en">outline</i>), czyli ,mówiąc kolokwialnie, spis treści. Przykład takiego spisu treści można zobaczyć w moim [tutorialu o semantycznym HTML-u](http://tutorials.comandeer.pl/html5-blog.html). Co ciekawe, jest on [faktycznie generowany z nagłówków](https://github.com/Comandeer/comandeers-tutorials/blob/180978efbd9711666f7ac5f0c7c606fc3564abbc/build/bs/build.js#L42-L71).
+W jaki sposób poznać, czy strona jest poprawnie podzielona na sekcje, a tym samym – czy nagłówki są wykorzystane poprawnie? To proste: nagłówki powinny stworzyć <i>hierarchię treści</i> (ang. <i lang="en">outline</i>), czyli, mówiąc kolokwialnie, spis treści. Przykład takiego spisu treści można zobaczyć w moim [tutorialu o semantycznym HTML-u](http://tutorials.comandeer.pl/html5-blog.html). Co ciekawe, jest on [faktycznie generowany z nagłówków](https://github.com/Comandeer/comandeers-tutorials/blob/180978efbd9711666f7ac5f0c7c606fc3564abbc/build/bs/build.js#L42-L71).
 
 ## Znaczenie nagłówków
 
@@ -49,7 +49,7 @@ Jak widać, nagłówek `h2` jest przedstawiany jako element o roli `heading` (na
 
 ## Nagłówki a HTML5
 
-HTML5 wprowadził nowe znaczniki dzielące stronę na sekcje (tzw. <i>znaczniki sekcjonujące</i>), m.in. `section` czy `article`. W specyfikacji HTML5 pojawia się także zarys nowego algorytmu definiującego hierarchię treści. W skrócie: nieważny jest poziom nagłówka, a jedynie poziom jego "zagłębienia", czyli `body > h2` będzie wyżej niż `body > section > h1`. 
+HTML5 wprowadził nowe znaczniki dzielące stronę na sekcje (tzw. <i>znaczniki sekcjonujące</i>), m.in. `section` czy `article`. W specyfikacji HTML5 pojawia się także zarys nowego algorytmu definiującego hierarchię treści. W skrócie: nieważny jest poziom nagłówka, a jedynie poziom jego "zagłębienia", czyli `body > h2` będzie wyżej niż `body > section > h1`.
 
 Tak brzmi teoria. Rzeczywistość okazała się brutalna, bo [żadna przeglądarka nie dodała wsparcia dla tego algorytmu](https://www.paciellogroup.com/blog/2013/10/html5-document-outline/). Algorytm stał się **niebezpieczną fikcją**, która powodowała problemy z dostępnością. Okazało się bowiem, że `body > h2` było nagłówkiem niższego rzędu niż `body > section > h1`. A z racji tego, że technologia asystująca nie wie o stronie nic ponad to, co dostarczy jej przeglądarka, **nie powinno się korzystać z nowego sposobu definiowania nagłówków**
 
@@ -94,10 +94,10 @@ Wydaje mi się, że wszystko zależy od kontekstu. W wypadku witryn zawierający
 	<img src="http://internet-bez-barier.com/wp-content/themes/internet-bez-barier/images/globe3.png" alt="" />
 	<div class="heading-inner">
 		<h1 class="site-title">Internet bez barier</h1>
-				
+
 		<p class="site-description">blog na temat dostępności stron internetowych</p>
 		<a class="skip" href="#main">Przejdź do głównej treści</a>
-	</div>	
+	</div>
 </div>
 
 <!-- podstrona nagłówek -->
