@@ -6,6 +6,7 @@ date:   2017-02-11 21:46:18 +0100
 categories: eksperymenty a11y
 comments: true
 ---
+
 Ostatnio [kumpel z pracy](https://github.com/Tade0) rzucił pomysłem: "a czemu w sumie nie napiszesz własnego czytnika ekranowego?". Tak po prawdzie nigdy się nad tym nie zastanawiałem jakoś specjalnie. Uważałem, że czytniki ekranowe są na tyle skomplikowane, że zrobienie tego _dobrze_ jest niezwykle trudne (co zresztą widać po tym jak wielkie rozbieżności są pomiędzy największymi w stawce, np. [VoiceOverem](http://www.apple.com/accessibility/mac/vision/) a [JAWS-em](http://www.freedomscientific.com/Products/Blindness/JAWS)). No i przede wszystkim jeszcze niedawno technologie webowe nie pozwalały na takie cuda, jak choćby czytanie tekstu na głos.
 
 Ale to się zmieniło i powstało [Web Speech API](https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API), którego częścią jest [Speech Synthesis](https://developers.google.com/web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API), czyli – po ludzku – API do zamieniania tekstu pisanego na mowę. [Wsparcie jest zadziwiająco dobre](http://caniuse.com/#feat=speech-synthesis), zwłaszcza jak na coś, co [wciąż nie jest oficjalnym standardem od W3C](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html). Skoro zatem główną funkcjonalność czytnika ekranowego znajdziemy dzisiaj w _de facto_ każdej przeglądarce, to możemy nieco poeksperymentować, prawda? Udało mi się złożyć [przykładową implementację](https://comandeer.github.io/sr-poc/) (zgadnijcie, w czym nie działa…), o której nieco poopowiadam.
@@ -18,7 +19,7 @@ Wbrew pozorom sama zamiana tekstu na mowę jest w całym czytniku najłatwiejsza
 
 Przyjrzyjmy się tym czynnościom po kolei.
 
-### Pobieramy czytalne elementy
+## Pobieramy czytalne elementy
 
 Co chcemy czytać użytkownikowi? Odpowiedź "wszystko" nie jest zbyt zadowalająca. Nie wszystko bowiem na stronie nadaje się do czytania, np. elementy w `head` (pomijając rzecz jasna `title`). Użytkownik raczej nie byłby zachwycony, gdybyśmy mu zaczęli czytać zawartość poszczególnych metatagów. Wypada zatem założyć, że użytkownika interesuje jedynie zawartość `body`.
 
@@ -55,7 +56,7 @@ Jak widać, pobieram wszystkie elementy z `body`, które nie mają atrybutu `[ar
 
 To podejście dość naiwne i nie uwzględnia bardziej skomplikowanych przypadków (zagnieżdżone sekcje, pomijanie `p > span` itp.) czy `[role=presentation]`, jednak na start jest całkowicie wystarczające i dla prostych stron sprawdza się perfekcyjnie. Jeśli chcielibyśmy rozwijać projekt, to trzeba jednak poświęcić temu więcej czasu i zakodzić wsparcie dla wspomnianych przypadków. W końcu struktura strony _nigdy_ nie jest tak prosta, jak w moim przykładzie.
 
-### Zaznaczanie elementu
+## Zaznaczanie elementu
 
 Skoro mamy już listę elementów, które czytamy, pora zastanowić się jak umożliwić użytkownikowi poruszanie się pomiędzy nimi i czytanie ich. W przypadku normalnej pracy z przeglądarką przechodzenie pomiędzy poszczególnymi elementami interaktywnymi odbywa się przy pomocy klawisza <kbd>Tab</kbd>, zatem postanowiłem, że w przypadku dema zastosuję konwencję <kbd>[klawisz czytnika]</kbd> + <kbd>Tab</kbd> (klawiszem czytnika jest <kbd>Alt</kbd>). Co więcej, nie możemy się w przypadku czytnika ograniczyć tylko do elementów interaktywnych, ale powinniśmy dawać możliwość nawigowania po wszystkich elementach czytalnych. Najłatwiej po prostu przy naciśnięcu <kbd>Alt</kbd> + <kbd>Tab</kbd> przesunąć się o jeden element w przód w tablicy `focusList`, którą przed chwilą utworzyliśmy. Natomiast jeśli ktoś naciśnie <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>, wypada przesunąć się o jeden element wstecz w tablicy `focusList` (analogicznie do naciśnięcia <kbd>Shift</kbd> + <kbd>Tab</kbd>).
 
@@ -130,7 +131,7 @@ Zostały tylko dwie kwestie: usuwanie zaznaczenia ze starych elementów przy prz
 
 I znów: naiwne podejście, ale sprawdza się, o dziwo, bardzo dobrze.
 
-### Czytanie elementu
+## Czytanie elementu
 
 Przy czytaniu elementów największym problemem jest to, w jaki sposób dany element przeczytać. W końcu doszedłem do wniosku, że… najlepiej nie czytać elementów. Nie, nie oszalałem – podszedłem do sprawy tak, jak powinno się podejść!
 
@@ -189,7 +190,7 @@ Bardzo prosta, _naiwna_ (jak cała reszta) implementacja, która pomija bardzo w
 
 Na podstawową implementację coś takiego starczy. W normalnej trzeba by było jeszcze sprawdzać, czy aby jakaś część zawartości nie powinna zostać pominięta (bo ma np. `[aria-hidden=true]`), czy też element nie ma dodatkowego opisu podanego przez `[aria-describedby]` itp. Itd.
 
-### Mówimy!
+## Mówimy!
 
 I teraz, po tych wszystkich przygotowaniach, możemy w końcu coś powiedzieć:
 

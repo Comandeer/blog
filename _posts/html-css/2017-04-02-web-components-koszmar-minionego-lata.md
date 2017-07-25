@@ -11,7 +11,7 @@ Ach, moje kochane Web Components, o których – jak to zauważają i wytykają 
 
 I g… nic, jak było źle, tak jest źle, jeśli nie znacznie gorzej. Ale po kolei.
 
-### Piękna idea…
+## Piękna idea…
 
 Nieskażone idee zawsze są piękne, czyż nie? Nie było inaczej i w przypadku WC (tak, używam tego skrótu, mimo że w artykułach po polsku wygląda _krypnie_): pozwólmy tworzyć webmasterom ich własne znaczniki! I choć oczywiście XML umożliwiał to od dawna, łącznie z [przestrzeniami nazw](https://developer.mozilla.org/en/docs/Namespaces), to jednak możliwość robienia tego w _normalnym_ HTML-u i to w taki sposób, żeby wytłumaczyć przeglądarce, jak ma się dokładnie obchodzić z takim elementem, była bez wątpienia przełomowa. Tym sposobem od `div` i `section` przeszliśmy do `my-article`.
 
@@ -30,7 +30,7 @@ Jeszcze mało? Dorzućmy wczytywanie tak stworzonych komponentów (czyli połąc
 
 I tak oto powstała trójca technologii (CE, SD, HI) składająca się na WC! Teoretycznie pozwala ona na stworzenie niezależnych od żadnego frameworka komponentów, które będzie można po prostu załadować na stronę i używać bez obawy, że wpłyną na jakikolwiek inny element strony (pełna enkapsulacja dzięki SD!). Idealny sposób na tworzenia interfejsu użytkownika, prawda?
 
-### …i smutna rzeczywistość
+## …i smutna rzeczywistość
 
 Niemniej w międzyczasie powstał [Angular.js](http://www.webkrytyk.pl/2014/12/12/moja-prawda-o-angular-js/), a następnie [React.js](https://facebook.github.io/react/), podczas gdy standard WC utknął wśród zawiłych meandrów procesu standaryzacyjnego W3C i, dzięki "konstruktywnej krytyce", zaorano pierwszą wersję standardu (którą później nazwano dla niepoznaki "V0") i stworzono… erm, _pierwszą_ wersję standardu ("V1"). Jest tak bardzo dobra, że jedna z podstawowych jego części, atrybut `[is]`, została odrzucona przez Apple i nigdy nie zostanie zaimplementowana w WebKicie. Z kolei  [sama dyskusja](https://github.com/w3c/webcomponents/issues/509) odnośnie tego, co ten atrybut ma robić i czy _w ogóle_ ma coś robić, doszła do poziomu totalnego absurdu (rzucano już [argumenty o długopisie NASA i ołówku ZSSR](https://github.com/w3c/webcomponents/issues/509#issuecomment-265542471)…). Zresztą bardzo podobny los spotkał HI, którym sprzeciwili się wszyscy oprócz Google.
 
@@ -46,6 +46,6 @@ Tak, ten tag HTML zawiera w sobie całą logikę biznesową skomplikowanej apli
 
 Idę płakać w kącie.
 
-### I co dalej?
+## I co dalej?
 
 Nic, wracaj do swojego Reacta, przedstawienie skończone. Czas się chyba w końcu pogodzić z faktem, że WC są martwe (w sumie to nigdy nie były żywe).

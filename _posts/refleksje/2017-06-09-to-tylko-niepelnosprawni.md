@@ -21,7 +21,7 @@ Ciekawiej zaczyna się, gdy zrozumie się, że dostępność może być także b
 
 Skoro dostępność jest usługą, to oczekiwać należy, że jej jakość w takim kontekście wzrośnie. I tak się rzeczywiście dzieje. Im o większą forsę chodzi, tym produkt jest bardziej dostępny. I choć nie ma nic złego w tym, że za dobrze wykonaną usługę specjaliści od dostępności biorą zapłatę, to jednak mimo wszystko wciąż można odnieść wrażenie, że jest to specjalna usługa, _tylko_ dla osób z niepełnosprawnościami.
 
-### Samolubna dostępność
+## Samolubna dostępność
 
 I tutaj dochodzimy do kwestii problemu: świadomość niepełnosprawności. U podstaw niezwykle silnego przeświadczenia o "ekskluzywności" dostępności leży przekonanie, że <q>mnie to nie dotyczy</q>, że <q>wszak jestem pełnosprawny</q>. Problem polega na tym, że to przekonanie jest bardzo ułudne i może się zmienić w każdej chwili. Ot, wystarczy potknąć się o zabawkę własnego psa i wybić sobie oko o kant szafy. Papa, pełnosprawności! Zresztą nie trzeba być ofiarą tragicznego wypadku – wystarczy się _zestarzeć_ (i tak, wiem, to nie do pomyślenia w dzisiejszym świecie; być starym – cóż za nonsens!).
 

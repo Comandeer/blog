@@ -9,7 +9,7 @@ comments: true
 
 Dzisiaj 1 marca 2017, zatem czas powoli przysiąść nad projektem, który nieopatrznie zgłosiłem do [konkursu Daj Się Poznać 2017](http://devstyle.pl/daj-sie-poznac/). Znając mój legendarny zapał i wytrwałość w tworzeniu moich programistycznych projektów (spoiler: umarły wszystkie), podziwiam swoją niezwykłą naiwność, że tym razem będzie inaczej i sprostam morderczym wymaganiom konkursu (2 posty tygodniowo na blogu?!!). Niemniej skoro już się zgłosiłem, wypada wytrwać przynajmniej 1. tydzień, prawda?
 
-### Mój skromny projekt
+## Mój skromny projekt
 
 Bardzo długo myślałem o tym, co tak naprawdę chcę wskrzesić ze swoich projektów. Zacząłem ich tak dużo, że aż wstyd, bo uśmierciłem wszystkie… Wypada zatem wspomnieć, nad czym kiedyś pracowałem (a tak, pochwalę się):
 
