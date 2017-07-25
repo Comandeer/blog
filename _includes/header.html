@@ -2,9 +2,13 @@
 
   <div class="wrapper">
 
-    <h1>
-      <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    {% if page.layout == 'home' %}
+    <h1 class="site-heading">
+    {% endif %}
+    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    {% if page.layout == 'home' %}
     </h1>
+    {% endif %}
 
     {% comment %}
       Ultimate hack to include menu only if there is at least one page *with title*

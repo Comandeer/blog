@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="home">
 
-  <h2 class="page-heading">Wpisy z kategorii {{ site.categories_names[ page.category ] | escape }}</h2>
+  <h1 class="page-heading">Wpisy z kategorii {{ site.categories_names[ page.category ] | escape }}</h1>
 
   {{ content }}
   {% assign posts = site.categories[page.category] %}
