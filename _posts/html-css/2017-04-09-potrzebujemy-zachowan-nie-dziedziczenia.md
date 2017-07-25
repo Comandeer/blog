@@ -11,7 +11,7 @@ comments: true
 
 Choć tydzień temu [obwieściłem śmierć Web Components](https://comandeer.github.io/blog/html-css/javascript/daj-sie-poznac-2017/2017/04/02/web-components-koszmar-minionego-lata.html), nie byłbym sobą, gdybym nie usiadł na chwilę i nie zaczął myśleć, czemu pewne rzeczy nie działały tak jak powinny i co się schrzaniło. Najbardziej interesowała mnie [kwestia owego nieszczęsnego atrybutu `[is]`](https://github.com/w3c/webcomponents/issues/509), o który toczone są zażarte boje. I wówczas zrozumiałem, że W3C po prostu źle podeszło do tematu.
 
-### OOP a DOM
+## OOP a DOM
 
 Jeśli coś się nazywa Obiektowym Modelem Dokumentu, to jakbyśmy nie próbowali nagiąć faktów, nie uciekniemy od prostego stwierdzenia, że mimo wszystko to część starego i dobrego OOP (DFM – Document Functional Object; rzucam Wam wyzwanie, wielbiciele FP!). Z tego też powodu Web Components (WC) również, chcąc nie chcąc, w tę metodologię wpisywać się muszą – ot, choćby dla starej, poczciwej zasady zachowania konsekwencji  i spójności.
 
@@ -46,7 +46,7 @@ W przypadku CE natomiast duży przycisk jest klasą dziedziczącą po wbudowanej
 
 Nie oszukujmy się: nie wygląda to zbyt ładnie. Sam natomiast mechanizm dziedziczenia przywodzi mi na myśl prymitywne przykłady podstaw obiektowości w niemal każdej książce do Javy czy PHP (`class Dog extends Animal`…). Podczas gdy [React od dawna zachęca do kompozycji](https://facebook.github.io/react/docs/composition-vs-inheritance.html), oficjalny standard utknął na poziomie zabaw z obiektami.
 
-### Kłopoty z dziedziczeniem
+## Kłopoty z dziedziczeniem
 
 Wyobraźmy sobie, że mamy [przycisk otwierający menu](https://jsfiddle.net/2uhg0kgr/), który wykonaliśmy jako CE:
 
@@ -64,7 +64,7 @@ To sprawia, że zaczynamy tworzyć sztuczne byty. Żeby uczynić konkretne eleme
 
 Co prawda w dalszym ciągu dyskusji [zaproponowano rozbicie elementów HTML na wiele małych interfejsów](https://github.com/w3c/webcomponents/issues/509#issuecomment-281059414), ale osobiście widzę w tym jeszcze większe zagrożenie niż prymitywne `[is]` i dziedziczenie całych elementów. Jeśli bowiem chcemy mieć przycisk, który otwiera menu, po prostu przypinamy event listener do przycisku i już. Nikt o zdrowych zmysłach nie będzie tworzył elementu `nav-toggler` składającego się z 30 interfejsów tylko po to, żeby zrobić przycisk otwierający menu. A jak już ktoś jest na tyle szalony, to i tak po drodze pewnie zapomni o dodaniu `HTMLActivateClickOnSpace` i tyle będzie z dostępnego przycisku.
 
-### Potrzebujemy zachowań!
+## Potrzebujemy zachowań!
 
 A teraz wyobraźmy sobie, gdyby można było zrobić coś takiego:
 

@@ -9,7 +9,7 @@ comments: true
 
 Technologię już wybrałem, pora zatem w kilku słowach opisać, jak mniej więcej wyobrażam sobie architekturę ComSemRela.
 
-### Aplikacja konsolowa jako trzon
+## Aplikacja konsolowa jako trzon
 
 Głównym pakietem całego projektu bez wątpienia będzie [`comsemrel`](https://github.com/ComSemRel/comsemrel), czyli prosta aplikacja konsolowa. Będzie ona umożliwiała zrobienie dwóch podstawowych rzeczy: stworzenie pliku konfiguracyjnego dla ComSemRela oraz odpalenie i kontrolowanie samego procesu release'owania.
 
@@ -29,7 +29,7 @@ comsemrel.render( userInput );
 
 Tyle! Do takiego prostego kodu powinien się sprowadzać kod pakietu `comsemrel`. Oczywiście cała magia będzie odbywać się pod spodem i będzie podzielona na jak najmniejsze [mikropakiety](http://developer.telerik.com/content-types/opinion/era-micro-packages/) (praktycznie każda komenda będzie posiadała swój własny pakiet), umieszczone w scope `@comsemrel`.
 
-### Komenda `init`
+## Komenda `init`
 
 Tę komendę będzie można podzielić na 3 etapy:
 
@@ -60,7 +60,7 @@ Problem polega na tym, że kombinacji tych elementów jest _nieskończenie wiele
 	"code-hosting": {
 		"github.com": "@comsemrel/github-init-creator"
 	},
-	
+
 	"package-manager": {
 		"package.json": "@comsemrel/npm-init-creator"
 	},
@@ -83,7 +83,7 @@ Chyba nie muszę zaznaczać, że sama instalacja pakietów dostanie swój własn
 
 Brzmi jak totalne szaleństwo? Pewnie tak, ale to nasensowniejszy sposób ze wszystkich, które mi przyszły do głowy.
 
-### Komenda `release`
+## Komenda `release`
 
 Ta komenda jest o wiele prostsza. To po prostu prosta implementacja task runnera jest: dostaje listę zadań i wykonuje je po kolei. Najprawdopodobniej użyję tutaj wzorca middleware… ale to zasługuje na osobnego posta. Na chwilę obecną zamysł jest taki, że ComSemRel na podstawie konfiguracji zainstaluje potrzebne pakiety (tym razem lokalnie, dla konkretnego projektu), a następnie po prostu wykona zawarty w nich kod. Brzmi prosto, ale pewnie i tak przy tym osiwieję.
 

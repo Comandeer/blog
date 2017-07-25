@@ -9,7 +9,7 @@ comments: true
 
 Tematyka dostępności bardzo mnie ciekawi, czego najlepszym dowodem jest [mój wpis na temat tworzenia własnego czytnika ekranowego](https://comandeer.github.io/blog/eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html). Wspominałem w nim o drzewku dostępności. I właśnie o nim będzie dzisiaj ciut więcej.
 
-### Co to drzewko dostępności?
+## Co to drzewko dostępności?
 
 Strona internetowa w pewnym sensie przypomina las, bo… składa się z samych drzew. Są przynajmniej trzy: DOM, CSSOM i właśnie drzewko dostępności.
 
@@ -38,7 +38,7 @@ CSSOM (CSS Object Model) to z kolei drzewko, które powstaje po sparsowaniu arku
 
 Drzewko dostępności to z kolei drzewko, które do każdego obiektu DOM dodaje dodatkowe informacje, które pozwalają technologiom asystującym taki element prawidłowo rozpoznać. I tak nasz `input` z przykładu będzie miał określoną rolę `textbox` (pole tekstowe) oraz zawierał informacje, że etykietę ma w tym i tym elemencie `label`. Tylko tyle i aż tyle.
 
-### Modyfikowanie drzewka dostępności
+## Modyfikowanie drzewka dostępności
 
 Jak dotąd przeglądarki bardzo broniły jakiegokolwiek dostępu do drzewka dostępności i nie bardzo mieliśmy możliwość choćby je oglądnąć. Sprawę zdecydowanie poprawiło powstanie [standardu ARIA](http://w3c.github.io/aria/aria/aria.html), który umożliwił nam modyfikowanie tego, co zwraca drzewko dostępności:
 
@@ -49,7 +49,7 @@ Jak dotąd przeglądarki bardzo broniły jakiegokolwiek dostępu do drzewka dost
 
 Z ARIA jest jednak jeden, podstawowy problem: działa na poziomie HTML-a, nie DOM. Cokolwiek byśmy nie próbowali zrobić w ARIA, musimy to zrobić rzeźbiąc w kodzie HTML. Dla aplikacji, w których niemal wszystko jest robione z poziomu JS-a, tego typu rozwiązanie niekoniecznie jest wygodne. Co więcej, ARIA nie pozwala w żaden sposób odczytać własności danego elementu w drzewku dostępności. ARIA zachowuje się jak całkowicie osobny byt. A to sprawia spore problemy.
 
-### Nadchodzi nowe
+## Nadchodzi nowe
 
 Dlatego też zaczęły się prace nad zupełnie nowym mechnizmem, [Accessibility Object Model](https://github.com/WICG/aom/blob/master/explainer.md) (obiektowy model dostępności), czyli taki DOM, ale dla drzewka dostępności. Podstawowe założenie jest niesamowicie proste: każdy obiekt w DOM będzie miał dodatkową własność, `accessibleNode`, która będzie zwracać wszelkie informacje o danym elemencie, jakie tylko posiada drzewko dostępności. Dzięki niej będzie także można modyfikować wszystko, co tylko nam się zamarzy. Wygodniej i potężniej niż ARIA, prawda?
 

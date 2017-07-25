@@ -9,7 +9,7 @@ comments: true
 
 Od rozpoczęcia konkursu minęło już trochę czasu, więc miałem go nieco, by zaznajomić się – choćby w podstawowym stopniu – z TypeScriptem. Oto garść moich wstępnych przemyśleń.
 
-### Typowanie, typowanie wszędzie…
+## Typowanie, typowanie wszędzie…
 
 Jeśli mówimy o TypeScripcie, w wyobraźni w dużej mierze mamy po prostu obraz JS-a z dołożoną składnią do wyrażania typów. Tylko tyle i aż tyle. Pomysł nowy nie jest i [swego czasu mógł się nawet pojawić w przeglądarkach](http://2ality.com/2015/02/soundscript.html), niemniej ostatecznie skończyło się na preprocesorze. Co prawda TypeScript ma konkurencję (np. [Flow](https://flowtype.org/)), ale i tak to on dzierży palmę pierwszeństwa wśród JS-ów z typowaniem.
 
@@ -25,7 +25,7 @@ function fn( parameter ) {}
 
 Niemniej typowanie w TS ma jedną, zasadniczą wadę: istnieje tylko na poziomie transpilacji i jest bezpowrotnie tracone po tym procesie. A to oznacza, że jeśli tworzymy bibliotekę i ktoś będzie używał jej jako JS-owego kodu (nie zaś TS-owego), to… typowanie w niczym mu nie pomoże. Zatem albo wszystko piszemy w TS-ie, albo typowanie pomoże tylko i wyłącznie nam, jako autorom. A szkoda, czasami przydałaby się opcja przeniesienia typowania także na etap wykonywania kodu (coś jak [StronglyTyped](https://github.com/leaverou/StronglyTyped/)).
 
-### Bundle'owanie to jakaś porażka
+## Bundle'owanie to jakaś porażka
 
 O tym [wspominałem w jednym z poprzednich wpisów](https://comandeer.github.io/blog/daj-sie-poznac-2017/2017/03/12/wybor-technologii.html). TypeScript nie potrafi w bundle'owanie i każdy przerobiony plik wypluwa do wskazanego katalogu. I robi to na tyle nieudolnie, że nawet pliki, które po transpilacji są puste, znajdują się w `dist/`. Słabo. Stąd potrzeba używania np. rollupa (stwarzającego inne problemy, ale o tym inną razą).
 

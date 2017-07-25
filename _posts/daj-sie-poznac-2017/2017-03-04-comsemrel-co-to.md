@@ -9,7 +9,7 @@ comments: true
 
 Skoro do 31 maja będę musiał _z wielką przyjemnością_ rozwijać projekt o jakże pięknej nazwie ComSemRel, wypadałoby przynajmniej napisać, co to takiego.
 
-### Geneza
+## Geneza
 
 Podstawowa mantra obecnego webdevu (i w sumie programowania w ogóle) to: automatyzacja. Automatyzujemy wszystko, co tylko się da. Zautomatyzowaliśmy już "kompilowanie" modułów JS, przerabianie SCSS na CSS, minifikację, konkatenację, publikowanie strony na serwerze, nawet blogi są w dużej mierze zautomatyzowane ([Jekyll](http://jekyllrb.com/) – FTW!). Ostało się już naprawdę mało bastionów, w których trzeba robić coś ręcznie (automatyzacja pisania kodu – soon…). Jednym z nich bez wątpienia jest żmudny proces publikowania nowych wersji naszych super-mega-hiper bibliotek/frameworków/skryptów w przeróżnych managerach pakietów.
 
@@ -34,7 +34,7 @@ Nic zatem dziwnego, że powstał projekt, który te czynności chce faktycznie z
 
 Skoro zatem jest automatyzacja, to można rozejść się do domów i spokojnie korzystać przy kubku herbaty, prawda?
 
-### Co mi się nie podoba?
+## Co mi się nie podoba?
 
 Cóż, nie do końca. Owszem, semantic-release rozwiązuje najbardziej palące problemy i jego główne założenia są jak najbardziej słuszne i sensowne, _ale_… Jest kilka rzeczy, które nie do końca mi pasują:
 
@@ -49,7 +49,7 @@ Cóż, nie do końca. Owszem, semantic-release rozwiązuje najbardziej palące p
 
 Część z powyższych wad można rozwiązać przy pomocy [pluginów](https://github.com/semantic-release/semantic-release#plugins), ale system pluginów do najbardziej elastycznych również nie należy. Jest raptem 5 miejsc, w które można się wpiąć: ustalenie nowej wersji, wygenerowanie changeloga, sprawdzenie, czy należy robić release (sprawdzenie, czy build faktycznie zielony itp.), sprawdzenie, czy została określona odpowiednia wersja i czy faktycznie powinna być opublikowana (brzmi trochę jakby zrobione na siłę) oraz ustalenie, jaka była ostatnia opublikowana wersja. Wciąż zatem jesteśmy ograniczani. A ja _nienawidzę_ ograniczeń, a do tego cierpię na poważny przypadek [syndromu NIH](https://en.wikipedia.org/wiki/Not_invented_here). Dlatego też postanowiłem stworzyć ComSemRel!
 
-### Główne założenia
+## Główne założenia
 
 Główne założenia ComSemRel są bardzo proste:
 

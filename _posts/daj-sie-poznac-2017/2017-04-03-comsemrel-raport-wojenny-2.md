@@ -9,7 +9,7 @@ comments: true
 
 Czas płynie nieubłaganie, zatem przyszła pora na kolejny raport wojenny z frontu walki o lepszą automatyzację release'ów.
 
-### Walka pozycyjna
+## Walka pozycyjna
 
 A wiadomości niemal nie ma. Przeciwnik umocnił swoją pozycję siecią niezwykle skomplikowanych fortyfikacji, zwanych w slangu wojskowym "dokumentacją" i niemal unicestwił moją armię złożoną z dobrych chęci i braku wolnego czasu. Im dłużej brnąłem w poszukiwaniu sensownej dokumentacji dla mojego karkołomnego przedsięwzięcia, tym bardziej utwierdzałem się w przekonaniu, że TypeScript takowej po prostu nie posiada…
 
@@ -25,7 +25,7 @@ Wystarczyło jeszcze tylko ustalić, w jaki sposób podsunąć to TypeScriptowi.
 
 Okazało się także, że [jakaś dobra dusza](http://blog.scottlogic.com/2015/01/20/typescript-compiler-api.html) już wcześniej robiła podobne dziwne rzeczy, co znacznie mi uprościło sprawę. Dzięki jej staraniom ostatecznie udało mi się przygotować [`@comsemrel/typescript-vfs-compiler`](https://www.npmjs.com/package/@comsemrel/typescript-vfs-compiler). Nawet działa, wystarczy dopieścić obsługę błędów, a następnie wsadzić do [`@comsemrel/rollup-plugin-typescript`](https://github.com/ComSemRel/rollup-plugin-typescript) i wymyślić, w jaki sposób dodać obsługę plików z definicją (bo na chwilę obecną jestem w stanie generować tylko dla pojedynczych plików `*.ts`, nie zaś do całego bundle'a, jaki mi wypluje Rollup). Jak już to zrobię, to jako ostatni krok wypada dopasować te klocki do [`@comandeer/rollup-lib-bundler`](https://www.npmjs.com/package/@comandeer/rollup-lib-bundler) i tym samym domknę temat mojego małego ekosystemu narzędzi.
 
-### Plan ataku
+## Plan ataku
 
 To oczywiście oznacza, że sam ComSemRel wciąż leży nieco odłogiem, niemniej mam już rozrysowany na kartce zarys całej architektury, zatem zostaje _jedynie_ wdrożyć ją w życie. Dokonałem też wstępnego wyboru bibliotek, które posłużą mi do komunikacji z użytkownikiem:
 

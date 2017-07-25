@@ -84,9 +84,9 @@ W kontekście HTML5 powstaje zatem zasadne pytanie: czy jest sens stosować znac
 
 Warto też przez chwilę zastanowić się nad określaniem głównego nagłówka strony. Jak już wiemy, powinno to być `h1`. Niemniej pytanie brzmi, co w tym `h1` powinno się zawierać?
 
-Od lat powtarzam, że [w przypadku większości stron głównym nagłówkiem strony powinno być logo](https://www.webkrytyk.pl/2013/08/18/lexy-com-pl/#naglowki). Podgląd ten niejako wspierają [wyniki badań użytkowników czytników ekranowych](http://www.456bereastreet.com/archive/201104/html5_document_outline_revisited/). Pojawia się tutaj jednak pewna ciekawa kwestia: `h1` dla logo/nazwy witryny ma sens tylko przy założeniu, że istnieje drugi nagłówek `h1` zawierający tytuł konkretnej strony. A przynajmniej to wydaje się najbardziej intuicyjne dla użytkowników.
+Przez lata powtarzałem, że [w przypadku większości stron głównym nagłówkiem strony powinno być logo](https://www.webkrytyk.pl/2013/08/18/lexy-com-pl/#naglowki). Niestety, podgląd ten  [nie jest mocno popularny wśród użytkowników czytników ekranowych](http://www.456bereastreet.com/archive/201104/html5_document_outline_revisited/). Większość z nich (ponad 50%) twierdzi, że `h1` powinno być tytułem danej podstrony. 30% użytkowników dopuszcza za to istnienie dwóch `h1`: dla tytułu całej witryny oraz dla tytułu danej podstrony. Jedynie około 12% uważa, że `h1` powinno oznaczać tytuł całej witryny.
 
-Wydaje mi się, że wszystko zależy od kontekstu. W wypadku witryn zawierających wiele stron widziałbym sens w dwóch podejściach: albo ustaleniu, że `h1` to **zawsze** logo/nazwa witryny, albo zastosowaniu techniki, w której logo/nazwa witryny byłoby nagłówkiem `h1` wyłącznie na stronie głównej, a na poszczególnych podstronach stanowiłoby już tylko link, podczas gdy tytuł strony byłby nagłówkiem `h1`. Ta pierwsza technika jest zastosowana na chwilę obecną na tym blogu i w moim tutorialu o semantycznym HTML-u. Ta druga technika jest wykorzystywana m.in. na stronie [<b>Internet Bez Barier</b>](http://internet-bez-barier.com/).  Warto porównać kod [strony głównej](http://internet-bez-barier.com/) z kodem [dowolnej podstrony](http://internet-bez-barier.com/tabele-html/):
+Tego typu wyniki doprowadziły do stworzenia techniki, w której logo/nazwa witryny jest nagłówkiem `h1` wyłącznie na stronie głównej. Na poszczególnych podstronach logo stanowi już tylko link, natomiast w znaczniku `h1` znajduje się tytuł podstrony.  Ta technika jest wykorzystywana m.in. na stronie [<b>Internet Bez Barier</b>](http://internet-bez-barier.com/).  Warto porównać kod [strony głównej](http://internet-bez-barier.com/) z kodem [dowolnej podstrony](http://internet-bez-barier.com/tabele-html/):
 
 ```html
 <!-- strona główna nagłówek -->
@@ -115,7 +115,7 @@ Wydaje mi się, że wszystko zależy od kontekstu. W wypadku witryn zawierający
 <h1 class="entry-title">Tabele HTML</h1>
 ```
 
-Jak widać, na stronie głównej nazwa strony jest wewnątrz tagu `h1` i nie jest linkiem (bo znajdujemy się na stronie głównej). Na podstronie z kolei `h1` jest zastąpione przez link powrotny do strony głównej, a samo `h1` jest równocześnie tytułem wpisu. Wydaje mi się, że tego typu podejście jest nieco lepsze od obecnie przeze mnie stosowanego, niemniej brakuje jakichś większych badań na temat nawigowania przy pomocy nagłówków.
+Jak widać, na stronie głównej nazwa witryny jest wewnątrz tagu `h1` i nie jest linkiem (bo znajdujemy się na stronie głównej). Na podstronie z kolei `h1` w nazwie witryny jest zastąpione przez link powrotny do strony głównej, a w `h1`umieszczono tytuł wpisu. Wydaje mi się, że tego typu podejście jest na chwile obecną najlepsze, niemniej brakuje jakichś większych badań na temat nawigowania przy pomocy nagłówków.
 
 W przypadku stron typu <i lang="en">one-page</i> problemu nie ma. Tutaj w sumie jedynym sensownym wzorcem (moim zdaniem rzecz jasna) jest ten z logo/nazwą witryny w `h1`.
 
@@ -135,6 +135,8 @@ Istnieje jeszcze jeden wzorzec, o którym warto wspomnieć, a który proponuje n
 ```
 
 W tym modelu nawigacja i nagłówek strony są osobnymi bytami. Trzeba przyznać, że jest to dość sensowne rozwiązanie i stosuje je m.in. [Smashing Magazine](https://www.smashingmagazine.com/)… niemniej nie do końca mnie przekonuje. Wydaje mi się, że ten wzorzec najbardziej sprawdziłby się w przypadku aplikacji, w której nagłówki określałyby po prostu kolejne widgety/komponenty, lub na stronach reklamowych, gdzie występuje tzw. [<i lang="en">hero section</i>](https://www.sitepoint.com/exploring-hero-section/).
+
+No i nie można zapomnieć o najstarszej technice, czyli `h1` jako tytule witryny. Choć nie jest to kardynalny błąd, może wprowadzać pewne zamieszanie dla użytkownika czytnika ekranowego. Istnieje wówczas rozbieżność pomiędzy nawigacją przy pomocy tzw. <i>landmarków</i> (`main, nav, article`) a nawigacją nagłówkami. Teoretycznie nawigowanie do `main` powinno dać ten sam rezultat, co nawigowanie do `h1`.
 
 ## Nagłówki kontekstualne?
 
@@ -161,3 +163,7 @@ I tu pojawia się problem: hierarchia treści pokaże komponent "Pogoda" jako os
 Poziomy nagłówków w HTML-u są bowiem _globalne_. Nie zależą w żaden sposób od miejsca występowania tagu. `h2` zawsze będzie nagłówkiem drugiego poziomu, a `h6` – szóstego. W czasach, gdy HTML był językiem tworzenia _dokumentów hipertekstowych_, nie sprawiało to praktycznie żadnego problemu. W chwili, gdy HTML stał się językiem do tworzenia _aplikacji internetowych_, brak nagłówków <i>kontekstualnych</i> (zależnych od swojego miejsca występowania) staje się problemem. Zwłaszcza, gdy myślimy o całości aplikacji jako o zbiorze niezależnych komponentów. Wówczas często nie wiemy, gdzie dana rzecz ostatecznie się znajdzie, a co za tym idzie – nie jesteśmy w stanie dobrać sensownie poziomu nagłówka.
 
 Na chwilę obecną problem ten najlepiej rozwiązać tworząc… [komponent nagłówka](https://github.com/ThePacielloGroup/html5-h), który za pomocą magii ARIA (`[aria-level]` czy `[role=heading]`) ustali swój faktyczny poziom. A [w przyszłości być może doczekamy się tego w HTML-u](https://github.com/w3c/html/issues/774), dzięki [tagowi `h`](https://jonathantneal.github.io/h-element-spec/).
+
+## Podtytuły
+
+Została ostatnia kwesia. [Podtytytułów nie robi się na nagłówkach](http://w3c.github.io/html/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines). Jest to bowiem dodatkowa informacja do już wstawionego nagłówka. Umieszczanie tego w nagłówku niepotrzebnie komplikowałoby hierarchię treści. Dodatkowo byłoby to utrudnieniem dla użytkowników czytników ekranowych, umieszczając dwa punkty nawigacyjne praktycznie w tym samym miejscu.

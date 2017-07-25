@@ -4,7 +4,7 @@ layout: default
 <article class="post" typeof="BlogPosting">
 
   <header class="post-header">
-    <h2 class="post-title" property="name headline">{{ page.title | escape }}</h2>
+    <h1 class="post-title" property="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" property="datePublished">{{ page.date | date: "%d-%m-%Y" }}</time>{% if page.author %} • <span property="author" typeof="Person"><span property="name">{{ page.author }}</span></span>{% endif %}{% for category in page.categories %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ category | url_encode }}">{{ site.categories_names[ category ] }}</a>{% endfor %}</p>
   </header>
 
