@@ -71,6 +71,7 @@
 
 .pagination-list {
 	display: flex;
+	flex-wrap: wrap;
 }
 .pagination-item {
 	border: 1px #000 solid;
@@ -79,8 +80,8 @@
 	flex: 1;
 	list-style: none;
 }
-.pagination-item + .pagination-item {
-	border-left: none;
+.pagination-item:not(:last-child) {
+	border-right: none;
 }
 .pagination-link, .pagination-label {
 	display: block;
