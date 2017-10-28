@@ -18,10 +18,12 @@ lang: pl
 email: comandeer@comandeer.pl
 description: > # this means to ignore newlines until "baseurl:"
   Kolejny nudny blog kolejnego nudnego fanatyka JS-a. Nie czytać, nie warto tracić czasu.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.comandeer.pl" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Comandeer
 google_analytics: UA-33158520-3
+paginate: 10
+paginate_path: "/strona-:num/"
 disqus:
   shortname: comandeers-blog
 feed:
@@ -40,6 +42,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock

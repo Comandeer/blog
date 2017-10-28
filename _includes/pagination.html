@@ -1,0 +1,42 @@
+<!--<nav class="pagination" aria-label="Paginacja">
+	{% if include.paginator.previous_page %}
+	<a href="{{ include.paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
+	{% endif %}
+	<span class="page-number ">Strona: {{ include.paginator.page }} z {{ include.paginator.total_pages }}</span>
+	{% if paginator.next_page %}
+	<a href="{{ include.paginator.next_page_path }}" class="next">Następna Strona</a>
+	{% endif %}
+</nav>-->
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Paginacja">
+	<ul class="pagination-list">
+	{% if paginator.previous_page %}
+	<li class="pagination-item">
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link"><span aria-hidden="true">←</span> Poprzednia strona</a>
+	</li>
+	{% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+	{% if page == paginator.page %}
+		<li class="pagination-item">
+			<span class="pagination-label">{{ page }} <span class="accessible-name">aktualna strona</span></span>
+		</li>
+	{% elsif page == 1 %}
+		<li class="pagination-item">
+			<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link"><span class="accessible-name">Strona </span>{{ page }}</a>
+		</li>
+	{% else %}
+		<li class="pagination-item">
+			<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="pagination-link"><span class="accessible-name">Strona </span>{{ page }}</a>
+		</li>
+	{% endif %}
+	{% endfor %}
+
+	{% if paginator.next_page %}
+	<li class="pagination-item">
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link">Następna strona <span aria-hidden="true">→</span></a>
+	</li>
+	{% endif %}
+	</ul>
+</nav>
+{% endif %}

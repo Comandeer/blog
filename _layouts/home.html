@@ -5,7 +5,9 @@ layout: default
 <div class="home">
   {{ content }}
 
-  {% include post-list.html posts=site.posts %}
+  {% include post-list.html posts=paginator.posts %}
+
+  {% include pagination.html paginator=paginator %}
 
   <p class="rss-subscribe">
     <a href="{{ "/feeds/feed.xml" | relative_url }}">
