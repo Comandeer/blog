@@ -7,7 +7,7 @@ categories: a11y daj-sie-poznac-2017 javascript
 comments: true
 ---
 
-Tematyka dostępności bardzo mnie ciekawi, czego najlepszym dowodem jest [mój wpis na temat tworzenia własnego czytnika ekranowego](https://comandeer.github.io/blog/eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html). Wspominałem w nim o drzewku dostępności. I właśnie o nim będzie dzisiaj ciut więcej.
+Tematyka dostępności bardzo mnie ciekawi, czego najlepszym dowodem jest [mój wpis na temat tworzenia własnego czytnika ekranowego](https://blog.comandeer.pl/eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html). Wspominałem w nim o drzewku dostępności. I właśnie o nim będzie dzisiaj ciut więcej.
 
 ## Co to drzewko dostępności?
 

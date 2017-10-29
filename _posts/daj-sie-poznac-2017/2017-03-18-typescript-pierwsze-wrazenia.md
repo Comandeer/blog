@@ -27,7 +27,7 @@ Niemniej typowanie w TS ma jedną, zasadniczą wadę: istnieje tylko na poziomie
 
 ## Bundle'owanie to jakaś porażka
 
-O tym [wspominałem w jednym z poprzednich wpisów](https://comandeer.github.io/blog/daj-sie-poznac-2017/2017/03/12/wybor-technologii.html). TypeScript nie potrafi w bundle'owanie i każdy przerobiony plik wypluwa do wskazanego katalogu. I robi to na tyle nieudolnie, że nawet pliki, które po transpilacji są puste, znajdują się w `dist/`. Słabo. Stąd potrzeba używania np. rollupa (stwarzającego inne problemy, ale o tym inną razą).
+O tym [wspominałem w jednym z poprzednich wpisów](https://blog.comandeer.pl/daj-sie-poznac-2017/2017/03/12/wybor-technologii.html). TypeScript nie potrafi w bundle'owanie i każdy przerobiony plik wypluwa do wskazanego katalogu. I robi to na tyle nieudolnie, że nawet pliki, które po transpilacji są puste, znajdują się w `dist/`. Słabo. Stąd potrzeba używania np. rollupa (stwarzającego inne problemy, ale o tym inną razą).
 
 I zanim ktoś zwróci uwagę na to, że TypeScript potrafi wypluwać jeden plik: nie, zwracanie jednego pliku dla modułów AMD czy System.js to nie ficzer.
 
