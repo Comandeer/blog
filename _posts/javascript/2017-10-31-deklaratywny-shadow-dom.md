@@ -30,7 +30,7 @@ W ten sposób stworzyliśmy element `div`, którego wnętrzności są ukryte.
 
 Nie będę w tym miejscu rozpisywał się o szczegółach tego kodu. Ważne jedynie, by pamiętać, że `attachShadow` zawsze musi przyjąć jako parametr obiekt z własnością `mode`, która może przyjąć wartość `'open'` lub `'closed'`. Natomiast faktyczny Shadow DOM (czyli to, co zwróci nam `attachShadow`) pozwala nam wyszukiwać elementy przez `querySelector*`, dodawać i usuwać nowe elementy przez tradycyjne metody DOM-we oraz dodatkowo ustawiać treść przy pomocy `innerHTML`.
 
-Problem, jaki powstaje przy okazji korzystania z Shadow DOM, jest taki, że staje się on zależny od JS i DOM, co pociąga ze sobą 3 poważne konsekwencje:
+Problem, jaki powstaje przy okazji korzystania z Shadow DOM, jest taki, że staje się on zależny od JS i DOM, co pociąga za sobą 3 poważne konsekwencje:
 
 *   Shadow DOM nie zadziała, gdy [nie zadziała JS](https://kryogenix.org/code/browser/everyonehasjs.html) – co w dobie niestabilnego mobilnego Internetu wcale nie jest takie niemożliwe.
 *   Shadow DOM nie lubi się z Server Side Rendering – nie da się wygenerować odpowiedniego kodu przy pomocy szablonów na serwerze, bo bez odwołania się do `attachShadow` i tak nie dostaniemy tego, co chcemy.
@@ -66,7 +66,7 @@ Na początku zajmijmy się przypadkiem, w którym nasz skrypt będzie podmienia�
 
 		shadow.innerHTML = shadowRoot.innerHTML; // 4
 
-		shadowRoot.remove() // 5
+		shadowRoot.remove(); // 5
 	} );
 }() );
 </script>
@@ -123,7 +123,7 @@ Oczywiście można zrobić to ręcznie i dodać do obsługi kliku nasz wcześni
 
 				shadow.innerHTML = shadowRoot.innerHTML;
 
-				shadowRoot.remove()
+				shadowRoot.remove();
 			} );
 		}
 
@@ -177,7 +177,7 @@ Najprostszym rozwiązaniem jest zamiana `shadowroot` na element `template` z jak
 <div>
 	<template shadowroot>
 		<img src="https://www.comandeer.pl/images/custom/comandeer.jpg" alt="Comandeer" onload="console.log( 'załadowano' );">
-	</template shadowroot>
+	</template>
 </div>
 
 <script>
@@ -191,7 +191,7 @@ Najprostszym rozwiązaniem jest zamiana `shadowroot` na element `template` z jak
 
 				shadow.appendChild( shadowRoot.content ); // 2
 
-				shadowRoot.remove()
+				shadowRoot.remove();
 			} );
 		}
 
@@ -232,7 +232,7 @@ Takim rozwiązaniem jest przeniesienie wszystkich dzieci elementu `shadowroot` d
 
 				shadow.appendChild( createDocumentFragment( shadowRoot ) ); // 1
 
-				shadowRoot.remove()
+				shadowRoot.remove();
 			} );
 		}
 
@@ -293,7 +293,7 @@ Ostatecznie całość kodu prezentuje się następująco:
 
 				shadow.appendChild( createDocumentFragment( shadowRoot ) ); // 1
 
-				shadowRoot.remove()
+				shadowRoot.remove();
 			} );
 		}
 
@@ -366,7 +366,7 @@ Niemniej muszę przyznać uczciwie, że rozwiązanie tego problemu przy pomocy C
 
 				shadow.appendChild( this._createDocumentFragment( this ) );
 
-				this.remove()
+				this.remove();
 			}
 
 			_createDocumentFragment() {
