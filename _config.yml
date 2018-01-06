@@ -30,7 +30,7 @@ feed:
   path: "feeds/feed.xml"
 categories_names:
   'na-luzie': "Na luzie"
-  'javascript': "Javascript"
+  'javascript': "JavaScript"
   'a11y': "Dostępność"
   'html-css': "HTML i CSS"
   'eksperymenty': "Eksperymenty"
