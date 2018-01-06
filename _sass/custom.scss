@@ -91,3 +91,11 @@
 .pagination-link:hover, .pagination-link:focus {
 	background: #eee;
 }
+
+a:visited {
+	color: $brand-color;
+}
+
+.post-link {
+	display: inline-block;
+}
