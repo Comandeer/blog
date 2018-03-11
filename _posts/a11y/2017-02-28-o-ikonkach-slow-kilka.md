@@ -31,7 +31,7 @@ Tak, powinno być użyte **co najmniej** `[aria-label]`. `[title]` też może za
 
 ## Bardziej dostępne sposoby
 
-Niemniej to jest dość słaby sposób, ponieważ działa tylko i wyłącznie dla czytników ekranowych. A co w sytuacjach, gdy style się nie doczytają, strona będzie użyta w przeglądarce tekstowej etc.? Innymi słowy mówiąc: jak sprawić, żeby ikonka działała _naprawdę_ zawsze?
+Niemniej to jest dość słaby sposób, ponieważ działa tylko i wyłącznie dla czytników ekranowych (i to nie w przypadku korzystania równocześnie z Google Translate, jak [zauważa Heydon](https://inclusive-components.design/notifications/#differentiatingmessagetypes)). A co w sytuacjach, gdy style się nie doczytają, strona będzie użyta w przeglądarce tekstowej etc.? Innymi słowy mówiąc: jak sprawić, żeby ikonka działała _naprawdę_ zawsze?
 
 ```html
 <span class="icon icon_email" aria-hidden="true"></span>
@@ -59,7 +59,7 @@ Ale to wciąż wszystko hacki – bo przecież tym jest sama idea icon fontów. 
 <img src="nasz-svg#name-of-view" alt="Tekst alternatywny">
 ```
 
-Oczywiście `[alt]` jak dla normalnego obrazka: jeśli ikonka to ozdobnik – pusty, jeśli niesie treść – wiadomo. Można nawet [używać sprite'ów](http://betravis.github.io/icon-methods/svg-sprite-sheets.html) i – jak widać – wsparcie jest zadziwiająco dobre.
+Oczywiście `[alt]` jak dla normalnego obrazka: jeśli ikonka to ozdobnik – pusty, jeśli niesie treść – wiadomo. Można nawet [używać sprite'ów](http://betravis.github.io/icon-methods/svg-sprite-sheets.html) i – jak widać – wsparcie jest zadziwiająco dobre. Dodatkowo [SVG nie posiadają takich problemów z dostępnością, jak icon fonty](https://cloudfour.com/thinks/seriously-dont-use-icon-fonts/).
 
 ## Casus `[title]`
 
@@ -67,4 +67,4 @@ Ktoś pewnie jeszcze zapyta: "A co z `[title]`? Przecież dostarcza informacji o
 
 ------
 
-Jak widać, sposobów na wstawienie icon fontów jest kilka, a najlepszy z nich to… wstawienie SVG ;)
+Jak widać, sposobów na wstawienie icon fontów jest kilka, a najlepszy z nich to… wstawienie SVG.
