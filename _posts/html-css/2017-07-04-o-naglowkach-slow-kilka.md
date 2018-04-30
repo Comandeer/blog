@@ -84,6 +84,8 @@ W kontekście HTML5 powstaje zatem zasadne pytanie: czy jest sens stosować znac
 
 Warto też przez chwilę zastanowić się nad określaniem głównego nagłówka strony. Jak już wiemy, powinno to być `h1`. Niemniej pytanie brzmi, co w tym `h1` powinno się zawierać?
 
+### #1 – nagłówek opisujący podstronę
+
 Przez lata powtarzałem, że [w przypadku większości stron głównym nagłówkiem strony powinno być logo](https://www.webkrytyk.pl/2013/08/18/lexy-com-pl/#naglowki). Niestety, podgląd ten  [nie jest mocno popularny wśród użytkowników czytników ekranowych](http://www.456bereastreet.com/archive/201104/html5_document_outline_revisited/). Większość z nich (ponad 50%) twierdzi, że `h1` powinno być tytułem danej podstrony. 30% użytkowników dopuszcza za to istnienie dwóch `h1`: dla tytułu całej witryny oraz dla tytułu danej podstrony. Jedynie około 12% uważa, że `h1` powinno oznaczać tytuł całej witryny.
 
 Tego typu wyniki doprowadziły do stworzenia techniki, w której logo/nazwa witryny jest nagłówkiem `h1` wyłącznie na stronie głównej. Na poszczególnych podstronach logo stanowi już tylko link, natomiast w znaczniku `h1` znajduje się tytuł podstrony.  Ta technika jest wykorzystywana m.in. na stronie [<b>Internet Bez Barier</b>](http://internet-bez-barier.com/).  Warto porównać kod [strony głównej](http://internet-bez-barier.com/) z kodem [dowolnej podstrony](http://internet-bez-barier.com/tabele-html/):
@@ -119,6 +121,8 @@ Jak widać, na stronie głównej nazwa witryny jest wewnątrz tagu `h1` i nie je
 
 W przypadku stron typu <i lang="en">one-page</i> problemu nie ma. Tutaj w sumie jedynym sensownym wzorcem (moim zdaniem rzecz jasna) jest ten z logo/nazwą witryny w `h1`.
 
+### #2 – nagłówek poza nawigacją
+
 Istnieje jeszcze jeden wzorzec, o którym warto wspomnieć, a który proponuje np. [Heydon Pickering](http://www.heydonworks.com/): logo strony jest pierwszą pozycją menu nawigacyjnego strony:
 
 ```html
@@ -135,6 +139,8 @@ Istnieje jeszcze jeden wzorzec, o którym warto wspomnieć, a który proponuje n
 ```
 
 W tym modelu nawigacja i nagłówek strony są osobnymi bytami. Trzeba przyznać, że jest to dość sensowne rozwiązanie i stosuje je m.in. [Smashing Magazine](https://www.smashingmagazine.com/)… niemniej nie do końca mnie przekonuje. Wydaje mi się, że ten wzorzec najbardziej sprawdziłby się w przypadku aplikacji, w której nagłówki określałyby po prostu kolejne widgety/komponenty, lub na stronach reklamowych, gdzie występuje tzw. [<i lang="en">hero section</i>](https://www.sitepoint.com/exploring-hero-section/).
+
+### #3 – nagłówek witryny
 
 No i nie można zapomnieć o najstarszej technice, czyli `h1` jako tytule witryny. Choć nie jest to kardynalny błąd, może wprowadzać pewne zamieszanie dla użytkownika czytnika ekranowego. Istnieje wówczas rozbieżność pomiędzy nawigacją przy pomocy tzw. <i>landmarków</i> (`main, nav, article`) a nawigacją nagłówkami. Teoretycznie nawigowanie do `main` powinno dać ten sam rezultat, co nawigowanie do `h1`.
 
