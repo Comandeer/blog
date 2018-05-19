@@ -1,12 +1,16 @@
 .site-heading {
 	margin: 0;
+	display: inline-block;
 }
 .site-title {
+	display: inline-block;
+	float: none;
 	height: 96px;
 	padding-left: 100px;
 	background: url( logo.png ) no-repeat top left;
 	transition: background .5s ease-in-out;
 }
+
 .site-title:hover, .site-title:focus {
 	background-position: 0 -96px;
 }
@@ -32,16 +36,39 @@
 	}
 }
 
-
-@media screen and ( max-width: 600px ) {
-	.site-nav:hover .trigger {
-	    display: none;
-	    padding:0;
+.site-nav {
+	display: block;
+	position: static;
+	float: none;
+	text-align: left;
+	border: none;
+	line-height: normal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+@media screen and ( min-width: 601px ) {
+	.site-nav {
+		float: right;
+		line-height: 96px;
+		margin: 0;
 	}
-
-	.site-nav .trigger:target, .site-nav .trigger--opened.trigger--opened {
-		display: block;
-		padding-bottom: 5px;
+}
+.site-menu {
+	margin: 0;
+	list-style: none;
+	display: flex;
+}
+.menu-item {
+	flex: 1;
+}
+.site-nav .page-link {
+	padding: 0;
+	margin: 0;
+}
+@media screen and ( max-width: 600px ) {
+	.site-nav .page-link {
+		line-height: 2;
+		border: 1px #000 solid;
 	}
 }
 
