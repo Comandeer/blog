@@ -126,3 +126,19 @@ a:visited {
 .post-link {
 	display: inline-block;
 }
+
+.note {
+	border: 1px #000 solid;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.note::before {
+	margin: -1rem;
+	margin-bottom: 0;
+	display: block;
+	background: #ddd;
+	text-align: center;
+	content: 'Dygresja';
+	font-size: larger;
+}

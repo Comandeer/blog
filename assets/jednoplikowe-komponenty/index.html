@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+	<html lang="pl">
+		<head>
+			<meta charset="UTF-8">
+			<title>Jednoplikowe komponenty</title>
+		</head>
+		<body>
+			<hello-world>Comandeer</hello-world>
+
+			<script src="loader.js"></script>
+			<script>
+				loadComponent( 'HelloWorld.wc' ).then( ( component ) => {
+					console.log( 'Component loaded' );
+				} );
+			</script>
+		</body>
+	</html>
