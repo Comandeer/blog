@@ -7,7 +7,7 @@ categories: refleksje html-css
 comments: true
 ---
 
-Dzisiaj krótko o tym, czym jest Headings First Principle (Zasada Najpierw Nagłówki). [Wymyśliłem ją na poczekaniu 20 lutego](https://github.com/w3c/html/issues/1224#issuecomment-366938835) w trakcie dyskusji nad sensownością znaczników `article` i `section` i moim skromnym zdaniem w prosty i sensowny sposób opisuje, jak dzielić stronę na sekcje.
+Dzisiaj krótko o tym, czym jest Headings First Principle (Zasada Najpierw Nagłówki). [Wymyśliłem ją na poczekaniu 20 lutego](https://github.com/w3c/html/issues/1566) w trakcie dyskusji nad sensownością znaczników `article` i `section` i moim skromnym zdaniem w prosty i sensowny sposób opisuje, jak dzielić stronę na sekcje.
 
 ## O co chodzi?
 
