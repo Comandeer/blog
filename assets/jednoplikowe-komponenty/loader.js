@@ -54,8 +54,8 @@ window.loadComponent = ( function() {
 			_upcast() {
 				const shadow = this.attachShadow( { mode: 'open' } );
 
-				shadow.appendChild( style );
-				shadow.appendChild( template.content );
+				shadow.appendChild( style.cloneNode( true ) );
+				shadow.appendChild( document.importNode( template.content, true ) );
 			}
 
 			_attachListeners() {

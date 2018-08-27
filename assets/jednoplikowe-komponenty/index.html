@@ -6,11 +6,16 @@
 		</head>
 		<body>
 			<hello-world>Comandeer</hello-world>
+			<button>Add new component instance</button>
 
 			<script src="loader.js"></script>
 			<script>
 				loadComponent( 'HelloWorld.wc' ).then( ( component ) => {
 					console.log( 'Component loaded' );
+				} );
+
+				document.querySelector( 'button' ).addEventListener( 'click', () => {
+					document.body.insertAdjacentHTML( 'beforeend', '<hello-world>Comandeer</hello-world>' );
 				} );
 			</script>
 		</body>

@@ -3,7 +3,7 @@ layout: post
 title:  "Jednoplikowe komponenty"
 author: Comandeer
 date:   2018-06-30 19:50:00 +0100
-categories: javascript html-css
+categories: javascript html-css eksperymenty
 comments: true
 ---
 
@@ -256,8 +256,8 @@ function registerComponent( { template, style, script } ) {
 		_upcast() {
 			const shadow = this.attachShadow( { mode: 'open' } );
 
-			shadow.appendChild( style );
-			shadow.appendChild( template.content );
+			shadow.appendChild( style.cloneNode() );
+			shadow.appendChild( document.importNode( template.content, true ) );
 		}
 	}
 }
