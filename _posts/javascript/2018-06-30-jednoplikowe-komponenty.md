@@ -256,7 +256,7 @@ function registerComponent( { template, style, script } ) {
 		_upcast() {
 			const shadow = this.attachShadow( { mode: 'open' } );
 
-			shadow.appendChild( style.cloneNode() );
+			shadow.appendChild( style.cloneNode( true ) );
 			shadow.appendChild( document.importNode( template.content, true ) );
 		}
 	}
