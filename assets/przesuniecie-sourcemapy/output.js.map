@@ -1,0 +1,1 @@
+{"version":3,"sources":["input.js"],"names":[],"mappings":"0BACA,KAAM,CAAA,IAAK,CACV,WAAW,EAAG,CACb,OAAO,CAAC,GAAR,CAAa,aAAb,CACA,CAHS","file":"output.js","sourcesContent":["/* Superważny komentarz */\nclass Test {\n\tconstructor() {\n\t\tconsole.log( 'Constructed' );\n\t}\n}\n"]}
