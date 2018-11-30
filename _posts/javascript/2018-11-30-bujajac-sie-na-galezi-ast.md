@@ -82,7 +82,7 @@ Można zauważyć, że tak jak w przypadku `document` w DOM, w AST JS-a mamy do 
 
 <p class="note">Instrukcja posiada wewnątrz sobie średnik, bo <a href="https://tc39.github.io/ecma262/#prod-ExpressionStatement">zgodnie ze specyfikacją ECMAScript jest to znak kończący instrukcję</a>. Teoretycznie kod bez średnika na końcu byłby niepoprawny składniowo, gdyby nie <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">mechanizm automatycznego wstawiania średników</a>.</p>
 
-Każdy węzeł AST zawiera informacje o węźle poprzedzającym (`left`) i następującym po nim (`right`). Co ciekawe, każdy węzeł AST posiada teżinformacje odnośnie tego, w którym miejscu kodu źródłowego się znajdował (`loc`). Średnio przydatne do większości zastosowań, ale np. przy tworzeniu sourcemap może się przydać.
+Każdy węzeł AST zawiera informacje o węźle poprzedzającym (`left`) i następującym po nim (`right`). Co ciekawe, każdy węzeł AST posiada też informację odnośnie tego, w którym miejscu kodu źródłowego się znajdował (`loc`). Średnio przydatne do większości zastosowań, ale np. przy tworzeniu sourcemap może się przydać.
 
 ## Modyfikujemy kod!
 
