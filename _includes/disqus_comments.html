@@ -2,6 +2,10 @@
 
   <div id="disqus_thread"></div>
   <script>
+    var disqus_config = function () {
+        this.page.identifier = '{{ page.id }}';
+    };
+
     (function() {
       var d = document, s = d.createElement('script');
 
