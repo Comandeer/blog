@@ -2,7 +2,7 @@
 layout: post
 title:  "Bujając się na gałęzi AST"
 author: Comandeer
-date:   2018-11-30 00:59:00 +0200
+date:   2018-11-30 01:59:00 +0100
 categories: javascript
 comments: true
 ---
