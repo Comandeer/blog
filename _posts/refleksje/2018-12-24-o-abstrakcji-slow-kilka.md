@@ -290,15 +290,17 @@ Wiemy już zatem, jakie metody powinno udostępniać nasze API. Spróbujmy zatem
 
 ```javascript
 class Store {
-	createTask( data ) {}
-	getAllTasks() {}
-	getTask( id ) {}
-	editTask( id, data ) {}
-	deleteTask( id ) {}
+	async createTask( data ) {}
+	async getAllTasks() {}
+	async getTask( id ) {}
+	async editTask( id, data ) {}
+	async deleteTask( id ) {}
 }
 ```
 
 Uzyskaliśmy zatem prostą klasę `Store`, realizującą wszystkie zadania z powyższej listy z dodatkową metodą `getAllTasks` do pobrania wszystkich istniejących zadań. Możemy ją teraz zapisać jako osobny moduł naszej aplikacji, `Store.js`.
+
+<p class="note">Jeśli zastanawiasz się, dlaczego wszystkie metody tej klasy są asynchroniczne, to pomyśl, skąd zwykle takie dane się pobiera. Zarówno komunikacja z API, jak i bazą danych, w przypadku JavaScriptu – będącego od zawsze jednowątkowym językiem – po prostu <em>musi</em> być asynchronicznego. W innym wypadku będzie blokować główny wątek przeglądarki. Stąd dla spójności z tymi najpopularniejszymi sposobami przechowywania danych wszystkie implementacje powinny być asynchroniczne.</p>
 
 ### Zamienne implementacje
 
@@ -312,27 +314,27 @@ class Store {
 		this.store = {};
 	}
 
-	createTask( data ) {
+	async createTask( data ) {
 		const id = generateId();
 
 		this.store[ id ] = data;
 
-        return id;
+		return id;
 	}
 
-	getAllTasks() {
+	async getAllTasks() {
 		return this.store;
 	}
 
-	getTask( id ) {
+	async getTask( id ) {
 		return this.store[ id ];
 	}
 
-	editTask( id, data ) {
+	async editTask( id, data ) {
 		this.store[ id ] = data;
 	}
 
-	deleteTask( id ) {
+	async deleteTask( id ) {
 		delete this.store[ id ];
 	}
 }
@@ -366,8 +368,8 @@ class App {
 		this.store = store;
 	}
 
-	renderTasks() {
-		const tasks = this.store.getAllTasks();
+	async renderTasks() {
+		const tasks = await this.store.getAllTasks();
 
 		// itd.
 	}
