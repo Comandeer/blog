@@ -12,7 +12,7 @@
 		<nav class="site-nav">
 			<ul id="menu" class="site-menu">
 				{% for my_page in site.pages %}
-					{% if my_page.title %}
+					{% if my_page.title and my_page.url != '/404.html' %}
 					<li class="menu-item">
 						<a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
 					</li>
