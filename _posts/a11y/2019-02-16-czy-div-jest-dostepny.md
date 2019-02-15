@@ -3,7 +3,7 @@ layout: post
 title:  "Czy div jest dostępny?"
 author: Comandeer
 date:   2019-02-15 23:50:00 +0100
-categories: a11y html-css
+categories: a11y html-css refleksje
 comments: true
 ---
 
