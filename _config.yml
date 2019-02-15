@@ -40,9 +40,10 @@ categories_names:
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock
