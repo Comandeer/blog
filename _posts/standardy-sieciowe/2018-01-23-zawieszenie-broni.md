@@ -3,7 +3,7 @@ layout: post
 title:  "Zawieszenie broni"
 author: Comandeer
 date:   2018-01-23 23:30:00 +0100
-categories: refleksje a11y
+categories: standardy-sieciowe refleksje a11y
 comments: true
 permalink: /zawieszenie-broni.html
 redirect_from:

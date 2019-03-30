@@ -3,7 +3,7 @@ layout: post
 title:  "Drzewko dostępności udostępnione!"
 author: Comandeer
 date:   2017-03-19 21:00:00 +0100
-categories: a11y daj-sie-poznac-2017 javascript
+categories: standardy-sieciowe a11y daj-sie-poznac-2017 javascript
 comments: true
 permalink: /drzewko-dostepnosci-udostepnione.html
 redirect_from:

@@ -3,7 +3,7 @@ layout: post
 title:  "Standaryzacja AMP?"
 author: Comandeer
 date:   2018-03-10 19:42:00 +0100
-categories: refleksje html-css
+categories: standardy-sieciowe refleksje html-css
 comments: true
 permalink: /standaryzacja-amp.html
 redirect_from:

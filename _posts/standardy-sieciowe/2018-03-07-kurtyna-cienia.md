@@ -3,7 +3,7 @@ layout: post
 title:  "Kurtyna cienia"
 author: Comandeer
 date:   2018-03-07 21:35:00 +0100
-categories: refleksje html-css
+categories: standardy-sieciowe refleksje html-css
 comments: true
 permalink: /kurtyna-cienia.html
 redirect_from:

@@ -3,7 +3,7 @@ layout: post
 title:  "Web Components – koszmar minionego lata"
 author: Comandeer
 date:   2017-04-02 19:00:00 +0100
-categories: html-css javascript daj-sie-poznac-2017
+categories: standardy-sieciowe html-css javascript daj-sie-poznac-2017
 comments: true
 permalink: /web-components-koszmar-minionego-lata.html
 redirect_from:

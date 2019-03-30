@@ -3,7 +3,7 @@ layout: post
 title:  "Koniec HTML5?"
 author: Comandeer
 date:   2019-03-31 16:00:00 +0200
-categories: refleksje
+categories: standardy-sieciowe refleksje
 comments: true
 permalink: /koniec-html5.html
 ---
