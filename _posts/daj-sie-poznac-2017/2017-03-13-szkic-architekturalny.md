@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-03-13 23:20:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /szkic-architekturalny.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/03/13/szkic-architekturalny.html
 ---
 
 Technologię już wybrałem, pora zatem w kilku słowach opisać, jak mniej więcej wyobrażam sobie architekturę ComSemRela.

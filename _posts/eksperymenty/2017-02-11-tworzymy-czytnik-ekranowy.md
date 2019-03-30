@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-02-11 21:46:18 +0100
 categories: eksperymenty a11y
 comments: true
+permalink: /tworzymy-czytnik-ekranowy.html
+redirect_from:
+    - /eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html
 ---
 
 Ostatnio [kumpel z pracy](https://github.com/Tade0) rzucił pomysłem: "a czemu w sumie nie napiszesz własnego czytnika ekranowego?". Tak po prawdzie nigdy się nad tym nie zastanawiałem jakoś specjalnie. Uważałem, że czytniki ekranowe są na tyle skomplikowane, że zrobienie tego _dobrze_ jest niezwykle trudne (co zresztą widać po tym jak wielkie rozbieżności są pomiędzy największymi w stawce, np. [VoiceOverem](http://www.apple.com/accessibility/mac/vision/) a [JAWS-em](http://www.freedomscientific.com/Products/Blindness/JAWS)). No i przede wszystkim jeszcze niedawno technologie webowe nie pozwalały na takie cuda, jak choćby czytanie tekstu na głos.

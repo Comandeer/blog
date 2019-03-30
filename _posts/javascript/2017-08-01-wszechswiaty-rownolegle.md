@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-08-01 23:30:00 +0200
 categories: javascript
 comments: true
+permalink: /wszechswiaty-rownolegle.html
+redirect_from:
+    - /javascript/2017/08/01/wszechswiaty-rownolegle.html
 ---
 
 Co to, Comandeer się przerzucił na fizykę kwantową? Nic z tych rzeczy, wciąż tylko JavaScript! Niemniej dzisiaj porozmawiamy sobie o… <i>sferach</i>.

@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-09-30 23:55:00 +0200
 categories: javascript
 comments: true
+permalink: /zmutowany-dom.html
+redirect_from:
+    - /javascript/2017/09/30/zmutowany-dom.html
 ---
 
 DOM jest jak żywy organizm. A każdy żywy organizm umie kilka podstawowych czynności, wśród których znajduje się… mutowanie!

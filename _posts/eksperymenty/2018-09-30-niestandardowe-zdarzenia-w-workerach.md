@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-09-30 23:41:00 +0100
 categories: eksperymenty javascript
 comments: true
+permalink: /niestandardowe-zdarzenia-w-workerach.html
+redirect_from:
+    - /eksperymenty/javascript/2018/09/30/niestandardowe-zdarzenia-w-workerach.html
 ---
 
 W przypadku skryptów korzystających z DOM stworzenie własnych, niestandardowych zdarzeń jest banalnie proste i sprowadza się do utworzenia nowej instancji [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). Ten sposób jednak nie (do końca) działa w przypadku workerów, które nie mają dostępu do DOM. Co zatem zrobić w takim wypadku?

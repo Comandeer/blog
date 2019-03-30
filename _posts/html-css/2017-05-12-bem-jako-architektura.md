@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-05-12 21:00:00 +0200
 categories: html-css javascript daj-sie-poznac-2017
 comments: true
+permalink: /bem-jako-architektura.html
+redirect_from:
+    - /html-css/javascript/daj-sie-poznac-2017/2017/05/12/bem-jako-architektura.html
 ---
 
 Co bardziej zaznajomieni z moją osobą zapewne już zorientowali się, że [udało mi się napisać książkę](http://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm). Tworzę w niej [bibliotekę BEMQuery](https://github.com/BEMQuery) (wrócę do niej kiedyś… serio), która opiera się na bardzo prostym założeniu: zamiast pobierać elementy jak w jQuery, przy pomocy selektorów CSS, tworzę swój własny język zainspirowany [metodologią BEM](https://en.bem.info/). Można by wręcz odnieść wrażenie, że jestem fanatykiem BEM-u – piszę o nim książkę, piszę narzędzia nim inspirowane, wszędzie, gdzie tylko się da, ewangelizuję ludzi, żeby przeszli na BEM…

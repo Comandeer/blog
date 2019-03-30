@@ -5,6 +5,8 @@ author: Comandeer
 date:   2017-05-14 19:00:00 +0200
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /comsemrel-raport-wojenny-8.html
+redirect_from: /daj-sie-poznac-2017/2017/05/14/comsemrel-raport-wojenny-8.html
 ---
 
 W tym tygodniu _wielkie, wspaniałe nowiny_: udało mi się zamknąć **4 issues**! Wow, ależ produktywny tydzień…

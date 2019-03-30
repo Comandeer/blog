@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-03-04 22:40:00 +0100
 categories: daj-sie-poznac-2017 javascript
 comments: true
+permalink: /comsemrel-co-to.html
+redirect_from:
+    - /daj-sie-poznac-2017/javascript/2017/03/04/comsemrel-co-to.html
 ---
 
 Skoro do 31 maja będę musiał _z wielką przyjemnością_ rozwijać projekt o jakże pięknej nazwie ComSemRel, wypadałoby przynajmniej napisać, co to takiego.

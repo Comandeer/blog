@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-10-09 23:59:00 +0200
 categories: javascript
 comments: true
+permalink: /przesuniecie-sourcemapy.html
+redirect_from:
+    - /javascript/2018/10/09/przesuniecie-sourcemapy.html
 ---
 
 W ten weekend mierzyłem się z kolejnym błędem w [moim najsłynniejszym projekcie na GitHubie](https://github.com/Comandeer/rollup-plugin-babel-minify) – [niepoprawnym generowaniem sourcemapy](https://github.com/Comandeer/rollup-plugin-babel-minify/issues/133). Problem okazał się na tyle ciekawy, że postanowiłem go opisać.

@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-10-17 18:24:08 +0200
 categories: na-luzie
 comments: true
+permalink: /konferencja-confrontjs.html
+redirect_from:
+    - /na-luzie/2018/10/17/konferencja-confrontjs.html
 ---
 
 29 października w Warszawie odbędzie się [konferencja ConfrontJS 2018](https://confrontjs.com/). Potrwa od 09:00 do 17:00, a jej w trakcie zostanie wygłoszonych 12 prelekcji. Całość jest organizowana przez stare dobre [WarsawJS](https://warsawjs.com/), w urokliwym [Campus Warsaw](https://www.youtube.com/watch?v=zUuU0whqDg8).

@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-26 17:30:00 +0200
 categories: refleksje daj-sie-poznac-2017
 comments: true
+permalink: /odjulianilem-sie.html
+redirect_from:
+    - /refleksje/daj-sie-poznac-2017/2017/04/26/odjulianilem-sie.html
 ---
 
 Dzisiaj nadszedł ten dzień, w którym uświadomiłem sobie, że niemal całkowicie _się odjulianiłem_. W tym miejscu jestem Ci winny, Drogi Czytelniku, kilka słów wyjaśnienia. Zacznijmy od niezbędnego kontekstu kulturowego:

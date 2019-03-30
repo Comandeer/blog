@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-03-07 21:35:00 +0100
 categories: refleksje html-css
 comments: true
+permalink: /kurtyna-cienia.html
+redirect_from:
+    - /refleksje/html-css/2018/03/07/kurtyna-cienia.html
 ---
 
 W dniach 5 i 6 marca 2018 roku [postanowiono zabić deklaratywny Shadow DOM](https://github.com/whatwg/dom/issues/510#issuecomment-370980398). Stało się to w czasie meetingu Web Platform WG w Tokio.

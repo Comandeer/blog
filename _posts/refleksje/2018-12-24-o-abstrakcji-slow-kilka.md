@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-12-24 16:01:00 +0100
 categories: refleksje javascript
 comments: true
+permalink: /o-abstrakcji-slow-kilka.html
+redirect_from:
+    - /refleksje/javascript/2018/12/24/o-abstrakcji-slow-kilka.html
 ---
 
 Ostatnio miałem przyjemność przeczytać [książkę Nicholása Bevacquy <cite>Mastering Modular JavaScript</cite>](https://helion.pl/ksiazki/mastering-modular-javascript-nicolas-bevacqua,e_0xjn.htm#format/e). Z racji tego, że książka ta porusza bardzo szeroko rolę abstrakcji w tworzeniu oprogramowania, stwierdziłem, że najwyższy czas spisać także garść własnych przemyśleń.

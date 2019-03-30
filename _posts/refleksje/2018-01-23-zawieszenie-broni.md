@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-01-23 23:30:00 +0100
 categories: refleksje a11y
 comments: true
+permalink: /zawieszenie-broni.html
+redirect_from:
+    - /refleksje/a11y/2018/01/23/zawieszenie-broni.html
 ---
 
 Ostatnio pisałem o [wieloletnim konflikcie pomiędzy WHATWG i W3C](https://blog.comandeer.pl/refleksje/a11y/2018/01/05/pyrrusowe-zwyciestwo.html). Nie spodziewałem się jednak, że przynajmniej częściowo zostanie zażegnany – i to tak pokojowo.
@@ -21,7 +24,7 @@ Główne zmiany w stosunku do starszej wersji z HTML 5.x to zamiana sformułowan
 
 Pierwsza zmiana jest dość dyskusyjna. Główna treść a dominująca treść niby oznaczają to samo, niemniej pierwszy zwrot wydaje się bardziej jednoznaczny. No ale dobra, można to przeżyć.
 
-Druga zmiana ogranicza kontekst występowania `main`. Wcześniej HTML 5.x pozwalało umieszczać `main` w wielu dziwnych miejscach, np. w `section`. Obecna wersja wymusza, żeby `main` było bezpośrednio w `body`, ewentualnie `div`, `form` bez dostępnej nazwy (z powodu [wymogów ASP .NET](https://github.com/whatwg/html/pull/3354#issuecomment-358898757)) lub custom elemencie. Możliwe jest też umieszczenie `main` bezpośrednio w `html`, jeśli tworzona przez nas strona nie posiada ani `head`, ani `body` (co jest dozwolone przez specyfikację). 
+Druga zmiana ogranicza kontekst występowania `main`. Wcześniej HTML 5.x pozwalało umieszczać `main` w wielu dziwnych miejscach, np. w `section`. Obecna wersja wymusza, żeby `main` było bezpośrednio w `body`, ewentualnie `div`, `form` bez dostępnej nazwy (z powodu [wymogów ASP .NET](https://github.com/whatwg/html/pull/3354#issuecomment-358898757)) lub custom elemencie. Możliwe jest też umieszczenie `main` bezpośrednio w `html`, jeśli tworzona przez nas strona nie posiada ani `head`, ani `body` (co jest dozwolone przez specyfikację).
 
 ## I co teraz?
 

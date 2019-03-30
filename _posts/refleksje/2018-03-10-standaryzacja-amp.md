@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-03-10 19:42:00 +0100
 categories: refleksje html-css
 comments: true
+permalink: /standaryzacja-amp.html
+redirect_from:
+    - /refleksje/html-css/2018/03/10/standaryzacja-amp.html
 ---
 
 Google ogłosiło, że [standaryzuje technologie związane z AMP](https://amphtml.wordpress.com/2018/03/08/standardizing-lessons-learned-from-amp/). Mam jednak pewne wątpliwości co do całego procesu…

@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-03 18:00:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /comsemrel-raport-wojenny-2.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/04/03/comsemrel-raport-wojenny-2.html
 ---
 
 Czas płynie nieubłaganie, zatem przyszła pora na kolejny raport wojenny z frontu walki o lepszą automatyzację release'ów.

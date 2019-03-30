@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-06-30 19:50:00 +0100
 categories: javascript html-css eksperymenty
 comments: true
+permalink: /jednoplikowe-komponenty.html
+redirect_from:
+    - /javascript/html-css/eksperymenty/2018/06/30/jednoplikowe-komponenty.html
 ---
 
 Chyba każdy, kto miał styczność z [frameworkiem Vue](https://vuejs.org/), słyszał również o jego [jednoplikowych komponentach](https://vuejs.org/v2/guide/single-file-components.html). Ten super prosty pomysł pozwala definiować cały kod odpowiedzialny za konkretny komponent w jednym pliku. Jest to na tyle dobre rozwiązanie, że [pojawiła się inicjatywa przeniesienia tego mechanizmu do przeglądarek](https://github.com/TheLarkInn/unity-component-specification). Niemniej – stanęła w miejscu i od sierpnia tamtego roku nic się nie wydarzyło. Mimo to myślę, że spojrzenie na ten problem i próba dostosowania go do przeglądarki jest ciekawym zagadnieniem, którym się dzisiaj zajmiemy.

@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-02-28 19:27:00 +0100
 categories: a11y html-css
 comments: true
+permalink: /o-ikonkach-slow-kilka.html
+redirect_from:
+    - /a11y/html-css/2017/02/28/o-ikonkach-slow-kilka.html
 ---
 
 Każdy z nas na pewno choć raz w życiu użył icon fontów – czy to [Fontello](http://fontello.com/), czy [Font Awesome](http://fontawesome.io/). Jednak nie każdy z nas zastanawiał się, jaki jest idealny sposób na wstawianie ich na stronę.

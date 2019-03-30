@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-10-31 23:25:00 +0100
 categories: javascript
 comments: true
+permalink: /deklaratywny-shadow-dom.html
+redirect_from:
+    - /javascript/2017/10/31/deklaratywny-shadow-dom.html
 ---
 
 W swoim [poprzednim wpisie](https://blog.comandeer.pl/javascript/2017/09/30/zmutowany-dom.html) rozpisałem się co nieco o mutowaniu DOM-u i obiecałem, że następnym razem pokażę sensowny przykład jego zastosowania. Ten czas właśnie nadszedł! Pokażę, jak przy pomocy mutacji stworzyć prototyp deklaratywnego Shadow DOM.

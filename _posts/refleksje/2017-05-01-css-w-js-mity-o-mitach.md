@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-05-01 18:20:00 +0200
 categories: refleksje html-css javascript daj-sie-poznac-2017
 comments: true
+permalink: /css-w-js-mity-o-mitach.html
+redirect_from:
+    - /refleksje/html-css/javascript/daj-sie-poznac-2017/2017/05/01/css-w-js-mity-o-mitach.html
 ---
 
 Wszyscy, którzy mnie znają, wiedzą doskonale, że w przypadku Sieci należę raczej do konserwatystów, będących [wyznawcami starego porządku](http://webroad.pl/inne/3722-progressive-enhancement-zapomniany-fundament). To uwielbienie dla tradycji rozciąga się także na używane technologie. Jeśli coś jest nowe, lecz _niewystarczająco_ dobre, po prostu tego nie używam. Prawda jest taka, że przeżyłem już niejedną super nowoczesną, gorącą technologię ([prawda, Angular?](https://www.webkrytyk.pl/2014/12/12/moja-prawda-o-angular-js/)) i widziałem śmierć niejednego standardu (a nawet przeglądarki!). I mam wrażenie, że kolejny z trendów również przeżyję: CSS w JS-ie.
@@ -111,7 +114,7 @@ I właśnie tak zabija się standardy sieciowie. Zamiast włączyć się w proce
 
 [Ciekawą kwestię porusza z kolei Paul Henschel](https://medium.com/@drcmda/pretending-that-css-works-just-fine-with-functional-components-is-a-delusional-as-saying-jss-has-it-9d9455af1eac):
 
->   Pretending that css works just fine with functional components is as odd as saying jss has it already figured out. […] A declarative, functional component is not a HTML directive and will never be. 
+>   Pretending that css works just fine with functional components is as odd as saying jss has it already figured out. […] A declarative, functional component is not a HTML directive and will never be.
 
 Skoro komponenty Reacta są funkcyjne, to czemu są deklarowane przy pomocy XML-owej składni? Co więcej – są przecież tłumaczone następnie na kod HTML… Odnoszę wrażenie, że funkcyjne komponenty to kolejny mit, jaki towarzyszy Reactowi, który po raz kolejny odwraca naszą uwagę od faktu, że React jest niczym więcej, jak warstwą abstrakcji dla widoku – i tym być powinien.
 

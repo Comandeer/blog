@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-05-28 23:40:00 +0200
 categories: javascript daj-sie-poznac-2017
 comments: true
+permalink: /prymitywna-implementacja-mitycznej-funkcji-react-createelement.html
+redirect_from:
+    - /javascript/daj-sie-poznac-2017/2017/05/28/pymitywna-implementacja-mitycznej-funkcji-React-createElement.html
 ---
 
 Każdy, kto choć trochę bawił się Reactem (czy naprawdę jestem jedynym, którego nigdy do tego nie ciągnęło?!), zapewne zauważył, że pod spodem JSX-a znajduje się [mityczna funkcja `React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement). [Składnia tej funkcji szybko została podchwycona przez inne biblioteki](https://github.com/Matt-Esch/virtual-dom#example---creating-a-vtree-using-the-objects-directly) i obecnie jest <i>de facto</i> standardem w środowisku zajmującym się Virtual DOM.
@@ -40,7 +43,7 @@ powinno nam ostatecznie wygenerować
 Analogicznie
 
 ```javascript
-React.createElement( 'div', null, 
+React.createElement( 'div', null,
 	React.createElement( 'p', null, 'Test' )
 );
 ```
@@ -49,7 +52,7 @@ powinno nam dać
 
 ```html
 <div>
-	<p>Test</p>  
+	<p>Test</p>
 </div>
 ```
 
@@ -77,7 +80,7 @@ Z racji tego, że `createElement` będzie można zagnieżdżać w sobie, wypada 
 ```javascript
 function createElement( tag, attributes, ...children ) {
 	const element = document.createElement( tag );
-	
+
 	return element;
 }
 ```
@@ -93,13 +96,13 @@ Działa! Na razie nie ma za dużo pożytku z tego, bo `document.createElement` j
 ```javascript
 function createElement( tag, attributes, ...children ) {
 	const element = document.createElement( tag );
-	
+
 	if ( attributes && typeof attributes === 'object' ) {
 		Object.keys( attributes ).forEach( ( attribute ) => {
 			element.setAttribute( attribute, attributes[ attribute ] );
 		} );
 	}
-	
+
 	return element;
 }
 ```
@@ -127,17 +130,17 @@ Uff, czyli zostały nam tylko dzieci do ogarnięcia! Z racji tego, że do pozost
 ```javascript
 function createElement( tag, attributes, ...children ) {
 	const element = document.createElement( tag );
-	
+
 	if ( attributes && typeof attributes === 'object' ) {
 		Object.entries( attributes ).forEach( ( [ name, value] ) => {
 			element.setAttribute( name, value );
 		} );
 	}
-	
+
 	children.forEach( ( child ) => {
 		element.appendChild( child );
 	} );
-	
+
 	return element;
 }
 ```
@@ -156,7 +159,7 @@ children.forEach( ( child ) => {
 	if ( typeof child === 'string' ) {
 		child = new Text( child );
 	}
-		
+
 	element.appendChild( child );
 } );
 ```
@@ -172,21 +175,21 @@ console.log( createElement( 'div', null, 'Test' ) ); // <div>Test</div>
 ```javascript
 function createElement( tag, attributes, ...children ) {
 	const element = document.createElement( tag );
-	
+
 	if ( attributes && typeof attributes === 'object' ) {
 		Object.entries( attributes ).forEach( ( [ name, value] ) => {
 			element.setAttribute( name, value );
 		} );
 	}
-	
+
 	children.forEach( ( child ) => {
 		if ( typeof child === 'string' ) {
 			child = new Text( child );
 		}
-		
+
 		element.appendChild( child );
 	} );
-	
+
 	return element;
 }
 ```

@@ -5,6 +5,9 @@ author: Comandeer
 date:   2019-01-31 02:45:00 +0100
 categories: eksperymenty javascript
 comments: true
+permalink: /system-polyfillow.html
+redirect_from:
+    - /eksperymenty/javascript/2019/01/31/system-polyfillow.html
 ---
 
 Pod koniec tamtego roku trafiłem na artykuł o [leniwym wczytywaniu polyfillów](https://itnext.io/lazy-loading-polyfills-4b85c4951e73). Były one wczytywane w kodzie aplikacji przy pomocy `import`. Niemniej zupełnie nie zgodziłem się wówczas z wizją autora i postanowiłem stworzyć własną wersję takiego systemu. W końcu znalazłem na to chwilę.

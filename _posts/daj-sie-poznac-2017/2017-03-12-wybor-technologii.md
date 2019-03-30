@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-03-12 22:50:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /wybor-technologii.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/03/12/wybor-technologii.html
 ---
 
 Skoro już ustaliłem, co chcę stworzyć w trakcie trwania konkursu (a przynajmniej zacząć), następnym logicznym krokiem będzie wybór technologii, które pomogą mi osiągnąć mój cel. Lista, jak na projekt w JS przystało, jest niepotrzebnie długa i udziwniona:

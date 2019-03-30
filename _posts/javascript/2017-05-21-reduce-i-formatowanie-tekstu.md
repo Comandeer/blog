@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-05-21 20:20:00 +0200
 categories: javascript daj-sie-poznac-2017
 comments: true
+permalink: /reduce-i-formatowanie-tekstu.html
+redirect_from:
+    - /javascript/daj-sie-poznac-2017/2017/05/21/reduce-i-formatowanie-tekstu.html
 ---
 
 Zapewne niektórzy się oburzą, co to za obrzydłe herezje ten Comandeer głosi: jak to można używać `Array.prototype.reduce` do formatowania tekstu?! Ano, można i już demonstruję jak i po co.

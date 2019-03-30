@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-05-07 23:00:00 +0200
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /comsemrel-raport-wojenny-7.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/05/07/comsemrel-raport-wojenny-7.html
 ---
 
 Dalej posucha straszna – za dużo mam innych rzeczy na głowie, żeby na poważnie się zająć ComSemRelem. Teraz siedzę i robię jakieś głupoty, typu poprawna konfiguracja CI, zapewnienie automatycznej aktualizacji zależności przy pomocy [Greenkeepera](https://greenkeeper.io/) itd. Słowem: ruszam, żeby nie było, że umarło.

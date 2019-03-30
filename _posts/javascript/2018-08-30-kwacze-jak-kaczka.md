@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-08-30 23:55:00 +0100
 categories: javascript
 comments: true
+permalink: /kwacze-jak-kaczka.html
+redirect_from:
+    - /javascript/2018/08/30/kwacze-jak-kaczka.html
 ---
 
 Typy proste w JavaScript są nieco specyficzne, bo można ich używać jak obiekty. W końcu kto z nas nie użył nigdy metody `replace` na zwykłym ciągu tekstowym? Ale czy da się zrobić na odwrót, czyli potraktować obiekty jak typy proste?

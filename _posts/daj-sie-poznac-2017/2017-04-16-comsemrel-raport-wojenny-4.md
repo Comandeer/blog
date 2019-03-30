@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-16 20:30:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /comsemrel-raport-wojenny-4.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/04/16/comsemrel-raport-wojenny-4.html
 ---
 
 Od ostatniego raportu minął tydzień, więc pora przyznać się po raz kolejny, jak bardzo mało udało mi się zrobić. Na szczęście tym razem wymówką nie jest bynajmniej lenistwo, a permanentny brak czasu, który poświęcam na rzeczy inne niż konkurs i rozwijanie moich pet projektów (tak, mimo wszystko mam życie!)

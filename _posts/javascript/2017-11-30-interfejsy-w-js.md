@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-11-30 23:15:00 +0100
 categories: javascript
 comments: true
+permalink: /interfejsy-w-js.html
+redirect_from:
+    - /javascript/2017/11/30/interfejsy-w-js.html
 ---
 
 Wszyscy kochamy Javę, dlatego wszyscy chcemy interfejsów w JS, prawda?
@@ -177,7 +180,7 @@ class Plugin {
 			throw new Error( 'Musisz mnie najpierw zaimplementować!' );
 		}
 	}
-	
+
 	exec {}
 }
 class MyPlugin extends Plugin {}

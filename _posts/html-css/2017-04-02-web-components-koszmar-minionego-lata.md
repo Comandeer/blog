@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-02 19:00:00 +0100
 categories: html-css javascript daj-sie-poznac-2017
 comments: true
+permalink: /web-components-koszmar-minionego-lata.html
+redirect_from:
+    - /html-css/javascript/daj-sie-poznac-2017/2017/04/02/web-components-koszmar-minionego-lata.html
 ---
 
 Ach, moje kochane Web Components, o których – jak to zauważają i wytykają mi nieraz znajomi – mogę rozprawiać godzinami, a i tak mi mało. [Gadałem o nich na żywo](http://comandeer.github.io/web-components-slides/), [pisałem o nich zanim się stało to modne](http://webroad.pl/javascript/3505-web-components) i [narzekałem na nie jeszcze przed nadejściem ich ery](http://tutorials.comandeer.pl/polymer.html). Aż w końcu nadeszły szczęśliwe czasy, w których Web Components mają natywne wsparcie. I co?

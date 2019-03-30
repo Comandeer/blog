@@ -5,9 +5,11 @@ author: Comandeer
 date:   2019-02-15 23:50:00 +0100
 categories: refleksje a11y html-css
 comments: true
+permalink: /czy-div-jest-dostepny.html
 redirect_from:
     - /a11y/html-css/2019/02/15/czy-div-jest-dostepny.html
     - /a11y/html-css/refleksje/2019/02/15/czy-div-jest-dostepny.html
+    - /refleksje/a11y/html-css/2019/02/15/czy-div-jest-dostepny.html
 ---
 
 14 lutego [Ryan Florence napisał na Twitterze, że przyciski w React Native Web (RNW) są dostępne](https://twitter.com/ryanflorence/status/1095884090484518914):

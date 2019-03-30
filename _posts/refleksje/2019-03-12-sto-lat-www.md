@@ -5,6 +5,9 @@ author: Comandeer
 date:   2019-03-12 10:00:00 +0100
 categories: refleksje
 comments: true
+permalink: /sto-lat-www.html
+redirect_from:
+    - /refleksje/2019/03/12/sto-lat-www.html
 ---
 
 [Dzisiaj Sieć obchodzi swoje 30. urodziny](https://twitter.com/CERN/status/1105363491030994944). Wszystkiego najlepszego!

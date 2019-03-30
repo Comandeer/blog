@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-09 20:00:00 +0100
 categories: html-css javascript daj-sie-poznac-2017
 comments: true
+permalink: /potrzebujemy-zachowan-nie-dziedziczenia.html
+redirect_from:
+    - /html-css/javascript/daj-sie-poznac-2017/2017/04/09/potrzebujemy-zachowan-nie-dziedziczenia.html
 ---
 
 <small>[This article is also available in English!](https://medium.com/content-uneditable/we-need-behaviors-not-inheritance-978484dfec24)</small>

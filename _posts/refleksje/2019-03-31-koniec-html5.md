@@ -5,6 +5,7 @@ author: Comandeer
 date:   2019-03-31 16:00:00 +0200
 categories: refleksje
 comments: true
+permalink: /koniec-html5.html
 ---
 
 Dzisiaj, czyli 31 marca 2019, kończy się "czarter" [Web Platform Working Group](https://www.w3.org/WebPlatform/WG/). A wraz z nim prawdopodobnie kończy się także historia HTML5 (i DOM 4). I nie, nie jest to przedwczesny żart primaaprilisowy.

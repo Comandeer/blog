@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-14 12:00:00 +0100
 categories: refleksje daj-sie-poznac-2017
 comments: true
+permalink: /mam-nierowno-pod-sufitem.html
+redirect_from:
+    - /refleksje/daj-sie-poznac-2017/2017/04/14/mam-nierowno-pod-sufitem.html
 ---
 
 Z ciekawości przeglądnąłem sobie ostatnio statystyki WebKrytyka (by sprawdzić, czy nowy [agregator treści](http://www.polskifrontend.pl/) przyniósł trochę ruchu) i zauważyłem, że ostatnio wpadło mi trochę ruchu z [Wykopu](http://www.wykop.pl/). Poszukałem skąd dokładnie pochodzi ten przypływ użytkowników i znalazłem [wątek dotyczący kursów Mirosława Zelenta](http://www.wykop.pl/wpis/23156181/). Cóż, od pewnych rzeczy – jak widać – nie sposób się uwolnić.
@@ -28,7 +31,7 @@ jQuery(function($)
 		{
 			//zresetuj scrolla
 			$.scrollTo(0);
-			
+
 			$('#link1').click(function() { $.scrollTo($('#budowacrt'), 500); });
 			$('#link2').click(function() { $.scrollTo($('#zasadacrt'), 500); });
 			$('#link3').click(function() { $.scrollTo($('#maskicrt'), 500); });
@@ -44,7 +47,7 @@ jQuery(function($)
 			$('#link13').click(function() { $.scrollTo($('#hdmi'), 500); });
 			$('#link14').click(function() { $.scrollTo($('#przyszlosc'), 500); });
 			$('#link15').click(function() { $.scrollTo($('#zrodla'), 500); });
-	
+
 			$('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
 		}
 		);

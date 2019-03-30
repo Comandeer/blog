@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-01-05 22:35:00 +0100
 categories: refleksje a11y
 comments: true
+permalink: /pyrrusowe-zwyciestwo.html
+redirect_from:
+    - /refleksje/a11y/2018/01/05/pyrrusowe-zwyciestwo.html
 ---
 
 W Sieci toczy się obecnie spór na miarę tego pomiędzy Świętym Cesarstwem Rzymskim a papiestwem. Po jednej stronie mamy WHATWG, po drugiej – W3C.

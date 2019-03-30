@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-04-09 20:30:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /comsemrel-raport-wojenny-3.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/04/09/comsemrel-raport-wojenny-3.html
 ---
 
 Zastanawiacie się, co takiego ciekawego stało się w ostatnim tygodniu w ComSemRelu? To Wam powiem: **ABSOLUTNIE NIC**.

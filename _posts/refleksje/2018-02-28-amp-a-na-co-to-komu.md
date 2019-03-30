@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-02-28 23:58:00 +0100
 categories: refleksje html-css
 comments: true
+permalink: /amp-a-na-co-to-komu.html
+redirect_from:
+    - /refleksje/html-css/2018/02/28/amp-a-na-co-to-komu.html
 ---
 
 Siedząc od lat w środowisku webdevowym, wyrobiłem sobie dość silne opinie o poszczególnych aspektach działania dżungli zwanej Siecią. Dzisiaj podzielę się jedną z takich opinii.

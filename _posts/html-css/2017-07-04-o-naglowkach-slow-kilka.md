@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-07-04 16:20:00 +0200
 categories: html-css a11y
 comments: true
+permalink: /o-naglowkach-slow-kilka.html
+redirect_from:
+    - /html-css/a11y/2017/07/04/o-naglowkach-slow-kilka.html
 ---
 
 Mam już dość powtarzania wciąż na nowo i nowo bzdur odnośnie wykorzystania nagłówków w HTML5, co wręcz prowadzi do ["poprawiania" dobrych materiałów w Sieci](http://sowaprogramuje.pl/10-bledow-poczatkujacych-frontend-developerow-czesc-1/#comment-54). Dlatego dzisiaj słów kilka o nagłówkach.

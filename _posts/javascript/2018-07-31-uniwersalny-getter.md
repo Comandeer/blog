@@ -5,6 +5,9 @@ author: Comandeer
 date:   2018-07-31 19:40:00 +0100
 categories: javascript
 comments: true
+permalink: /uniwersalny-getter.html
+redirect_from:
+    - /javascript/2018/07/31/uniwersalny-getter.html
 ---
 
 Chociaż magia niezbyt idzie w parze z programowaniem, to mimo to polubiłem PHP-owe metody magiczne, wśród których chyba najbardziej przypadło mi do gustu `__get`. Ta prosta metoda pozwalała przechwycić odwołania do nieistniejących pól klasy:
@@ -126,7 +129,7 @@ const proxy = new Proxy( obj, {
 		if ( Reflect.has( target, property ) ) { // 1
 			return Reflect.get( target, property ); // 2
 		}
-		
+
 		return '¯\\_(ツ)_/¯'; // 3
 	}
 } );

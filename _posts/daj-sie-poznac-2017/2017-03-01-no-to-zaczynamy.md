@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-03-01 22:10:18 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /no-to-zaczynamy.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/03/01/no-to-zaczynamy.html
 ---
 
 Dzisiaj 1 marca 2017, zatem czas powoli przysiąść nad projektem, który nieopatrznie zgłosiłem do [konkursu Daj Się Poznać 2017](http://devstyle.pl/daj-sie-poznac/). Znając mój legendarny zapał i wytrwałość w tworzeniu moich programistycznych projektów (spoiler: umarły wszystkie), podziwiam swoją niezwykłą naiwność, że tym razem będzie inaczej i sprostam morderczym wymaganiom konkursu (2 posty tygodniowo na blogu?!!). Niemniej skoro już się zgłosiłem, wypada wytrwać przynajmniej 1. tydzień, prawda?

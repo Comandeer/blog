@@ -5,6 +5,9 @@ author: Comandeer
 date:   2017-03-18 23:40:00 +0100
 categories: daj-sie-poznac-2017
 comments: true
+permalink: /typescript-pierwsze-wrazenia.html
+redirect_from:
+    - /daj-sie-poznac-2017/2017/03/18/typescript-pierwsze-wrazenia.html
 ---
 
 Od rozpoczęcia konkursu minęło już trochę czasu, więc miałem go nieco, by zaznajomić się – choćby w podstawowym stopniu – z TypeScriptem. Oto garść moich wstępnych przemyśleń.
