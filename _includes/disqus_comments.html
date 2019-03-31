@@ -1,9 +1,8 @@
 {% if page.comments != false and jekyll.environment == "production" %}
-
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-        this.page.identifier = '{{ page.id }}';
+        this.page.identifier = '{% if page.redirect_from %} {{ page.redirect_from | last }} {% else %} {{ page.id }} {% endif %}';
     };
 
     (function() {
