@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Icon CE demo</title>
+</head>
+<body>
+	<icon- name="facebook" width="256" height="256" normal-background="#f00" normal-fill="blue" hover-background="#0f0" hover-fill="orange"></icon->
+	<icon- name="typescript"></icon->
+
+	<script>
+		class Icon extends HTMLElement {
+			connectedCallback() {
+				const name = this.getAttribute( 'name' );
+				const width = this.getAttribute( 'width' ) || 32;
+				const height = this.getAttribute( 'height' ) || 32;
+				const params = this.createSearchQuery();
+				const shadow = this.attachShadow( { mode: 'closed' } );
+
+				shadow.innerHTML = `<object data="sprite.svg?${ params }#${ this.getAttribute( 'name' ) }" type="image/svg+xml" width="${ width }" height="${ height }"></object>`;
+			}
+
+			createSearchQuery() {
+				const attributes = [ ...this.attributes ].filter( ( { name } ) => {
+					return ![
+						'name',
+						'width',
+						'height'
+					].includes( name );
+				} ).map( ( { name, value } ) => {
+					return [ name, value ];
+				} );
+				const params = new URLSearchParams( attributes );
+
+				return params.toString();
+			}
+		}
+
+		customElements.define( 'icon-', Icon );
+	</script>
+</body>
+</html>
