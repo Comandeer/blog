@@ -84,7 +84,7 @@ myArray[ 0 ] = 'whatever';
 console.log( myArray.length ); // 1
 ```
 
-Jak widać, teraz wszystko działa tak, jak powinno. Dzieje się tak, ponieważ `extends` pozwala także na dziedziczenie wszelkich niestandardowych zachowań tzw. [obiektów egzotycznych](https://tc39.es/ecma262/#sec-exotic-object). Jak się nietrudno domyślić, `Array` to właśnie przykład obiektu egzotycznego. Oznacza to mniej więcej tyle, że w jego zachowaniu pojawia się odstępstwo w stosunku do innych, "normalnych" obiektów w JS. W przypadku tablic tym odstępstwem jest oczywiście dostęp (dodawanie/usuwanie) do elementów tablicy przy pomocy indeksów numerycznych oraz powiązana z tym własność `length`. 
+Jak widać, teraz wszystko działa tak, jak powinno. Dzieje się tak, ponieważ `extends` pozwala także na dziedziczenie wszelkich niestandardowych zachowań tzw. [obiektów egzotycznych](https://tc39.es/ecma262/#sec-exotic-object). Jak się nietrudno domyślić, `Array` to właśnie przykład obiektu egzotycznego. Oznacza to mniej więcej tyle, że w jego zachowaniu pojawia się odstępstwo w stosunku do innych, "normalnych" obiektów w JS. W przypadku tablic tym odstępstwem jest oczywiście dostęp (dodawanie/usuwanie) do elementów tablicy przy pomocy indeksów numerycznych oraz powiązana z tym własność `length`.
 
 <p class="note"><a href="https://exploringjs.com/es6/ch_classes.html#_why-cant-you-subclass-built-in-constructors-in-es5" rel="noreferrer noopener">Więcej o różnicy pomiędzy dziedziczeniem w ES5 i ES6 napisał Axel Rauschmayer</a>.</p>
 
@@ -147,7 +147,7 @@ Odczytywanie elementów z tablicy uruchamia pułapkę `get`. Zanim jednak pobier
 function translateProperty( target, property ) { // 1
 	const propertyAsNumber = Number( property ); // 2
 
-	if ( Number.isNaN( propertyAsNumber ) || propertyAsNumber > 0 ) { // 3
+	if ( Number.isNaN( propertyAsNumber ) || propertyAsNumber >= 0 ) { // 3
 		return property; // 4
 	}
 
@@ -161,7 +161,7 @@ function translateProperty( target, property ) { // 1
 }
 ```
 
-Jako parametry (1) przekazujemy tablicę (`target`), dla której chcemy ustalić indeks, oraz nazwę pobieranej własności (`property`). Z racji tego, że każda nazwa własności jest przekazywana jako ciąg tekstowy, to żeby sprawdzić, czy mamy do czynienia z indeksem tablicy, przeprowadzamy konwersję do liczby (2). Jeśli jako wynik uzyskamy `NaN` (a więc: jeśli własność nie jest liczbą) albo liczbę dodatnią (3), po prostu zwracamy tę własność (4). W innym wypadku uzyskujemy dodatni indeks poprzez odjęcie od długości tablicy wartości absolutnej indeksu (5). Z racji tego, że długość tablicy jest zawsze o jeden dłuższa niż ostatni indeks w tablicy, niweluje to różnicę wynikają z faktu, że negatywne indeksy są numerowane od `-1`. Jeśli wynik takiego obliczenia jest ujemny (6) – a zatem: jeśli ktoś chce się cofnąć dalej niż wszystkie elementy w tablicy – rzucamy odpowiedni błąd (7). Jeśli uzyskaliśmy indeks dodatni, zwracamy go (8).
+Jako parametry (1) przekazujemy tablicę (`target`), dla której chcemy ustalić indeks, oraz nazwę pobieranej własności (`property`). Z racji tego, że każda nazwa własności jest przekazywana jako ciąg tekstowy, to żeby sprawdzić, czy mamy do czynienia z indeksem tablicy, przeprowadzamy konwersję do liczby (2). Jeśli jako wynik uzyskamy `NaN` (a więc: jeśli własność nie jest liczbą) albo liczbę dodatnią lub zero (3), po prostu zwracamy tę własność (4). W innym wypadku uzyskujemy dodatni indeks (lub równy 0) poprzez odjęcie od długości tablicy wartości absolutnej indeksu (5). Z racji tego, że długość tablicy jest zawsze o jeden dłuższa niż ostatni indeks w tablicy, niweluje to różnicę wynikają z faktu, że negatywne indeksy są numerowane od `-1`. Jeśli wynik takiego obliczenia jest ujemny (6) – a zatem: jeśli ktoś chce się cofnąć dalej niż wszystkie elementy w tablicy – rzucamy odpowiedni błąd (7). Jeśli uzyskaliśmy indeks dodatni lub zero, zwracamy go (8).
 
 Teraz wystarczy dorzucić tę funkcję na początek pułapki `get` naszego proxy:
 
