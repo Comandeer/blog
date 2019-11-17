@@ -28,6 +28,16 @@ Podobnie jak w tamtym roku, jest też konkurs. Do wygrania są **AŻ DWA** bilet
 
 Odpowiedzi proszę nadsyłać na adres [comandeer@comandeer.pl](mailto:comandeer@comandeer.pl). Dwie najlepsze odpowiedzi pozwolę sobie opublikować później w aktualizacji tego wpisu, a ich autorów nagrodzić biletami. Konkurs trwa do **16 listopada 2019 23:59:59**.
 
+### Zwycięzca #1
+
+> Jakiego Web API mi brakuje? Szukając odpowiedzi na to pytanie zastanawiałem się dobre kilka dni. Okazało się, że odpowiedź sama się znalazła – brakuje dobrego API sieci kin. Dlaczego? To proste, brakuje miejsca w którym znalazłbym wszystkie informacje na temat repertuarów lokalnych kin. Znacznie ułatwiłoby to sprawę szukania odpowiedniego dla nas filmu, daty i godziny.
+>
+> Oczywiście istnieją już podobne rozwiązania, ale brak w nich kin tych „mniej komercyjnych”, a szkoda – bo w przypadku powstania takiego narzędzia te byłyby również lepiej promowane i zyskałyby na popularności.
+
+### Zwycięzca #2
+
+> Najbardziej brakuje mi API stacji paliw np Orlen - tam najczęściej tankuje, wystawienie takiego API skutkowało by możliwością napisania apilkajci z porównywarka cen paliw na danej stacji i wybrania najkorzystniejszej opcji.
+
 ## Zniżka
 
 Ale to nie wszystko! Jeśli z jakiegoś powodu nie wierzysz w swoją wygraną w konkursie, mam też dla Ciebie kupon zniżkowy na bilet, który redukuje cenę o 25%:
