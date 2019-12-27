@@ -1,3 +1,46 @@
+:focus {
+	outline: 2px #e00 dashed;
+}
+:focus-visible {
+	outline: 2px #e00 dashed;
+}
+:focus:not(:focus-visible) {
+	outline: none;
+}
+[tabindex="-1"] {
+	outline: none;
+}
+.sr-only {
+	position: absolute;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+	margin: -1px;
+	white-space: normal;
+}
+.sr-only:focus {
+	clip: auto;
+	z-index: 10;
+	width: auto;
+	height: auto;
+	white-space: inherit;
+}
+
+.skip-link {
+	top: 0;
+	left: 0;
+	background: #fff;
+	color: #000;
+	font-size: 2rem;
+	line-height: 2rem;
+	padding: 0 1rem;
+}
+.skip-link:hover, .skip-link:focus {
+	color: #000;
+}
+
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 	font-size: inherit;
 }
