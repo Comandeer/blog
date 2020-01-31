@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Abortable asynchronous function</title>
+</head>
+<body>
+	<button id="calculate">Calculate</button>
+
+	<script type="module">
+		{
+			let abortController = null;
+
+			document.querySelector( '#calculate' ).addEventListener( 'click', async ( { target } ) => {
+				if ( abortController ) {
+					abortController.abort();
+
+					abortController = null;
+					target.innerText = 'Calculate';
+
+					return;
+				}
+
+				abortController = new AbortController();
+				target.innerText = 'Stop calculation';
+
+				try {
+					const result = await calculate( abortController.signal );
+
+					alert( result );
+				} catch {
+					alert( 'WHY DID YOU DO THAT?!!' );
+				} finally {
+					abortController = null;
+					target.innerText = 'Calculate';
+				}
+			} );
+
+			function calculate( abortSignal ) {
+				return new Promise( ( resolve, reject ) => {
+					const error = new DOMException( 'Calculation aborted by user', 'AbortError' );
+
+					if ( abortSignal.aborted ) {
+						return reject( error );
+					}
+
+					const timeout = setTimeout( ()=> {
+						resolve( 1 );
+					}, 5000 );
+
+					abortSignal.addEventListener( 'abort', () => {
+						clearTimeout( timeout );
+						reject( error );
+					} );
+				} );
+			}
+		}
+	</script>
+</body>
+</html>
