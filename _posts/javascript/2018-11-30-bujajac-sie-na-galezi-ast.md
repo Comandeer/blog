@@ -134,26 +134,26 @@ someFunction();
 Załóżmy, że jesteśmy już po fazie instalacji zależności:
 
 ```bash
-npm install @babel/parse @babel/traverse @babel/generator @babel/types
+npm install @babel/parser @babel/traverse @babel/generator @babel/types
 ```
 
-Pierwszy krok, jaki musimy wykonać, to zamiana kodu na AST. W tym celu musimy wczytać treść tego pliku, a następnie skorzystać z metody `parse` pakietu `@babel/parse`:
+Pierwszy krok, jaki musimy wykonać, to zamiana kodu na AST. W tym celu musimy wczytać treść tego pliku, a następnie skorzystać z metody `parse` pakietu `@babel/parser`:
 
 ```javascript
 const { join: joinPath} = require( 'path' ); // 3
 const { readFileSync } = require( 'fs' ); // 2
-const { parse } = require( '@babel/parse' ); // 5
+const { parse } = require( '@babel/parser' ); // 5
 
 const path = joinPath( __dirname, 'input.js' );
 const code = readFileSync( path, 'utf8' ); // 1
 const ast = parse( code ); // 4
 ```
 
-Do wczytania pliku (1) używamy metody `readFileSync` z wbudowanego modułu `fs` (2). By mieć pewność, że ścieżka do pliku będzie prawidłowa, skorzystamy z kolei z metody `join` z wbudowanego modułu `path` (3). Gdy już mamy kod z pliku zapisany do zmiennej, wystarczy przepuścić go przez metodę `parse` (4), która pochodzi z pakietu `@babel/parse` (5). Tyle – mamy AST!
+Do wczytania pliku (1) używamy metody `readFileSync` z wbudowanego modułu `fs` (2). By mieć pewność, że ścieżka do pliku będzie prawidłowa, skorzystamy z kolei z metody `join` z wbudowanego modułu `path` (3). Gdy już mamy kod z pliku zapisany do zmiennej, wystarczy przepuścić go przez metodę `parse` (4), która pochodzi z pakietu `@babel/parser` (5). Tyle – mamy AST!
 
 ### Przeczesywanie drzewka
 
-Na tym rola modułu `@babel/parse` się kończy, a na scenę wkracza `@babel/traverse`, umożliwiający poruszanie się po całym drzewku i pobieranie każdego węzła. Przekażmy mu zatem AST:
+Na tym rola modułu `@babel/parser` się kończy, a na scenę wkracza `@babel/traverse`, umożliwiający poruszanie się po całym drzewku i pobieranie każdego węzła. Przekażmy mu zatem AST:
 
 ```javascript
 const { default: traverse } = require( '@babel/traverse' );
