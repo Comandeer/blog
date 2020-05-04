@@ -128,7 +128,7 @@ Na szczęście uruchomienie lokalnego serwera sprowadza się do wywołania poni�
 npx http-server ./
 ```
 
-Komenda ta ściągnie i urochomi [pakiet npm `http-server`](https://www.npmjs.com/package/http-server). Możemy następnie przejść pod adres `http://localhost:8080` (lub inny adres, który wyświetlił się w Twoim terminalu) i przetestować aplikację.
+Komenda ta ściągnie i uruchomi [pakiet npm `http-server`](https://www.npmjs.com/package/http-server). Możemy następnie przejść pod adres `http://localhost:8080` (lub inny adres, który wyświetlił się w Twoim terminalu) i przetestować aplikację.
 
 I to tyle! Dzięki tym nowym APIs można bez większych problemów wykrywać konkretne kształty na obrazkach – a przynajmniej w Chrome. Czy inne przeglądarki to również zaimplementują? Zobaczymy.
 
