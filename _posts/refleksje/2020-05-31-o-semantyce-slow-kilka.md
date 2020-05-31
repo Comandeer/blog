@@ -122,7 +122,7 @@ Tym sposobem nasz nagłówek przekazuje informacje z wszystkich wymienionych wy�
 
 W podobny sposób można rozszerzać znaczenie praktycznie każdego znacznika HTML.
 
-## Semantyka o dostępność
+## Semantyka a dostępność
 
 Ok, teoria teorią, ale czy ma to faktyczne przełożenie na cokolwiek? Jak najbardziej. Najprościej wykazać to, pokazując, jak semantyka wpływa na dostępność. Robiłem to już zresztą wcześniej, np. w [artykule o nagłówkach](https://blog.comandeer.pl/o-naglowkach-slow-kilka.html#nag%C5%82%C3%B3wki-a-dost%C4%99pno%C5%9B%C4%87) czy [artykule o przyciskach w React Native](https://blog.comandeer.pl/czy-div-jest-dostepny.html#dost%C4%99pno%C5%9B%C4%87-to-nie-tylko-czytniki-ekranowe).
 
