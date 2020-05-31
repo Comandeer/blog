@@ -10,7 +10,7 @@ redirect_from:
     - /html-css/javascript/daj-sie-poznac-2017/2017/05/12/bem-jako-architektura.html
 ---
 
-Co bardziej zaznajomieni z moją osobą zapewne już zorientowali się, że [udało mi się napisać książkę](http://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm). Tworzę w niej [bibliotekę BEMQuery](https://github.com/BEMQuery) (wrócę do niej kiedyś… serio), która opiera się na bardzo prostym założeniu: zamiast pobierać elementy jak w jQuery, przy pomocy selektorów CSS, tworzę swój własny język zainspirowany [metodologią BEM](https://en.bem.info/). Można by wręcz odnieść wrażenie, że jestem fanatykiem BEM-u – piszę o nim książkę, piszę narzędzia nim inspirowane, wszędzie, gdzie tylko się da, ewangelizuję ludzi, żeby przeszli na BEM…
+Co bardziej zaznajomieni z moją osobą zapewne już zorientowali się, że [udało mi się napisać książkę](http://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm). Tworzę w niej [bibliotekę BEMQuery](https://github.com/BEMQuery) (wrócę do niej kiedyś… serio), która opiera się na bardzo prostym założeniu: zamiast pobierać elementy jak w jQuery, przy pomocy selektorów CSS, tworzę swój własny język zainspirowany [metodyką BEM](https://en.bem.info/). Można by wręcz odnieść wrażenie, że jestem fanatykiem BEM-u – piszę o nim książkę, piszę narzędzia nim inspirowane, wszędzie, gdzie tylko się da, ewangelizuję ludzi, żeby przeszli na BEM…
 
 Nie zawsze tak jednak było. Kiedyś uważałem BEM za klasyczny przykład [classitisu](https://www.steveworkman.com/html5-2/standards/2009/classitis-the-new-css-disease/). Było to spowodowane prostym faktem, że niemal wszystkie materiały w Sieci, które przybliżyć miały czytelnikowi, czym jest BEM, skupiały się w gruncie rzeczy na jego najmniej istotnym elemencie: konwencji nazewniczej. Niemniej, gdy wspomina się o BEM, niemal wszyscy myślą właśnie o tym – o konwencji nazewniczej:
 
@@ -20,7 +20,7 @@ Nie zawsze tak jednak było. Kiedyś uważałem BEM za klasyczny przykład [clas
 </div>
 ```
 
-[Nieco lepszy przykład](http://pasjaonline.pl/krotki-przyklad-na-zywo/) skonstruowałem lata temu. Nie zmienia to jednak faktu, że praktycznie wszystkie artykuły o BEM po polsku (ale nie tylko) sprowadzają się do tego samego: wspomnienia, że BEM to podział na bloki, elementy i modyfikatory i że jest to realizowane przy pomocy konwencji nazewniczej. I tutaj pojawia się problem: wiążę się całą metodologię z jej konkretną implementacją…
+[Nieco lepszy przykład](http://pasjaonline.pl/krotki-przyklad-na-zywo/) skonstruowałem lata temu. Nie zmienia to jednak faktu, że praktycznie wszystkie artykuły o BEM po polsku (ale nie tylko) sprowadzają się do tego samego: wspomnienia, że BEM to podział na bloki, elementy i modyfikatory i że jest to realizowane przy pomocy konwencji nazewniczej. I tutaj pojawia się problem: wiążę się całą metodykę z jej konkretną implementacją…
 
 Wróćmy do samego początku, do podstaw i przyjrzyjmy się BEM nie przez pryzmat jego konwencji nazewniczej, ale _terminologii_. Pozwolę sobie użyć [swojego poprzedniego przykładu, formularza logowania](http://codepen.io/Comandeer/pen/epbaYM) i jeszcze raz spróbujemy go podzielić zgodnie z filozofią BEM. Dla przypomnienia, najważniejsze założenia BEM brzmią:
 

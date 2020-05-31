@@ -16,7 +16,7 @@ Choć tydzień temu [obwieściłem śmierć Web Components](https://blog.comand
 
 ## OOP a DOM
 
-Jeśli coś się nazywa Obiektowym Modelem Dokumentu, to jakbyśmy nie próbowali nagiąć faktów, nie uciekniemy od prostego stwierdzenia, że mimo wszystko to część starego i dobrego OOP (DFM – Document Functional Object; rzucam Wam wyzwanie, wielbiciele FP!). Z tego też powodu Web Components (WC) również, chcąc nie chcąc, w tę metodologię wpisywać się muszą – ot, choćby dla starej, poczciwej zasady zachowania konsekwencji  i spójności.
+Jeśli coś się nazywa Obiektowym Modelem Dokumentu, to jakbyśmy nie próbowali nagiąć faktów, nie uciekniemy od prostego stwierdzenia, że mimo wszystko to część starego i dobrego OOP (DFM – Document Functional Model; rzucam Wam wyzwanie, wielbiciele FP!). Z tego też powodu Web Components (WC) również, chcąc nie chcąc, w tę metodologię wpisywać się muszą – ot, choćby dla starej, poczciwej zasady zachowania konsekwencji  i spójności.
 
 Najbardziej ucierpiały na tym Custom Elements (CE), które są niczym innym jak klasami rozszerzającymi natywny DOM-owy konstruktor `HTMLElement`. Jeśli tego podstawowego warunku nie spełnimy, przeglądarka się zbuntuje przy próbie stworzenia takiego elementu:
 
