@@ -3,7 +3,7 @@ layout: post
 title:  "O nagłówkach słów kilka"
 author: Comandeer
 date:   2017-07-04 16:20:00 +0200
-categories: html-css a11y
+categories: html-css a11y refleksje
 comments: true
 permalink: /o-naglowkach-slow-kilka.html
 redirect_from:
@@ -175,4 +175,4 @@ Na chwilę obecną problem ten najlepiej rozwiązać tworząc… [komponent nag�
 
 ## Podtytuły
 
-Została ostatnia kwesia. [Podtytytułów nie robi się na nagłówkach](http://w3c.github.io/html/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines). Jest to bowiem dodatkowa informacja do już wstawionego nagłówka. Umieszczanie tego w nagłówku niepotrzebnie komplikowałoby hierarchię treści. Dodatkowo byłoby to utrudnieniem dla użytkowników czytników ekranowych, umieszczając dwa punkty nawigacyjne praktycznie w tym samym miejscu.
+Została ostatnia kwesia. [Podtytytułów nie robi się na nagłówkach](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines). Jest to bowiem dodatkowa informacja do już wstawionego nagłówka. Umieszczanie tego w nagłówku niepotrzebnie komplikowałoby hierarchię treści. Dodatkowo byłoby to utrudnieniem dla użytkowników czytników ekranowych, umieszczając dwa punkty nawigacyjne praktycznie w tym samym miejscu.
