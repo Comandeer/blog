@@ -27,10 +27,10 @@ Czemu pusty element? Ponieważ to najprostszy sposób na stworzenie elementu, kt
 Natomiast jeśli ikonka niesie treść sama w sobie (nie towarzyszy jej żaden tekst), to wówczas można zrobić tak:
 
 ```html
-<span class="icon icon_email" aria-label="E-mail"></span>
+<span role="img" class="icon icon_email" aria-label="E-mail"></span>
 ```
 
-Tak, powinno być użyte **co najmniej** `[aria-label]`. `[title]` też może zadziałać, ale pojawia się pewien problem: `[title]` jest czytany tylko wówczas, gdy zawartość elementu nie jest możliwa do przeczytania. Czyli wracamy do problemu z Unicode. W przypadku `[aria-label]` problemu nie ma, bo jest on czytany _zamiast_ zawartości elementu (zawsze, nawet jak zawartość to całkowicie normalny tekst).
+Tak, powinno być użyte **co najmniej** `[aria-label]`. `[title]` też może zadziałać, ale pojawia się pewien problem: `[title]` jest czytany tylko wówczas, gdy zawartość elementu nie jest możliwa do przeczytania. Czyli wracamy do problemu z Unicode. W przypadku `[aria-label]` problemu nie ma, bo jest on czytany _zamiast_ zawartości elementu (zawsze, nawet jak zawartość to całkowicie normalny tekst). Dodatkowo trzeba dodać elementowi odpowiednią rolę (z racji, że to ikonka, najlepiej użyć `img`) – inaczej [**sposób może nie zadziałać**](https://w3c.github.io/using-aria/#practical-support-aria-label-aria-labelledby-and-aria-describedby).
 
 ## Bardziej dostępne sposoby
 
