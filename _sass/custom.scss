@@ -59,23 +59,26 @@ kbd {
 	display: inline-block;
 }
 .site-title {
-	display: inline-block;
-	float: none;
-	height: 96px;
-	padding-left: 100px;
-	background: url( logo.png ) no-repeat top left;
-	transition: background .5s ease-in-out;
+	display: flex;
+	height: 60px;
 }
 
-.site-title:hover, .site-title:focus {
-	background-position: 0 -96px;
+.site-title::before {
+	display: block;
+	content: url( logo-light.svg );
+	width: 60px;
+	height: 60px;
+}
+
+.site-title:hover::before, .site-title:focus::before {
+	opacity: .8;
 }
 @media screen and ( min-width: 400px ) {
 	.site-title {
-		line-height: 96px;
+		line-height: 60px;
 	}
 	.site-nav {
-		line-height: 96px;
+		line-height: 60px;
 	}
 }
 .site-nav .trigger {
@@ -105,7 +108,7 @@ kbd {
 @media screen and ( min-width: 601px ) {
 	.site-nav {
 		float: right;
-		line-height: 96px;
+		line-height: 60px;
 		margin: 0;
 	}
 }
