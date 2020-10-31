@@ -8,7 +8,7 @@ comments: true
 permalink: /web-intents-i-naiwniak-czyli-dlaczego-nie-mozemy-miec-fajnych-rzeczy.html
 ---
 
-Wieki temu Paul Kinlan zaproponował nowy standard internetowy: [Web Intents](https://en.wikipedia.org/wiki/Web_Intents). Osobiście czułem, że może to być jedna z większych rewolucji w historii Sieci. I co? I wyszło jak zawsze – czyli w sumie _nie_ wyszło…
+Wieki temu [Paul Kinlan](https://paul.kinlan.me/) zaproponował nowy standard internetowy: [Web Intents](https://en.wikipedia.org/wiki/Web_Intents). Osobiście czułem, że może to być jedna z większych rewolucji w historii Sieci. I co? I wyszło jak zawsze – czyli w sumie _nie_ wyszło…
 
 ## Web Intents – czyli co?
 
@@ -27,7 +27,7 @@ Gdzieś na samym początku 2011 roku znaleźć można [pierwsze wzmianki o Web I
 
 Jednak pomysł na umożliwienie sensownej komunikacji między aplikacjami natywnymi a Siecią nie umarł razem z Web Intents. Wprost z nich powstały dwa inne pomysły: [Web Wishes](https://darobin.github.io/web-wish/) oraz [Web Activities](https://wiki.mozilla.org/WebAPI/WebActivities). Paul Kinlan również później [próbował reanimować pomysł](https://paul.kinlan.me/reinventing-web-intents/), ale bezskutecznie (mimo że zaproponowane przez niego rozwiązanie działa!). Niemniej Web Intents dały podwaliny pod dwa inne projekty Google'a: [Ballistę](https://github.com/chromium/ballista) i wreszcie [Fugu](https://web.dev/fugu-status/).
 
-Ballista była projektem, z którego powstały Web Share (wraz z Web Share Target) oraz File Handling. Rzeczy te następnie stały się częścią projektu Fugu i obecnie są albo uznanymi standardami ([Web Share](https://w3c.github.io/web-share/) i [Web Share Target](https://w3c.github.io/web-share-target/level-2/)), albo mają eksperymentalne implementacje w Chrome ([File Handling](https://web.dev/pl/file-handling/)). Można zatem powiedzieć, że Web Intents weszły do przeglądarek tylnym wejściem… 
+Ballista była projektem, z którego powstały Web Share (wraz z Web Share Target) oraz File Handling. Rzeczy te następnie stały się częścią projektu Fugu i obecnie są albo uznanymi standardami ([Web Share](https://w3c.github.io/web-share/) i [Web Share Target](https://w3c.github.io/web-share-target/level-2/)), albo mają eksperymentalne implementacje w Chrome ([File Handling](https://web.dev/pl/file-handling/)). Można zatem powiedzieć, że Web Intents weszły do przeglądarek tylnym wejściem…
 
 ## Nowy model interakcji z użytkownikiem
 
