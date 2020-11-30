@@ -8,7 +8,7 @@ comments: true
 permalink: /dzien-niebieskiej-czapki.html
 ---
 
-Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki (ang. <i lang="en">Blue Beanie Day</i>). Wszystkiego najlepszego dla wszystkich webdeveloperów! :tada:
+Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki (ang. <i lang="en">Blue Beanie Day</i>). Wszystkiego najlepszego dla wszystkich webdeveloperów! 🎉
 
 ## Niebieska czapka?
 
