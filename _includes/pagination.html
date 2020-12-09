@@ -23,7 +23,7 @@
 		</li>
 	{% elsif page == 1 %}
 		<li class="pagination-item">
-			<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link"><span class="accessible-name">Strona </span>{{ page }}</a>
+			<a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link"><span class="accessible-name">Strona </span>{{ page }}</a>
 		</li>
 	{% else %}
 		<li class="pagination-item">
