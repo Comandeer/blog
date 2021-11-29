@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dzień Niebieskiej Czapki"
+title:  "Dzień Niebieskiej Czapki 2021"
 author: Comandeer
 date:   2021-11-30 00:40:00 +0100
 categories: na-luzie standardy-sieciowe
