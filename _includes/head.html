@@ -24,7 +24,21 @@
 	{% endif %}
 
 	<link rel="icon" href="{{ "/assets/logo-light.svg" | relative_url }}">
-	<link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}" id="page-style">
+	<link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}" id="page-styles">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 	<link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ site.feed.path | relative_url }}">
+	<script>
+		{
+			const date = new Date();
+			const day = date.getDate();
+			const month = date.getMonth();
+
+			if ( day === 9 && month === 3 ) {
+				// CSS Naked Day!
+				const pageStyles = document.querySelector( '#page-styles' );
+
+				pageStyles.media = 'none';
+			}
+		}
+	</script>
 </head>
