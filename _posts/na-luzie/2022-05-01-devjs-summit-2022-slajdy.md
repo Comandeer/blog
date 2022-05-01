@@ -2,7 +2,7 @@
 layout: post
 title:  "dev.js Summit 2022 – slajdy"
 author: Comandeer
-date:   2022-04-29 22:08 +0200
+date: 2022-05-01 17:55 +0200
 categories: na-luzie
 comments: true
 permalink: /devjs-summit-2022-slajdy.html
