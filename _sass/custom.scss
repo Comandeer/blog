@@ -217,3 +217,8 @@ a:visited {
 	content: 'Dygresja';
 	font-size: larger;
 }
+
+table th, table tr:nth-child(even) {
+	background-color: #6f6f7f;
+	color: #fff;
+}
