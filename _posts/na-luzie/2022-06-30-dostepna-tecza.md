@@ -53,7 +53,7 @@ Nowe kolory dobrane względem tła prezentują się następująco:
 | Pomarańczowy | `#ff8c00`             | `#df5c00`         | 3.7                    |
 | Żółty        | `#ffed00`             | `#9a9a00`         | 3                      |
 | Zielony      | `#008026`             | `#008026`         | 5.1                    |
-| Niebieski    | `#004dff`             | `#bbc3ff`         | 5.99                   |
+| Niebieski    | `#004dff`             | `#004dff`         | 5.99                   |
 | Fioletowy    | `#750787`             | `#750787`         | 9.82                   |
 
 W zasadzie tylko dwa kolory się zmieniły, bo reszta dobrze kontrastowała od samego początku.
