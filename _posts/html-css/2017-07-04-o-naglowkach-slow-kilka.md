@@ -12,6 +12,8 @@ redirect_from:
 
 Mam już dość powtarzania wciąż na nowo i nowo bzdur odnośnie wykorzystania nagłówków w HTML5, co wręcz prowadzi do ["poprawiania" dobrych materiałów w Sieci](http://sowaprogramuje.pl/10-bledow-poczatkujacych-frontend-developerow-czesc-1/#comment-54). Dlatego dzisiaj słów kilka o nagłówkach.
 
+<small>**Aktualizacja 2022-10-30**: w końcu poprawiłem linki do specyfikacji HTML i dodałem informacje o `hgroup` w sekcji o podtytułach.</small>
+
 ## Nagłówki – czyli co?
 
 Na sam początek warto zastanowić się, czym są nagłówki. Jeśli ktoś o nich wspomina w kontekście SEO, to najlepiej go _nie_ słuchać. Mit o tym, że mają większe znaczenie dla Google od "normalnych" tagów, wziął się z prawdziwej roli nagłówków.
@@ -52,9 +54,9 @@ Jak widać, nagłówek `h2` jest przedstawiany jako element o roli `heading` (na
 
 ## Nagłówki a HTML5
 
-HTML5 wprowadził nowe znaczniki dzielące stronę na sekcje (tzw. <i>znaczniki sekcjonujące</i>), m.in. `section` czy `article`. W specyfikacji HTML5 pojawia się także zarys nowego algorytmu definiującego hierarchię treści. W skrócie: nieważny jest poziom nagłówka, a jedynie poziom jego "zagłębienia", czyli `body > h2` będzie wyżej niż `body > section > h1`.
+HTML5 wprowadził nowe znaczniki dzielące stronę na sekcje (tzw. <i>znaczniki sekcjonujące</i>), m.in. `section` czy `article`. W specyfikacji HTML5 pojawił się także [zarys nowego algorytmu definiującego hierarchię treści](https://www.w3.org/TR/2014/REC-html5-20141028/sections.html#outlines). W skrócie: nieważny był poziom nagłówka, a jedynie poziom jego "zagłębienia", czyli `body > h2` będzie wyżej niż `body > section > h1`.
 
-Tak brzmi teoria. Rzeczywistość okazała się brutalna, bo [żadna przeglądarka nie dodała wsparcia dla tego algorytmu](https://www.paciellogroup.com/blog/2013/10/html5-document-outline/). Algorytm stał się **niebezpieczną fikcją**, która powodowała problemy z dostępnością. Okazało się bowiem, że `body > h2` było nagłówkiem niższego rzędu niż `body > section > h1`. A z racji tego, że technologia asystująca nie wie o stronie nic ponad to, co dostarczy jej przeglądarka, **nie powinno się korzystać z nowego sposobu definiowania nagłówków**
+Tak brzmiała teoria. Rzeczywistość okazała się brutalna, bo [żadna przeglądarka nie dodała wsparcia dla tego algorytmu](https://www.paciellogroup.com/blog/2013/10/html5-document-outline/). Algorytm stał się **niebezpieczną fikcją**, która powodowała problemy z dostępnością. Okazało się bowiem, że `body > h2` było nagłówkiem niższego rzędu niż `body > section > h1`. A z racji tego, że technologia asystująca nie wie o stronie nic ponad to, co dostarczy jej przeglądarka, **nie powinno się korzystać z nowego sposobu definiowania nagłówków**
 
 Łatwo to sprawdzić empirycznie. Gdyby nowy algorytm działał, `h1` w poniższym kodzie powinien być przedstawiony czytnikowi ekranowemu jako nagłówek drugiego poziomu:
 
@@ -73,13 +75,7 @@ Zobaczmy zatem, czy Chrome faktycznie tak przedstawia ten nagłówek technologii
 
 Jak widać, nagłówek wewnątrz sekcji wciąż jest przedstawiany jako nagłówek pierwszego stopnia. To oznacza, że wykorzystanie kilku nagłówków `h1` na stronie (mimo stosowania równolegle tagów sekcjonujących) tworzy **płaską hierarchię treści**. Tego typu hierarchia jest całkowicie nieprzydatna z punktu widzenia użytkownika – zwłaszcza takiego, który posługuje się dodatkowo technologią asystującą.
 
-Prawda ta jest znana od zawsze i [ma odzwierciedlenie w specyfikacji HTML5](http://w3c.github.io/html/sections.html#creating-an-outline):
-
->   Warning! There are currently no known native implementations of the outline algorithm in graphical browsers or assistive technology user agents, although the algorithm is implemented in other software such as conformance checkers and browser extensions. Therefore the [outline](http://w3c.github.io/html/sections.html#outline) algorithm cannot be relied upon to convey document structure to users. Authors should use heading [rank](http://w3c.github.io/html/sections.html#rank) (`h1`-`h6`) to convey document structure.
-
-Co więcej, cały ten fragment specyfikacji jest oznaczony jako <i>nienormatywny</i> – a zatem nikt _nie ma obowiązku_ się do niego stosować. I nikt tego nie robi.
-
-[W specyfikacji HTML od WHATWG nie istnieje takowa informacja](https://html.spec.whatwg.org/multipage/sections.html#outlines). Ba, ta specyfikacja opisuje sposób obliczania nagłówków wewnątrz elementu `hgroup`! To kolejny dowód na to, że jeśli chodzi o dostępność, to lepiej omijać specyfikację od WHATWG…
+Prawda ta jest znana od zawsze i [w końcu ma odzwierciedlenie w specyfikacji HTML](https://blog.comandeer.pl/nie-zyja-naglowki-niech-zyja-naglowki.html) – algorytm outline'u został usunięty i już oficjalnie jedynym poprawnym sposobem na tworzenie hierarchii treści jest **wykorzystywanie wszystkich poziomów nagłówków**.
 
 W kontekście HTML5 powstaje zatem zasadne pytanie: czy jest sens stosować znaczniki sekcjonujące skoro i tak wypada stosować nagłówki po staremu? Uważam, że tak, bo tagi te sprawiają, że kod staje się przejrzystszy. Sekcje są oznaczone już nie tylko przez sam nagłówek, ale przez wyraźny tag `section` bądź `article`. Tym sposobem kod jest bardziej <i>semantyczny</i>.
 
@@ -91,7 +87,7 @@ Warto też przez chwilę zastanowić się nad określaniem głównego nagłówka
 
 Przez lata powtarzałem, że [w przypadku większości stron głównym nagłówkiem strony powinno być logo](https://www.webkrytyk.pl/2013/08/18/lexy-com-pl/#naglowki). Niestety, podgląd ten  [nie jest mocno popularny wśród użytkowników czytników ekranowych](http://www.456bereastreet.com/archive/201104/html5_document_outline_revisited/). Większość z nich (ponad 50%) twierdzi, że `h1` powinno być tytułem danej podstrony. 30% użytkowników dopuszcza za to istnienie dwóch `h1`: dla tytułu całej witryny oraz dla tytułu danej podstrony. Jedynie około 12% uważa, że `h1` powinno oznaczać tytuł całej witryny.
 
-Tego typu wyniki doprowadziły do stworzenia techniki, w której logo/nazwa witryny jest nagłówkiem `h1` wyłącznie na stronie głównej. Na poszczególnych podstronach logo stanowi już tylko link, natomiast w znaczniku `h1` znajduje się tytuł podstrony.  Ta technika jest wykorzystywana m.in. na stronie [<b>Internet Bez Barier</b>](http://internet-bez-barier.com/).  Warto porównać kod [strony głównej](http://internet-bez-barier.com/) z kodem [dowolnej podstrony](http://internet-bez-barier.com/tabele-html/):
+Tego typu wyniki doprowadziły do stworzenia techniki, w której logo/nazwa witryny jest nagłówkiem `h1` wyłącznie na stronie głównej. Na poszczególnych podstronach logo stanowi już tylko link, natomiast w znaczniku `h1` znajduje się tytuł podstrony.  Ta technika ~~jest~~ była wykorzystywana m.in. na stronie [<b>Internet Bez Barier</b>](https://web.archive.org/web/20170201032956/http://internet-bez-barier.com/).  Warto porównać kod [strony głównej](https://web.archive.org/web/20170201032956/http://internet-bez-barier.com/) z kodem [dowolnej podstrony](https://web.archive.org/web/20170912214540/http://internet-bez-barier.com/tabele-html):
 
 ```html
 <!-- strona główna nagłówek -->
@@ -141,7 +137,7 @@ Istnieje jeszcze jeden wzorzec, o którym warto wspomnieć, a który proponuje n
 </nav>
 ```
 
-W tym modelu nawigacja i nagłówek strony są osobnymi bytami. Trzeba przyznać, że jest to dość sensowne rozwiązanie i stosuje je m.in. [Smashing Magazine](https://www.smashingmagazine.com/)… niemniej nie do końca mnie przekonuje. Wydaje mi się, że ten wzorzec najbardziej sprawdziłby się w przypadku aplikacji, w której nagłówki określałyby po prostu kolejne widgety/komponenty, lub na stronach reklamowych, gdzie występuje tzw. [<i lang="en">hero section</i>](https://www.sitepoint.com/exploring-hero-section/).
+W tym modelu nawigacja i nagłówek strony są osobnymi bytami. Trzeba przyznać, że jest to dość sensowne rozwiązanie i stosuje je m.in. [Smashing Magazine](https://www.smashingmagazine.com/). Wydaje mi się, że ten wzorzec najbardziej sprawdziłby się w przypadku aplikacji, w której nagłówki określałyby po prostu kolejne widgety/komponenty, lub na stronach reklamowych, gdzie występuje tzw. [<i lang="en">hero section</i>](https://www.sitepoint.com/exploring-hero-section/).
 
 ### #3 – nagłówek witryny
 
@@ -171,8 +167,18 @@ I tu pojawia się problem: hierarchia treści pokaże komponent "Pogoda" jako os
 
 Poziomy nagłówków w HTML-u są bowiem _globalne_. Nie zależą w żaden sposób od miejsca występowania tagu. `h2` zawsze będzie nagłówkiem drugiego poziomu, a `h6` – szóstego. W czasach, gdy HTML był językiem tworzenia _dokumentów hipertekstowych_, nie sprawiało to praktycznie żadnego problemu. W chwili, gdy HTML stał się językiem do tworzenia _aplikacji internetowych_, brak nagłówków <i>kontekstualnych</i> (zależnych od swojego miejsca występowania) staje się problemem. Zwłaszcza, gdy myślimy o całości aplikacji jako o zbiorze niezależnych komponentów. Wówczas często nie wiemy, gdzie dana rzecz ostatecznie się znajdzie, a co za tym idzie – nie jesteśmy w stanie dobrać sensownie poziomu nagłówka.
 
-Na chwilę obecną problem ten najlepiej rozwiązać tworząc… [komponent nagłówka](https://github.com/ThePacielloGroup/html5-h), który za pomocą magii ARIA (`[aria-level]` czy `[role=heading]`) ustali swój faktyczny poziom. A [w przyszłości być może doczekamy się tego w HTML-u](https://github.com/w3c/html/issues/774), dzięki [tagowi `h`](https://jonathantneal.github.io/h-element-spec/).
+Na chwilę obecną problem ten najlepiej rozwiązać tworząc… [komponent nagłówka](https://github.com/ThePacielloGroup/html5-h), który za pomocą magii ARIA (`[aria-level]` czy `[role=heading]`) ustali swój faktyczny poziom. A [w przyszłości być może doczekamy się tego w HTML-u](https://github.com/whatwg/html/issues/7390), dzięki [elementowi `h`](https://jonathantneal.github.io/h-element-spec/).
 
 ## Podtytuły
 
-Została ostatnia kwesia. [Podtytytułów nie robi się na nagłówkach](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines). Jest to bowiem dodatkowa informacja do już wstawionego nagłówka. Umieszczanie tego w nagłówku niepotrzebnie komplikowałoby hierarchię treści. Dodatkowo byłoby to utrudnieniem dla użytkowników czytników ekranowych, umieszczając dwa punkty nawigacyjne praktycznie w tym samym miejscu.
+Została ostatnia kwesia. Podtytytułów nie robi się na nagłówkach. Jest to bowiem dodatkowa informacja do już wstawionego nagłówka. Umieszczanie tego w nagłówku niepotrzebnie komplikowałoby hierarchię treści. Dodatkowo byłoby to utrudnieniem dla użytkowników czytników ekranowych, umieszczając dwa punkty nawigacyjne praktycznie w tym samym miejscu.
+
+Na szczęście standard HTML dochrapał się ostatnio oficjalnego sposobu oznaczania nagłówków. Po usunięciu algorytmu outline'u trzeba było zrobić coś z elementem `hgroup`, który nie miał już dłużej sensu. No więc zmieniono jego znaczenie i teraz służy właśnie do [grupowania nagłówka wraz z jego podtytułem](https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element):
+
+```html
+<hgroup>
+	<h1>Pan Tadeusz</h1>
+	<p>czyli ostatni zajazd na Litwie</p>
+</hgroup>
+```
+
