@@ -3,7 +3,7 @@ layout: post
 title:  "Konferencja ConFrontJS + konkurs"
 author: Comandeer
 date:   2018-10-17 18:24:08 +0200
-categories: na-luzie
+categories: wspolpraca
 comments: true
 permalink: /konferencja-confrontjs.html
 redirect_from:
