@@ -22,7 +22,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.comandeer.pl" # the base hostname & protocol for your site, e.g. http://example.com
 timezone: "Europe/Warsaw"
 github_username:  Comandeer
-twitter_username: Comandeer2
 google_analytics: UA-33158520-3
 paginate: 10
 paginate_path: "/strona-:num/"
