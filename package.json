@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .eleventy.js",
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Comandeer",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@comandeer/eslint-config": "^0.13.1",
+    "eslint": "8"
+  }
+}
