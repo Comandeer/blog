@@ -6,6 +6,11 @@
  * @returns
  */
 module.exports = function( eleventyConfig ) {
+	eleventyConfig.setLiquidOptions( {
+		dynamicPartials: false,
+		strictFilters: false
+	} );
+
 	return {
 		dir: {
 			layouts: '_layouts'
