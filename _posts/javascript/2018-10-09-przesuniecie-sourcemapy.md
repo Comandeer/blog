@@ -3,7 +3,8 @@ layout: post
 title:  "Przesunięcie sourcemapy"
 author: Comandeer
 date: 2018-10-09T23:59:00+0200
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /przesuniecie-sourcemapy.html
 redirect_from:

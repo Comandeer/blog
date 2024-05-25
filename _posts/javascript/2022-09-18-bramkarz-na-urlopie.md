@@ -3,7 +3,9 @@ layout: post
 title:  "Bramkarz na urlopie"
 author: Comandeer
 date: 2022-09-18T19:13:00+0200
-categories: javascript eksperymenty
+tags: 
+    - javascript
+    - eksperymenty
 comments: true
 permalink: /bramkarz-na-urlopie.html
 ---

@@ -3,7 +3,9 @@ layout: post
 title:  "Tworzymy własny bundler"
 author: Comandeer
 date: 2020-07-30T23:06:00+0200
-categories: javascript eksperymenty
+tags: 
+    - javascript
+    - eksperymenty
 comments: true
 permalink: /tworzymy-wlasny-bundler.html
 ---

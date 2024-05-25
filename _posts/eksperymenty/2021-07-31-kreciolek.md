@@ -3,7 +3,8 @@ layout: post
 title:  "Kręciołek!"
 author: Comandeer
 date: 2021-07-31T23:50:00+0200
-categories: eksperymenty
+tags: 
+    - eksperymenty
 comments: true
 permalink: /kreciolek.html
 ---

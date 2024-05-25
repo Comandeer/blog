@@ -3,7 +3,8 @@ layout: post
 title:  "ComSemRel – raport wojenny #8"
 author: Comandeer
 date: 2017-05-14T19:00:00+0200
-categories: daj-sie-poznac-2017
+tags: 
+    - daj-sie-poznac-2017
 comments: true
 permalink: /comsemrel-raport-wojenny-8.html
 redirect_from: /daj-sie-poznac-2017/2017/05/14/comsemrel-raport-wojenny-8.html

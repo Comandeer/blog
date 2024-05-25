@@ -3,7 +3,8 @@ layout: post
 title:  "No to zaczynamy!"
 author: Comandeer
 date: 2017-03-01T22:10:18+0100
-categories: daj-sie-poznac-2017
+tags: 
+    - daj-sie-poznac-2017
 comments: true
 permalink: /no-to-zaczynamy.html
 redirect_from:

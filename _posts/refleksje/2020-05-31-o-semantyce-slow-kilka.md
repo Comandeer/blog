@@ -3,7 +3,11 @@ layout: post
 title:  "O semantyce słów kilka"
 author: Comandeer
 date: 2020-05-31T18:26:00+0200
-categories: refleksje a11y html-css standardy-sieciowe
+tags: 
+    - refleksje
+    - a11y
+    - html-css
+    - standardy-sieciowe
 comments: true
 permalink: /o-semantyce-slow-kilka.html
 ---

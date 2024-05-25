@@ -3,7 +3,9 @@ layout: post
 title:  "Dzień Niebieskiej Czapki 2023"
 author: Comandeer
 date: 2023-11-30T18:18:00+0100
-categories: na-luzie standardy-sieciowe
+tags: 
+    - na-luzie
+    - standardy-sieciowe
 comments: true
 permalink: /dzien-niebieskiej-czapki-2023.html
 ---

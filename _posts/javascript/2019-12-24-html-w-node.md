@@ -3,7 +3,8 @@ layout: post
 title:  "HTML w Node.js"
 author: Comandeer
 date: 2019-12-24T16:27:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /html-w-node.html
 ---

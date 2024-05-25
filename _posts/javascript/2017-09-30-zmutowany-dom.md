@@ -3,7 +3,8 @@ layout: post
 title:  "Zmutowany DOM"
 author: Comandeer
 date: 2017-09-30T23:55:00+0200
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /zmutowany-dom.html
 redirect_from:

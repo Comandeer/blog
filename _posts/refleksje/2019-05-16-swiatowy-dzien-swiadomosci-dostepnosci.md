@@ -3,7 +3,9 @@ layout: post
 title:  "Światowy Dzień Świadomości Dostępności"
 author: Comandeer
 date: 2019-05-16T18:10:00+0200
-categories: refleksje a11y
+tags: 
+    - refleksje
+    - a11y
 comments: true
 permalink: /swiatowy-dzien-swiadomosci-dostepnosci.html
 ---

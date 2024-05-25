@@ -3,7 +3,10 @@ layout: post
 title:  "Asynchroniczny DOM"
 author: Comandeer
 date: 2018-05-27T19:01:00+0100
-categories: refleksje javascript standardy-sieciowe
+tags: 
+    - refleksje
+    - javascript
+    - standardy-sieciowe
 comments: true
 permalink: /asynchroniczny-dom.html
 redirect_from:

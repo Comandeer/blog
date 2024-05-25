@@ -3,7 +3,8 @@ layout: post
 title:  "async/await w ES3"
 author: Comandeer
 date: 2019-09-30T20:05:00+0200
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /async-await-w-es3.html
 ---

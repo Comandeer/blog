@@ -3,7 +3,10 @@ layout: post
 title:  "O nagłówkach słów kilka"
 author: Comandeer
 date: 2017-07-04T16:20:00+0200
-categories: html-css a11y refleksje
+tags: 
+    - html-css
+    - a11y
+    - refleksje
 comments: true
 permalink: /o-naglowkach-slow-kilka.html
 redirect_from:

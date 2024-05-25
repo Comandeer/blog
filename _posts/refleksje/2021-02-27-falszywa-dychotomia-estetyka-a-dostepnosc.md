@@ -3,7 +3,9 @@ layout: post
 title:  "Fałszywa dychotomia – estetyka a dostępność"
 author: Comandeer
 date: 2021-02-27T23:33:00+0100
-categories: refleksje a11y
+tags: 
+    - refleksje
+    - a11y
 comments: true
 permalink: /falszywa-dychotomia-estetyka-a-dostepnosc.html
 ---

@@ -3,7 +3,8 @@ layout: post
 title:  "Wybór technologii"
 author: Comandeer
 date: 2017-03-12T22:50:00+0100
-categories: daj-sie-poznac-2017
+tags: 
+    - daj-sie-poznac-2017
 comments: true
 permalink: /wybor-technologii.html
 redirect_from:

@@ -3,7 +3,9 @@ layout: post
 title:  "Kreda, czyli reakcja łańcuchowa"
 author: Comandeer
 date: 2024-05-01T00:25:00+0200
-categories: javascript eksperymenty
+tags: 
+    - javascript
+    - eksperymenty
 comments: true
 permalink: /kreda-czyli-reakcja-lancuchowa.html
 ---

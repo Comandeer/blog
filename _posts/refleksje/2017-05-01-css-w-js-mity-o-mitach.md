@@ -3,7 +3,11 @@ layout: post
 title:  "CSS w JS – mity o mitach"
 author: Comandeer
 date: 2017-05-01T18:20:00+0200
-categories: refleksje html-css javascript daj-sie-poznac-2017
+tags: 
+    - refleksje
+    - html-css
+    - javascript
+    - daj-sie-poznac-2017
 comments: true
 permalink: /css-w-js-mity-o-mitach.html
 redirect_from:

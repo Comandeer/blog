@@ -3,7 +3,9 @@ layout: post
 title:  "Rewolucja klasowa"
 author: Comandeer
 date: 2021-04-29T00:24:00+0200
-categories: refleksje javascript
+tags: 
+    - refleksje
+    - javascript
 comments: true
 permalink: /rewolucja-klasowa.html
 ---

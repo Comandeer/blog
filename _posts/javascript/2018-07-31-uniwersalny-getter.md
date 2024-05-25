@@ -3,7 +3,8 @@ layout: post
 title:  "Uniwersalny getter"
 author: Comandeer
 date: 2018-07-31T19:40:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /uniwersalny-getter.html
 redirect_from:

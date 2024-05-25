@@ -3,7 +3,9 @@ layout: post
 title:  "Headings First Principle"
 author: Comandeer
 date: 2018-04-30T22:05:00+0200
-categories: refleksje html-css
+tags: 
+    - refleksje
+    - html-css
 comments: true
 permalink: /headings-first-principle.html
 redirect_from:

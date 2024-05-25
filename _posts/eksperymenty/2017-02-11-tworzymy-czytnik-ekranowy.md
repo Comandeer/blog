@@ -3,7 +3,10 @@ layout: post
 title:  "Tworzymy czytnik ekranowy"
 author: Comandeer
 date: 2017-02-11T21:46:18+0100
-categories: eksperymenty a11y standardy-sieciowe
+tags: 
+    - eksperymenty
+    - a11y
+    - standardy-sieciowe
 comments: true
 permalink: /tworzymy-czytnik-ekranowy.html
 redirect_from:

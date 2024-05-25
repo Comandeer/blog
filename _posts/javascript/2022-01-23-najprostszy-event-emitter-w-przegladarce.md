@@ -3,7 +3,8 @@ layout: post
 title:  "Najprostszy event emitter w przeglądarce"
 author: Comandeer
 date: 2022-01-23T23:10:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /najprostszy-event-emitter-w-przegladarce.html
 ---

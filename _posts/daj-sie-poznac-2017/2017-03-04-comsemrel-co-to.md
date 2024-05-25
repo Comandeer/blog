@@ -3,7 +3,9 @@ layout: post
 title:  "ComSemRel – co to?"
 author: Comandeer
 date: 2017-03-04T22:40:00+0100
-categories: daj-sie-poznac-2017 javascript
+tags: 
+    - daj-sie-poznac-2017
+    - javascript
 comments: true
 permalink: /comsemrel-co-to.html
 redirect_from:

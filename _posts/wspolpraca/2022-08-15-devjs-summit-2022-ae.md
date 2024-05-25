@@ -3,7 +3,8 @@ layout: post
 title:  "dev.js Summit 2022 Autumn Edition"
 author: Comandeer
 date: 2022-08-15T22:37:00+0200
-categories: wspolpraca
+tags: 
+    - wspolpraca
 comments: true
 permalink: /devjs-summit-2022-ae.html
 ---

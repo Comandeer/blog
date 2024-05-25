@@ -3,7 +3,9 @@ layout: post
 title:  "Cienie przeszłości"
 author: Comandeer
 date: 2023-02-24T23:22:00+0100
-categories: javascript standardy-sieciowe
+tags: 
+    - javascript
+    - standardy-sieciowe
 comments: true
 permalink: /cienie-przeszlosci.html
 ---

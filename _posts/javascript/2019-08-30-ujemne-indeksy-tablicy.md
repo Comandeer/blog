@@ -3,7 +3,8 @@ layout: post
 title:  "Ujemne indeksy tablicy"
 author: Comandeer
 date: 2019-08-30T21:10:00+0200
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /ujemne-indeksy-tablicy.html
 ---

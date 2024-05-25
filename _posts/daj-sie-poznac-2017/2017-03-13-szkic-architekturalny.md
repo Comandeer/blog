@@ -3,7 +3,8 @@ layout: post
 title:  "Szkic architekturalny"
 author: Comandeer
 date: 2017-03-13T23:20:00+0100
-categories: daj-sie-poznac-2017
+tags: 
+    - daj-sie-poznac-2017
 comments: true
 permalink: /szkic-architekturalny.html
 redirect_from:

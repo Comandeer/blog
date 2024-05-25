@@ -3,7 +3,8 @@ layout: post
 title:  "Interfejsy w JS"
 author: Comandeer
 date: 2017-11-30T23:15:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /interfejsy-w-js.html
 redirect_from:

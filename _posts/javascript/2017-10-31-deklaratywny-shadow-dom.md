@@ -3,7 +3,9 @@ layout: post
 title:  "Deklaratywny Shadow DOM"
 author: Comandeer
 date: 2017-10-31T23:25:00+0100
-categories: javascript eksperymenty
+tags: 
+    - javascript
+    - eksperymenty
 comments: true
 permalink: /deklaratywny-shadow-dom.html
 redirect_from:

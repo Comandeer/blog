@@ -3,7 +3,8 @@ layout: post
 title:  "Bujając się na gałęzi AST"
 author: Comandeer
 date: 2018-11-30T01:59:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /bujajac-sie-na-galezi-ast.html
 redirect_from:

@@ -3,7 +3,8 @@ layout: post
 title:  "Pamięć Internetu"
 author: Comandeer
 date: 2021-08-21T22:07:00+0200
-categories: refleksje
+tags: 
+    - refleksje
 comments: false
 permalink: /pamiec-internetu.html
 ---

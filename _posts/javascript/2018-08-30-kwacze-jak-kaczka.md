@@ -3,7 +3,8 @@ layout: post
 title:  "Kwacze jak kaczka…"
 author: Comandeer
 date: 2018-08-30T23:55:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /kwacze-jak-kaczka.html
 redirect_from:

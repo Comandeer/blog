@@ -3,7 +3,10 @@ layout: post
 title:  "Pyrrusowe zwycięstwo"
 author: Comandeer
 date: 2018-01-05T22:35:00+0100
-categories: standardy-sieciowe refleksje a11y
+tags: 
+    - standardy-sieciowe
+    - refleksje
+    - a11y
 comments: true
 permalink: /pyrrusowe-zwyciestwo.html
 redirect_from:

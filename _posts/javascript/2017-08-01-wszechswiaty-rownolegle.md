@@ -3,7 +3,8 @@ layout: post
 title:  "Wszechświaty równoległe"
 author: Comandeer
 date: 2017-08-01T23:30:00+0200
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /wszechswiaty-rownolegle.html
 redirect_from:

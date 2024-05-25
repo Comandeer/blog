@@ -3,7 +3,9 @@ layout: post
 title:  "Hipermodularyzacja, czyli Rzym płonie"
 author: Comandeer
 date: 2020-02-29T23:56:00+0100
-categories: refleksje javascript
+tags: 
+    - refleksje
+    - javascript
 comments: true
 permalink: /hipermodularyzacja-czyli-rzym-plonie.html
 ---

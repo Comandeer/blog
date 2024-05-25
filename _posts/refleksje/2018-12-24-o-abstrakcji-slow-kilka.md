@@ -3,7 +3,9 @@ layout: post
 title:  "O abstrakcji słów kilka"
 author: Comandeer
 date: 2018-12-24T16:01:00+0100
-categories: refleksje javascript
+tags: 
+    - refleksje
+    - javascript
 comments: true
 permalink: /o-abstrakcji-slow-kilka.html
 redirect_from:

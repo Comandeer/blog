@@ -3,7 +3,9 @@ layout: post
 title:  "AMP – a na co to komu?"
 author: Comandeer
 date: 2018-02-28T23:58:00+0100
-categories: refleksje html-css
+tags: 
+    - refleksje
+    - html-css
 comments: true
 permalink: /amp-a-na-co-to-komu.html
 redirect_from:

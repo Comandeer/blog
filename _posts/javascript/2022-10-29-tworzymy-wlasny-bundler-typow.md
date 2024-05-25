@@ -3,7 +3,9 @@ layout: post
 title:  "Tworzymy własny bundler typów"
 author: Comandeer
 date: 2022-10-29T19:00:00+0200
-categories: javascript eksperymenty
+tags: 
+    - javascript
+    - eksperymenty
 comments: true
 permalink: /tworzymy-wlasny-bundler-typow.html
 ---

@@ -3,7 +3,9 @@ layout: post
 title:  "Jak działa narzędzie do code coverage?"
 author: Comandeer
 date: 2021-01-31T23:20:00+0100
-categories: javascript eksperymenty
+tags: 
+    - javascript
+    - eksperymenty
 comments: true
 permalink: /jak-dziala-narzedzie-do-code-coverage.html
 ---

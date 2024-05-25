@@ -3,7 +3,8 @@ layout: post
 title:  "Mutowalna niemutowalność"
 author: Comandeer
 date: 2022-02-28T10:03:00+0100
-categories: javascript
+tags: 
+    - javascript
 comments: true
 permalink: /mutowalna-niemutowalnosc.html
 ---

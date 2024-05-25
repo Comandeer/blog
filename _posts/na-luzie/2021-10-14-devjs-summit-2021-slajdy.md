@@ -3,7 +3,8 @@ layout: post
 title:  "dev.js Summit 2021 – slajdy"
 author: Comandeer
 date:   2021-10-14T22:52+0200
-categories: na-luzie
+tags: 
+    - na-luzie
 comments: true
 permalink: /devjs-summit-2021-slajdy.html
 ---

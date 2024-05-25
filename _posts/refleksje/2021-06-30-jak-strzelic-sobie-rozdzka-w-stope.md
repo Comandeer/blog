@@ -3,7 +3,9 @@ layout: post
 title:  "Jak strzelić sobie różdżką w stopę?"
 author: Comandeer
 date: 2021-06-30T23:22:00+0200
-categories: refleksje javascript
+tags: 
+    - refleksje
+    - javascript
 comments: true
 permalink: /jak-strzelic-sobie-rozdzka-w-stope.html
 ---

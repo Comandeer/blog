@@ -3,7 +3,9 @@ layout: post
 title:  "Jak strzelić sobie różdżką w stopę, część 2."
 author: Comandeer
 date: 2023-01-31T23:55:00+0100
-categories: refleksje javascript
+tags: 
+    - refleksje
+    - javascript
 comments: true
 permalink: /jak-strzelic-sobie-rozdzka-w-stope-czesc-2.html
 ---

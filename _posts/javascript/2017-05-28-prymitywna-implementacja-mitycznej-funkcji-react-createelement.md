@@ -3,7 +3,9 @@ layout: post
 title:  "Prymitywna implementacja mitycznej funkcji React.createElement"
 author: Comandeer
 date: 2017-05-28T23:40:00+0200
-categories: javascript daj-sie-poznac-2017
+tags: 
+    - javascript
+    - daj-sie-poznac-2017
 comments: true
 permalink: /prymitywna-implementacja-mitycznej-funkcji-react-createelement.html
 redirect_from:
