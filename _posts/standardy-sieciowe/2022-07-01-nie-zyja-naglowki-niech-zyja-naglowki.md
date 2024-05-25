@@ -2,7 +2,7 @@
 layout: post
 title:  "Nie żyją nagłówki, niech żyją nagłówki!"
 author: Comandeer
-date:   2022-07-01 18:03:00 +0200
+date: 2022-07-01T18:03:00+0200
 categories: standardy-sieciowe a11y refleksje
 comments: true
 permalink: /nie-zyja-naglowki-niech-zyja-naglowki.html

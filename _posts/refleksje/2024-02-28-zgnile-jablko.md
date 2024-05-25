@@ -2,7 +2,7 @@
 layout: post
 title:  "Zgniłe jabłko"
 author: Comandeer
-date:   2024-02-28 18:17:00 +0100
+date: 2024-02-28T18:17:00+0100
 categories: refleksje
 comments: true
 permalink: /zgnile-jablko.html

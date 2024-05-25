@@ -2,7 +2,7 @@
 layout: post
 title:  "Oswojony Zalgo"
 author: Comandeer
-date:   2021-03-31 18:58:00 +0200
+date: 2021-03-31T18:58:00+0200
 categories: refleksje javascript
 comments: true
 permalink: /oswojony-zalgo.html

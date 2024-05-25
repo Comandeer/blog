@@ -2,7 +2,7 @@
 layout: post
 title:  "Najprostszy event emitter w przeglądarce"
 author: Comandeer
-date:   2022-01-23 23:10:00 +0100
+date: 2022-01-23T23:10:00+0100
 categories: javascript
 comments: true
 permalink: /najprostszy-event-emitter-w-przegladarce.html
@@ -46,7 +46,7 @@ class EventEmitter extends EventTarget {
         const event = new CustomEvent( name, { // 2
             detail
         } );
-        
+
         return this.dispatchEvent( event ); // 3
     }
 }
@@ -54,7 +54,7 @@ class EventEmitter extends EventTarget {
 
 Tworzymy w niej event na podstawie przekazanych danych – jego nazwy i własności `detail` (1). Dane te przekazujemy do konstruktora `CustomEvent` (2). Na samym końcu wywołujemy zdarzenie (3).
 
-Wykorzystanie jest praktycznie takie samo jak "czystego" `EventTarget`: 
+Wykorzystanie jest praktycznie takie samo jak "czystego" `EventTarget`:
 
 ```javascript
 const eventEmitter = new EventEmitter();

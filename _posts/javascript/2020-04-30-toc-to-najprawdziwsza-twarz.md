@@ -2,7 +2,7 @@
 layout: post
 title:  "Toć to najprawdziwsza twarz…!"
 author: Comandeer
-date:   2020-04-30 23:24:00 +0200
+date: 2020-04-30T23:24:00+0200
 categories: javascript standardy-sieciowe
 comments: true
 permalink: /toc-to-najprawdziwsza-twarz.html

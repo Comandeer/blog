@@ -2,7 +2,7 @@
 layout: post
 title:  "Jeden znak jest warty więcej niż tysiąc ifów"
 author: Comandeer
-date:   2021-09-07 23:46:00 +0200
+date: 2021-09-07T23:46:00+0200
 categories: javascript
 comments: true
 permalink: /jeden-znak-jest-warty-wiecej-niz-tysiac-ifow.html

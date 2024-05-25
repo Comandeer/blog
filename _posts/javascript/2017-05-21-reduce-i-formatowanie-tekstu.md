@@ -2,7 +2,7 @@
 layout: post
 title:  "Reduce i formatowanie tekstu"
 author: Comandeer
-date:   2017-05-21 20:20:00 +0200
+date: 2017-05-21T20:20:00+0200
 categories: javascript daj-sie-poznac-2017
 comments: true
 permalink: /reduce-i-formatowanie-tekstu.html

@@ -2,7 +2,7 @@
 layout: post
 title:  "Piękny kod"
 author: Comandeer
-date:   2023-09-27 00:08:00 +0200
+date: 2023-09-27T00:08:00+0200
 categories: javascript eksperymenty
 comments: true
 permalink: /piekny-kod.html

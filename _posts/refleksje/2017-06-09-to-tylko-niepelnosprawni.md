@@ -2,7 +2,7 @@
 layout: post
 title:  "To tylko niepełnosprawni…"
 author: Comandeer
-date:   2017-06-09 23:25:00 +0200
+date: 2017-06-09T23:25:00+0200
 categories: refleksje a11y
 comments: true
 permalink: /to-tylko-niepelnosprawni.html

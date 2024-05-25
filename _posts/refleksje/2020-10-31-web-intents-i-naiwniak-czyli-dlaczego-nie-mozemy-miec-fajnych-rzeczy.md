@@ -2,7 +2,7 @@
 layout: post
 title:  "Web Intents i naiwniak, czyli dlaczego nie możemy mieć fajnych rzeczy?"
 author: Comandeer
-date:   2020-10-31 19:00:00 +0100
+date: 2020-10-31T19:00:00+0100
 categories: refleksje standardy-sieciowe
 comments: true
 permalink: /web-intents-i-naiwniak-czyli-dlaczego-nie-mozemy-miec-fajnych-rzeczy.html

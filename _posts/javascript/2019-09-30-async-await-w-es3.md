@@ -2,7 +2,7 @@
 layout: post
 title:  "async/await w ES3"
 author: Comandeer
-date:   2019-09-30 20:05:00 +0200
+date: 2019-09-30T20:05:00+0200
 categories: javascript
 comments: true
 permalink: /async-await-w-es3.html
@@ -62,7 +62,7 @@ run();
 async function run() {
 	const response = await doAjax();
 	const parsed = await parseResponse( response );
-	
+
 	displayResponse( parsed );
 }
 ```
@@ -117,7 +117,7 @@ try {
 	}
 
 	console.log( 'przejmujemy sterowanie' );
-	
+
 	e.then( function() { // 2
 		asyncCallback(); // 3
 

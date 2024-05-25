@@ -2,7 +2,7 @@
 layout: post
 title:  "ComSemRel – raport wojenny #9"
 author: Comandeer
-date:   2017-05-21 20:30:00 +0200
+date: 2017-05-21T20:30:00+0200
 categories: daj-sie-poznac-2017
 comments: true
 permalink: /comsemrel-raport-wojenny-9.html

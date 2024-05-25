@@ -2,7 +2,7 @@
 layout: post
 title:  "Aktualna data bez daty"
 author: Comandeer
-date:   2019-04-04 18:10:00 +0200
+date: 2019-04-04T18:10:00+0200
 categories: javascript
 comments: true
 permalink: /aktualna-data-bez-daty.html

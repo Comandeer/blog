@@ -2,7 +2,7 @@
 layout: post
 title:  "Rewolucja klasowa"
 author: Comandeer
-date:   2021-04-29 00:24:00 +0200
+date: 2021-04-29T00:24:00+0200
 categories: refleksje javascript
 comments: true
 permalink: /rewolucja-klasowa.html
@@ -15,7 +15,7 @@ Widać wyraźnie, że TC39 próbuje ukryć niewygodny fakt istnienia gdzieś tam
 ```javascript
 class MyClass {
 	static #x = 'whatever'; // 1
-	
+
 	getX() {
 		return MyClass.#x;
 	}

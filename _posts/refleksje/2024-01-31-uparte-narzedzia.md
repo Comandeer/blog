@@ -2,7 +2,7 @@
 layout: post
 title:  "Uparte narzędzia"
 author: Comandeer
-date:   2024-01-31 20:59:00 +0100
+date: 2024-01-31T20:59:00+0100
 categories: refleksje javascript
 comments: true
 permalink: /uparte-narzedzia.html

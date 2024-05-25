@@ -2,7 +2,7 @@
 layout: post
 title:  "Jednoplikowe komponenty"
 author: Comandeer
-date:   2018-06-30 19:50:00 +0100
+date: 2018-06-30T19:50:00+0100
 categories: javascript html-css eksperymenty
 comments: true
 permalink: /jednoplikowe-komponenty.html

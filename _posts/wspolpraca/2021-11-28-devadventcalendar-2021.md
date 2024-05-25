@@ -2,7 +2,7 @@
 layout: post
 title:  "DevAdventCalendar 2021"
 author: Comandeer
-date:   2021-11-28 15:19:00 +0100
+date: 2021-11-28T15:19:00+0100
 categories: wspolpraca
 comments: true
 permalink: /devadventcalendar-2021.html

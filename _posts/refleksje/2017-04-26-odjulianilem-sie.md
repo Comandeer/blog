@@ -2,7 +2,7 @@
 layout: post
 title:  "Odjulianiłem się…"
 author: Comandeer
-date:   2017-04-26 17:30:00 +0200
+date: 2017-04-26T17:30:00+0200
 categories: refleksje daj-sie-poznac-2017
 comments: true
 permalink: /odjulianilem-sie.html

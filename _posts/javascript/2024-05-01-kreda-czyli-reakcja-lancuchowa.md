@@ -2,7 +2,7 @@
 layout: post
 title:  "Kreda, czyli reakcja łańcuchowa"
 author: Comandeer
-date:   2024-05-01 00:25:00 +0200
+date: 2024-05-01T00:25:00+0200
 categories: javascript eksperymenty
 comments: true
 permalink: /kreda-czyli-reakcja-lancuchowa.html
@@ -107,7 +107,7 @@ const chainPrototype = Object.defineProperties( () => {}, { // 1
 function createChain() {
 	const chain = ( text ) => { // 4
 		console.log( text ); // 5
-	}; 
+	};
 
 	Object.setPrototypeOf( chain, chainPrototype ); // 6
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "TypeScript – pierwsze wrażenia"
 author: Comandeer
-date:   2017-03-18 23:40:00 +0100
+date: 2017-03-18T23:40:00+0100
 categories: daj-sie-poznac-2017
 comments: true
 permalink: /typescript-pierwsze-wrazenia.html

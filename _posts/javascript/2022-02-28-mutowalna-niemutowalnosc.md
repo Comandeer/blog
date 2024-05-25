@@ -2,7 +2,7 @@
 layout: post
 title:  "Mutowalna niemutowalność"
 author: Comandeer
-date:   2022-02-28 10:03:00 +0100
+date: 2022-02-28T10:03:00+0100
 categories: javascript
 comments: true
 permalink: /mutowalna-niemutowalnosc.html
@@ -366,7 +366,7 @@ function createDraft( state, parent = null ) { // 1
 
 		get( target, property ) {
 			[…]
-            
+
 			if ( !draft.copy[ property ][ isDraft ] ) {
 				draft.copy[ property ] = createDraft( draft.copy[ property ], draft ); // 2
 			}

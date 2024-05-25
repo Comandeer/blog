@@ -2,7 +2,7 @@
 layout: post
 title:  "Niestandardowe zdarzenia w workerach"
 author: Comandeer
-date:   2018-09-30 23:41:00 +0100
+date: 2018-09-30T23:41:00+0100
 categories: eksperymenty javascript
 comments: true
 permalink: /niestandardowe-zdarzenia-w-workerach.html

@@ -2,7 +2,7 @@
 layout: post
 title:  "Potrzebujemy zachowań, nie dziedziczenia!"
 author: Comandeer
-date:   2017-04-09 20:00:00 +0100
+date: 2017-04-09T20:00:00+0100
 categories: standardy-sieciowe html-css javascript daj-sie-poznac-2017
 comments: true
 permalink: /potrzebujemy-zachowan-nie-dziedziczenia.html

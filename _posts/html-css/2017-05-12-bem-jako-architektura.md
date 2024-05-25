@@ -2,7 +2,7 @@
 layout: post
 title:  "BEM jako architektura"
 author: Comandeer
-date:   2017-05-12 21:00:00 +0200
+date: 2017-05-12T21:00:00+0200
 categories: html-css javascript daj-sie-poznac-2017
 comments: true
 permalink: /bem-jako-architektura.html

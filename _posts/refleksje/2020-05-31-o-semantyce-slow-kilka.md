@@ -2,7 +2,7 @@
 layout: post
 title:  "O semantyce słów kilka"
 author: Comandeer
-date:   2020-05-31 18:26:00 +0200
+date: 2020-05-31T18:26:00+0200
 categories: refleksje a11y html-css standardy-sieciowe
 comments: true
 permalink: /o-semantyce-slow-kilka.html
@@ -66,7 +66,7 @@ Stąd też `div` ma znaczenie – ponieważ jego opis znajduje się w specyfikac
 
 Taka jeszcze dygresja na koniec definiowania semantyki. Za to, że po polsku słowa "semantyka" i "znaczenie" są traktowane całkowicie osobno, wprowadzając tym samym pewne nieścisłości terminologiczne, obwiniłbym różnice, jakie istnieją między językiem angielskim i polskim. [W angielskim](https://www.oxfordlearnersdictionaries.com/definition/english/semantics) semantyka oznacza zarówno naukę o znaczeniu slów, jak i samo ich znaczenie. [W polskim](https://sjp.pwn.pl/sjp/semantyka;2575165.html) semantyka oznacza już tylko naukę.
 
-Niemniej nawet mimo tej różnicy (a może właśnie dzięki niej) sformułowania typu "znaczenie semantyczne" czy "znaczniki semantyczne" są tym bardziej niezrozumiałe. Dlatego uważam, że mówiąc o semantyce elementów, należy pamiętać, że chodzi nam o nic innego, jak o _znaczenie_ elementów. Być może byłoby o wiele lepiej, gdybyśmy po polsku używali właśnie takiego sformułowania, zamiast hermetycznej semantyki. Ale ten okręt już odpłynął… 
+Niemniej nawet mimo tej różnicy (a może właśnie dzięki niej) sformułowania typu "znaczenie semantyczne" czy "znaczniki semantyczne" są tym bardziej niezrozumiałe. Dlatego uważam, że mówiąc o semantyce elementów, należy pamiętać, że chodzi nam o nic innego, jak o _znaczenie_ elementów. Być może byłoby o wiele lepiej, gdybyśmy po polsku używali właśnie takiego sformułowania, zamiast hermetycznej semantyki. Ale ten okręt już odpłynął…
 
 ## Trzy poziomy semantyki
 

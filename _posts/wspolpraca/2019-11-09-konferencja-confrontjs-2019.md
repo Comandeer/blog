@@ -2,7 +2,7 @@
 layout: post
 title:  "Konferencja ConFrontJS 2019 + konkurs"
 author: Comandeer
-date:   2019-11-09 15:12:08 +0200
+date: 2019-11-09T15:12:08+0200
 categories: wspolpraca
 comments: true
 permalink: /konferencja-confrontjs-2019.html

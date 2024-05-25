@@ -3,7 +3,7 @@
 layout: post
 title: "Dostępna tęcza"
 author: Comandeer
-date: 2022-06-30 22:10:00 +0200
+date: 2022-06-30T22:10:00+0200
 categories: na-luzie
 comments: true
 permalink: /dostepna-tecza.html

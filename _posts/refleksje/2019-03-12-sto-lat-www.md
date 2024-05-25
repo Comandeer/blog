@@ -2,7 +2,7 @@
 layout: post
 title:  "Sto lat, WWW!"
 author: Comandeer
-date:   2019-03-12 10:00:00 +0100
+date: 2019-03-12T10:00:00+0100
 categories: refleksje
 comments: true
 permalink: /sto-lat-www.html

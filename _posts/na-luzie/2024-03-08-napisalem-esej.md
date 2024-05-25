@@ -2,7 +2,7 @@
 layout: post
 title:  "Napisałem esej"
 author: Comandeer
-date:   2024-03-08 00:35:00 +0100
+date: 2024-03-08T00:35:00+0100
 categories: na-luzie
 comments: true
 permalink: /napisalem-esej.html

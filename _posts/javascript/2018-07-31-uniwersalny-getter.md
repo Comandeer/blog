@@ -2,7 +2,7 @@
 layout: post
 title:  "Uniwersalny getter"
 author: Comandeer
-date:   2018-07-31 19:40:00 +0100
+date: 2018-07-31T19:40:00+0100
 categories: javascript
 comments: true
 permalink: /uniwersalny-getter.html

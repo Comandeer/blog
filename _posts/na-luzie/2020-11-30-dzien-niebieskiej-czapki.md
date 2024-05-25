@@ -2,7 +2,7 @@
 layout: post
 title:  "Dzień Niebieskiej Czapki"
 author: Comandeer
-date:   2020-11-30 22:42:00 +0100
+date: 2020-11-30T22:42:00+0100
 categories: na-luzie standardy-sieciowe
 comments: true
 permalink: /dzien-niebieskiej-czapki.html

@@ -2,7 +2,7 @@
 layout: post
 title:  "Kurtyna cienia"
 author: Comandeer
-date:   2018-03-07 21:35:00 +0100
+date: 2018-03-07T21:35:00+0100
 categories: standardy-sieciowe refleksje html-css
 comments: true
 permalink: /kurtyna-cienia.html

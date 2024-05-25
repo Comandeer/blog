@@ -2,7 +2,7 @@
 layout: post
 title:  "Sieć bez Internetu"
 author: Comandeer
-date:   2020-03-31 22:40:00 +0200
+date: 2020-03-31T22:40:00+0200
 categories: refleksje standardy-sieciowe
 comments: true
 permalink: /siec-bez-internetu.html

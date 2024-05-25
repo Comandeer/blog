@@ -2,7 +2,7 @@
 layout: post
 title:  "W odwiedzinach u Bramkarza"
 author: Comandeer
-date:   2023-10-31 19:13:00 +0100
+date: 2023-10-31T19:13:00+0100
 categories: javascript eksperymenty
 comments: true
 permalink: /w-odwiedzinach-u-bramkarza.html

@@ -2,7 +2,7 @@
 layout: post
 title:  "O ikonkach słów kilka"
 author: Comandeer
-date:   2017-02-28 19:27:00 +0100
+date: 2017-02-28T19:27:00+0100
 categories: a11y html-css
 comments: true
 permalink: /o-ikonkach-slow-kilka.html

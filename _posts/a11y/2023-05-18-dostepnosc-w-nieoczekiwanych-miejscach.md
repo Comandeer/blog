@@ -2,7 +2,7 @@
 layout: post
 title:  "Dostępność w nieoczekiwanych miejscach"
 author: Comandeer
-date:   2023-05-18 00:00:00 +0200
+date: 2023-05-18T00:00:00+0200
 categories: a11y refleksje
 comments: true
 permalink: /dostepnosc-w-nieoczekiwanych-miejscach.html

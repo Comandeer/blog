@@ -2,7 +2,7 @@
 layout: post
 title:  "Światełko w tunelu"
 author: Comandeer
-date:   2019-04-09 23:15:00 +0200
+date: 2019-04-09T23:15:00+0200
 categories: standardy-sieciowe refleksje
 comments: true
 permalink: /swiatelko-w-tunelu.html

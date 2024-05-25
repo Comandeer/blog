@@ -2,7 +2,7 @@
 layout: post
 title:  "Ale ten Internet stary…"
 author: Comandeer
-date:   2019-10-29 18:06:00 +0100
+date: 2019-10-29T18:06:00+0100
 categories: refleksje
 comments: true
 permalink: /ale-ten-internet-stary.html

@@ -2,7 +2,7 @@
 layout: post
 title:  "Mam nierówno pod sufitem"
 author: Comandeer
-date:   2017-04-14 12:00:00 +0100
+date: 2017-04-14T12:00:00+0100
 categories: refleksje daj-sie-poznac-2017
 comments: true
 permalink: /mam-nierowno-pod-sufitem.html

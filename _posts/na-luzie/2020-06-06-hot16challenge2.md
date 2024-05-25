@@ -2,7 +2,7 @@
 layout: post
 title:  "#hot16challenge2"
 author: Comandeer
-date:   2020-06-06 17:53:00 +0200
+date: 2020-06-06T17:53:00+0200
 categories: na-luzie
 comments: true
 permalink: /hot16challenge2.html

@@ -2,7 +2,7 @@
 layout: post
 title:  "HTML nie żyje, niech żyje HTML!"
 author: Comandeer
-date:   2019-05-28 19:15:00 +0200
+date: 2019-05-28T19:15:00+0200
 categories: standardy-sieciowe refleksje
 comments: true
 permalink: /html-nie-zyje-niech-zyje-html.html

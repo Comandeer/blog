@@ -2,7 +2,7 @@
 layout: post
 title:  "Stylowalne ikonki SVG"
 author: Comandeer
-date:   2019-07-25 22:15:00 +0200
+date: 2019-07-25T22:15:00+0200
 categories: eksperymenty html-css
 comments: true
 permalink: /stylowalne-ikonki-svg.html

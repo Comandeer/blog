@@ -2,7 +2,7 @@
 layout: post
 title:  "System polyfillów"
 author: Comandeer
-date:   2019-01-31 02:45:00 +0100
+date: 2019-01-31T02:45:00+0100
 categories: eksperymenty javascript
 comments: true
 permalink: /system-polyfillow.html

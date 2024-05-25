@@ -2,7 +2,7 @@
 layout: post
 title:  "Tworzymy własny bundler"
 author: Comandeer
-date:   2020-07-30 23:06:00 +0200
+date: 2020-07-30T23:06:00+0200
 categories: javascript eksperymenty
 comments: true
 permalink: /tworzymy-wlasny-bundler.html
@@ -24,7 +24,7 @@ I w sumie to tyle. Jedyny haczyk polega na tym, że importowane pliki mogą impo
     ```javascript
     import Test from './Test.js';
     import { render } from './tools.js';
-    
+
     render( Test.msg );
     ```
 
@@ -32,11 +32,11 @@ I w sumie to tyle. Jedyny haczyk polega na tym, że importowane pliki mogą impo
 
     ```javascript
     import { createClass } from './tools.js';
-    
+
     const Test = createClass( {
     	msg: 'Test'
     } );
-    
+
     export default Test;
     ```
 
@@ -46,11 +46,11 @@ I w sumie to tyle. Jedyny haczyk polega na tym, że importowane pliki mogą impo
     function createClass( obj ) {
     	return obj;
     }
-    
+
     function render( string ) {
     	console.log( string );
     }
-    
+
     export { createClass };
     export { render };
     ```
@@ -178,7 +178,7 @@ traverse( ast, {
 			if ( !isImportDeclaration( path.node ) ) {
 				return;
 			}
-      
+
 			console.log( path.node.source.value );
 
 			processModule( path.node.source.value );
@@ -204,20 +204,20 @@ const { dirname } = require( 'path' ); // 1
 function processModule( path ) {
 	const dir = dirname( path ); // 2
 	[…]
-  
+
 	traverse( ast, {
 		enter( path ) {
 			if ( !isImportDeclaration( path.node ) ) {
 				return;
 			}
-      
+
 			console.log( path.node.source.value );
 
 			const depPath = resolvePath( dir, path.node.source.value ); // 3
 			processModule( depPath ); // 4
 		}
 	} );
-  
+
   […]
 }
 

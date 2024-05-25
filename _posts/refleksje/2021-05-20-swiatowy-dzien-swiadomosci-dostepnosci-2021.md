@@ -2,7 +2,7 @@
 layout: post
 title:  "Światowy Dzień Świadomości Dostępności 2021"
 author: Comandeer
-date:   2021-05-20 16:53:00 +0200
+date: 2021-05-20T16:53:00+0200
 categories: refleksje a11y
 comments: true
 permalink: /swiatowy-dzien-swiadomosci-dostepnosci-2021.html

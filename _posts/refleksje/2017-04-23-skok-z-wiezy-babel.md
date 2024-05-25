@@ -2,7 +2,7 @@
 layout: post
 title:  "Skok z wieży Babel"
 author: Comandeer
-date:   2017-04-23 20:00:00 +0100
+date: 2017-04-23T20:00:00+0100
 categories: refleksje javascript daj-sie-poznac-2017
 comments: true
 permalink: /skok-z-wiezy-babel.html

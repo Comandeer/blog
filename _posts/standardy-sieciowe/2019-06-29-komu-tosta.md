@@ -2,7 +2,7 @@
 layout: post
 title:  "Komu tosta?"
 author: Comandeer
-date:   2019-06-29 14:45:00 +0200
+date: 2019-06-29T14:45:00+0200
 categories: standardy-sieciowe refleksje
 comments: true
 permalink: /komu-tosta.html
