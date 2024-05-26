@@ -3,12 +3,15 @@
 /**
  *
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
- * @returns
  */
 module.exports = function( eleventyConfig ) {
 	eleventyConfig.setLiquidOptions( {
 		dynamicPartials: false,
 		strictFilters: false
+	} );
+
+	eleventyConfig.addPassthroughCopy( {
+		public: '.'
 	} );
 
 	return {
