@@ -1,14 +1,11 @@
-<a href="#tresc" class="sr-only skip-link">Przewiń do&nbsp;treści&nbsp;<span aria-hidden="true">⇩</span></a>
+<a href="#tresc" class="visually-hidden visually-hidden_focusable">Przewiń do&nbsp;treści&nbsp;<span aria-hidden="true">⇩</span></a>
 <header class="site-header">
-
-	<div class="wrapper">
-		{% if page.layout == 'home' %}
-		<h1 class="site-heading">
-		{% endif %}
-		<a class="site-title" href="/">{{ site.title | escape }}</a>
-		{% if page.layout == 'home' %}
-		</h1>
-		{% endif %}
-	</div>
+	{% if page.url == '/' %}
+	<h1 class="site-heading">
+	{% endif %}
+	<a class="site-title" href="/">Comandeerowy blog</a>
+	{% if page.url == '/' %}
+	</h1>
+	{% endif %}
 
 </header>

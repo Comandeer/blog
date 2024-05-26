@@ -1,13 +1,11 @@
 {% assign post=include.post %}
-<p class="post-meta">
-	<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>{% if post.author %} • {{ post.author }}{% endif %}{% for category in post.categories %} • <a href="{{ site.url }}{{ site.baseurl }}/{{ category | url_encode }}">{{ site.categories_names[ category ] }}</a>{% endfor %}
-</p>
+{% include 'post-metadata' date=post.date author=post.data.author tags=post.data.tags %}
 
 <h2>
-    <a class="post-link" href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
+    <a class="post-link" href="{{ post.url }}" rel="bookmark">{{ post.data.title | escape }}</a>
 </h2>
 
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160, "…" | escape }}</p>
 <p>
-	<a href="{{ post.url | relative_url }}">Czytaj całość <span class="accessible-name">postu {{ post.title | escape }}</span> <span aria-hidden="true">»</span></a>
+	<a href="{{ post.url }}">Czytaj całość <span class="visually-hidden">postu {{ post.data.title | escape }}</span> <span aria-hidden="true">»</span></a>
 </p>

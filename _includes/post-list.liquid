@@ -1,7 +1,11 @@
+{% assign paginator = include.posts %}
+
 <ul class="post-list">
-  {% for post in include.posts %}
+  {% for post in paginator.items %}
     <li>
       {% include 'post' post=post %}
     </li>
   {% endfor %}
 </ul>
+
+{% include 'paginator' paginator=paginator.href %}
