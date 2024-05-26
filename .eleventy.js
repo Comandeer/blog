@@ -6,7 +6,7 @@
  */
 module.exports = function( eleventyConfig ) {
 	eleventyConfig.setLiquidOptions( {
-		dynamicPartials: false,
+		dynamicPartials: true,
 		strictFilters: false
 	} );
 
