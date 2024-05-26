@@ -3,7 +3,7 @@ layout: post
 title:  "Przesunięcie sourcemapy"
 author: Comandeer
 date: 2018-10-09T23:59:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /przesuniecie-sourcemapy.html
@@ -116,7 +116,7 @@ Poszczególne liczby oznaczają, od lewej:
 
 Dobrze, wiemy już jak sourcemapa wygląda, ale wciąż nie wiemy, jak ją wykorzystać. Zobaczmy zatem prosty [przykład strony wykorzystującej sourcemapę](/assets/przesuniecie-sourcemapy/example1.html). Zgodnie z poleceniem na stronie otwieramy devtools przeglądarki (<kbd>F12</kbd>) i przechodzimy do zakładki Sources (Źródła). W panelu po lewej znajduje się lista plików wczytanych przez daną stronę. Możemy zauważyć, że oprócz pliku `output.js` znajduje się też tam plik `input.js` – nawet pomimo tego, że [fizycznie go tam nie ma](/assets/przesuniecie-sourcemapy/input.js)! _Magia_…
 
-{% include figure.html src="/assets/images/przesuniecie-sourcemapy/example1.jpg" link="/assets/images/przesuniecie-sourcemapy/example1.jpg" alt="Otwarta zakładka &quot;Sources&quot; w devtools Google Chrome pokazująca przerobiony kod oraz drzewko wyboru plików po lewej, zawierającc zarówno plik output.js, jak i input.js" %}
+{% include 'figure' src="/assets/images/przesuniecie-sourcemapy/example1.jpg" link="/assets/images/przesuniecie-sourcemapy/example1.jpg" alt="Otwarta zakładka &quot;Sources&quot; w devtools Google Chrome pokazująca przerobiony kod oraz drzewko wyboru plików po lewej, zawierającc zarówno plik output.js, jak i input.js" %}
 
 Ale to jeszcze nie koniec magii… Przejdźmy do zakładki Console (Konsola) i stwórzmy nowy obiekt klasy `Test`:
 
@@ -126,7 +126,7 @@ new Test();
 
 Jak można się domyśleć, w konsoli pojawi się komunikat <q>Constructed</q>, niemniej obok pojawi się informacja, że wywołanie tej funkcji nastąpiło w pliku `input.js` w linii 4!
 
-{% include figure.html src="/assets/images/przesuniecie-sourcemapy/example1-console.jpg" link="/assets/images/przesuniecie-sourcemapy/example1-console.jpg" alt="Konsola wyświetlająca wynik stworzenia nowego obiektu klasy Test, pokazująca, że wywołanie console.log nastąpiło w 4 linii pliku input.js" %}
+{% include 'figure' src="/assets/images/przesuniecie-sourcemapy/example1-console.jpg" link="/assets/images/przesuniecie-sourcemapy/example1-console.jpg" alt="Konsola wyświetlająca wynik stworzenia nowego obiektu klasy Test, pokazująca, że wywołanie console.log nastąpiło w 4 linii pliku input.js" %}
 
 <div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/xT0xeJpnrWC4XWblEk" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/whoa-hd-tim-and-eric-xT0xeJpnrWC4XWblEk">via GIPHY</a></p>
 

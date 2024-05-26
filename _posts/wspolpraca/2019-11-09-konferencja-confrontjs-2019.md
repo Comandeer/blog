@@ -3,7 +3,7 @@ layout: post
 title:  "Konferencja ConFrontJS 2019 + konkurs"
 author: Comandeer
 date: 2019-11-09T15:12:08+0200
-tags: 
+tags:
     - wspolpraca
 comments: true
 permalink: /konferencja-confrontjs-2019.html
@@ -11,7 +11,7 @@ permalink: /konferencja-confrontjs-2019.html
 
 Podobnie jak w tamtym roku, tak i w tym objąłem patronatem medialnym (ależ to dumnie brzmi!) [konferencję ConFrontJS](https://2019.confrontjs.com/), która będzie miała swoją drugą edycję już 7 grudnia w Warszawie!
 
-{% include figure.html src="/assets/images/konferencja-confrontjs-2019/banner.gif" link="https://confrontjs.com/" alt="" %}
+{% include 'figure' src="/assets/images/konferencja-confrontjs-2019/banner.gif" link="https://confrontjs.com/" alt="" %}
 
 ## Moje typy
 

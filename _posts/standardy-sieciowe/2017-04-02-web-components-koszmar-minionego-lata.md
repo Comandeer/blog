@@ -3,7 +3,7 @@ layout: post
 title:  "Web Components – koszmar minionego lata"
 author: Comandeer
 date: 2017-04-02T19:00:00+0100
-tags: 
+tags:
     - standardy-sieciowe
     - html-css
     - javascript
@@ -25,7 +25,7 @@ Nieskażone idee zawsze są piękne, czyż nie? Nie było inaczej i w przypadku 
 Żeby było jeszcze lepiej, to mądrzy ludzie stwierdzili, że skoro już pozwalamy tworzyć własne znaczniki, to zróbmy to dobrze, czyli pozwólmy robić to, co przeglądarki mogą od dawna: ukrywać różne, dziwne bebechy i pokazywać jedynie znacznik (jak to ma miejsce choćby z `video`)!
 
 {% capture src %}{{ '/assets/images/video-SD.png' | absolute_url }}{% endcapture %}
-{% include figure.html alt="Shadow DOM tagu video w przeglądarce Chrome" src=src %}
+{% include 'figure' alt="Shadow DOM tagu video w przeglądarce Chrome" src=src %}
 
 Tak oto narodził się Shadow DOM (SD).
 

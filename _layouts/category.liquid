@@ -7,7 +7,7 @@ layout: default
 
   {{ content }}
   {% assign posts = site.categories[page.category] %}
-  {% include post-list.html posts=posts %}
+  {% include 'post-list' posts=posts %}
 
   <p class="rss-subscribe">
     {% capture rss_link %}/feeds/{{ page.category | url_encode }}.xml{% endcapture %}

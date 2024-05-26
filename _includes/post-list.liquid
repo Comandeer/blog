@@ -1,7 +1,7 @@
 <ul class="post-list">
   {% for post in include.posts %}
     <li>
-      {% include post.html post=post %}
+      {% include 'post' post=post %}
     </li>
   {% endfor %}
 </ul>

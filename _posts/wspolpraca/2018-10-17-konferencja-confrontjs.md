@@ -3,7 +3,7 @@ layout: post
 title:  "Konferencja ConFrontJS + konkurs"
 author: Comandeer
 date: 2018-10-17T18:24:08+0200
-tags: 
+tags:
     - wspolpraca
 comments: true
 permalink: /konferencja-confrontjs.html
@@ -13,7 +13,7 @@ redirect_from:
 
 29 października w Warszawie odbędzie się [konferencja ConfrontJS 2018](https://confrontjs.com/). Potrwa od 09:00 do 17:00, a jej w trakcie zostanie wygłoszonych 12 prelekcji. Całość jest organizowana przez stare dobre [WarsawJS](https://warsawjs.com/), w urokliwym [Campus Warsaw](https://www.youtube.com/watch?v=zUuU0whqDg8).
 
-{% include figure.html src="/assets/images/konferencja-confrontjs/confrontjs.svg" link="https://confrontjs.com/" alt="ConFrontJS" %}
+{% include 'figure' src="/assets/images/konferencja-confrontjs/confrontjs.svg" link="https://confrontjs.com/" alt="ConFrontJS" %}
 
 ## Moje typy
 

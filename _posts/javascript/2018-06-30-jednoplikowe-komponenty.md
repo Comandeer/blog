@@ -3,7 +3,7 @@ layout: post
 title:  "Jednoplikowe komponenty"
 author: Comandeer
 date: 2018-06-30T19:50:00+0100
-tags: 
+tags:
     - javascript
     - html-css
     - eksperymenty
@@ -144,7 +144,7 @@ loadComponent( 'HelloWorld.wc' ).then( ( component ) => {
 } );
 ```
 
-{% include figure.html src="/assets/images/jednoplikowe-komponenty-fetch.png" link="/assets/images/jednoplikowe-komponenty-fetch.png" alt="Konsola Google Chrome wyświetlająca informacje o wczytaniu pliku HelloWorld.wc, a następnie wyświetlająca jego zawartość w formie tekstu" %}
+{% include 'figure' src="/assets/images/jednoplikowe-komponenty-fetch.png" link="/assets/images/jednoplikowe-komponenty-fetch.png" alt="Konsola Google Chrome wyświetlająca informacje o wczytaniu pliku HelloWorld.wc, a następnie wyświetlająca jego zawartość w formie tekstu" %}
 
 Działa!
 
@@ -168,7 +168,7 @@ Najpierw tworzymy nową instancję parsera (1), a następnie parsujemy tekstową
 
 Jeśli teraz sprawdzimy, co zwraca `loadComponent`, zauważymy, że jest to kompletne drzewko DOM.
 
-{% include figure.html src="/assets/images/jednoplikowe-komponenty-parsowanie.png" link="/assets/images/jednoplikowe-komponenty-parsowanie.png" alt="Konsola Chrome pokazująca sparsowane drzewko DOM komponentu" %}
+{% include 'figure' src="/assets/images/jednoplikowe-komponenty-parsowanie.png" link="/assets/images/jednoplikowe-komponenty-parsowanie.png" alt="Konsola Chrome pokazująca sparsowane drzewko DOM komponentu" %}
 
 I mówiąc "kompletne" mam na myśli _naprawdę_ kompletne. W tym wypadku dostajemy pełnoprawny dokument HTML, z `head` i `body`. Jak widać, zawartość naszego komponentu trafiła do `head`. Jest to spowodowane tym, w jaki sposób parser HTML wykonuje swoją pracę.  [Algorytm budowania drzewa DOM](https://html.spec.whatwg.org/multipage/parsing.html#tree-construction) jest opisany dokładnie w specyfikacji HTML LS. W największym uproszczeniu można przyjąć, że konstruując takie drzewko, parser będzie umieszczał wszystko w `head` tak długo, aż nie natknie się na element, który jest dozwolony tylko w `body`. Wszystkie wykorzystane przez nas elementy (`template`, `style`, `script`) są dozwolone w `head`, stąd otrzymujemy taki wynik. Gdybyśmy na początek naszego komponentu dodali np. pusty znacznik `p`, wówczas cała jego zawartość znalazłaby się w `body` dokumentu stworzonego przez parser.
 
@@ -285,7 +285,7 @@ function registerComponent( { template, style, script } ) {
 
 Jeśli teraz sprobujemy wykorzystać nasz komponent na stronie, powinien zadziałać:
 
-{% include figure.html src="/assets/images/jednoplikowe-komponenty-dzialanie1.png" link="/assets/images/jednoplikowe-komponenty-dzialanie1.png" alt="Komponent wyświetlony w Chrome: czerwony prostokąt o zaookrąglonych krawędziach, wewnątrz którego znajduje się napis: &quot;Hello, world! My name is Comandeer.&quot;" %}
+{% include 'figure' src="/assets/images/jednoplikowe-komponenty-dzialanie1.png" link="/assets/images/jednoplikowe-komponenty-dzialanie1.png" alt="Komponent wyświetlony w Chrome: czerwony prostokąt o zaookrąglonych krawędziach, wewnątrz którego znajduje się napis: &quot;Hello, world! My name is Comandeer.&quot;" %}
 
 ## Wczytanie skryptu z komponentu
 
@@ -496,7 +496,7 @@ Jak widać, przybył nowy parametr w destrukturyzacji, `listeners` (1) oraz nowa
 
 Po tym zabiegu w końcu klikanie w nasz komponent powinno dawać odpowiedni efekt:
 
-{% include figure.html src="/assets/images/jednoplikowe-komponenty-dzialanie2.png" link="/assets/images/jednoplikowe-komponenty-dzialanie2.png" alt="Komunikat wyświetlony w Chrome po naciśnięciu komponentu:  &quot;Don't touch me!&quot;" %}
+{% include 'figure' src="/assets/images/jednoplikowe-komponenty-dzialanie2.png" link="/assets/images/jednoplikowe-komponenty-dzialanie2.png" alt="Komunikat wyświetlony w Chrome po naciśnięciu komponentu:  &quot;Don't touch me!&quot;" %}
 
 I tym oto sposobem udało nam się zaimplementować działające jednoplikowe Web Components 🎉!
 

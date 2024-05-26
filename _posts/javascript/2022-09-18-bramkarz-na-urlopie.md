@@ -3,7 +3,7 @@ layout: post
 title:  "Bramkarz na urlopie"
 author: Comandeer
 date: 2022-09-18T19:13:00+0200
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
@@ -26,7 +26,7 @@ Główna aplikacja odpala się **przed** wykonaniem się kodu wewnątrz wczytywa
 
 Niemniej i na to istnieją haki – niekoniecznie działające stuprocentowo dobrze, ale _działające_.
 
-{% include figure.html src="/assets/images/bramkarz-na-urlopie/meme.jpg" alt="–You are without doubt the worst hack I've ever heard of! –But you have heard of me" %}
+{% include 'figure' src="/assets/images/bramkarz-na-urlopie/meme.jpg" alt="–You are without doubt the worst hack I've ever heard of! –But you have heard of me" %}
 
 Istnieje w Node.js [moduł `node:module`](https://nodejs.org/api/module.html), który zawiera całą logikę obsługi modułów CJS. Wśród niej jest (nieudokumentowana) metoda `Module._load`, służąca właśnie do wczytywania modułów. Nadpisanie jej w teorii pozwala dodać wsparcie dla asynchronicznego `require()`. A przynajmniej takiego, które poczeka na wczytanie się konfiguracji Bramkarza:
 
@@ -55,6 +55,6 @@ Tylko że tutaj trafiłem na kolejny problem: mój projekt ma zależności. Wię
 ## I to by było na tyle
 Szkoda mi tego projektu, bo bardzo podobała mi się idea zrobienia narzędzia, które pozwalałoby na wprowadzenie do Node'a czegoś na wzór systemu uprawnień. Niemniej trudności, które napotkałem, skutecznie mnie zniechęciły. A już nawet wygenerowałem ładne logo dla projektu przy użyciu [Dall·e 2](https://openai.com/dall-e-2/):
 
-{% include figure.html src="/assets/images/bramkarz-na-urlopie/logo.png" alt="Bramkarz w eleganckim garniturze przed wejściem do klubu nocnego" %}
+{% include 'figure' src="/assets/images/bramkarz-na-urlopie/logo.png" alt="Bramkarz w eleganckim garniturze przed wejściem do klubu nocnego" %}
 
 No cóż, może Bramkarz doczeka się lepszych czasów, np. Node.js kiedyś porzuci wsparcie dla CJS. Na razie jednak Bramkarz zostaje wysłany na urlop.

@@ -3,7 +3,7 @@ layout: post
 title:  "ComSemRel – co to?"
 author: Comandeer
 date: 2017-03-04T22:40:00+0100
-tags: 
+tags:
     - daj-sie-poznac-2017
     - javascript
 comments: true
@@ -74,4 +74,4 @@ Podsumowując: ComSemRel to będzie lepsze (bo _własne_) semantic-release. Ambi
 PS przygarnę PR-a z ładnym logo!
 
 {% capture src %}{{ '/assets/images/bender-kill.jpg' | absolute_url }}{% endcapture %}
-{% include figure.html alt="KILL ALL HUMANS" src=src %}
+{% include 'figure' alt="KILL ALL HUMANS" src=src %}

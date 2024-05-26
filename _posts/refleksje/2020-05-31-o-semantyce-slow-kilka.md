@@ -3,7 +3,7 @@ layout: post
 title:  "O semantyce słów kilka"
 author: Comandeer
 date: 2020-05-31T18:26:00+0200
-tags: 
+tags:
     - refleksje
     - a11y
     - html-css
@@ -150,7 +150,7 @@ W skrócie: każdy element HTML jest prezentowany w określony sposób w [drzewk
 
 Z punktu widzenia użytkownika, który posługuje się wizualną przeglądarką, obydwa elementy wyglądają tak samo i mogą pełnić role nagłówka. Ale gdy z jakiegoś powodu nie doczyta się CSS (bo np. padnie CDN), drugi z elementów przestanie pełnić swoją rolę. Dodatkowo w drzewku dostępności te obydwa elementy są prezentowane zupełnie inaczej:
 
-{% include figure.html src="/assets/images/o-semantyce-slow-kilka/accessibility-tree.png" link="/assets/images/o-semantyce-slow-kilka/accessibility-tree.png" alt="Element h1 ma rolę heading, podczas gdy span – text container." caption="Widok elementów w inspektorze dostępności Firefoksa" %}
+{% include 'figure' src="/assets/images/o-semantyce-slow-kilka/accessibility-tree.png" link="/assets/images/o-semantyce-slow-kilka/accessibility-tree.png" alt="Element h1 ma rolę heading, podczas gdy span – text container." caption="Widok elementów w inspektorze dostępności Firefoksa" %}
 
 To oznacza, że np. użytkownicy czytników ekranowych nie będą w stanie wykorzystać drugiego z elementów do nawigacji po stronie, a przeglądarka lub inny program nie będzie w stanie wygenerować poprawnego spisu treści dla takiej strony.
 
@@ -160,7 +160,7 @@ Teoretycznie można to naprawić nadając elementowi `span` odpowiednią rolę p
 
 A jak już jesteśmy przy Google, to warto wspomnieć o tym, w jaki sposób wykorzystuje dodatkowe informacje semantyczne, przekazywane przy pomocy RDFa czy JSON-LD. Dzięki nim możemy do pewnego stopnia wpływać na to, jak prezentowana będzie nasza strona w wynikach wyszukiwania. Najprostszym przykładem może być dodanie gwiazdek z oceną przy wyszukiwaniu produktu:
 
-{% include figure.html src="/assets/images/o-semantyce-slow-kilka/google-schema.png" link="/assets/images/o-semantyce-slow-kilka/google-schema.png" alt="Moja książka w wynikach wyszukiwania ma ocenę 4.2/6 w Helionie oraz 6/10 w Lubimy czytać." %}
+{% include 'figure' src="/assets/images/o-semantyce-slow-kilka/google-schema.png" link="/assets/images/o-semantyce-slow-kilka/google-schema.png" alt="Moja książka w wynikach wyszukiwania ma ocenę 4.2/6 w Helionie oraz 6/10 w Lubimy czytać." %}
 
 Tego typu gwiazdki można dodać przy pomocy [odpowiedniego typu danych Schema.org](https://schema.org/Review). Samo Schema.org to wspólna inicjatywa Google, Microsoftu (Binga), Yahoo i Yandexu, która dostarcza wspólnego dla tych wyszukiwarek sposobu oznaczania dodatkowej semantyki. Dzięki temu wyszukiwarki te mogą w prosty sposób odczytywać różne dodatkowe informacje, jak m.in. oceny produktów czy ich ceny. Ot, taka namiastka [Web 3.0](https://en.wikipedia.org/wiki/Semantic_Web#Web_3.0).
 
