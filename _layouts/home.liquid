@@ -1,15 +1,19 @@
----
-layout: default
----
-<div class="home">
-  {{ content }}
+<!DOCTYPE html>
+	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+	  {% include 'head' %}
+	  <body>
+		{% include 'header' %}
+		<main id="tresc" class="page-content">
+			{{ content }}
 
-  {% include 'post-list' posts=pagination %}
+			{% include 'post-list' posts=pagination %}
 
-  <p class="rss-subscribe">
-    <a href="/feeds/feed.xml">
-      <img src="/assets/rss.png" alt=""> Subskrybuj blog
-    </a>
-  </p>
-
-</div>
+			<p class="rss-subscribe">
+				<a href="/feeds/feed.xml">
+				<img src="/assets/rss.png" alt=""> Subskrybuj blog
+				</a>
+			</p>
+		</main>
+		{% include 'footer' %}
+	  </body>
+	</html>

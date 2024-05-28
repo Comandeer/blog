@@ -1,19 +1,22 @@
----
-layout: default
----
-<div class="home">
+<!DOCTYPE html>
+	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+	  {% include 'head' %}
+	  <body>
+		{% include 'header' %}
+		<main id="tresc" class="page-content">
+			<h1 class="page-heading">Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}</h1>
 
-  <h1 class="page-heading">Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}</h1>
+			{{ content }}
 
-  {{ content }}
+			{% include 'post-list' posts=pagination %}
 
-  {% include 'post-list' posts=pagination %}
-
-  <p class="rss-subscribe">
-    {% capture rss_link %}/feeds/{{ tag | url_encode }}.xml{% endcapture %}
-    <a href="{{ rss_link }}">
-      <img src="/assets/rss.png" alt=""> Subskrybuj kategorię {{ site.tagNames[ tag ] }}
-    </a>
-  </p>
-
-</div>
+			<p class="rss-subscribe">
+			  {% capture rss_link %}/feeds/{{ tag | url_encode }}.xml{% endcapture %}
+			  <a href="{{ rss_link }}">
+				<img src="/assets/rss.png" alt=""> Subskrybuj kategorię {{ site.tagNames[ tag ] }}
+			  </a>
+			</p>
+		</main>
+		{% include 'footer' %}
+	  </body>
+	</html>
