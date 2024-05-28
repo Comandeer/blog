@@ -1,6 +1,7 @@
 /* global module */
 
 const site = require( './_data/site' );
+const { formatRFC3339 } = require( 'date-fns' );
 
 /**
  *
@@ -33,6 +34,10 @@ module.exports = function( eleventyConfig ) {
 
 	eleventyConfig.addPassthroughCopy( {
 		public: '.'
+	} );
+
+	eleventyConfig.addFilter( 'rfc_date', ( date ) => {
+		return formatRFC3339( date );
 	} );
 
 	return {

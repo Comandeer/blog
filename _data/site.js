@@ -1,4 +1,7 @@
 module.exports = {
+	url: 'https://blog.comandeer.pl',
+	description: 'Kolejny nudny blog kolejnego nudnego fanatyka JS-a. Nie czytać, nie warto tracić czasu.',
+	timezone: 'Europe/Warsaw',
 	tagNames: {
 		'na-luzie': 'Na luzie',
 		javascript: 'JavaScript',

@@ -14,6 +14,9 @@ importers:
       '@comandeer/eslint-config':
         specifier: ^0.13.1
         version: 0.13.1(eslint@8.57.0)(typescript@5.4.5)
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
       eslint:
         specifier: '8'
         version: 8.57.0
@@ -1041,6 +1044,9 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
+
+  date-fns@3.6.0:
+    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -3327,6 +3333,8 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  date-fns@3.6.0: {}
 
   debug@2.6.9:
     dependencies:

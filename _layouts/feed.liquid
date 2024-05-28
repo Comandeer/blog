@@ -1,28 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xml" href="{{ site.url }}{{ site.baseurl }}/feed.xslt.xml"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <link href="{{ site.url }}{{ site.baseurl }}/feeds/{{page.category | url_encode }}.xml" rel="self" type="application/atom+xml" />
-  <link href="{{ site.url }}{{ site.baseurl }}/{{ page.category | url_encode }}" rel="alternate" type="text/html" />
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.url }}{{ site.baseurl }}/{{page.category | url_encode }}</id>
-  <category term="{{ site.categories_names[ page.category ] | xml_escape }}" />
-  <title type="html">Comandeer’s blog</title>
-  <subtitle>Kategoria '{{ site.categories_names[ page.category ] | xml_escape }}'</subtitle>
-
-  {% for post in site.categories[ page.category ] limit:10 %}
+  <link href="{{ site.url }}/feeds/{{tag | url_encode }}.xml" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}/{{ tag | url_encode }}" rel="alternate" type="text/html" />
+  <updated>{{ page.date | rfc_date }}</updated>
+  <id>{{ site.url }}/feeds/{% if tag %}{{ tag | url_encode }}.xml{% else %}feed.xml{% endif %}</id>
+  <title type="html">Comandeerowy blog</title>
+  {% if tag %}
+  <category term="{{ site.tagNames[ tag ] | xml_escape }}" />
+  <subtitle>Kategoria '{{ site.tagNames[ tag ] | xml_escape }}'</subtitle>
+  {% else %}
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  {% endif %}
+  {% if tag %}
+  {% assign posts = collections[ tag ] %}
+  {% else %}
+  {% assign posts = collections.posts %}
+  {% endif %}
+  {% for post in posts limit:10 %}
   <entry>
-    <title type="html">{{ post.title | xml_escape }}</title>
-    {% if post.author %}
+    <title type="html">{{ post.data.title | xml_escape }}</title>
+    {% if post.data.author %}
     <author>
-      <name>{{ post.author | xml_escape }}</name>
+      <name>{{ post.data.author | xml_escape }}</name>
     </author>
     {% endif %}
-    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" rel="alternate" type="text/html" />
-    <published>{{ post.date | date_to_xmlschema }}</published>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>{{ site.url }}{{ site.baseurl }}{{ post.url }}</id>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" />
+    <published>{{ post.date | rfc_date }}</published>
+    <updated>{{ post.date | rfc_date }}</updated>
+    <id>{{ site.url }}{{ post.url }}</id>
     <summary>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160, "…" | xml_escape }}</summary>
-    <content type="html" xml:base="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.content | xml_escape }}</content>
+    <content type="html" xml:base="{{ site.url }}{{ post.url }}"><![CDATA[{{ post.content }}]]></content>
   </entry>
   {% endfor %}
 </feed>
