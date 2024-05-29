@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Headings First Principle"
+description: "Zasada Najpierw Nagłówki jako podstawa tworzenia struktury treści na stronie WWW."
 author: Comandeer
 date: 2018-04-30T22:05:00+0200
-tags: 
+tags:
     - refleksje
     - html-css
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /refleksje/html-css/2018/04/30/headings-first-principle.html
 ---
 
-Dzisiaj krótko o tym, czym jest Headings First Principle (Zasada Najpierw Nagłówki). [Wymyśliłem ją na poczekaniu 20 lutego](https://github.com/w3c/html/issues/1566) w trakcie dyskusji nad sensownością znaczników `article` i `section` i moim skromnym zdaniem w prosty i sensowny sposób opisuje, jak dzielić stronę na sekcje.
+Dzisiaj krótko o tym, czym jest Headings First Principle (Zasada Najpierw Nagłówki). [Wymyśliłem ją na poczekaniu 20 lutego](https://github.com/w3c/html/issues/1566) w trakcie dyskusji nad sensownością znaczników `article` i `section` i moim skromnym zdaniem w prosty i sensowny sposób opisuje, jak dzielić stronę na sekcje.<!--more-->
 
 ## O co chodzi?
 

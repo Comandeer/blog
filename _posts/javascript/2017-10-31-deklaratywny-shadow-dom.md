@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Deklaratywny Shadow DOM"
+description: "Eksperyment polegający na dodaniu deklaratywnego Shadom DOM-u."
 author: Comandeer
 date: 2017-10-31T23:25:00+0100
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /javascript/2017/10/31/deklaratywny-shadow-dom.html
 ---
 
-W swoim [poprzednim wpisie](https://blog.comandeer.pl/javascript/2017/09/30/zmutowany-dom.html) rozpisałem się co nieco o mutowaniu DOM-u i obiecałem, że następnym razem pokażę sensowny przykład jego zastosowania. Ten czas właśnie nadszedł! Pokażę, jak przy pomocy mutacji stworzyć prototyp deklaratywnego Shadow DOM.
+W swoim [poprzednim wpisie](https://blog.comandeer.pl/javascript/2017/09/30/zmutowany-dom.html) rozpisałem się co nieco o mutowaniu DOM-u i obiecałem, że następnym razem pokażę sensowny przykład jego zastosowania. Ten czas właśnie nadszedł! Pokażę, jak przy pomocy mutacji stworzyć prototyp deklaratywnego Shadow DOM.<!--more-->
 
 <small>Wypada zaznaczyć, że treści zawarte w tym artykule działają tylko w [przeglądarkach obsługujących Shadow DOM](http://caniuse.com/#feat=shadowdomv1). W chwili pisania jest to tylko Chrome i Safari.</small>
 

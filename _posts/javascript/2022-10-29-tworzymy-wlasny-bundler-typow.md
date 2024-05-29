@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Tworzymy własny bundler typów"
+description: "Krótki poradnik, jak stworzyć narzędzie, które bundle'uje TS-owe deklaracj typów."
 author: Comandeer
 date: 2022-10-29T19:00:00+0200
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
 permalink: /tworzymy-wlasny-bundler-typow.html
 ---
 
-Nieco ponad rok temu opisałem [proces tworzenia prymitywnego bundlera](https://blog.comandeer.pl/tworzymy-wlasny-bundler.html). Nie tak dawno zacząłem się zastanawiać, czy dałoby się go w prosty sposób dostosować do bundle'owania plików z [definicjami typów TS-a](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-d-ts.html). A że to wciąż jest [faktyczny problem](https://github.com/Microsoft/TypeScript/issues/4433#issuecomment-1183981387), postanowiłem to sprawdzić.
+Nieco ponad rok temu opisałem [proces tworzenia prymitywnego bundlera](https://blog.comandeer.pl/tworzymy-wlasny-bundler.html). Nie tak dawno zacząłem się zastanawiać, czy dałoby się go w prosty sposób dostosować do bundle'owania plików z [definicjami typów TS-a](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-d-ts.html). A że to wciąż jest [faktyczny problem](https://github.com/Microsoft/TypeScript/issues/4433#issuecomment-1183981387), postanowiłem to sprawdzić.<!--more-->
 
 ## Teoria
 

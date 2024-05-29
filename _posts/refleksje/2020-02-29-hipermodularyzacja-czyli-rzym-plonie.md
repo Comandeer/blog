@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Hipermodularyzacja, czyli Rzym płonie"
+description: "Rozważania o hipermodularyzacji i monolitach w kontekście narzędzia Rome."
 author: Comandeer
 date: 2020-02-29T23:56:00+0100
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
@@ -19,7 +20,7 @@ permalink: /hipermodularyzacja-czyli-rzym-plonie.html
 
 </blockquote>
 
-Zdecydowanie moim ulubionym cesarzem jest Neron, ponieważ tak jak on czasami lubię sobie popatrzeć jak Rzym płonie… Z tym, że mój Rzym to zupełnie inny Rzym.
+Zdecydowanie moim ulubionym cesarzem jest Neron, ponieważ tak jak on czasami lubię sobie popatrzeć jak Rzym płonie… Z tym, że mój Rzym to zupełnie inny Rzym.<!--more-->
 
 ## Rzym?
 

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Zgniłe jabłko"
+description: "Apple vs PWA i UE."
 author: Comandeer
 date: 2024-02-28T18:17:00+0100
-tags: 
+tags:
     - refleksje
 comments: true
 permalink: /zgnile-jablko.html

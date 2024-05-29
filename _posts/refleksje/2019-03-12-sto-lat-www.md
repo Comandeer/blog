@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Sto lat, WWW!"
+description: "Sieć obchodzi 30. urodziny!"
 author: Comandeer
 date: 2019-03-12T10:00:00+0100
-tags: 
+tags:
     - refleksje
 comments: true
 permalink: /sto-lat-www.html

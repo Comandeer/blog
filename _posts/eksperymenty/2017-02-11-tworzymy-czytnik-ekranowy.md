@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Tworzymy czytnik ekranowy"
+description: "Krótki eksperyment w implementowaniu czytnika ekranowego przy użyciu współczesnych technologii sieciowych, w tym Web Speech API."
 author: Comandeer
 date: 2017-02-11T21:46:18+0100
-tags: 
+tags:
     - eksperymenty
     - a11y
     - standardy-sieciowe
@@ -15,7 +16,7 @@ redirect_from:
 
 Ostatnio [kumpel z pracy](https://github.com/Tade0) rzucił pomysłem: "a czemu w sumie nie napiszesz własnego czytnika ekranowego?". Tak po prawdzie nigdy się nad tym nie zastanawiałem jakoś specjalnie. Uważałem, że czytniki ekranowe są na tyle skomplikowane, że zrobienie tego _dobrze_ jest niezwykle trudne (co zresztą widać po tym jak wielkie rozbieżności są pomiędzy największymi w stawce, np. [VoiceOverem](http://www.apple.com/accessibility/mac/vision/) a [JAWS-em](http://www.freedomscientific.com/Products/Blindness/JAWS)). No i przede wszystkim jeszcze niedawno technologie webowe nie pozwalały na takie cuda, jak choćby czytanie tekstu na głos.
 
-Ale to się zmieniło i powstało [Web Speech API](https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API), którego częścią jest [Speech Synthesis](https://developers.google.com/web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API), czyli – po ludzku – API do zamieniania tekstu pisanego na mowę. [Wsparcie jest zadziwiająco dobre](http://caniuse.com/#feat=speech-synthesis), zwłaszcza jak na coś, co [wciąż nie jest oficjalnym standardem od W3C](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html). Skoro zatem główną funkcjonalność czytnika ekranowego znajdziemy dzisiaj w _de facto_ każdej przeglądarce, to możemy nieco poeksperymentować, prawda? Udało mi się złożyć [przykładową implementację](https://comandeer.github.io/sr-poc/) (zgadnijcie, w czym nie działa…), o której nieco poopowiadam.
+Ale to się zmieniło i powstało [Web Speech API](https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API), którego częścią jest [Speech Synthesis](https://developers.google.com/web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API), czyli – po ludzku – API do zamieniania tekstu pisanego na mowę. [Wsparcie jest zadziwiająco dobre](http://caniuse.com/#feat=speech-synthesis), zwłaszcza jak na coś, co [wciąż nie jest oficjalnym standardem od W3C](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html). Skoro zatem główną funkcjonalność czytnika ekranowego znajdziemy dzisiaj w _de facto_ każdej przeglądarce, to możemy nieco poeksperymentować, prawda? Udało mi się złożyć [przykładową implementację](https://comandeer.github.io/sr-poc/) (zgadnijcie, w czym nie działa…), o której nieco poopowiadam.<!--more-->
 
 Wbrew pozorom sama zamiana tekstu na mowę jest w całym czytniku najłatwiejsza i sprowadza się do wywołania prostej metody [`speechSynthesis.speak`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak). Najpierw jednak trzeba:
 

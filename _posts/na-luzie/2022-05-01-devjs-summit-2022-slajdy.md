@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "dev.js Summit 2022 – slajdy"
+description: "Slajdy z mojej prelekcji Mity o dostępności."
 author: Comandeer
 date: 2022-05-01T17:55+0200
-tags: 
+tags:
     - na-luzie
 comments: true
 permalink: /devjs-summit-2022-slajdy.html

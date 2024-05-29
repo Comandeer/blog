@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "Kręciołek!"
+description: "Krótki opis eksperymentowania z tworzeniem własnego CLI spinnera."
 author: Comandeer
 date: 2021-07-31T23:50:00+0200
-tags: 
+tags:
     - eksperymenty
 comments: true
 permalink: /kreciolek.html
 ---
 
-Jeśli w wolnym czasie człowiek bawi się w tworzenie narzędzi uruchamianych w terminalu, to prędzej czy później stanie przed poważnym wyzwaniem – implementacją kręciołka, znanego też pod swoją angielską nazwą, spinnera. Przyszło zatem i mnie zmierzyć się z tym tematem.
+Jeśli w wolnym czasie człowiek bawi się w tworzenie narzędzi uruchamianych w terminalu, to prędzej czy później stanie przed poważnym wyzwaniem – implementacją kręciołka, znanego też pod swoją angielską nazwą, spinnera. Przyszło zatem i mnie zmierzyć się z tym tematem.<!--more-->
 
 ## Dlaczego nie gotowe rozwiązania?
 

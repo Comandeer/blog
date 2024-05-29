@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Odjulianiłem się…"
+description: "Radosna zabawa słowotwórcza z nutką refleksji egzystencjalnej."
 author: Comandeer
 date: 2017-04-26T17:30:00+0200
-tags: 
+tags:
     - refleksje
     - daj-sie-poznac-2017
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /refleksje/daj-sie-poznac-2017/2017/04/26/odjulianilem-sie.html
 ---
 
-Dzisiaj nadszedł ten dzień, w którym uświadomiłem sobie, że niemal całkowicie _się odjulianiłem_. W tym miejscu jestem Ci winny, Drogi Czytelniku, kilka słów wyjaśnienia. Zacznijmy od niezbędnego kontekstu kulturowego:
+Dzisiaj nadszedł ten dzień, w którym uświadomiłem sobie, że niemal całkowicie _się odjulianiłem_.<!--more--> W tym miejscu jestem Ci winny, Drogi Czytelniku, kilka słów wyjaśnienia. Zacznijmy od niezbędnego kontekstu kulturowego:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-nOkR7HjyO4?rel=0" frameborder="0" allowfullscreen></iframe>
 

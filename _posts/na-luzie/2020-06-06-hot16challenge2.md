@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "#hot16challenge2"
+description: "Mój udział w akcji #hot16challenge2."
 author: Comandeer
 date: 2020-06-06T17:53:00+0200
-tags: 
+tags:
     - na-luzie
 comments: true
 permalink: /hot16challenge2.html
 ---
 
-[Zostałem nominowany przez pewnego łysola](https://youtu.be/R3WiHx-XYHM?t=186) do #hot16challenge2/#code16challenge. No więc ten…
+[Zostałem nominowany przez pewnego łysola](https://youtu.be/R3WiHx-XYHM?t=186) do #hot16challenge2/#code16challenge. No więc ten…<!--more-->
 
 ## Zbiórka
 

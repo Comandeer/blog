@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "O abstrakcji słów kilka"
+description: "Krótkie rozważania o istocie abstrakcji oraz jej wpływie na jakość oprogramowania."
 author: Comandeer
 date: 2018-12-24T16:01:00+0100
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /refleksje/javascript/2018/12/24/o-abstrakcji-slow-kilka.html
 ---
 
-Ostatnio miałem przyjemność przeczytać [książkę Nicholása Bevacquy <cite>Mastering Modular JavaScript</cite>](https://helion.pl/ksiazki/mastering-modular-javascript-nicolas-bevacqua,e_0xjn.htm#format/e). Z racji tego, że książka ta porusza bardzo szeroko rolę abstrakcji w tworzeniu oprogramowania, stwierdziłem, że najwyższy czas spisać także garść własnych przemyśleń.
+Ostatnio miałem przyjemność przeczytać [książkę Nicholása Bevacquy <cite>Mastering Modular JavaScript</cite>](https://helion.pl/ksiazki/mastering-modular-javascript-nicolas-bevacqua,e_0xjn.htm#format/e). Z racji tego, że książka ta porusza bardzo szeroko rolę abstrakcji w tworzeniu oprogramowania, stwierdziłem, że najwyższy czas spisać także garść własnych przemyśleń.<!--more-->
 
 <p class="note">To faktycznie garść przemyśleń, które od dość dawna kotłowały mi się w głowie. Pod żadnym pozorem nie jest to poradnik, jak tworzyć dobre abstrakcje. Raczej garść przemyśleń starego, zrzędliwego programisty. Jeśli szukasz faktycznego poradnika, polecam wymienioną wyżej książkę!</p>
 

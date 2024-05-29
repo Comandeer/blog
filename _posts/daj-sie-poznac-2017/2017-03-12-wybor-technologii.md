@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Wybór technologii"
+description: Opis decyzji projektowych dla ComSemRela.
 author: Comandeer
 date: 2017-03-12T22:50:00+0100
-tags: 
+tags:
     - daj-sie-poznac-2017
 comments: true
 permalink: /wybor-technologii.html
@@ -19,7 +20,7 @@ Skoro już ustaliłem, co chcę stworzyć w trakcie trwania konkursu (a przynajm
 *   [jest](https://facebook.github.io/jest/)
 *   [husky](https://github.com/typicode/husky) + [commitplease](https://github.com/jzaefferer/commitplease) + [commitizen](http://commitizen.github.io/cz-cli/) + [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
 
-Przyjrzyjmy się pokrótce wszystkim elementom z tej listy.
+Przyjrzyjmy się pokrótce wszystkim elementom z tej listy. <!--more-->
 
 ## TypeScript
 

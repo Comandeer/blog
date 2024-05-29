@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "async/await w ES3"
+description: "Sztuczka z YUI.Test pozwalająca na symulację składni async/await w ES3."
 author: Comandeer
 date: 2019-09-30T20:05:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /async-await-w-es3.html
 ---
 
-Sensowne narzędzia do obsługi asynchroniczności pojawiły się w JavaScripcie stosunkowo późno, bo dopiero w ES6. W jednej z późniejszych wersji pojawiła się też składnia `async`/`await`. Niemniej przy odrobinie wyobraźni można namiastkę tej składni stworzyć w starym, dobrym ES3.
+Sensowne narzędzia do obsługi asynchroniczności pojawiły się w JavaScripcie stosunkowo późno, bo dopiero w ES6. W jednej z późniejszych wersji pojawiła się też składnia `async`/`await`. Niemniej przy odrobinie wyobraźni można namiastkę tej składni stworzyć w starym, dobrym ES3.<!--more-->
 
 ## Asynchroniczna rewolucja
 

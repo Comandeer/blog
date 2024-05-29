@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Tworzymy własny bundler"
+description: "Krótki poradnik o tworzeniu własnego bundlera JS-a."
 author: Comandeer
 date: 2020-07-30T23:06:00+0200
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
 permalink: /tworzymy-wlasny-bundler.html
 ---
 
-Bądźmy szczerzy: praktycznie wszyscy używamy jakiegoś bundlera, ale prawie nikt z nas swojego bundlera nie lubi (na Ciebie patrzę, webpack…). Może by tak zatem… stworzyć swój własny bundler?
+Bądźmy szczerzy: praktycznie wszyscy używamy jakiegoś bundlera, ale prawie nikt z nas swojego bundlera nie lubi (na Ciebie patrzę, webpack…). Może by tak zatem… stworzyć swój własny bundler?<!--more-->
 
 ## Zasada działania
 

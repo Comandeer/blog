@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "O semantyce słów kilka"
+description: "Czym jest semantyka i dlaczego jest tak istotna w HTML-u?"
 author: Comandeer
 date: 2020-05-31T18:26:00+0200
 tags:
@@ -12,7 +13,7 @@ comments: true
 permalink: /o-semantyce-slow-kilka.html
 ---
 
-W świecie webdevu semantyka to dość modne słowo. Tylko co to tak naprawdę jest i do czego służy?
+W świecie webdevu semantyka to dość modne słowo. Tylko co to tak naprawdę jest i do czego służy?<!--more-->
 
 ## Problem semantyki
 

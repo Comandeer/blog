@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "TypeScript – pierwsze wrażenia"
+description: Moje subiektywne wrażenia po pierwszej styczności z TypeScriptem.
 author: Comandeer
 date: 2017-03-18T23:40:00+0100
-tags: 
+tags:
     - daj-sie-poznac-2017
 comments: true
 permalink: /typescript-pierwsze-wrazenia.html
@@ -11,7 +12,7 @@ redirect_from:
     - /daj-sie-poznac-2017/2017/03/18/typescript-pierwsze-wrazenia.html
 ---
 
-Od rozpoczęcia konkursu minęło już trochę czasu, więc miałem go nieco, by zaznajomić się – choćby w podstawowym stopniu – z TypeScriptem. Oto garść moich wstępnych przemyśleń.
+Od rozpoczęcia konkursu minęło już trochę czasu, więc miałem go nieco, by zaznajomić się – choćby w podstawowym stopniu – z TypeScriptem. Oto garść moich wstępnych przemyśleń.<!--more-->
 
 ## Typowanie, typowanie wszędzie…
 

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HTML nie żyje, niech żyje HTML!"
+description: "HTML5 przestało istnieć, teraz mamy już tylko HTML."
 author: Comandeer
 date: 2019-05-28T19:15:00+0200
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
 comments: true

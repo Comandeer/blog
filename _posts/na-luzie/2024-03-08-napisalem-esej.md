@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Napisałem esej"
+description: "Good Web Design – esej hipertekstowy o tym, jak tworzyć dobre strony WWW."
 author: Comandeer
 date: 2024-03-08T00:35:00+0100
-tags: 
+tags:
     - na-luzie
 comments: true
 permalink: /napisalem-esej.html

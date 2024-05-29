@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piękny kod"
+description: "Jak można stworzyć własny formatter kodu JS?"
 author: Comandeer
 date: 2023-09-27T00:08:00+0200
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
@@ -12,7 +13,7 @@ permalink: /piekny-kod.html
 
 Ostatnio doszedłem do wniosku, że do formatowania mógłbym używać jakiegoś faktycznego formatera zamiast [ESLinta](https://eslint.org/). Oczywistym wyborem byłby [Prettier](https://prettier.io/), ale nie byłbym sobą, gdybym nie pisał swojego kodu w stylu, pod który nijak się nie da Prettiera skonfigurować. A nie uśmiechało mi się zmieniać styl pisania kodu tylko po to, żeby odhaczyć sobie na liście "rozpoczęcie używania formatera". Zacząłem szukać alternatywy i… trafiłem tak naprawdę na jedną obiecującą – [dprint](https://dprint.dev/). Szybki, mocno konfigurowalny i ogólnie bardzo miły w pracy – tylko że brakowało mu _dosłownie_ 3 opcji konfiguracyjnych, żeby formatował dokładnie tak, jak chcę.
 
-Zatem zrobiłem tylko jedną logiczną rzecz… Co? Nie, oczywiście, że nie chodzi mi o przygotowanie PR-a do dprinta. Zacząłem rzeźbić [własny formater](https://github.com/Comandeer/formatter/)!
+Zatem zrobiłem tylko jedną logiczną rzecz… Co? Nie, oczywiście, że nie chodzi mi o przygotowanie PR-a do dprinta. Zacząłem rzeźbić [własny formater](https://github.com/Comandeer/formatter/)!<!--more-->
 
 ## Problem
 

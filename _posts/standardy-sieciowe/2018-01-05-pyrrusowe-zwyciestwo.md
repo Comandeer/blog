@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Pyrrusowe zwycięstwo"
+description: "Czemu WHATWG nie potrafi się dogadać z W3C i co to dla nas oznacza?"
 author: Comandeer
 date: 2018-01-05T22:35:00+0100
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
     - a11y
@@ -13,7 +14,7 @@ redirect_from:
     - /refleksje/a11y/2018/01/05/pyrrusowe-zwyciestwo.html
 ---
 
-W Sieci toczy się obecnie spór na miarę tego pomiędzy Świętym Cesarstwem Rzymskim a papiestwem. Po jednej stronie mamy WHATWG, po drugiej – W3C.
+W Sieci toczy się obecnie spór na miarę tego pomiędzy Świętym Cesarstwem Rzymskim a papiestwem. Po jednej stronie mamy WHATWG, po drugiej – W3C.<!--more-->
 
 ## Wojna pozycyjna
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Czy div jest dostępny?"
+description: Refleksja nad tym, czemu div zamiast przycisku nie jest dostępnym rozwiązaniem.
 author: Comandeer
 date: 2019-02-15T23:50:00+0100
 tags:
@@ -71,7 +72,7 @@ redirect_from:
 >
 > Więc tak… po prostu użyj przycisku albo przycisku z RNW, ale nie swojego własnego przycisku na `div`.]
 
-Takie podejście jest nie tyle niewłaściwe, co szkodliwe. Postaram się pokrótce przybliżyć, czemu tak uważam.
+Takie podejście jest nie tyle niewłaściwe, co szkodliwe. Postaram się pokrótce przybliżyć, czemu tak uważam.<!--more-->
 
 ## Informacje o natywnym przycisku są niepełne
 

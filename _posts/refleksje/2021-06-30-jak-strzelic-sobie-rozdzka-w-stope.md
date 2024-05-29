@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Jak strzelić sobie różdżką w stopę?"
+description: "O wyzwaniach przy tworzeniu własnego frameworka testowego."
 author: Comandeer
 date: 2021-06-30T23:22:00+0200
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
 permalink: /jak-strzelic-sobie-rozdzka-w-stope.html
 ---
 
-W życiu niemal każdego programisty przychodzi taki moment, w którym stwierdza, że w jego kodzie przyda się więcej magii. A potem za zabawę z tymi ciemnymi mocami płaci wysoką cenę. Nie inaczej było też i w mojej przypadku. Ale po kolei…
+W życiu niemal każdego programisty przychodzi taki moment, w którym stwierdza, że w jego kodzie przyda się więcej magii. A potem za zabawę z tymi ciemnymi mocami płaci wysoką cenę. Nie inaczej było też i w mojej przypadku. Ale po kolei…<!--more-->
 
 ## Problem
 

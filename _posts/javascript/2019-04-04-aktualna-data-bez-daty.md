@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "Aktualna data bez daty"
+description: "Kilka sztuczek na uzyskanie daty w JS-ie bez używania Date."
 author: Comandeer
 date: 2019-04-04T18:10:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /aktualna-data-bez-daty.html
 ---
 
-Dzisiaj na Facebooku ktoś zadał ciekawe pytanie: jak w JS wyświetlić aktualną datę i czas, nie używając `Date` ani nie pobierając czasu z żadnego zewnętrznego źródła (nawet `input[type=datetime-local]`)? Przyjrzyjmy się zatem, jak to zrobić!
+Dzisiaj na Facebooku ktoś zadał ciekawe pytanie: jak w JS wyświetlić aktualną datę i czas, nie używając `Date` ani nie pobierając czasu z żadnego zewnętrznego źródła (nawet `input[type=datetime-local]`)? Przyjrzyjmy się zatem, jak to zrobić!<!--more-->
 
 ## Znacznik czasu Unixa
 

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Stylowalne ikonki SVG"
+descriotion: "Kilka sposobów na to, jak ostylować ikonki SVG."
 author: Comandeer
 date: 2019-07-25T22:15:00+0200
-tags: 
+tags:
     - eksperymenty
     - html-css
 comments: true
@@ -12,7 +13,7 @@ permalink: /stylowalne-ikonki-svg.html
 
 To, że [SVG jest lepsze od fontów z ikonami](https://css-tricks.com/icon-fonts-vs-svg/), jest już raczej dość powszechną wiedzą. Ale jeden problem związany z SVG wydaje się nas prześladować od lat i wciąż nie widać rozwiązania na horyzoncie: ikony SVG w zewnętrznym pliku są średnio używalne. Nie da się ich ot tak wczytać z zewnętrznej domeny ([same origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy), FTW!), nie da się stylować ich części, a do niedawna w ogóle nic się nie dało z nimi zrobić…
 
-<small>Wszystkie ikony użyte w tym artykule pochodzą z [Devicon](https://konpa.github.io/devicon/).</small>
+<small>Wszystkie ikony użyte w tym artykule pochodzą z [Devicon](https://konpa.github.io/devicon/).</small><!--more-->
 
 ## Problem
 

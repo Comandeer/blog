@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Niestandardowe zdarzenia w workerach"
+description: "Jak stworzyć niestandardowe zdarzenia w Web Workers."
 author: Comandeer
 date: 2018-09-30T23:41:00+0100
 tags:
@@ -12,7 +13,7 @@ redirect_from:
     - /eksperymenty/javascript/2018/09/30/niestandardowe-zdarzenia-w-workerach.html
 ---
 
-W przypadku skryptów korzystających z DOM stworzenie własnych, niestandardowych zdarzeń jest banalnie proste i sprowadza się do utworzenia nowej instancji [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). Ten sposób jednak nie (do końca) działa w przypadku workerów, które nie mają dostępu do DOM. Co zatem zrobić w takim wypadku?
+W przypadku skryptów korzystających z DOM stworzenie własnych, niestandardowych zdarzeń jest banalnie proste i sprowadza się do utworzenia nowej instancji [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). Ten sposób jednak nie (do końca) działa w przypadku workerów, które nie mają dostępu do DOM. Co zatem zrobić w takim wypadku?<!--more-->
 
 ## Zaraz, zaraz – workery…?
 

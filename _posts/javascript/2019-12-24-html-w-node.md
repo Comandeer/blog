@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "HTML w Node.js"
+description: "Jak wczytywać HTML przy pomocy require() w Node.js?"
 author: Comandeer
 date: 2019-12-24T16:27:00+0100
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /html-w-node.html
 ---
 
-Czasami można używać pewnej technologii od lat i nie zorientować się, że gdzieś tam głęboko chowa pewną małą, acz diabelnie przydatną funkcję. Tak jest też w przypadku Node.js i jego `require`.
+Czasami można używać pewnej technologii od lat i nie zorientować się, że gdzieś tam głęboko chowa pewną małą, acz diabelnie przydatną funkcję. Tak jest też w przypadku Node.js i jego `require`.<!--more-->
 
 ## HTML w Node.js?!
 

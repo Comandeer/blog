@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Asynchroniczny DOM"
+description: "Jak zoptymalizować operacje na DOM-ie przy użyciu asynchroniczności?"
 author: Comandeer
 date: 2018-05-27T19:01:00+0100
-tags: 
+tags:
     - refleksje
     - javascript
     - standardy-sieciowe
@@ -13,7 +14,7 @@ redirect_from:
     - /refleksje/javascript/2018/05/27/asynchroniczny-dom.html
 ---
 
-Ostatnio natrafiłem na [artykuł opisujący, jak działa React Fiber](https://engineering.hexacta.com/didact-fiber-incremental-reconciliation-b2fe028dcaec) i doznałem momentu z cyklu "hej, przecież ja to znam!". Ba, koncept użyty w React 16 do polepszenia wydajności posłużył mi do napisania sporej części [mojej książki](https://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm#format/d). Dlatego dzisiaj zapraszam na krótką podróż po meandrach (a)synchronicznego DOM-u.
+Ostatnio natrafiłem na [artykuł opisujący, jak działa React Fiber](https://engineering.hexacta.com/didact-fiber-incremental-reconciliation-b2fe028dcaec) i doznałem momentu z cyklu "hej, przecież ja to znam!". Ba, koncept użyty w React 16 do polepszenia wydajności posłużył mi do napisania sporej części [mojej książki](https://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm#format/d). Dlatego dzisiaj zapraszam na krótką podróż po meandrach (a)synchronicznego DOM-u.<!--more-->
 
 ## Na początku był DOM
 

@@ -5,7 +5,7 @@
     <a class="post-link" href="{{ post.url }}" rel="bookmark">{{ post.data.title | escape }}</a>
 </h2>
 
-<p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160, "…" | escape }}</p>
+<p>{{ post.content | excerpt }}</p>
 <p>
 	<a href="{{ post.url }}">Czytaj całość <span class="visually-hidden">postu {{ post.data.title | escape }}</span> <span aria-hidden="true">»</span></a>
 </p>

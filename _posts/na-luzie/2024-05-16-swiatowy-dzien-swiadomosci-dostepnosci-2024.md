@@ -2,9 +2,10 @@
 
 layout: post
 title: "Światowy Dzień Świadomości Dostępności 2024"
+description: "Świętujmy razem Dzień Świadomości Dostępności 2024 🎉!"
 author: Comandeer
 date: 2024-05-16T18:38:00+0200
-tags: 
+tags:
     - na-luzie
 comments: true
 permalink: /swiatowy-dzien-swiadomosci-dostepnosci-2024.html

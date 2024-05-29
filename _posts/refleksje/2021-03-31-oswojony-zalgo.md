@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Oswojony Zalgo"
+description: "Błędy w implementacji asynchronicznych API."
 author: Comandeer
 date: 2021-03-31T18:58:00+0200
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
 permalink: /oswojony-zalgo.html
 ---
 
-Wieki temu Isaac Z. Schlueter napisał artykuł na temat [projektowania asynchronicznyczh API](https://blog.izs.me/2013/08/designing-apis-for-asynchrony). Przestrzegł w nim przed wypuszczaniem na świat Zalgo.
+Wieki temu Isaac Z. Schlueter napisał artykuł na temat [projektowania asynchronicznyczh API](https://blog.izs.me/2013/08/designing-apis-for-asynchrony). Przestrzegł w nim przed wypuszczaniem na świat Zalgo.<!--more-->
 
 ## Zalgo?
 

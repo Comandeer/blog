@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Światełko w tunelu"
+description: "WHATWG i W3C dogadują szczegóły porozumienia."
 author: Comandeer
 date: 2019-04-09T23:15:00+0200
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
 comments: true
 permalink: /swiatelko-w-tunelu.html
 ---
 
-Być może mój pesymizm związany z końcem HTML5 okaże się przesadzony. Wszystko wskazuje bowiem, że negocjacje pomiędzy W3C a WHATWG faktycznie do czegoś prowadzą i wypracowano [wstępny zarys porozumienia](https://www.w3.org/2019/04/WHATWG-W3C-MOU.html).
+Być może mój pesymizm związany z końcem HTML5 okaże się przesadzony. Wszystko wskazuje bowiem, że negocjacje pomiędzy W3C a WHATWG faktycznie do czegoś prowadzą i wypracowano [wstępny zarys porozumienia](https://www.w3.org/2019/04/WHATWG-W3C-MOU.html).<!--more-->
 
 Najważniejsze punkty tego porozumienia to:
 

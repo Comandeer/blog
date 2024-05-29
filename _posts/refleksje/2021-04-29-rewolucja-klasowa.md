@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Rewolucja klasowa"
+description: "O tym, jak ES zmienił swój paradygmat obiektowy dzięki klasom."
 author: Comandeer
 date: 2021-04-29T00:24:00+0200
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
 permalink: /rewolucja-klasowa.html
 ---
 
-Swego czasu powszechną wiedzą było to, że klasy stanowiły wyłącznie cukier składniowy dla prototypów. Tak też sprawę ująłem w swojej książce ([<cite>JavaScript. Programowanie zaawansowane</cite>](https://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm#format/e), s. 113). Wtedy (5 lat temu!), faktycznie, takie stwierdzenie dało się obronić. Z jednej strony dlatego, że klasy nie były tak rozbudowane jak obecnie, z drugiej dlatego, że były nowością i paradoksalnie łatwiej było je zrozumieć poprzez porównanie do już istniejącego mechanizmu. Ale od tego czasu sporo się zmieniło.
+Swego czasu powszechną wiedzą było to, że klasy stanowiły wyłącznie cukier składniowy dla prototypów. Tak też sprawę ująłem w swojej książce ([<cite>JavaScript. Programowanie zaawansowane</cite>](https://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm#format/e), s. 113). Wtedy (5 lat temu!), faktycznie, takie stwierdzenie dało się obronić. Z jednej strony dlatego, że klasy nie były tak rozbudowane jak obecnie, z drugiej dlatego, że były nowością i paradoksalnie łatwiej było je zrozumieć poprzez porównanie do już istniejącego mechanizmu. Ale od tego czasu sporo się zmieniło.<!--more-->
 
 Widać wyraźnie, że TC39 próbuje ukryć niewygodny fakt istnienia gdzieś tam, na samym dnie prototypów w JS-ie i niemal wszystkie nowości związane z obiektówką dodaje bezpośrednio do klas. Ostatnio weszła naprawdę spora zmiana, składająca się z kilku propozycji połączonych razem: [możliwość definiowania pól (własności) w klasach](https://github.com/tc39/proposal-class-fields) (także [statycznych](https://github.com/tc39/proposal-static-class-features)). Równolegle wprowadzono [podział na publiczne i prywatne pola](https://github.com/tc39/proposal-private-methods). Tym sposobem nic nie stoi na przeszkodzie, by tworzyć takie kombinacje:
 

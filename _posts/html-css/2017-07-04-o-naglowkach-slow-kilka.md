@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "O nagłówkach słów kilka"
+description: "Krótki poradnik o tworzeniu dobrych nagłówków."
 author: Comandeer
 date: 2017-07-04T16:20:00+0200
 tags:
@@ -13,7 +14,7 @@ redirect_from:
     - /html-css/a11y/2017/07/04/o-naglowkach-slow-kilka.html
 ---
 
-Mam już dość powtarzania wciąż na nowo i nowo bzdur odnośnie wykorzystania nagłówków w HTML5, co wręcz prowadzi do ["poprawiania" dobrych materiałów w Sieci](http://sowaprogramuje.pl/10-bledow-poczatkujacych-frontend-developerow-czesc-1/#comment-54). Dlatego dzisiaj słów kilka o nagłówkach.
+Mam już dość powtarzania wciąż na nowo i nowo bzdur odnośnie wykorzystania nagłówków w HTML5, co wręcz prowadzi do ["poprawiania" dobrych materiałów w Sieci](http://sowaprogramuje.pl/10-bledow-poczatkujacych-frontend-developerow-czesc-1/#comment-54). Dlatego dzisiaj słów kilka o nagłówkach.<!--more-->
 
 <small>**Aktualizacja 2022-10-30**: w końcu poprawiłem linki do specyfikacji HTML i dodałem informacje o `hgroup` w sekcji o podtytułach.</small>
 

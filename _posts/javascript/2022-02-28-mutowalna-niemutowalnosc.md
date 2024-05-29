@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "Mutowalna niemutowalność"
+description: "Eksperyment z tworzeniem własnej wersji biblioteki Immer."
 author: Comandeer
 date: 2022-02-28T10:03:00+0100
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /mutowalna-niemutowalnosc.html
 ---
 
-Istnieje sobie taka biblioteka jak [Immer](https://immerjs.github.io/immer/). W największym skrócie można powiedzieć, że jest ona w świecie niemutowalności tym, czym składnia `async`/`await` w świecie asynchroniczności – ukrywa przed nami fakt, że kod jest nie-jakiś lub jest a-jakiś. I ostatnio zaczęło mnie zastanawiać, jak działa pod spodem.
+Istnieje sobie taka biblioteka jak [Immer](https://immerjs.github.io/immer/). W największym skrócie można powiedzieć, że jest ona w świecie niemutowalności tym, czym składnia `async`/`await` w świecie asynchroniczności – ukrywa przed nami fakt, że kod jest nie-jakiś lub jest a-jakiś. I ostatnio zaczęło mnie zastanawiać, jak działa pod spodem.<!--more-->
 
 ## Przykład
 

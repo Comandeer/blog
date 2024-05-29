@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Interfejsy w JS"
+description: "Jak zasymulować interfejsy w czystym JS-ie, bez TypeScriptu?"
 author: Comandeer
 date: 2017-11-30T23:15:00+0100
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /interfejsy-w-js.html
@@ -11,7 +12,7 @@ redirect_from:
     - /javascript/2017/11/30/interfejsy-w-js.html
 ---
 
-Wszyscy kochamy Javę, dlatego wszyscy chcemy interfejsów w JS, prawda?
+Wszyscy kochamy Javę, dlatego wszyscy chcemy interfejsów w JS, prawda?<!--more-->
 
 ## Po co mi to?
 

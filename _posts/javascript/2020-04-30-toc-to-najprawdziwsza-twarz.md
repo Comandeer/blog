@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Toć to najprawdziwsza twarz…!"
+description: "Wprowadzenie do rozpoznawania twarzy przy pomocy Shape Detection API."
 author: Comandeer
 date: 2020-04-30T23:24:00+0200
-tags: 
+tags:
     - javascript
     - standardy-sieciowe
 comments: true
 permalink: /toc-to-najprawdziwsza-twarz.html
 ---
 
-Google wierzy, że [Sieć może konkurować z natywnymi aplikacjami bez żadnego wstydu](https://www.chromium.org/teams/web-capabilities-fugu). Jednym z obszarów, na którym aplikacje sieciowe były słabsze od swoich natywnych odpowiedników, było wykrywanie różnych kształtów na zdjęciach. Ale te czasy już bezpowrotnie minęły!
+Google wierzy, że [Sieć może konkurować z natywnymi aplikacjami bez żadnego wstydu](https://www.chromium.org/teams/web-capabilities-fugu). Jednym z obszarów, na którym aplikacje sieciowe były słabsze od swoich natywnych odpowiedników, było wykrywanie różnych kształtów na zdjęciach. Ale te czasy już bezpowrotnie minęły!<!--more-->
 
 ## Shape Detection API
 

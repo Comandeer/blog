@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "ComSemRel – co to?"
+description: Krótkie wyjaśnienie, czym jest projekt ComSemRel oraz co stanowiło inspirację dla niego.
 author: Comandeer
 date: 2017-03-04T22:40:00+0100
 tags:
@@ -12,7 +13,7 @@ redirect_from:
     - /daj-sie-poznac-2017/javascript/2017/03/04/comsemrel-co-to.html
 ---
 
-Skoro do 31 maja będę musiał _z wielką przyjemnością_ rozwijać projekt o jakże pięknej nazwie ComSemRel, wypadałoby przynajmniej napisać, co to takiego.
+Skoro do 31 maja będę musiał _z wielką przyjemnością_ rozwijać projekt o jakże pięknej nazwie ComSemRel, wypadałoby przynajmniej napisać, co to takiego.<!--more-->
 
 ## Geneza
 

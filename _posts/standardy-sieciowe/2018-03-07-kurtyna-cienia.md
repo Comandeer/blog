@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Kurtyna cienia"
+description: "O tym, jak deklaratywny Shadow DOM upadł."
 author: Comandeer
 date: 2018-03-07T21:35:00+0100
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
     - html-css
@@ -13,7 +14,7 @@ redirect_from:
     - /refleksje/html-css/2018/03/07/kurtyna-cienia.html
 ---
 
-W dniach 5 i 6 marca 2018 roku [postanowiono zabić deklaratywny Shadow DOM](https://github.com/whatwg/dom/issues/510#issuecomment-370980398). Stało się to w czasie meetingu Web Platform WG w Tokio.
+W dniach 5 i 6 marca 2018 roku [postanowiono zabić deklaratywny Shadow DOM](https://github.com/whatwg/dom/issues/510#issuecomment-370980398). Stało się to w czasie meetingu Web Platform WG w Tokio.<!--more-->
 
 Osobiście [bardzo cieszyłem się z powodu deklaratywnego Shadow DOM](https://blog.comandeer.pl/javascript/2017/10/31/deklaratywny-shadow-dom.html) (dSD). Niestety, radości tej nie podzielają twórcy przeglądarek, którzy uważają, że implementacja dSD jest zbyt trudna i może spowodować problemy z bezpieczeństwem przeglądarek. Jest to dziwne o tyle, że w dyskusji jako przykład wskazuje się `template`, którego kod byłby przecież wymarzonym kandydatem do wykorzystania jako podwaliny dSD.
 

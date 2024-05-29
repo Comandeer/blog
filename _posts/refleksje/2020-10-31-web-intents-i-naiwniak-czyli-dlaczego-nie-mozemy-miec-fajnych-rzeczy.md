@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Web Intents i naiwniak, czyli dlaczego nie możemy mieć fajnych rzeczy?"
+description: "Krótkie rozważania o tym, dlaczego Web Intents upadły jako idea"
 author: Comandeer
 date: 2020-10-31T19:00:00+0100
-tags: 
+tags:
     - refleksje
     - standardy-sieciowe
 comments: true
 permalink: /web-intents-i-naiwniak-czyli-dlaczego-nie-mozemy-miec-fajnych-rzeczy.html
 ---
 
-Wieki temu [Paul Kinlan](https://paul.kinlan.me/) zaproponował nowy standard internetowy: [Web Intents](https://en.wikipedia.org/wiki/Web_Intents). Osobiście czułem, że może to być jedna z większych rewolucji w historii Sieci. I co? I wyszło jak zawsze – czyli w sumie _nie_ wyszło…
+Wieki temu [Paul Kinlan](https://paul.kinlan.me/) zaproponował nowy standard internetowy: [Web Intents](https://en.wikipedia.org/wiki/Web_Intents). Osobiście czułem, że może to być jedna z większych rewolucji w historii Sieci. I co? I wyszło jak zawsze – czyli w sumie _nie_ wyszło…<!--more-->
 
 ## Web Intents – czyli co?
 

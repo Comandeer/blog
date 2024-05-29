@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "CSS w JS – mity o mitach"
+description: "Komentarze do komentarzy o artykule na temat CSS-in-JS."
 author: Comandeer
 date: 2017-05-01T18:20:00+0200
-tags: 
+tags:
     - refleksje
     - html-css
     - javascript
@@ -14,7 +15,7 @@ redirect_from:
     - /refleksje/html-css/javascript/daj-sie-poznac-2017/2017/05/01/css-w-js-mity-o-mitach.html
 ---
 
-Wszyscy, którzy mnie znają, wiedzą doskonale, że w przypadku Sieci należę raczej do konserwatystów, będących [wyznawcami starego porządku](http://webroad.pl/inne/3722-progressive-enhancement-zapomniany-fundament). To uwielbienie dla tradycji rozciąga się także na używane technologie. Jeśli coś jest nowe, lecz _niewystarczająco_ dobre, po prostu tego nie używam. Prawda jest taka, że przeżyłem już niejedną super nowoczesną, gorącą technologię ([prawda, Angular?](https://www.webkrytyk.pl/2014/12/12/moja-prawda-o-angular-js/)) i widziałem śmierć niejednego standardu (a nawet przeglądarki!). I mam wrażenie, że kolejny z trendów również przeżyję: CSS w JS-ie.
+Wszyscy, którzy mnie znają, wiedzą doskonale, że w przypadku Sieci należę raczej do konserwatystów, będących [wyznawcami starego porządku](http://webroad.pl/inne/3722-progressive-enhancement-zapomniany-fundament). To uwielbienie dla tradycji rozciąga się także na używane technologie. Jeśli coś jest nowe, lecz _niewystarczająco_ dobre, po prostu tego nie używam. Prawda jest taka, że przeżyłem już niejedną super nowoczesną, gorącą technologię ([prawda, Angular?](https://www.webkrytyk.pl/2014/12/12/moja-prawda-o-angular-js/)) i widziałem śmierć niejednego standardu (a nawet przeglądarki!). I mam wrażenie, że kolejny z trendów również przeżyję: CSS w JS-ie.<!--more-->
 
 Trend ten narodził się, rzecz jasna, wraz z [powstaniem Reacta](https://speakerdeck.com/vjeux/react-css-in-js) i miał rozwiązywać problemy, których dotąd w CSS-ie nie rozwiązano. Problem polega na tym, że, owszem, czysty CSS ich nie rozwiązywał, ale dobre praktyki i całe ekosystemy skonstruowane wokół różnych metodologii – jak najbardziej. Niemniej powstały mity o tym, jaki CSS jest zły, które pozwoliły ugruntować się nowemu trendowi. Nie przeczę, rozwiązania pokroju CSS Modules czy [`styled-components`](https://github.com/styled-components/styled-components) mają swoją niszę – zwłaszcza w ekosystemie Reacta. Problem polega na tym, że ludzie ich używają z całkowicie _bezsensownych_ powodów lub – o zgrozo! – "bo tak". Doskonale to pokazują komentarze do [artykułu o mitach odnośnie CSS-a w JS-ie](https://hackernoon.com/stop-using-css-in-javascript-for-web-development-fa32fb873dcc), które zafrapowały mnie na tyle, że części z nich postanowiłem się przyjrzeć bliżej.
 

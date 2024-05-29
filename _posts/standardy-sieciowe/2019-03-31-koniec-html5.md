@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Koniec HTML5?"
+description: "Zmiany w W3C mogą oznaczać koniec HTML5 – ale to dobrze."
 author: Comandeer
 date: 2019-03-31T16:00:00+0200
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
 comments: true
 permalink: /koniec-html5.html
 ---
 
-Dzisiaj, czyli 31 marca 2019, kończy się "czarter" [Web Platform Working Group](https://www.w3.org/WebPlatform/WG/). A wraz z nim prawdopodobnie kończy się także historia HTML5 (i DOM 4). I nie, nie jest to przedwczesny żart primaaprilisowy.
+Dzisiaj, czyli 31 marca 2019, kończy się "czarter" [Web Platform Working Group](https://www.w3.org/WebPlatform/WG/). A wraz z nim prawdopodobnie kończy się także historia HTML5 (i DOM 4). I nie, nie jest to przedwczesny żart primaaprilisowy.<!--more-->
 
 ## Dwa standardy
 

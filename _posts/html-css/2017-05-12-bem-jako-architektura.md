@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "BEM jako architektura"
+description: "BEM to nie tylko rozwiązanie problemu specyficzności CSS-a, ale także język domenowy i architektura komponentowa."
 author: Comandeer
 date: 2017-05-12T21:00:00+0200
-tags: 
+tags:
     - html-css
     - javascript
     - daj-sie-poznac-2017
@@ -13,7 +14,7 @@ redirect_from:
     - /html-css/javascript/daj-sie-poznac-2017/2017/05/12/bem-jako-architektura.html
 ---
 
-Co bardziej zaznajomieni z moją osobą zapewne już zorientowali się, że [udało mi się napisać książkę](http://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm). Tworzę w niej [bibliotekę BEMQuery](https://github.com/BEMQuery) (wrócę do niej kiedyś… serio), która opiera się na bardzo prostym założeniu: zamiast pobierać elementy jak w jQuery, przy pomocy selektorów CSS, tworzę swój własny język zainspirowany [metodyką BEM](https://en.bem.info/). Można by wręcz odnieść wrażenie, że jestem fanatykiem BEM-u – piszę o nim książkę, piszę narzędzia nim inspirowane, wszędzie, gdzie tylko się da, ewangelizuję ludzi, żeby przeszli na BEM…
+Co bardziej zaznajomieni z moją osobą zapewne już zorientowali się, że [udało mi się napisać książkę](http://helion.pl/ksiazki/javascript-programowanie-zaawansowane-tomasz-comandeer-jakut,jascpz.htm). Tworzę w niej [bibliotekę BEMQuery](https://github.com/BEMQuery) (wrócę do niej kiedyś… serio), która opiera się na bardzo prostym założeniu: zamiast pobierać elementy jak w jQuery, przy pomocy selektorów CSS, tworzę swój własny język zainspirowany [metodyką BEM](https://en.bem.info/). Można by wręcz odnieść wrażenie, że jestem fanatykiem BEM-u – piszę o nim książkę, piszę narzędzia nim inspirowane, wszędzie, gdzie tylko się da, ewangelizuję ludzi, żeby przeszli na BEM…<!--more-->
 
 Nie zawsze tak jednak było. Kiedyś uważałem BEM za klasyczny przykład [classitisu](https://www.steveworkman.com/html5-2/standards/2009/classitis-the-new-css-disease/). Było to spowodowane prostym faktem, że niemal wszystkie materiały w Sieci, które przybliżyć miały czytelnikowi, czym jest BEM, skupiały się w gruncie rzeczy na jego najmniej istotnym elemencie: konwencji nazewniczej. Niemniej, gdy wspomina się o BEM, niemal wszyscy myślą właśnie o tym – o konwencji nazewniczej:
 

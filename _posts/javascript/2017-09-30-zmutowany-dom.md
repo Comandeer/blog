@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Zmutowany DOM"
+description: "Jak wykorzystać MutationObservera do wykrywania zmian w DOM-ie?"
 author: Comandeer
 date: 2017-09-30T23:55:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /zmutowany-dom.html
@@ -11,7 +12,7 @@ redirect_from:
     - /javascript/2017/09/30/zmutowany-dom.html
 ---
 
-DOM jest jak żywy organizm. A każdy żywy organizm umie kilka podstawowych czynności, wśród których znajduje się… mutowanie!
+DOM jest jak żywy organizm. A każdy żywy organizm umie kilka podstawowych czynności, wśród których znajduje się… mutowanie!<!--more-->
 
 ## Mutacje – co to?
 

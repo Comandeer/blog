@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "W odwiedzinach u Bramkarza"
+description: "Przyjrzenie się zmianom, jakie nastąpiły wokół systemu uprawnień w Node.js."
 author: Comandeer
 date: 2023-10-31T19:13:00+0100
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
 permalink: /w-odwiedzinach-u-bramkarza.html
 ---
 
-Słońce leniwie chowało się za widnokręgiem, rozrzucając pomarańczowe smugi po bezchmurnym, alabastrowym niebie, jakby było wielkim krakenem rozczapierzającym swoje macki. Szedłem złotożółtą plażą kontrastującą z lazurową tonią oceanu, w której odbijały się heroiczne zmagania niebios z wodną bestią. Piasek chrzęścił pod moimi stopami, jakby szepcząco skarżąc się na brutalność mego kroku. Widziałem go – siedział na leżaku, udając, że życiodajna ognista kula wciąż góruje na nieboskłonie, a jej kapryśne promienie tylko czekają, by smagać jego bladą skórę. Gdy stanąłem nad nim i pochyliłem się, miał zamknięte oczy. Drapieżny mrok rzucanego przeze mnie cienia zmusił go do spojrzenia na mnie – spojrzenia jakże zaskoczonego i pytającego. Powolnym, acz zdecydowanym, ruchem dłoni zdjąłem okulary przeciwsłoneczne i, patrząc cynicznie w jego wciąż nierozumiejące oczy, powiedziałem spokojnie ochrypłym głosem: "Wstawaj, Bramkarzu, mamy Node'a do spalenia".
+Słońce leniwie chowało się za widnokręgiem, rozrzucając pomarańczowe smugi po bezchmurnym, alabastrowym niebie, jakby było wielkim krakenem rozczapierzającym swoje macki. Szedłem złotożółtą plażą kontrastującą z lazurową tonią oceanu, w której odbijały się heroiczne zmagania niebios z wodną bestią. Piasek chrzęścił pod moimi stopami, jakby szepcząco skarżąc się na brutalność mego kroku. Widziałem go – siedział na leżaku, udając, że życiodajna ognista kula wciąż góruje na nieboskłonie, a jej kapryśne promienie tylko czekają, by smagać jego bladą skórę. Gdy stanąłem nad nim i pochyliłem się, miał zamknięte oczy. Drapieżny mrok rzucanego przeze mnie cienia zmusił go do spojrzenia na mnie – spojrzenia jakże zaskoczonego i pytającego. Powolnym, acz zdecydowanym, ruchem dłoni zdjąłem okulary przeciwsłoneczne i, patrząc cynicznie w jego wciąż nierozumiejące oczy, powiedziałem spokojnie ochrypłym głosem: "Wstawaj, Bramkarzu, mamy Node'a do spalenia".<!--more-->
 
 ## Zmiana krajobrazu
 

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "O ikonkach słów kilka"
+description: Krótki poradnik o wstawianiu ikonek na stronę WWW, zarówno przy użyciu fontów, jak i SVG.
 author: Comandeer
 date: 2017-02-28T19:27:00+0100
-tags: 
+tags:
     - a11y
     - html-css
 comments: true
@@ -13,6 +14,7 @@ redirect_from:
 ---
 
 Każdy z nas na pewno choć raz w życiu użył icon fontów – czy to [Fontello](http://fontello.com/), czy [Font Awesome](http://fontawesome.io/). Jednak nie każdy z nas zastanawiał się, jaki jest idealny sposób na wstawianie ich na stronę.
+<!--more-->
 
 ## Tradycyjne sposoby
 

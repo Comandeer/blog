@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Jak strzelić sobie różdżką w stopę, część 2."
+description: "Błędy i złe decyzje projektowe w tworzeniu własnego frameworka testowego."
 author: Comandeer
 date: 2023-01-31T23:55:00+0100
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
 permalink: /jak-strzelic-sobie-rozdzka-w-stope-czesc-2.html
 ---
 
-W czerwcu 2021 opisywałem nieco [mój pomysł na pakiet testowy](https://blog.comandeer.pl/jak-strzelic-sobie-rozdzka-w-stope.html) dla reszty moich projektów. Ostatecznie jednak postanowiłem, że nie będę go dłużej rozwijał, ponieważ jest zbyt problematyczny. I w tym poście postaram się wyjaśnić dlaczego.
+W czerwcu 2021 opisywałem nieco [mój pomysł na pakiet testowy](https://blog.comandeer.pl/jak-strzelic-sobie-rozdzka-w-stope.html) dla reszty moich projektów. Ostatecznie jednak postanowiłem, że nie będę go dłużej rozwijał, ponieważ jest zbyt problematyczny. I w tym poście postaram się wyjaśnić dlaczego.<!--more-->
 
 ## Natywne wsparcie dla ESM w Node.js
 

@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Jak działa narzędzie do code coverage?"
+description: "Krótkie spojrzenie wgłąb narzędzi do sprawdzania pokrycia kodu testami."
 author: Comandeer
 date: 2021-01-31T23:20:00+0100
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
 permalink: /jak-dziala-narzedzie-do-code-coverage.html
 ---
 
-Dzisiaj kontynuujemy zabawy z AST. Tym razem padło na narzędzie do code coverage!
+Dzisiaj kontynuujemy zabawy z AST. Tym razem padło na narzędzie do code coverage!<!--more-->
 
 ## Zasada działania
 

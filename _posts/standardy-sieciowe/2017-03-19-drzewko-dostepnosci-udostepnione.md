@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Drzewko dostępności udostępnione!"
+description: "Spojrzenie na drzewko dostępności w przeglądarce."
 author: Comandeer
 date: 2017-03-19T21:00:00+0100
-tags: 
+tags:
     - standardy-sieciowe
     - a11y
     - daj-sie-poznac-2017
@@ -14,7 +15,7 @@ redirect_from:
     - /a11y/daj-sie-poznac-2017/javascript/2017/03/19/drzewko-dostepnosci-udostepnione.html
 ---
 
-Tematyka dostępności bardzo mnie ciekawi, czego najlepszym dowodem jest [mój wpis na temat tworzenia własnego czytnika ekranowego](https://blog.comandeer.pl/eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html). Wspominałem w nim o drzewku dostępności. I właśnie o nim będzie dzisiaj ciut więcej.
+Tematyka dostępności bardzo mnie ciekawi, czego najlepszym dowodem jest [mój wpis na temat tworzenia własnego czytnika ekranowego](https://blog.comandeer.pl/eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html). Wspominałem w nim o drzewku dostępności. I właśnie o nim będzie dzisiaj ciut więcej.<!--more-->
 
 ## Co to drzewko dostępności?
 

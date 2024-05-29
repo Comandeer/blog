@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "To tylko niepełnosprawni…"
+description: "Wykluczanie jednej grupy osób szkodzi nam wszystkim."
 author: Comandeer
 date: 2017-06-09T23:25:00+0200
-tags: 
+tags:
     - refleksje
     - a11y
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /refleksje/a11y/2017/06/09/to-tylko-niepelnosprawni.html
 ---
 
-Bardzo często – czy to w dyskusjach na Facebooku, czy w sekcji komentarzy na WebKrytyku – natykam się na stwierdzenie, że dbanie o dostępność jest tylko dodatkiem, umiejętnością, która nie jest niezbędna każdemu webdeveloperowi. Wszak brak dostępności zaboli "tylko" niepełnosprawnych… Tylko czy to "tylko" jest naprawdę takim _tylko_?
+Bardzo często – czy to w dyskusjach na Facebooku, czy w sekcji komentarzy na WebKrytyku – natykam się na stwierdzenie, że dbanie o dostępność jest tylko dodatkiem, umiejętnością, która nie jest niezbędna każdemu webdeveloperowi. Wszak brak dostępności zaboli "tylko" niepełnosprawnych… Tylko czy to "tylko" jest naprawdę takim _tylko_?<!--more-->
 
 ## Imperatywy
 

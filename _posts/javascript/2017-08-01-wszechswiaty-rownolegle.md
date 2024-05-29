@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Wszechświaty równoległe"
+description: "Przenoszenie obiektów między różnymi realmami w JS-ie."
 author: Comandeer
 date: 2017-08-01T23:30:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /wszechswiaty-rownolegle.html
@@ -11,7 +12,7 @@ redirect_from:
     - /javascript/2017/08/01/wszechswiaty-rownolegle.html
 ---
 
-Co to, Comandeer się przerzucił na fizykę kwantową? Nic z tych rzeczy, wciąż tylko JavaScript! Niemniej dzisiaj porozmawiamy sobie o… <i>sferach</i>.
+Co to, Comandeer się przerzucił na fizykę kwantową? Nic z tych rzeczy, wciąż tylko JavaScript! Niemniej dzisiaj porozmawiamy sobie o… <i>sferach</i>.<!--more-->
 
 ## Jak rozbić bank?
 

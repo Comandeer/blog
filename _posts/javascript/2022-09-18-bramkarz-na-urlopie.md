@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Bramkarz na urlopie"
+description: "Wyjaśnienie, czemu projekt Bramkarz został zawieszony."
 author: Comandeer
 date: 2022-09-18T19:13:00+0200
 tags:
@@ -10,7 +11,7 @@ comments: true
 permalink: /bramkarz-na-urlopie.html
 ---
 
-Byłem zmuszony podjąć decyzję o zakończeniu projektu [Bramkarz](https://github.com/Comandeer/bramkarz), który rozpocząłem [jakieś 2 miesiące temu](https://blog.comandeer.pl/bramkarz.html). W tym wpisie pokrótce wyjaśnię dlaczego.
+Byłem zmuszony podjąć decyzję o zakończeniu projektu [Bramkarz](https://github.com/Comandeer/bramkarz), który rozpocząłem [jakieś 2 miesiące temu](https://blog.comandeer.pl/bramkarz.html). W tym wpisie pokrótce wyjaśnię dlaczego.<!--more-->
 ## Dziurawe zabezpieczenie
 Bramkarz był w założeniu narzędziem pokroju [Hagany](https://github.com/yaakov123/hagana), ale dla projektów, które wykorzystywały [natywne moduły ES](https://nodejs.org/api/esm.html) zamiast, tradycyjnego dla Node.js, [systemu modułów CJS](https://nodejs.org/api/modules.html). To wymuszało wykorzystanie eksperymentalnego [API loaderów](https://nodejs.org/api/esm.html#loaders). I chociaż całość była dość toporna z powodu ograniczeń składni ESM (m.in. brak dynamicznych eksportów), to działało to nadspodziewanie dobrze.
 Tylko że był jeden mały problem: tego typu zabezpieczenie można było banalnie prosto obejść. Wystarczyło stworzyć plik JS z rozszerzeniem `.cjs`. Dla Node'a oznacza to, że w tym pliku znajduje się kod w składni CJS. Czyli taki, który jest wczytywany przy pomocy `require()`, nie zaś – `import`. A więc taki, który omija całe zabezpieczenie dodane przez Bramkarza przy pomocy loadera ESM…

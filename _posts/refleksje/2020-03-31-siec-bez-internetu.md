@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Sieć bez Internetu"
+description: "Web Bundles jako sposób na Sieć bez Internetu."
 author: Comandeer
 date: 2020-03-31T22:40:00+0200
-tags: 
+tags:
     - refleksje
     - standardy-sieciowe
 comments: true
 permalink: /siec-bez-internetu.html
 ---
 
-Przez długi czas słowa "Sieć" i "Internet" były używane zamiennie. Ale w 2020 przestały być synonimami!
+Przez długi czas słowa "Sieć" i "Internet" były używane zamiennie. Ale w 2020 przestały być synonimami!<!--more-->
 
 ## Internet i Sieć
 

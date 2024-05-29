@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Uniwersalny getter"
+description: "Jak wykorzystać Proxy w JS-ie do implementacji odpowiednika __get() z PHP?"
 author: Comandeer
 date: 2018-07-31T19:40:00+0100
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /uniwersalny-getter.html
@@ -30,7 +31,7 @@ var_dump( $test->iAmAlive ); // nope
 
 ```
 
-W przypadku JS-a nie było to, niestety, możliwe. Aż do ES6…
+W przypadku JS-a nie było to, niestety, możliwe. Aż do ES6…<!--more-->
 
 ## Nieuniwersalny getter
 

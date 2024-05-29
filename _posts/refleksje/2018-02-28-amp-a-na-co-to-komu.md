@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "AMP – a na co to komu?"
+description: "AMP jest szkodliwy."
 author: Comandeer
 date: 2018-02-28T23:58:00+0100
-tags: 
+tags:
     - refleksje
     - html-css
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /refleksje/html-css/2018/02/28/amp-a-na-co-to-komu.html
 ---
 
-Siedząc od lat w środowisku webdevowym, wyrobiłem sobie dość silne opinie o poszczególnych aspektach działania dżungli zwanej Siecią. Dzisiaj podzielę się jedną z takich opinii.
+Siedząc od lat w środowisku webdevowym, wyrobiłem sobie dość silne opinie o poszczególnych aspektach działania dżungli zwanej Siecią. Dzisiaj podzielę się jedną z takich opinii.<!--more-->
 
 ## AMP – czyli co?
 

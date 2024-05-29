@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "dev.js Summit 2021 – slajdy"
+description: "Slajdy z mojej prelekcji Przycisk i accessibility, czyli o pozornej prostocie dostępności."
 author: Comandeer
 date:   2021-10-14T22:52+0200
-tags: 
+tags:
     - na-luzie
 comments: true
 permalink: /devjs-summit-2021-slajdy.html

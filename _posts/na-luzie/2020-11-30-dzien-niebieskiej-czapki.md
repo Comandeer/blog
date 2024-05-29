@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Dzień Niebieskiej Czapki"
+description: "Świętujmy razem Dzień Niebieskiej Czapki 2020 🎉!"
 author: Comandeer
 date: 2020-11-30T22:42:00+0100
-tags: 
+tags:
     - na-luzie
     - standardy-sieciowe
 comments: true

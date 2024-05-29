@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Uparte narzędzia"
+description: "Czy nadmiar konfigurowalności jest dobry?"
 author: Comandeer
 date: 2024-01-31T20:59:00+0100
-tags: 
+tags:
     - refleksje
     - javascript
 comments: true
 permalink: /uparte-narzedzia.html
 ---
 
-Nie tak dawno temu na fejsowych grupkach poświęconych webdevowi zobaczyłem dwie rzeczy. Jedną z nich był news o nowej wersji jakiejś popularnej JS-owej biblioteki, w którym autor zastanawiał się, jak przetłumaczyć na polski słówko <i lang="en">opinionated</i>. Drugą był kod startera dla aplikacji w Next.js i Tailwindzie, który zawierał 20 plików konfiguracyjnych (22, jeśli doliczyć licencję i plik `README`). Co te posty mają ze sobą wspólnego? W sumie to nic, ale skłoniły mnie do dzisiejszej refleksji.
+Nie tak dawno temu na fejsowych grupkach poświęconych webdevowi zobaczyłem dwie rzeczy. Jedną z nich był news o nowej wersji jakiejś popularnej JS-owej biblioteki, w którym autor zastanawiał się, jak przetłumaczyć na polski słówko <i lang="en">opinionated</i>. Drugą był kod startera dla aplikacji w Next.js i Tailwindzie, który zawierał 20 plików konfiguracyjnych (22, jeśli doliczyć licencję i plik `README`). Co te posty mają ze sobą wspólnego? W sumie to nic, ale skłoniły mnie do dzisiejszej refleksji.<!--more-->
 
 20 plików konfiguracyjnych. Swego czasu całe moje projekty posiadały mniej plików, niż ten starter konfiguracji. Ale potem coś się zdecydowanie zmieniło. Gdy teraz spoglądam na kod [swojego bundlera](https://github.com/Comandeer/rollup-lib-bundler), z przerażeniem stwierdzam, że metaplików (a więc zawierających jakąś konfigurację lub inne informacje o projekcie, nie zaś kod) jest podejrzanie wręcz dużo (15 plików i dwa katalogi). Na dobrą sprawę jest ich więcej niż faktycznego kodu. I z jednej strony to fantastycznie, że w JS-owym ekosystemie możemy sobie skonfigurować absolutnie wszystko, łącznie z dokładnym sposobem formatowania kodu. Tylko pytanie, czy na pewno potrzebujemy aż takiej swobody?
 

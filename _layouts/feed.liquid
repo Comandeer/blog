@@ -27,7 +27,9 @@
     <published>{{ post.date | rfc_date }}</published>
     <updated>{{ post.date | rfc_date }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
-    <summary><![CDATA[{{ post.content | excerpt }}]]></summary>
+	{% if post.data.description %}
+    <summary><![CDATA[{{ post.data.description }}]]></summary>
+	{% endif %}
     <content type="html" xml:base="{{ site.url }}{{ post.url }}"><![CDATA[{{ post.content }}]]></content>
   </entry>
   {% endfor %}

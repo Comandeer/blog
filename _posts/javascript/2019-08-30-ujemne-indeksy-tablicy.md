@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Ujemne indeksy tablicy"
+description: "Jak zaimplementować dostęp do elementów tablicy przy pomocy ujemnych indeksów?"
 author: Comandeer
 date: 2019-08-30T21:10:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /ujemne-indeksy-tablicy.html
@@ -23,7 +24,7 @@ print( arr[ 2 ] ) # 21
 
 Żeby dostać się do ostatniego elementu tablicy, można się posłużyć indeksem `-1`, do przedostatniego – `-2` itd.
 
-Zobaczmy zatem, czy i jak da się przenieść podobną możliwość do JS-a!
+Zobaczmy zatem, czy i jak da się przenieść podobną możliwość do JS-a!<!--more-->
 
 ## Tworzenie podklas
 

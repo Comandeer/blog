@@ -2,6 +2,7 @@
 
 layout: post
 title: "Dostępna tęcza"
+description: "Pobawmy się kolorami tęczy!"
 author: Comandeer
 date: 2022-06-30T22:10:00+0200
 tags:
@@ -11,7 +12,7 @@ permalink: /dostepna-tecza.html
 
 ---
 
-Ostatnio rozmawiałem z przyjaciółką i nagle zeszliśmy na dziwne tematy, aż w końcu zaczęliśmy się zastanawiać, czy [tęczowa flaga](https://pl.wikipedia.org/wiki/T%C4%99czowa_flaga_(ruch_LGBT)) jest dostępna? A że dzisiaj ostatni dzień Miesiąca Dumy, stwierdziłem, że czemu by nie pochylić się nad tym eksperymentem myślowym?
+Ostatnio rozmawiałem z przyjaciółką i nagle zeszliśmy na dziwne tematy, aż w końcu zaczęliśmy się zastanawiać, czy [tęczowa flaga](https://pl.wikipedia.org/wiki/T%C4%99czowa_flaga_(ruch_LGBT)) jest dostępna? A że dzisiaj ostatni dzień Miesiąca Dumy, stwierdziłem, że czemu by nie pochylić się nad tym eksperymentem myślowym?<!--more-->
 
 ## Co to znaczy "dostępna"?
 

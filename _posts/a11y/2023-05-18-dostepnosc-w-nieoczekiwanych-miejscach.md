@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Dostępność w nieoczekiwanych miejscach"
+description: Dostępność można znaleźć w miejscach, w których byśmy się jej nie spodziewali.
 author: Comandeer
 date: 2023-05-18T00:00:00+0200
-tags: 
+tags:
     - a11y
     - refleksje
 comments: true
 permalink: /dostepnosc-w-nieoczekiwanych-miejscach.html
 ---
 
-Dzisiaj, 18 maja 2023, obchodzimy kolejny [Światowy Dzień Świadomości Dostępności (ang. <i lang="en">Global Accessibility Awareness Day</i>)](https://accessibility.day/). Z tej okazji naszła mnie krótka refleksja o tym, jak postrzegana jest dostępność.
+Dzisiaj, 18 maja 2023, obchodzimy kolejny [Światowy Dzień Świadomości Dostępności (ang. <i lang="en">Global Accessibility Awareness Day</i>)](https://accessibility.day/). Z tej okazji naszła mnie krótka refleksja o tym, jak postrzegana jest dostępność.<!--more-->
 
 Gdyby zapytać przypadkową osobę webdeveloperską o to, czym jest dostępność, to jest duża szansa uzyskania odpowiedzi, że to dostosowanie strony tak, aby mogły z niej korzystać także osoby z niepełnosprawnościami. To prawda. Prawdopodobnie można by też usłyszeć o [standardzie WCAG](https://wcag21.lepszyweb.pl/). I to też jak najbardziej prawda. Problem polega na tym, że nie _cała_ prawda.
 

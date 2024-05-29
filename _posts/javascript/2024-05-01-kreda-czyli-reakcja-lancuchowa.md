@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Kreda, czyli reakcja łańcuchowa"
+description: "Jak odtworzyć API Chalka przy użyciu proxy?"
 author: Comandeer
 date: 2024-05-01T00:25:00+0200
-tags: 
+tags:
     - javascript
     - eksperymenty
 comments: true
@@ -26,7 +27,7 @@ import chalk from 'chalk';
 console.log( chalk.underline.italic( 'Podkreślony, pochylony tekst' ) );
 ```
 
-Zdecydowanie czytelniej i jakoś tak _milej_. No więc postanowiłem spróbować dorobić taki interfejs do natywnego wsparcia kolorków.
+Zdecydowanie czytelniej i jakoś tak _milej_. No więc postanowiłem spróbować dorobić taki interfejs do natywnego wsparcia kolorków.<!--more-->
 
 ## Kreda
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Przesunięcie sourcemapy"
+description: "Krótki opis buga w generowaniu sourcemapy oraz sposobu jego rozwiązania przy pomocy ręcznejj modyfikacji sourcemapy."
 author: Comandeer
 date: 2018-10-09T23:59:00+0200
 tags:
@@ -11,7 +12,7 @@ redirect_from:
     - /javascript/2018/10/09/przesuniecie-sourcemapy.html
 ---
 
-W ten weekend mierzyłem się z kolejnym błędem w [moim najsłynniejszym projekcie na GitHubie](https://github.com/Comandeer/rollup-plugin-babel-minify) – [niepoprawnym generowaniem sourcemapy](https://github.com/Comandeer/rollup-plugin-babel-minify/issues/133). Problem okazał się na tyle ciekawy, że postanowiłem go opisać.
+W ten weekend mierzyłem się z kolejnym błędem w [moim najsłynniejszym projekcie na GitHubie](https://github.com/Comandeer/rollup-plugin-babel-minify) – [niepoprawnym generowaniem sourcemapy](https://github.com/Comandeer/rollup-plugin-babel-minify/issues/133). Problem okazał się na tyle ciekawy, że postanowiłem go opisać.<!--more-->
 
 ## Sourcemapa – co to takiego?
 

@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Fałszywa dychotomia – estetyka a dostępność"
+description: "Wybór między dostępnością a estetyką jest fałszywy."
 author: Comandeer
 date: 2021-02-27T23:33:00+0100
-tags: 
+tags:
     - refleksje
     - a11y
 comments: true
 permalink: /falszywa-dychotomia-estetyka-a-dostepnosc.html
 ---
 
-W webdevie pokutuje przekonanie, że strona może być albo ładna, albo dostępna. Myślą tak nawet [laureaci Awwwards 2020](https://twitter.com/ericwbailey/status/1351243179060768778). Problem w tym, że przekonanie to jest całkowicie błędne i często drobne zmiany mogą sprawić, że ładna strona stanie się także o wiele bardziej dostępna.
+W webdevie pokutuje przekonanie, że strona może być albo ładna, albo dostępna. Myślą tak nawet [laureaci Awwwards 2020](https://twitter.com/ericwbailey/status/1351243179060768778). Problem w tym, że przekonanie to jest całkowicie błędne i często drobne zmiany mogą sprawić, że ładna strona stanie się także o wiele bardziej dostępna.<!--more-->
 
 ## Animacja, czyli słoń w składzie porcelany
 

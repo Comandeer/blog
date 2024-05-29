@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Skok z wieży Babel"
+description: "Trochę narzekania na dokumentację Babela."
 author: Comandeer
 date: 2017-04-23T20:00:00+0100
-tags: 
+tags:
     - refleksje
     - javascript
     - daj-sie-poznac-2017
@@ -13,7 +14,7 @@ redirect_from:
     - /refleksje/javascript/daj-sie-poznac-2017/2017/04/23/skok-z-wiezy-babel.html
 ---
 
-Przecież najpopularniejsze narzędzie w ekosystemie JS nie może być całkowicie zepsute i dodatkowo nie posiadać żadnej sensownej dokumentacji, [prawda](https://www.youtube.com/watch?v=zTuUAlMveBU)? Jeśli na to pytanie, Drogi Czytelniku, odpowiedziałeś twierdząco, to muszę Cię zmartwić: jak najbardziej może. I przekonałem się o tym, nie po raz pierwszy zresztą, na własnej skórze.
+Przecież najpopularniejsze narzędzie w ekosystemie JS nie może być całkowicie zepsute i dodatkowo nie posiadać żadnej sensownej dokumentacji, [prawda](https://www.youtube.com/watch?v=zTuUAlMveBU)? Jeśli na to pytanie, Drogi Czytelniku, odpowiedziałeś twierdząco, to muszę Cię zmartwić: jak najbardziej może. I przekonałem się o tym, nie po raz pierwszy zresztą, na własnej skórze.<!--more-->
 
 Dokładnie wczoraj wypuściłem wersję 3.0.0 mojego [`rollup-plugin-babili`](https://www.npmjs.com/package/rollup-plugin-babili). Nigdy nie przypuszczałem, że to wręcz prymitywne narzędzie do minifikacji będzie moim najpopularniejszym projektem (i tyle, jeśli chodzi o zmienianie świata oprogramowania…). Ba, jest na tyle popularne, że ktoś go _faktycznie używa_ i nawet znalazł poważny defekt, do którego – uwaga, uwaga! – przygotował [pull request](https://github.com/Comandeer/rollup-plugin-babili/pull/15). [Święto](https://www.youtube.com/watch?v=nsBByTiKfyY). Tenże pull request naprawiał pewne niedogodności w tzw. bannerze, czyli komentarzu zawierającego informacje o licencji i autorze, który znajduje się na samej górze pliku:
 

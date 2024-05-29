@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Reduce i formatowanie tekstu"
+description: "Krótko o tym, jak można używać Array#reduce() do formatowania tekstu."
 author: Comandeer
 date: 2017-05-21T20:20:00+0200
-tags: 
+tags:
     - javascript
     - daj-sie-poznac-2017
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /javascript/daj-sie-poznac-2017/2017/05/21/reduce-i-formatowanie-tekstu.html
 ---
 
-Zapewne niektórzy się oburzą, co to za obrzydłe herezje ten Comandeer głosi: jak to można używać `Array.prototype.reduce` do formatowania tekstu?! Ano, można i już demonstruję jak i po co.
+Zapewne niektórzy się oburzą, co to za obrzydłe herezje ten Comandeer głosi: jak to można używać `Array.prototype.reduce` do formatowania tekstu?! Ano, można i już demonstruję jak i po co.<!--more-->
 
 ## Co to za czary?
 

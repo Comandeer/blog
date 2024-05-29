@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "DevAdventCalendar 2021"
+description: "Zapraszam na wydarzenie DevAdventCalendar 2021!"
 author: Comandeer
 date: 2021-11-28T15:19:00+0100
 tags:
@@ -9,7 +10,7 @@ comments: true
 permalink: /devadventcalendar-2021.html
 ---
 
-Idą święta, zaczyna się grudzień… A to znak, że zaczyna się też adwent! Któż z nas nie lubi tych słodkich, czekoladowych kalendarzy, umilających nam oczekiwanie na Gwiazdkę?
+Idą święta, zaczyna się grudzień… A to znak, że zaczyna się też adwent! Któż z nas nie lubi tych słodkich, czekoladowych kalendarzy, umilających nam oczekiwanie na Gwiazdkę?<!--more-->
 
 Okazuje się, że developerzy mają swój własny kalendarz, [**DevAdventCalendar**](https://devadventcalendar.pl/)! Co prawda, nie ma w nim czekoladek (szkoda…!), ale każde okienko kryje inne, ciekawe nagrody. Wystarczy odpowiedzieć poprawnie na pytanie, które pojawi się po otwarciu okienka.
 

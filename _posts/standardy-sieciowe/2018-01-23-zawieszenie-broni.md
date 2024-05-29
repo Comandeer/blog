@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Zawieszenie broni"
+description: "O tym, jak WHATWG i W3C się dogadały."
 author: Comandeer
 date: 2018-01-23T23:30:00+0100
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
     - a11y
@@ -13,7 +14,7 @@ redirect_from:
     - /refleksje/a11y/2018/01/23/zawieszenie-broni.html
 ---
 
-Ostatnio pisałem o [wieloletnim konflikcie pomiędzy WHATWG i W3C](https://blog.comandeer.pl/refleksje/a11y/2018/01/05/pyrrusowe-zwyciestwo.html). Nie spodziewałem się jednak, że przynajmniej częściowo zostanie zażegnany – i to tak pokojowo.
+Ostatnio pisałem o [wieloletnim konflikcie pomiędzy WHATWG i W3C](https://blog.comandeer.pl/refleksje/a11y/2018/01/05/pyrrusowe-zwyciestwo.html). Nie spodziewałem się jednak, że przynajmniej częściowo zostanie zażegnany – i to tak pokojowo.<!--more-->
 
 ## Ale co się stało?
 

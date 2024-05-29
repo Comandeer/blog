@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Bujając się na gałęzi AST"
+description: "Krótkie wprowadzenie do parsowania JS-a przy pomocy Babela."
 author: Comandeer
 date: 2018-11-30T01:59:00+0100
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /bujajac-sie-na-galezi-ast.html
@@ -11,7 +12,7 @@ redirect_from:
     - /javascript/2018/11/30/bujajac-sie-na-galezi-ast.html
 ---
 
-Istnieją rzeczy, na które zwykle nie zwracamy jakiejkolwiek uwagi, po prostu przyjmując ich istnienie za pewnik lub nie musząc się nimi całkowicie przejmować. Wiele takich rzeczy jest i w JS-ie – rzeczy, o które nie musimy się martwić w czasie codziennej pracy (no, chyba że rozwijasz Babela czy innego Rollupa; wówczas te rzeczy _są_ Twoją pracą…). Przyjrzymy się dzisiaj jednej z takich rzeczy – AST.
+Istnieją rzeczy, na które zwykle nie zwracamy jakiejkolwiek uwagi, po prostu przyjmując ich istnienie za pewnik lub nie musząc się nimi całkowicie przejmować. Wiele takich rzeczy jest i w JS-ie – rzeczy, o które nie musimy się martwić w czasie codziennej pracy (no, chyba że rozwijasz Babela czy innego Rollupa; wówczas te rzeczy _są_ Twoją pracą…). Przyjrzymy się dzisiaj jednej z takich rzeczy – AST.<!--more-->
 
 ## Co to jest AST?
 

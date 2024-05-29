@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Nie żyją nagłówki, niech żyją nagłówki!"
+description: "Algorytm outline'u w końcu wypada ze specyfikacji HTML."
 author: Comandeer
 date: 2022-07-01T18:03:00+0200
-tags: 
+tags:
     - standardy-sieciowe
     - a11y
     - refleksje
@@ -11,7 +12,7 @@ comments: true
 permalink: /nie-zyja-naglowki-niech-zyja-naglowki.html
 ---
 
-Stało się. [Po ponad **12 latach** przepychanek](https://html5accessibility.com/stuff/2022/04/05/12-years-beyond-a-html-joke/), w końcu [algorytm outline'u został usunięty ze specyfikacji HTML](https://github.com/whatwg/html/commit/6682bdeee6fb08f5972bea92064fe250f1b4ec9c).
+Stało się. [Po ponad **12 latach** przepychanek](https://html5accessibility.com/stuff/2022/04/05/12-years-beyond-a-html-joke/), w końcu [algorytm outline'u został usunięty ze specyfikacji HTML](https://github.com/whatwg/html/commit/6682bdeee6fb08f5972bea92064fe250f1b4ec9c).<!--more-->
 
 W praktyce zmienia to niewiele, bo o tym, że ten algorytm nie działa, [wiedziano od bardzo dawna](https://www.tpgi.com/html5-document-outline/). Jedynym miejscem, w którym próbowano ten fakt ignorować, była właśnie specyfikacja. To się jednak dzisiaj zmieniło i algorytm przestał istnieć. A zatem tak naprawdę jedynym prawidłowym sposobem wykorzystania nagłówków jest ten jeszcze z czasów HTML 4 – czyli [tworzenie odpowiedniej hierarchii](https://blog.comandeer.pl/o-naglowkach-slow-kilka.html#znaczenie-nag%C5%82%C3%B3wk%C3%B3w).
 

@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Cienie przeszłości"
+description: "O zaszłościach historycznych w atrybucie [onclick]."
 author: Comandeer
 date: 2023-02-24T23:22:00+0100
-tags: 
+tags:
     - javascript
     - standardy-sieciowe
 comments: true
 permalink: /cienie-przeszlosci.html
 ---
 
-Niektóre rzeczy w webdevie wydają się nie być przesadnie ekscytujące. No bo czymże może nas zaskoczyć atrybut `[onclick]`? Cóż, okazuje się, że _wieloma_ rzeczami.
+Niektóre rzeczy w webdevie wydają się nie być przesadnie ekscytujące. No bo czymże może nas zaskoczyć atrybut `[onclick]`? Cóż, okazuje się, że _wieloma_ rzeczami.<!--more-->
 
 ## Problem
 

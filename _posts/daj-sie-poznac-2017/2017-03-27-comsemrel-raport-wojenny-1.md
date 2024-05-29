@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "ComSemRel – raport wojenny #1"
+description: "Podsumowanie postępu prac nad ComSemRelem #1."
 author: Comandeer
 date: 2017-03-27T23:50:00+0100
-tags: 
+tags:
     - daj-sie-poznac-2017
 comments: true
 permalink: /comsemrel-raport-wojenny-1.html
@@ -11,7 +12,7 @@ redirect_from:
     - /daj-sie-poznac-2017/2017/03/27/comsemrel-raport-wojenny-1.html
 ---
 
-Dzisiaj pierwszy raport z placu boju o lepszą automatyzację releasowania oprogramowania open source! Wieści nie są dobre, ale wciąż nie tragiczne (przynajmniej jak na mnie).
+Dzisiaj pierwszy raport z placu boju o lepszą automatyzację releasowania oprogramowania open source! Wieści nie są dobre, ale wciąż nie tragiczne (przynajmniej jak na mnie).<!--more-->
 
 ## TS jest fajny, chyba że akurat nie jest fajny
 

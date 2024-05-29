@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Web Components – koszmar minionego lata"
+description: "Krótkie spojrzenie na obecny stan Web Components."
 author: Comandeer
 date: 2017-04-02T19:00:00+0100
 tags:
@@ -16,7 +17,7 @@ redirect_from:
 
 Ach, moje kochane Web Components, o których – jak to zauważają i wytykają mi nieraz znajomi – mogę rozprawiać godzinami, a i tak mi mało. [Gadałem o nich na żywo](http://comandeer.github.io/web-components-slides/), [pisałem o nich zanim się stało to modne](http://webroad.pl/javascript/3505-web-components) i [narzekałem na nie jeszcze przed nadejściem ich ery](http://tutorials.comandeer.pl/polymer.html). Aż w końcu nadeszły szczęśliwe czasy, w których Web Components mają natywne wsparcie. I co?
 
-I g… nic, jak było źle, tak jest źle, jeśli nie znacznie gorzej. Ale po kolei.
+I g… nic, jak było źle, tak jest źle, jeśli nie znacznie gorzej. Ale po kolei.<!--more-->
 
 ## Piękna idea…
 

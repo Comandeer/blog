@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Mam nierówno pod sufitem"
+description: "Czyli czemu wkurzam się na różne kursy w Sieci."
 author: Comandeer
 date: 2017-04-14T12:00:00+0100
 tags:
@@ -12,7 +13,7 @@ redirect_from:
     - /refleksje/daj-sie-poznac-2017/2017/04/14/mam-nierowno-pod-sufitem.html
 ---
 
-Z ciekawości przeglądnąłem sobie ostatnio statystyki WebKrytyka (by sprawdzić, czy nowy [agregator treści](http://www.polskifrontend.pl/) przyniósł trochę ruchu) i zauważyłem, że ostatnio wpadło mi trochę ruchu z [Wykopu](http://www.wykop.pl/). Poszukałem skąd dokładnie pochodzi ten przypływ użytkowników i znalazłem [wątek dotyczący kursów Mirosława Zelenta](http://www.wykop.pl/wpis/23156181/). Cóż, od pewnych rzeczy – jak widać – nie sposób się uwolnić.
+Z ciekawości przeglądnąłem sobie ostatnio statystyki WebKrytyka (by sprawdzić, czy nowy [agregator treści](http://www.polskifrontend.pl/) przyniósł trochę ruchu) i zauważyłem, że ostatnio wpadło mi trochę ruchu z [Wykopu](http://www.wykop.pl/). Poszukałem skąd dokładnie pochodzi ten przypływ użytkowników i znalazłem [wątek dotyczący kursów Mirosława Zelenta](http://www.wykop.pl/wpis/23156181/). Cóż, od pewnych rzeczy – jak widać – nie sposób się uwolnić.<!--more-->
 
 Nigdy nie sądziłem, że napisanie krytyki tych kursów (zresztą podobnie jak artykułu o Angularze) zapewni mi stały napływ ruchu przez najbliższe _lata_. Wciąż najwięcej odwiedzających mam właśnie z powodu tych artykułów. I za każdym razem natykam się na pewnego rodzaju ścianę. I zawsze jest to ta sama ściana: "te kursy są dobre, bo dobrze wprowadzają do tematu". [Nie inaczej było i w tej dyskusji](http://www.wykop.pl/wpis/23156181/#comment-83470343):
 

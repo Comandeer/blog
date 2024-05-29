@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "Najprostszy event emitter w przeglądarce"
+description: "Jak stworzyć emitter zdarzeń przy pomocy EventTarget()?"
 author: Comandeer
 date: 2022-01-23T23:10:00+0100
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /najprostszy-event-emitter-w-przegladarce.html
 ---
 
-Praca z DOM prędzej czy później wymusi na każdym zapoznanie się z [event listenerami](https://javascript.info/introduction-browser-events). Ten prosty mechanizm pozwala nam reagować w momencie, gdy w aplikacji sieciowej coś się dzieje – użytkownik kliknie przycisk, jakaś animacja się zakończy, wczyta się zawartość ramki… Jednak czasami taki system zdarzeń przydałby się w logice naszej aplikacji. Wówczas w jednym miejscu moglibyśmy reagować na rzeczy, które dzieją się w innych częściach aplikacji. Na szczęście okazuje się, że w przeglądarce jest na to sposób.
+Praca z DOM prędzej czy później wymusi na każdym zapoznanie się z [event listenerami](https://javascript.info/introduction-browser-events). Ten prosty mechanizm pozwala nam reagować w momencie, gdy w aplikacji sieciowej coś się dzieje – użytkownik kliknie przycisk, jakaś animacja się zakończy, wczyta się zawartość ramki… Jednak czasami taki system zdarzeń przydałby się w logice naszej aplikacji. Wówczas w jednym miejscu moglibyśmy reagować na rzeczy, które dzieją się w innych częściach aplikacji. Na szczęście okazuje się, że w przeglądarce jest na to sposób.<!--more-->
 
 ## Nasz event emitter
 

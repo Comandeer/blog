@@ -2,9 +2,10 @@
 
 layout: post
 title: "Światowy Dzień Świadomości Dostępności 2022"
+description: "Świętujmy razem Dzień Świadomości Dostępności 2022 🎉!"
 author: Comandeer
 date: 2022-05-19T21:00:00+0200
-tags: 
+tags:
     - na-luzie
 comments: true
 permalink: /swiatowy-dzien-swiadomosci-dostepnosci-2022.html

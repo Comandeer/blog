@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "System polyfillów"
+description: "Eksperymentalny system polyfillów, który sam wykrywa brakujące ficzery i jest transparentny dla aplikacji."
 author: Comandeer
 date: 2019-01-31T02:45:00+0100
-tags: 
+tags:
     - eksperymenty
     - javascript
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /eksperymenty/javascript/2019/01/31/system-polyfillow.html
 ---
 
-Pod koniec tamtego roku trafiłem na artykuł o [leniwym wczytywaniu polyfillów](https://itnext.io/lazy-loading-polyfills-4b85c4951e73). Były one wczytywane w kodzie aplikacji przy pomocy `import`. Niemniej zupełnie nie zgodziłem się wówczas z wizją autora i postanowiłem stworzyć własną wersję takiego systemu. W końcu znalazłem na to chwilę.
+Pod koniec tamtego roku trafiłem na artykuł o [leniwym wczytywaniu polyfillów](https://itnext.io/lazy-loading-polyfills-4b85c4951e73). Były one wczytywane w kodzie aplikacji przy pomocy `import`. Niemniej zupełnie nie zgodziłem się wówczas z wizją autora i postanowiłem stworzyć własną wersję takiego systemu. W końcu znalazłem na to chwilę.<!--more-->
 
 ## Założenia
 

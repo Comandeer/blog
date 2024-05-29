@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Prymitywna implementacja mitycznej funkcji React.createElement"
+title:  "Prymitywna implementacja mitycznej funkcji React#createElement()"
+description: "Odtwarzamy React#createElement() przy wykorzystaniu czystego JS-a i DOM-u."
 author: Comandeer
 date: 2017-05-28T23:40:00+0200
-tags: 
+tags:
     - javascript
     - daj-sie-poznac-2017
 comments: true
@@ -12,7 +13,7 @@ redirect_from:
     - /javascript/daj-sie-poznac-2017/2017/05/28/pymitywna-implementacja-mitycznej-funkcji-React-createElement.html
 ---
 
-Każdy, kto choć trochę bawił się Reactem (czy naprawdę jestem jedynym, którego nigdy do tego nie ciągnęło?!), zapewne zauważył, że pod spodem JSX-a znajduje się [mityczna funkcja `React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement). [Składnia tej funkcji szybko została podchwycona przez inne biblioteki](https://github.com/Matt-Esch/virtual-dom#example---creating-a-vtree-using-the-objects-directly) i obecnie jest <i>de facto</i> standardem w środowisku zajmującym się Virtual DOM.
+Każdy, kto choć trochę bawił się Reactem (czy naprawdę jestem jedynym, którego nigdy do tego nie ciągnęło?!), zapewne zauważył, że pod spodem JSX-a znajduje się [mityczna funkcja `React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement). [Składnia tej funkcji szybko została podchwycona przez inne biblioteki](https://github.com/Matt-Esch/virtual-dom#example---creating-a-vtree-using-the-objects-directly) i obecnie jest <i>de facto</i> standardem w środowisku zajmującym się Virtual DOM.<!--more-->
 
 ## Virtual DOM – cóż to?
 

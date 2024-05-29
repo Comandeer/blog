@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "Jeden znak jest warty więcej niż tysiąc ifów"
+description: "Opis problemów związanych z pomijaniem średników w JS-ie."
 author: Comandeer
 date: 2021-09-07T23:46:00+0200
-tags: 
+tags:
     - javascript
 comments: true
 permalink: /jeden-znak-jest-warty-wiecej-niz-tysiac-ifow.html
 ---
 
-Czasami niektóre błędy są bardzo trudne do zdebugowania, bo występują stosunkowo rzadko, a i czają się w miejscach, w których byśmy się ich nie spodziewali.
+Czasami niektóre błędy są bardzo trudne do zdebugowania, bo występują stosunkowo rzadko, a i czają się w miejscach, w których byśmy się ich nie spodziewali.<!--more-->
 
 ## Problem
 

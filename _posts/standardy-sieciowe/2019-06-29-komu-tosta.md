@@ -1,16 +1,17 @@
 ---
 layout: post
 title:  "Komu tosta?"
+description: "Czyli jak Google planuje wbudować bibliotekę z Web Components w przeglądarkę."
 author: Comandeer
 date: 2019-06-29T14:45:00+0200
-tags: 
+tags:
     - standardy-sieciowe
     - refleksje
 comments: true
 permalink: /komu-tosta.html
 ---
 
-Ostatnio Google ogłosiło, że [zamierza wprowadzić nowy element HTML, `toast`/`std-toast`](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Gl7FIKM5IFw/tA70X9ZIBQAJ). Nie trzeba chyba mówić, że [wywołało to poruszenie w środowisku](https://adactio.com/journal/15357)…
+Ostatnio Google ogłosiło, że [zamierza wprowadzić nowy element HTML, `toast`/`std-toast`](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Gl7FIKM5IFw/tA70X9ZIBQAJ). Nie trzeba chyba mówić, że [wywołało to poruszenie w środowisku](https://adactio.com/journal/15357)…<!--more-->
 
 ## Ale o co chodzi?
 
