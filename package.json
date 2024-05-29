@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "lint": "eslint .eleventy.js",
+	"prestart": "rimraf _site",
     "start": "eleventy --serve",
+	"prebuild": "rimraf _site",
     "build": "eleventy"
   },
   "keywords": [
@@ -17,7 +19,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@comandeer/eslint-config": "^0.13.1",
+    "bulma": "^1.0.1",
     "date-fns": "^3.6.0",
-    "eslint": "8"
+    "eslint": "8",
+    "rimraf": "^5.0.7",
+    "sass": "^1.77.3"
   }
 }

@@ -1,6 +1,7 @@
 /* global module */
 
 const { formatRFC3339 } = require( 'date-fns' );
+const sass = require( 'sass' );
 const site = require( './_data/site' );
 
 /**
@@ -44,6 +45,22 @@ module.exports = function( eleventyConfig ) {
 		const [ excerpt ] = content.split( /<!--\s*more\s*-->/ );
 
 		return excerpt.trim();
+	} );
+
+	eleventyConfig.addTemplateFormats( 'scss' );
+
+	// https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
+	eleventyConfig.addExtension( 'scss', {
+		outputFileExtension: 'css',
+		async compile( inputContent ) {
+			return async () => {
+				const { css } = sass.compileString( inputContent, {
+					loadPaths: [ './node_modules' ]
+				} );
+
+				return css;
+			};
+		}
 	} );
 
 	return {
