@@ -3,13 +3,13 @@
 const path = require( 'node:path' );
 const { formatRFC3339 } = require( 'date-fns' );
 const markdownIt = require( 'markdown-it' );
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItClass = require('@toycode/markdown-it-class');
-const markdownItLinkAttributes = require('markdown-it-link-attributes');
-const markdownItEmoji = require('markdown-it-emoji').full;
+const markdownItAnchor = require( 'markdown-it-anchor' );
+const markdownItClass = require( '@toycode/markdown-it-class' );
+const markdownItLinkAttributes = require( 'markdown-it-link-attributes' );
+const markdownItEmoji = require( 'markdown-it-emoji' ).full;
 const sass = require( 'sass' );
 const slugify = require( 'slugify' );
-const site = require( './_data/site' );
+const site = require( './src/_data/site' );
 const imageShortCode = require( './shortcodes/image' );
 
 /**
@@ -26,7 +26,7 @@ module.exports = function( eleventyConfig ) {
 		typographer: true
 	} ).use( markdownItAnchor, {
 		slugify: ( str ) => {
-			return slugify(str, {
+			return slugify( str, {
 				replacement: '-',
 				remove: /[#,&,+()$~%.'":*¿?¡!<>{}]/g,
 				lower: true
@@ -56,7 +56,7 @@ module.exports = function( eleventyConfig ) {
 		use( markdownItEmoji ) );
 
 	eleventyConfig.addCollection( 'posts', ( collection ) => {
-		return collection.getFilteredByGlob( '_posts/**/*.md' ).
+		return collection.getFilteredByGlob( 'src/_posts/**/*.md' ).
 			sort( ( a, b ) => {
 				return b.date - a.date;
 			} );
@@ -79,8 +79,11 @@ module.exports = function( eleventyConfig ) {
 		strictFilters: false
 	} );
 
-	eleventyConfig.addPassthroughCopy( {
-		public: '.'
+	[
+		'src/assets/',
+		'src/favicon.ico'
+	].forEach( ( path ) => {
+		return eleventyConfig.addPassthroughCopy( path );
 	} );
 
 	eleventyConfig.addFilter( 'rfc_date', ( date ) => {
@@ -113,7 +116,9 @@ module.exports = function( eleventyConfig ) {
 
 	return {
 		dir: {
-			layouts: '_layouts'
+			input: 'src',
+			layouts: '_layouts',
+			output: 'dist'
 		}
 	};
 };

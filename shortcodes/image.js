@@ -82,7 +82,7 @@ function getOutputPaths( src ) {
 	const srcDir = path.dirname( src.replace( /^((..\/)+|\.?\/)images\//, '' ) );
 
 	return {
-		dir: path.join( './_site/assets/images/', srcDir ),
+		dir: path.join( './dist/assets/images/', srcDir ),
 		url: path.join( '/assets/images/', srcDir )
 	};
 }
