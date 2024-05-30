@@ -3,7 +3,17 @@
 <ul class="post-list">
   {% for post in paginator.items %}
     <li>
-      {% include 'post' post=post %}
+		{% include 'post-metadata' date=post.date author=post.data.author tags=post.data.tags %}
+
+		<h2 class="title is-2">
+			<a class="post-link" href="{{ post.url }}" rel="bookmark">{{ post.data.title | escape }}</a>
+		</h2>
+
+		<div class="content">{{ post.content | excerpt }}</div>
+
+		<p>
+			<a href="{{ post.url }}">Czytaj całość <span class="is-sr-only">postu {{ post.data.title | escape }}</span> <span aria-hidden="true">»</span></a>
+		</p>
     </li>
   {% endfor %}
 </ul>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
 	  {% include 'head' %}
-	  <body>
+	  <body class="container is-max-widescreen">
 		{% include 'header' %}
-		<main id="tresc" class="page-content">
+		<main id="tresc">
 			<h1 class="page-heading">Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}</h1>
 
 			{{ content }}

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
 	  {% include 'head' %}
-	  <body>
+	  <body class="container is-max-widescreen">
 		{% include 'header' %}
-		<main id="tresc" class="page-content">
+		<main id="tresc">
 			<article class="post" typeof="BlogPosting">
 
 				<header class="post-header">
-				  <h1 class="post-title" property="name headline">{{ title }}</h1>
+				  <h1 class="title is-1" property="name headline">{{ title }}</h1>
 				  {%  include 'post-metadata' date=page.date author=author tags=tags %}
 			  </header>
 
-				<div class="post-content" property="articleBody">
+				<div property="articleBody">
 				  {{ content }}
 				</div>
 

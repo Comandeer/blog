@@ -17,8 +17,7 @@ Z ciekawości przeglądnąłem sobie ostatnio statystyki WebKrytyka (by sprawdzi
 
 Nigdy nie sądziłem, że napisanie krytyki tych kursów (zresztą podobnie jak artykułu o Angularze) zapewni mi stały napływ ruchu przez najbliższe _lata_. Wciąż najwięcej odwiedzających mam właśnie z powodu tych artykułów. I za każdym razem natykam się na pewnego rodzaju ścianę. I zawsze jest to ta sama ściana: "te kursy są dobre, bo dobrze wprowadzają do tematu". [Nie inaczej było i w tej dyskusji](http://www.wykop.pl/wpis/23156181/#comment-83470343):
 
-{% capture src %}{{ '/assets/images/wykop-koment.png' | absolute_url }}{% endcapture %}
-{% include 'figure' alt="" src=src %}
+{% include 'figure' alt="" src="../../images/wykop-koment.png" %}
 
 >jejku, ten komentarz to jakaś totalna porażka. Jak można przyczepiać się do wszystkiego. Jest oczywistym, że poradniki Zelenta, to nie jakieś sprawdzone wzorce projektowe gotowe do wykorzystania, tylko coś co ma wprowadzić nas w dane zagadnienie (w tym przypadku front-end) i przy tym nie zniechęcić na starcie.
 >Mam wrażenie, że wszyscy krytycy mają nie równo pod sufitem. Elo.

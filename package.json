@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "lint": "eslint .eleventy.js",
-	"prestart": "rimraf _site",
+    "prestart": "rimraf _site",
     "start": "eleventy --serve",
-	"prebuild": "rimraf _site",
+    "prebuild": "rimraf _site",
     "build": "eleventy"
   },
   "keywords": [
@@ -18,11 +18,19 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.8",
     "@comandeer/eslint-config": "^0.13.1",
+    "@toycode/markdown-it-class": "^1.2.4",
     "bulma": "^1.0.1",
     "date-fns": "^3.6.0",
     "eslint": "8",
+    "html-minifier-terser": "^7.2.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-link-attributes": "^4.0.1",
     "rimraf": "^5.0.7",
-    "sass": "^1.77.3"
+    "sass": "^1.77.3",
+    "slugify": "^1.6.6"
   }
 }
