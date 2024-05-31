@@ -19,6 +19,34 @@ const imageShortCode = require( './shortcodes/image' );
 module.exports = function( eleventyConfig ) {
 	eleventyConfig.ignores.add( '/images/**' );
 
+	const placeholder = '™™©©®®';
+	slugify.extend( {
+		'ę': 'ę',
+		'Ę': 'ę',
+		'ó': 'ó',
+		'Ó': 'ó',
+		'ą': 'ą',
+		'Ą': 'ą',
+		'ś': 'ś',
+		'Ś': 'ś',
+		'ł': 'ł',
+		'Ł': 'ł',
+		'ż': 'ż',
+		'Ż': 'ż',
+		'ź': 'ź',
+		'Ź': 'ź',
+		'ć': 'ć',
+		'Ć': 'ć',
+		'ń': 'ń',
+		'Ń': 'ń',
+		'[': '',
+		']': '',
+		'/': '',
+		'–': placeholder,
+		'—': placeholder,
+		'+': placeholder
+	} );
+
 	eleventyConfig.setLibrary( 'md', markdownIt ( {
 		html: true,
 		breaks: true,
@@ -26,11 +54,21 @@ module.exports = function( eleventyConfig ) {
 		typographer: true
 	} ).use( markdownItAnchor, {
 		slugify: ( str ) => {
-			return slugify( str, {
+			str = str.
+				replaceAll( ' ', '' ).
+				replaceAll( '– ', ' ' );
+
+			const slug = slugify( str, {
 				replacement: '-',
 				remove: /[#,&,+()$~%.'":*¿?¡!<>{}]/g,
-				lower: true
+				lower: true,
+				trim: false
 			} );
+
+			return slug.
+				replaceAll( placeholder, '' ).
+				replaceAll( '👍', '' ).
+				replaceAll( '👎', '' );
 		},
 		tabIndex: false,
 		permalink: markdownItAnchor.permalink.headerLink()
