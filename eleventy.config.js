@@ -2,7 +2,8 @@
 
 const path = require( 'node:path' );
 const { formatRFC3339 } = require( 'date-fns' );
-const sass = require( 'sass' );
+const revPlugin = require( 'eleventy-plugin-rev' );
+const sassPlugin = require( 'eleventy-sass' );
 const site = require( './src/_data/site' );
 const markdownIt = require( './plugins/markdownIt' );
 const imageShortCode = require( './shortcodes/image' );
@@ -13,6 +14,11 @@ const imageShortCode = require( './shortcodes/image' );
  */
 module.exports = function( eleventyConfig ) {
 	eleventyConfig.ignores.add( '/images/**' );
+
+	eleventyConfig.addPlugin( revPlugin );
+	eleventyConfig.addPlugin( sassPlugin, {
+		rev: true
+	} );
 
 	eleventyConfig.setLibrary( 'md', markdownIt );
 
@@ -55,22 +61,6 @@ module.exports = function( eleventyConfig ) {
 		const [ excerpt ] = content.split( /<!--\s*more\s*-->/ );
 
 		return excerpt.trim();
-	} );
-
-	eleventyConfig.addTemplateFormats( 'scss' );
-
-	// https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
-	eleventyConfig.addExtension( 'scss', {
-		outputFileExtension: 'css',
-		async compile( inputContent ) {
-			return async () => {
-				const { css } = sass.compileString( inputContent, {
-					loadPaths: [ './node_modules' ]
-				} );
-
-				return css;
-			};
-		}
 	} );
 
 	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
