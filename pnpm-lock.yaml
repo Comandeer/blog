@@ -20,6 +20,9 @@ importers:
       '@toycode/markdown-it-class':
         specifier: ^1.2.4
         version: 1.2.4
+      almond.css:
+        specifier: ^1.2.2
+        version: 1.2.2
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
@@ -933,6 +936,9 @@ packages:
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
+
+  almond.css@1.2.2:
+    resolution: {integrity: sha512-bAOvsWLyJ2sqXWT5VSFI+iLiygCx+aLDcINF3DKWG3A9QmuBoZFnncZ53BIeNh//PT4akrbDfAZRex8idNmuHw==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -3660,6 +3666,8 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
+
+  almond.css@1.2.2: {}
 
   ansi-regex@5.0.1: {}
 
