@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
-	  {% include 'head' %}
-	  <body class="container is-max-widescreen">
-		{% include 'header' %}
-		<main id="tresc">
-			<h1 class="page-heading">Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}</h1>
+		{% capture title %}Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}, strona {{ pagination.pageNumber | plus: 1 }}{% endcapture %}
+		{% include 'head' %}
+		<body>
+			{% include 'header' %}
+			<main id="tresc">
+				<hgroup>
+					<h1>Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}</h1>
+					<p>Strona {{ pagination.pageNumber | plus: 1 }}</p>
+				</hgroup>
 
-			{{ content }}
 
-			{% include 'post-list' posts=pagination %}
+				{{ content }}
 
-			<p class="rss-subscribe">
-			  {% capture rss_link %}/feeds/{{ tag | url_encode }}.xml{% endcapture %}
-			  <a href="{{ rss_link }}">
-				<img src="/assets/rss.png" alt=""> Subskrybuj kategorię {{ site.tagNames[ tag ] }}
-			  </a>
-			</p>
-		</main>
-		{% include 'footer' %}
-	  </body>
+				{% include 'post-list' posts=pagination %}
+
+				<p class="rss-subscribe">
+					{% capture rss_link %}/feeds/{{ tag | url_encode }}.xml{% endcapture %}
+					<a href="{{ rss_link }}">
+					<img src="/assets/rss.png" alt=""> Subskrybuj kategorię {{ site.tagNames[ tag ] }}
+					</a>
+				</p>
+			</main>
+			{% include 'footer' %}
+		</body>
 	</html>

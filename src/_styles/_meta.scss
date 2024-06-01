@@ -1,0 +1,23 @@
+.meta {
+	display: flex;
+	margin-left: 0;
+	gap: 0.5em;
+}
+
+.meta__item {
+	margin-top: 0;
+}
+
+.meta__value {
+	font-style: normal;
+	margin-left: 0;
+}
+
+.meta__value::after {
+	content: '•';
+	margin-left: 0.5em;
+}
+
+.meta__value:last-child::after {
+	content: '';
+}

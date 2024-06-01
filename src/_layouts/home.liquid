@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
-	  {% include 'head' %}
-	  <body class="container is-max-widescreen">
-		{% include 'header' %}
-		<main id="tresc">
-			{{ content }}
+		{%  if pagination.pageNumber > 0 %}
+		{% capture title %}Najnowsze wpisy, strona {{ pagination.pageNumber | plus: 1 }}{% endcapture %}
+		{% endif %}
+		{% include 'head' %}
+		<body>
+			{% include 'header' %}
+			<main id="tresc">
+				<hgroup>
+					<h1>Najnowsze wpisy</h1>
+					{%  if pagination.pageNumber > 0 %}
+					<p>Strona {{ pagination.pageNumber | plus: 1 }}</p>
+					{% endif %}
+				</hgroup>
 
-			{% include 'post-list' posts=pagination %}
+				{{ content }}
 
-			<p class="rss-subscribe">
-				<a href="/feeds/feed.xml">
-				<img src="/assets/rss.png" alt=""> Subskrybuj blog
-				</a>
-			</p>
-		</main>
-		{% include 'footer' %}
-	  </body>
+				{% include 'post-list' posts=pagination %}
+
+				<p class="rss-subscribe">
+					<a href="/feeds/feed.xml">
+					<img src="/assets/rss.png" alt=""> Subskrybuj blog
+					</a>
+				</p>
+			</main>
+			{% include 'footer' %}
+		</body>
 	</html>

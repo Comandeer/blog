@@ -62,6 +62,7 @@ module.exports = async function imageShortCode(
 		src: lowSrc.url,
 		width: lowSrc.width,
 		height: lowSrc.height,
+		style: `aspect-ratio: ${ lowSrc.width } / ${ lowSrc.height }`,
 		alt: alt.replace( /"/g, '&quot;' ),
 		loading,
 		decoding: 'async'

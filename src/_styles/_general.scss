@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:root {
+	color-scheme: light dark;
+	background-color: var(--primary-bg);
+	font-family: var(--font-family);
+	line-height: var(--line-height);
+	color: var(--secondary);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	max-width: 80ch;
+	margin: 0 auto;
+}
+
+a {
+	color: var(--primary);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.5;
+	text-wrap: balance;
+}
+
+hgroup :where( h1, h2, h3, h4, h5, h6 ):has( + p ) {
+	margin-bottom: 0;
+}
+
+hgroup p {
+	font-size: 1.5em;
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+code {
+	background: var(--secondary-bg);
+	padding: 0.25em;
+	border-radius: 5px;
+}
+
+pre {
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre>code {
+	padding: 0;
+	background: none;
+	border-radius: 0;
+}
+
+// Loosely based on https://dylanatsmith.com/wrote/styling-the-kbd-element
+kbd {
+	background-color: #fff;
+	color: #111;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 0 1px var(--#ddd);
+	line-height: 1;
+	min-width: 0.75rem;
+	display: inline-block;
+	text-align: center;
+	padding: 2px 5px;
+}
+
+blockquote {
+	border-left: 4px solid var( --primary );
+	margin: 0;
+	padding-left: 1em;
+}

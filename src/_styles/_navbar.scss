@@ -1,0 +1,30 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 4px solid var( --primary );
+}
+
+.navbar__logo {
+	display: flex;
+	font-size: 2em;
+}
+
+.navbar__logo::before, [data-theme=light] .navbar__logo::before {
+	width: 2em;
+	height: 2em;
+	content: url( /assets/logo-light.svg );
+}
+
+[data-theme=dark] .navbar__logo::before {
+	content: url( /assets/logo-dark.svg );
+}
+
+@media ( prefers-color-scheme: dark ) {
+	.navbar__logo::before {
+		content: url( /assets/logo-dark.svg );
+	}
+}
+
+.navbar__logo:hover::before {
+	opacity: 0.9;
+}

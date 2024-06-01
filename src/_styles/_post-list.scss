@@ -1,0 +1,8 @@
+.post-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.post-list__post + .post-list__post {
+	border-top: 1px solid var(--primary);
+}

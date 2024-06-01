@@ -2,10 +2,15 @@
 {% assign author = include.author %}
 {% assign tags = include.tags %}
 
-<p class="post-meta">
-	<time
-		datetime="{{ include.date | date: "%Y-%m-%d" }}"
-	>{{ include.date | date: "%d-%m-%Y" }}</time>{% if author %} • {{ author }}{% endif %}{% for tag in tags %} • <a
-		href="/{{ tag | url_encode }}">{{ site.tagNames[ tag ] }}</a
-	>{% endfor %}
-</p>
+<dl class="meta">
+	<dt class="meta__item visually-hidden">Opublikowany:</dt>
+	<dd class="meta__value"><time datetime="{{ include.date | date: "%Y-%m-%d" }}">{{ include.date | date: "%d-%m-%Y" }}</time></dd>
+	{% if author %}
+		<dt class="meta__item visually-hidden">Autor:</dt>
+		<dd class="meta__value">{{ author }}</dd>
+	{% endif %}
+	<dt class="meta__item visually-hidden">Kategorie:</dt>
+	{% for tag in tags %}
+		<dd class="meta__value"><a href="/{{ tag | url_encode }}">{{ site.tagNames[ tag ] }}</a></dd>
+	{% endfor %}
+</dl>

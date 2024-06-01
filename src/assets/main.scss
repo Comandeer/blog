@@ -1,5 +1,9 @@
-@use "../../node_modules/almond.css/dist/almond.lite.css";
-
-img {
-	height: auto;
-}
+@use "../_styles/_variables";
+@use "../_styles/_general";
+@use "../_styles/navbar";
+@use "../_styles/_post-list";
+@use "../_styles/_meta";
+@use "../_styles/figure";
+@use "../_styles/paginator";
+@use "../_styles/footer";
+@use "../_styles/utils";
