@@ -6,10 +6,15 @@
 
 :root {
 	color-scheme: light dark;
+	box-sizing: border-box;
 	background-color: var(--primary-bg);
 	font-family: var(--font-family);
 	line-height: var(--line-height);
 	color: var(--secondary);
+}
+
+:focus-visible {
+	outline: 2px solid var( --secondary );
 }
 
 body {
@@ -17,6 +22,10 @@ body {
 	flex-direction: column;
 	max-width: 80ch;
 	margin: 0 auto;
+}
+
+main {
+	padding: 0 0.5em;
 }
 
 a {

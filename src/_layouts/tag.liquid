@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-	<html lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+	<html class="no-js" lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
 		{% capture title %}Wpisy z kategorii {{ site.tagNames[ tag ] | escape }}, strona {{ pagination.pageNumber | plus: 1 }}{% endcapture %}
+		{% capture description %}Zachęcam do przeglądnięcia wpisów z kategorii {{ site.tagNames[ tag ] | escape }} – a nuż coś Cię zaciekawi!{% endcapture %}
 		{% include 'head' %}
 		<body>
 			{% include 'header' %}

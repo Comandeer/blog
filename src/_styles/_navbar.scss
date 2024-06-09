@@ -1,11 +1,19 @@
 .navbar {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	border-bottom: 4px solid var( --primary );
+	flex-wrap: wrap-reverse;
+}
+
+@media ( width > 40em ) {
+	.navbar {
+		justify-content: space-between;
+	}
 }
 
 .navbar__logo {
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 2em;
 }
 
@@ -26,5 +34,13 @@
 }
 
 .navbar__logo:hover::before {
-	opacity: 0.9;
+	opacity: 0.8;
 }
+
+@media ( width < 25em ) {
+	.navbar__logo-name {
+		display: none;
+	}
+}
+
+
