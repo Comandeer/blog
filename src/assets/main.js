@@ -1,3 +1,19 @@
+/**
+ * @typedef CookiePreferences
+ * @property {boolean} prefs
+ * @property {boolean} embed
+ */
+
+/**
+ * @type CookiePreferences
+ */
+let cookiePrefences = localStorage.getItem( 'cookiePreferences' ) ?
+	JSON.parse( localStorage.getItem( 'cookiePreferences' ) ) :
+	{
+		prefs: false,
+		embed: false
+	};
+
 const themeSwitcherInvoker = document.querySelector( '.theme-switcher__invoker' );
 const themeSwitcherInvokerIcon = document.querySelector( '.theme-switcher__invoker-icon' );
 const themeSwitcherList = document.querySelector( '.theme-switcher__list' );
@@ -91,7 +107,10 @@ function updateThemePreferences( theme ) {
 	currentTheme = theme;
 
 	document.documentElement.dataset.theme = theme;
-	localStorage.setItem( 'theme', theme );
+
+	if ( cookiePrefences.prefs ) {
+		localStorage.setItem( 'theme', theme );
+	}
 }
 
 function updateThemeSwitcherMenu( theme ) {
@@ -112,4 +131,62 @@ function moveFocus( direction ) {
 	}
 
 	themeSwitcherOptions[ currentFocusIndex ].focus();
+}
+
+const cookieBannerButtonAll = document.querySelector( '#cookie-banner-button-all' );
+const cookieBannerButtonNone = document.querySelector( '#cookie-banner-button-none' );
+const cookieBannerButtonChoose = document.querySelector( '#cookie-banner-button-choose' );
+const cookieSettingsButton = document.querySelector( '#cookie-settings' );
+const cookieDialog = document.querySelector( '#cookie-dialog' );
+const cookieDialogForm = document.querySelector( '#cookie-dialog-form' );
+
+cookieBannerButtonAll.addEventListener( 'click', () => {
+	setCookiePreferences( {
+		prefs: true,
+		embed: true
+	} );
+
+	closeCookieBanner();
+} );
+
+cookieBannerButtonNone.addEventListener( 'click', () => {
+	setCookiePreferences( {
+		prefs: false,
+		embed: false
+	} );
+
+	closeCookieBanner();
+} );
+
+cookieBannerButtonChoose.addEventListener( 'click', () => {
+	closeCookieBanner();
+	cookieDialog.showModal();
+	updateCookieDialog();
+} );
+
+cookieSettingsButton.addEventListener( 'click', () => {
+	cookieDialog.showModal();
+	updateCookieDialog();
+} );
+
+cookieDialogForm.addEventListener( 'submit', ( evt ) => {
+	setCookiePreferences( {
+		prefs: evt.target.elements.prefs.checked,
+		embed: evt.target.elements.embed.checked
+	} );
+} );
+
+function closeCookieBanner() {
+	document.documentElement.classList.remove( 'cookie-banner-shown' );
+}
+
+function updateCookieDialog() {
+	cookieDialogForm.elements.prefs.checked = cookiePrefences.prefs;
+	cookieDialogForm.elements.embed.checked = cookiePrefences.embed;
+}
+
+function setCookiePreferences( preferences ) {
+	localStorage.setItem( 'cookiePreferences', JSON.stringify( preferences ) );
+
+	cookiePrefences = preferences;
 }

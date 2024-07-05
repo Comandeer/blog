@@ -1,4 +1,32 @@
 <footer class="footer">
-  <p><small>Używam cookies w celu polepszenia działania witryny. <a href="/polityka-prywatnosci.html">Polityka prywatności</a></small></p>
+  <p><small>Używam cookies w celu polepszenia działania witryny.
+  <button id="cookie-settings">Ustawienia ciasteczek</button>
+  <a href="/polityka-prywatnosci.html">Polityka prywatności</a></small></p>
   <p>Copyright © <a href="https://www.comandeer.pl">Comandeer</a></p>
 </footer>
+
+<dialog id="cookie-dialog" class="cookie-dialog" aria-labelledby="cookie-dialog-name">
+	<form id="cookie-dialog-form" method="dialog">
+		<h2 id="cookie-dialog-name">Dostosuj ciasteczka</h2>
+		<p id="cookie-dialog-description">Wybierz z poniższej listy, który rodzaj ciasteczek chcesz zaakceptować.
+		Więcej szczegółów odnośnie wykorzystania poszczególnych rodzajów znajduje się w <a href="/polityka-prywatnosci.html">polityce prywatności</a>.</p>
+		<div role="group" aria-label="Ciasteczka">
+			<p>
+				<input type="checkbox" switch checked="checked" disabled="disabled" id="cookie-dialog-necessary">
+				<label for="cookie-dialog-necessary"><b>Niezbędne</b></label> – te ciasteczka przechowują informacje niezbędne do poprawnego działania strony.
+			</p>
+			<p>
+				<input type="checkbox" switch  id="cookie-dialog-prefs" name="prefs">
+				<label for="cookie-dialog-prefs"><b>Preferencje</b></label> – te ciasteczka pozwalają na dostosowanie działania strony do swoich preferencji,
+				np. przez dobór motywu.
+			</p>
+			<p>
+				<input type="checkbox" switch  id="cookie-dialog-embed" name="embed">
+				<label for="cookie-dialog-embed"><b>Osadzona treść</b></label> – na stronie w niektórych miejsach osadzona jest treść z innych źródeł,
+				np. przykłady kodu z zewnętrznych serwisów czy filmy. Taka treść zazwyczaj używa ciasteczek. Odrzucenie tego rodzaju ciasteczek spowoduje
+				wyłączenie osadzonej treści.
+			</p>
+		</div>
+		<p><button>Zapisz ustawienia</button></p>
+	</form>
+</dialog>

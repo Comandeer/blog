@@ -34,5 +34,12 @@
 			}
 		}
 	</script>
+	<script>
+		document.documentElement.classList.remove( 'no-js' );
+
+		if ( !localStorage.getItem( 'cookiePreferences' ) ) {
+			document.documentElement.classList.add( 'cookie-banner-shown' );
+		}
+	</script>
 	<script src="/assets/main.js" type="module"></script>
 </head>
