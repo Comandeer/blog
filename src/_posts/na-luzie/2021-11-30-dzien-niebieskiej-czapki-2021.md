@@ -11,7 +11,7 @@ comments: true
 permalink: /dzien-niebieskiej-czapki-2021.html
 ---
 
-Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki. Wszystkiego najlepszego dla wszystkich webdeveloperów! 🎉
+Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki. Wszystkiego najlepszego dla wszystkich webdeveloperów! 🎉<!--more-->
 
 ## Niebieska czapka?
 

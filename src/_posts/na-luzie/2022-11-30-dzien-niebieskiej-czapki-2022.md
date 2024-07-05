@@ -11,7 +11,7 @@ comments: true
 permalink: /dzien-niebieskiej-czapki-2022.html
 ---
 
-Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki. Wszystkiego najlepszego dla wszystkich webdeveloperów! 🎉
+Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki. Wszystkiego najlepszego dla wszystkich webdeveloperów! 🎉<!--more-->
 
 W tym roku naprawdę się postarałem i mam niebieską czapkę (dzięki, 🐈!):
 

@@ -78,9 +78,11 @@ Najlepszym przykładem działania feature detection jest [biblioteka Modernizr](
 
 ### Nie chcemy opierać się na zewnętrznej usłudze
 
-Choć większość opisanych założeń spełnia [usługa polyfill.io](https://polyfill.io/v3/), to nie chcemy się na niej opierać. Każda zewnętrzna usługa to tak naprawdę kolejna zależność naszej aplikacji. W tym momencie działanie naszej aplikacji uzależnialibyśmy od działania zewnętrznej usługi wczytującej polyfille. Gdyby zaliczyła ona pada, nasza aplikacja również by klęknęła i to całkowicie nie z naszej winy.
+<p class="note">⚠️ Ostatnio wspomniana niżej usługa zmieniła właściciela i <a href="https://sansec.io/research/polyfill-supply-chain-attack" rel="noreferrer noopener">złapano ją na rozprowadzaniu malware</a>. To w sumie dobrze podsumowuje rozważania z tej sekcji o zewnętrznych usługach jako kolejnych zależnościach, a tym samym – potencjalnych dziurach…</p>
 
-I choć można zastosować polyfill.io lokalnie, na potrzeby tego artykułu stworzymy prymitywny skrypt wczytujący polyfille.
+Choć większość opisanych założeń spełnia usługa polyfill [dot] io, to nie chcemy się na niej opierać. Każda zewnętrzna usługa to tak naprawdę kolejna zależność naszej aplikacji. W tym momencie działanie naszej aplikacji uzależnialibyśmy od działania zewnętrznej usługi wczytującej polyfille. Gdyby zaliczyła ona pada, nasza aplikacja również by klęknęła i to całkowicie nie z naszej winy.
+
+I choć można zastosować polyfill [dot] io lokalnie, na potrzeby tego artykułu stworzymy prymitywny skrypt wczytujący polyfille.
 
 ### Dodatkowe założenie
 
