@@ -75,7 +75,7 @@ I zanim pójdziemy sprzedać nerkę, by pokryć straty, sprawdźmy, czy mimo wsz
 
 A co jeślibyśmy przekopiowali całość do SVG, łącznie ze stylami?
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg" class="icon-facebook" viewBox="0 0 128 128">
 	<defs>
 		<style>
@@ -138,7 +138,7 @@ http://example.com/nasz-obrazek.svg?zmienna=wartosc
 
 Pytanie jednak, jak to zrobić? Odpowiedź kryje się w starszej z propozycji. Można zauważyć, że znajdują się tam działające przykłady rozwiązania. A wszystko w oparciu o skrypt znajdujący się bezpośrednio w pliku SVG:
 
-```svg
+```xml
 <script type="text/ecmascript" xlink:href="param.js" />
 ```
 
@@ -179,7 +179,7 @@ Przy pomocy destrukturyzacji wyciągamy nazwę parametru do zmiennej `param`, a 
 
 Jeśli połączymy to z SVG i wprowadzimy sensowne zmienne, możemy uzyskać coś takiego:
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg" class="icon-facebook" viewBox="0 0 128 128">
 	<defs>
 		<style>
@@ -227,7 +227,7 @@ Teraz możemy sterować kolorami SVG, przekazując odpowiednie parametry w URL-u
 
 A co jeśli klient jest jeszcze bardziej złośliwy i zechce jeszcze jedną ikonkę, ale równocześnie uprze się, że obydwie mają być _w tym samym pliku SVG_? Na szczęście [sprite'y w SVG to nic nowego](https://betravis.github.io/icon-methods/svg-sprite-sheets.html):
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<style>
