@@ -42,4 +42,11 @@
 		}
 	</script>
 	<script src="{{ "/assets/main.js" | rev }}" type="module"></script>
+	<script type="module">
+		if ( 'serviceWorker' in navigator ) {
+			await navigator.serviceWorker.register( '{{ "/sw.js" | rev }}', {
+				scope: '/'
+			} );
+		}
+	</script>
 </head>

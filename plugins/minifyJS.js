@@ -10,7 +10,7 @@ module.exports = function( eleventyConfig ) {
 	eleventyConfig.addExtension( 'src.js', {
 		outputFileExtension: 'js',
 
-		async compile( content ) {
+		async compile( content, inputPath ) {
 			const { code } = await minify( content, {
 				module: true
 			} );
