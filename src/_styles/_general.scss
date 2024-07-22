@@ -63,7 +63,7 @@ h6 {
 	text-wrap: balance;
 }
 
-hgroup :where( h1, h2, h3, h4, h5, h6 ):has( + p ) {
+hgroup :where( h1, h2, h3, h4, h5, h6 ) {
 	margin-block-end: 0;
 }
 
@@ -71,42 +71,4 @@ hgroup p {
 	font-size: 1.5em;
 	line-height: 1.5;
 	margin: 0;
-}
-
-code {
-	background: var(--secondary-bg);
-	padding: 0.25em;
-	border-radius: 5px;
-}
-
-pre {
-	max-inline-size: 100%;
-	overflow: auto;
-}
-
-pre>code {
-	padding: 0;
-	background: none;
-	border-radius: 0;
-}
-
-// Loosely based on https://dylanatsmith.com/wrote/styling-the-kbd-element
-kbd {
-	background-color: #fff;
-	color: #111;
-	border-radius: 5px;
-	border: 1px solid #ddd;
-	box-shadow: 0 2px 0 1px var(--#ddd);
-	line-height: 1;
-	min-inline-size: 0.75rem;
-	display: inline-block;
-	text-align: center;
-	padding-block: 2px;
-	padding-inline: 5px;
-}
-
-blockquote {
-	border-inline-start: 4px solid var( --primary );
-	margin: 0;
-	padding-inline-start: 1em;
 }
