@@ -6,6 +6,7 @@ const revPlugin = require( 'eleventy-plugin-rev' );
 const sassPlugin = require( 'eleventy-sass' );
 const site = require( './src/_data/site' );
 const markdownIt = require( './plugins/markdownIt' );
+const minifyJS = require( './plugins/minifyJS' );
 const imageShortCode = require( './shortcodes/image' );
 
 /**
@@ -93,6 +94,8 @@ module.exports = function( eleventyConfig ) {
 	].forEach( ( path ) => {
 		return eleventyConfig.addPassthroughCopy( path );
 	} );
+
+	minifyJS( eleventyConfig );
 
 	eleventyConfig.addFilter( 'rfc_date', ( date ) => {
 		return formatRFC3339( date );
