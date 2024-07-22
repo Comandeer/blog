@@ -138,6 +138,7 @@ const cookieBannerButtonNone = document.querySelector( '#cookie-banner-button-no
 const cookieBannerButtonChoose = document.querySelector( '#cookie-banner-button-choose' );
 const cookieSettingsButton = document.querySelector( '#cookie-settings' );
 const cookieDialog = document.querySelector( '#cookie-dialog' );
+const cookieDialogCloseButton = document.querySelector( '#cookie-dialog-close' );
 const cookieDialogForm = document.querySelector( '#cookie-dialog-form' );
 
 cookieBannerButtonAll.addEventListener( 'click', () => {
@@ -174,6 +175,11 @@ cookieDialogForm.addEventListener( 'submit', ( evt ) => {
 		prefs: evt.target.elements.prefs.checked,
 		embed: evt.target.elements.embed.checked
 	} );
+} );
+
+cookieDialogCloseButton.addEventListener( 'click', () => {
+	closeCookieBanner();
+	cookieDialog.close();
 } );
 
 function closeCookieBanner() {
