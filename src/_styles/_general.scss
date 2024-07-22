@@ -26,6 +26,9 @@ body {
 
 main {
 	padding: 0 0.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 a {
@@ -66,7 +69,7 @@ hgroup :where( h1, h2, h3, h4, h5, h6 ):has( + p ) {
 hgroup p {
 	font-size: 1.5em;
 	line-height: 1.5;
-	margin-top: 0;
+	margin: 0;
 }
 
 code {
