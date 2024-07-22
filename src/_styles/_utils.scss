@@ -1,13 +1,13 @@
 .visually-hidden {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
-	height: 1px;
+	block-size: 1px;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
 	white-space: nowrap;
-	width: 1px;
+	inline-size: 1px;
 }
 
 .visually-hidden_skip-link:active,
@@ -18,8 +18,8 @@
 	overflow: visible;
 	white-space: inherit;
 	width: auto;
-	top: 0;
-	left: 0;
+	inset-block-start: 0;
+	inset-inline-start: 0;
 	font-size: 2em;
 	background: var(--primary-bg);
 }

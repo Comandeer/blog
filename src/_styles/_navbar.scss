@@ -1,7 +1,7 @@
 .navbar {
 	display: flex;
 	justify-content: center;
-	border-bottom: 4px solid var( --primary );
+	border-block-end: 4px solid var( --primary );
 	flex-wrap: wrap-reverse;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .navbar__logo::before, [data-theme=light] .navbar__logo::before {
-	width: 2em;
-	height: 2em;
+	inline-size: 2em;
+	block-size: 2em;
 	content: url( /assets/logo-light.svg );
 }
 

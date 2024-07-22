@@ -22,40 +22,39 @@
 }
 
 .theme-switcher__invoker {
-	padding: 0 1em;
-	height: 100%;
-
+	padding-block: 0;
+	padding-inline: 1em;
+	block-size: 100%;
 }
 
 .theme-switcher__list {
 	background: var( --primary-bg );
 	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
+	inset-block-start: 100%;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	margin-top: -0.5em;
+	margin-block-start: -0.5em;
 	border: 1px solid var( --primary );
 }
-
 
 .theme-switcher__list::before {
 	content: '';
 	position: absolute;
-	width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-bottom: 5px solid var( --primary );
-	top: -5px;
+	inline-size: 0;
+	block-size: 0;
+	border-inline-start: 5px solid transparent;
+	border-inline-end: 5px solid transparent;
+	border-block-end: 5px solid var( --primary );
+	inset-block-start: -5px;
 	left: calc( 50% - 2.5px );
 }
 
 .theme-switcher__option {
 	display: block;
-	width: 100%;
+	inline-size: 100%;
 }
 
 .theme-switcher__option:focus {
@@ -66,4 +65,5 @@
 	content: '✓';
 	font-weight: bold;
 	font-size: 1.1em;
+	margin-inline-end: 0.25em;
 }
