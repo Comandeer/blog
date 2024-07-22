@@ -198,6 +198,10 @@ function setCookiePreferences( preferences ) {
 }
 
 class EmbedComponent extends HTMLElement {
+	#motionWarning = [
+		'https://giphy.com'
+	];
+
 	#urlHandlers = new Map( [
 		[ 'https://codepen.io', ( url ) => {
 			return String( url ).replace( '/pen/', '/embed/' );
@@ -230,6 +234,14 @@ class EmbedComponent extends HTMLElement {
 		}
 
 		const embedUrl = new URL( src );
+		const motionWarning = this.#motionWarning.includes( embedUrl.origin );
+
+		if ( motionWarning && window.matchMedia( 'prefers-reduced-motion: reduced' ) ) {
+			this.insertAdjacentHTML( 'afterbegin', '<p>⚠️ Treść może zawierać ruszające się elementy!</p>' );
+
+			return;
+		}
+
 		const urlHandler = this.#urlHandlers.get( embedUrl.origin );
 
 		if ( !urlHandler ) {
