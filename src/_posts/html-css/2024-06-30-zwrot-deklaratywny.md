@@ -3,7 +3,9 @@ layout: post
 title:  "Zwrot deklaratywny"
 author: Comandeer
 date:   2024-06-30T22:51:00+0200
-categories: html-css refleksje
+tags:
+  - html-css
+  - refleksje
 comments: true
 permalink: /zwrot-deklaratywny.html
 ---
