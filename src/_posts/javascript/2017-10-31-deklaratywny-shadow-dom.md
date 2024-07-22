@@ -253,7 +253,7 @@ Jak widać teraz do Shadow DOM dodajemy dziecko stworzone przez funkcję `create
 
 Ostatecznie całość kodu prezentuje się następująco:
 
-<iframe width="100%" height="300" src="https://jsfiddle.net/Comandeer/t2qyvz1z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+{% include 'embed' src="https://jsfiddle.net/Comandeer/t2qyvz1z" %}
 
 ```html
 <div>
@@ -335,7 +335,7 @@ Zapewne co bardziej zainteresowani tematyką Web Components zapytają, czemu zas
 
 Niemniej muszę przyznać uczciwie, że rozwiązanie tego problemu przy pomocy Custom Elementu byłoby o wiele bardziej eleganckie i prezentowałoby się tak:
 
-<iframe width="100%" height="300" src="https://jsfiddle.net/Comandeer/14h0qjtx/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+{% include 'embed' src="https://jsfiddle.net/Comandeer/14h0qjtx" %}
 
 ```html
 <div>

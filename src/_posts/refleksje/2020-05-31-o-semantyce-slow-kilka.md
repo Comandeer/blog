@@ -36,7 +36,7 @@ Jeśli chodzi o samo znaczenie, to… `div` nic nie znaczy sam w sobie. Nie ukry
 
 Podsumowując: `div` jest elementem semantycznym, ponieważ ma znaczenie: nic nie znaczy, ale równocześnie może coś znaczyć, niemniej nie w sposób istotny dla użytkownika.
 
-<div style="max-width:100%;height:0;padding-bottom:119%;position:relative;"><iframe src="https://giphy.com/embed/HfFccPJv7a9k4" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/HfFccPJv7a9k4">via GIPHY</a></p>
+{% include 'embed' src="https://giphy.com/embed/HfFccPJv7a9k4" %}
 
 Spróbujmy jednak połapać się w tym galimatiasie!
 

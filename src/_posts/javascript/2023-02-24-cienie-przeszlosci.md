@@ -33,12 +33,7 @@ Wyobraźmy sobie prosty kod HTML + JS:
 </script>
 ```
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="oNPzWEZ" data-user="Comandeer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Comandeer/pen/oNPzWEZ">
-  [onclick] + with #1</a> by Comandeer (<a href="https://codepen.io/Comandeer">@Comandeer</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{% include 'embed' src="https://codepen.io/Comandeer/pen/oNPzWEZ" %}
 
 Mamy kontener z powiadomieniami (1), a pod spodem knefel, który ma je usuwać (2). Podczepiona jest do niego przy pomocy atrybutu `[onclick]` funkcja `clear()` (3), która ustawia własność `innerHTML` kontenera na pusty ciąg znaków. Ot, całkiem prosty kawałek kodu.
 
@@ -103,12 +98,7 @@ Otóż okazuje się, że istnieje [metoda `document.clear()`](https://developer.
 </script>
 ```
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="OJoRmQE" data-user="Comandeer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Comandeer/pen/OJoRmQE">
-  [onclick] + with #2</a> by Comandeer (<a href="https://codepen.io/Comandeer">@Comandeer</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{% include 'embed' src="https://codepen.io/Comandeer/pen/OJoRmQE" %}
 
 Po kliknięciu przycisku, w konsoli pojawi się `true`. Czyli nasza funkcja `clear()` została nadpisana przez metodę `document`u o tej samej nazwie. Innymi słowy, kod wewnątrz `[onclick]`a jest  mniej więcej równoznaczny z poniższym:
 
@@ -130,12 +120,7 @@ Nie byłbym sobą, gdybym nie poszperał w specyfikacji, żeby znaleźć wyjaśn
 </form>
 ```
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="yLxabvd" data-user="Comandeer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Comandeer/pen/yLxabvd">
-  [onclick] + with #3</a> by Comandeer (<a href="https://codepen.io/Comandeer">@Comandeer</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{% include 'embed' src="https://codepen.io/Comandeer/pen/yLxabvd" %}
 
 * `reset()` pochodzi z formularza ([`HTMLFormElement#reset()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset)),
 * `clear()` to już wspominane wcześniej `document.clear()`,

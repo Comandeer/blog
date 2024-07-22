@@ -196,3 +196,55 @@ function setCookiePreferences( preferences ) {
 
 	cookiePrefences = preferences;
 }
+
+class EmbedComponent extends HTMLElement {
+	#urlHandlers = new Map( [
+		[ 'https://codepen.io', ( url ) => {
+			return String( url ).replace( '/pen/', '/embed/' );
+		} ],
+
+		[ 'https://jsfiddle.net', ( url ) => {
+			const urlWithoutSlash = String( url ).replace( /\/$/, '' );
+
+			return `${ urlWithoutSlash }/embedded/`;
+		} ],
+
+		[ 'https://giphy.com', ( url ) => {
+			return url;
+		} ],
+
+		[ 'https://www.youtube.com',  ( url ) => {
+			return String( url ).replace( 'youtube.com/watch?v=', 'youtube-nocookie.com/embed/' );
+		}]
+	] );
+
+	connectedCallback() {
+		if ( !cookiePrefences.embed ) {
+			return;
+		}
+
+		const src = this.getAttribute( 'src' );
+
+		if ( !URL.canParse( src ) ) {
+			return;
+		}
+
+		const embedUrl = new URL( src );
+		const urlHandler = this.#urlHandlers.get( embedUrl.origin );
+
+		if ( !urlHandler ) {
+			return;
+		}
+
+		const iframeUrl = urlHandler( embedUrl );
+
+		const iframe = document.createElement( 'iframe' );
+
+		iframe.src = iframeUrl;
+
+		this.innerHTML = '';
+		this.append( iframe );
+	}
+}
+
+customElements.define( 'embed-', EmbedComponent );

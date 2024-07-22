@@ -24,7 +24,7 @@ Niemniej ręczne obserwowanie mutacji nie jest wygodne, a przede wszystkim – n
 
 Można na przykład stworzyć obserwatora, który wykryje zmianę zawartości pola tekstowego stworzonego przy pomocy atrybutu `[contenteditable]`:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/Comandeer/ju26vyy0/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+{% include 'embed' src="https://jsfiddle.net/Comandeer/ju26vyy0" %}
 
 ```html
 <style>
@@ -72,7 +72,7 @@ Innym przykładem, w którym obserwator może się przydać, jest potrzeba wykry
 
 Jak już wspominałem, obserwator może wykrywać zmiany w atrybutach elementów:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/Comandeer/bp49cmkp/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+{% include 'embed' src="https://jsfiddle.net/Comandeer/bp49cmkp" %}
 
 ```html
 <input disabled>
@@ -99,7 +99,7 @@ Jak widać, mimo że obserwator obserwuje atrybuty (a zatem elementy kodu HTML),
 
 Niemniej od samego początku istnienia pól formularzy istnieje też błąd w specyfikacji HTML, który sprawia, że nie można obserwować w taki sposób zmian zawartości pól formularza. Atrybut `[value]` pola formularza bowiem nie odzwierciedla aktualnej zawartości pola (własność `value`), lecz _domyślną_ wartość pola (czyli tę, którą pole będzie miało po wyrenderowaniu danego kodu HTML, bez interakcji ze strony użytkownika; wartość tą przechowuje własność `defaultValue`). Nie można tego zmienić, gdyż zepsułoby to za dużo stron. Sprawia to jednak, że nie da się obserwować przy pomocy `MutationObserver` zmian, jakie zachodzą w wartości pola formularza:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/Comandeer/nu3avaws/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+{% include 'embed' src="https://jsfiddle.net/Comandeer/nu3avaws" %}
 
 ```html
 <input value="Domyślna wartość">

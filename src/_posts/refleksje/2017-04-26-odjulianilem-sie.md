@@ -15,7 +15,7 @@ redirect_from:
 
 Dzisiaj nadszedł ten dzień, w którym uświadomiłem sobie, że niemal całkowicie _się odjulianiłem_.<!--more--> W tym miejscu jestem Ci winny, Drogi Czytelniku, kilka słów wyjaśnienia. Zacznijmy od niezbędnego kontekstu kulturowego:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-nOkR7HjyO4?rel=0" frameborder="0" allowfullscreen></iframe>
+{% include 'embed' src="https://www.youtube.com/watch?v=-nOkR7HjyO4" %}
 
 Skoro już mamy to za sobą, pozwól, że zacytuję Ci oficjalną definicję odjulianienia z mojego osobistego <i>Słownika wyrazów, które wymyśliłem, gdy zbyt długo myślałem lub miałem gorączkę</i>:
 

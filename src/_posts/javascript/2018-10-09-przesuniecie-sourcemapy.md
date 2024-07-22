@@ -129,7 +129,7 @@ Jak można się domyśleć, w konsoli pojawi się komunikat <q>Constructed</q>,
 
 {% include 'figure' src="../../images/przesuniecie-sourcemapy/example1-console.jpg" link="/assets/images/przesuniecie-sourcemapy/example1-console.jpg" alt="Konsola wyświetlająca wynik stworzenia nowego obiektu klasy Test, pokazująca, że wywołanie console.log nastąpiło w 4 linii pliku input.js" %}
 
-<div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/xT0xeJpnrWC4XWblEk" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/whoa-hd-tim-and-eric-xT0xeJpnrWC4XWblEk">via GIPHY</a></p>
+{% include 'embed' src="https://giphy.com/embed/xT0xeJpnrWC4XWblEk" %}
 
 Jak już wspominałem wcześniej, [podobna magia działa także z debuggerem](https://trackjs.com/blog/debugging-with-sourcemaps/). Tym sposobem nasi klienci dostaną w pełni zoptymalizowany kod, a my – przyjemne poprawianie istniejących w nim błędów.
 

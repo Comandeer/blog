@@ -63,6 +63,26 @@ module.exports = function( eleventyConfig ) {
 		return excerpt.trim();
 	} );
 
+	eleventyConfig.addFilter( 'embedOrigin', ( url ) => {
+		if ( url.startsWith( 'https://codepen.io' ) ) {
+			return ' na CodePenie.';
+		}
+
+		if ( url.startsWith( 'https://jsfiddle.net' ) ) {
+			return ' na JSFiddle.';
+		}
+
+		if ( url.startsWith( 'https://giphy.com' ) ) {
+			return ' na Giphy.';
+		}
+
+		if ( url.startsWith( 'https://www.youtube.com' ) ) {
+			return ' na YouTubie.';
+		}
+
+		return '';
+	} );
+
 	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
 
 	return {

@@ -30,7 +30,7 @@ Pierwsze podejrzenia nasuwa już sam język, w jakim napisano ten wpis na blogu.
 >
 >   [Przez ponad dwa lata, AMP był wiodącym formatem służącym tworzeniu nieustannie wspaniałych doświadczeń użytkownika i Google kontynuuje szerokie inwestycje w tę dobrze zbadaną ścieżkę prowadzącą do stworzenia użytkownikocentrycznej Sieci.]
 
-<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/pVAMI8QYM42n6" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/january-joan-baez-googles-pVAMI8QYM42n6">via GIPHY</a></p>
+{% include 'embed' src="https://giphy.com/embed/pVAMI8QYM42n6" %}
 
 Przejdźmy może do ciekawszych rzeczy…
 

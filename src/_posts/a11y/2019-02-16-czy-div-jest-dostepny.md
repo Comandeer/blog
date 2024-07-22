@@ -78,7 +78,7 @@ Takie podejście jest nie tyle niewłaściwe, co szkodliwe. Postaram się pokró
 
 Przyciski po kliknięciu _mają_ własność `event.relatedTarget`:
 
-<iframe width="100%" height="300" src="//jsfiddle.net/Comandeer/Lmuwj7eb/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+{% include 'embed' src="https://jsfiddle.net/Comandeer/Lmuwj7eb" %}
 
 Jeśli ponawigujemy po przykładzie klawiaturą (<kbd>Tab</kbd> oraz <kbd>Shift</kbd>+<kbd>Tab</kbd>), zauważymy, że wyświetla się poprawny identyfikator pola, z którego przeszliśmy do przycisku. Co prawda [Ryan uściśla następnie, że chodzi o Firefoksa i Safari](https://twitter.com/ryanflorence/status/1096067667570487297), ale wciąż nie pokrywa się to z moimi testami. Na moim macOS 10.14.3 zarówno w Firefoksie, jak i w Safari powyższy kod działa – [wbrew informacji na MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus) . Być może zmienił się sposób obsługi focusowania na poziomie całego systemu. To równocześnie oznaczałoby, że problem nieprzekazywania `event.relatedTarget` przez przyciski jest już rozwiązany.
 
