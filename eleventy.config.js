@@ -90,7 +90,8 @@ module.exports = function( eleventyConfig ) {
 
 	[
 		'src/assets/',
-		'src/favicon.ico'
+		'src/favicon.ico',
+		'src/manifest.webmanifest'
 	].forEach( ( path ) => {
 		return eleventyConfig.addPassthroughCopy( path );
 	} );
