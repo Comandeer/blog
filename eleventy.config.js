@@ -91,7 +91,8 @@ module.exports = function( eleventyConfig ) {
 	[
 		'src/assets/',
 		'src/favicon.ico',
-		'src/manifest.webmanifest'
+		'src/manifest.webmanifest',
+		'src/_redirects'
 	].forEach( ( path ) => {
 		return eleventyConfig.addPassthroughCopy( path );
 	} );
