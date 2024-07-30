@@ -1,0 +1,69 @@
+.no-js .theme-switcher {
+	display: none;
+}
+
+.theme-switcher {
+	position: relative;
+}
+
+.theme-switcher__invoker, .theme-switcher__option {
+	background: transparent;
+	border-color: transparent;
+	color: var( --primary );
+	line-height: 2em;
+}
+
+.theme-switcher__invoker:hover, .theme-switcher__option:hover {
+	background: var( --secondary-bg );
+}
+
+.theme-switcher__invoker:active, .theme-switcher__option:active {
+	background: #{"color( from var( --secondary-bg ) srgb r g b / 0.7 )"};
+}
+
+.theme-switcher__invoker {
+	padding-block: 0;
+	padding-inline: 1em;
+	block-size: 100%;
+}
+
+.theme-switcher__list {
+	background: var( --primary-bg );
+	position: absolute;
+	inset-block-start: 100%;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-block-start: -0.5em;
+	border: 1px solid var( --primary );
+}
+
+.theme-switcher__list::before {
+	content: '';
+	position: absolute;
+	inline-size: 0;
+	block-size: 0;
+	border-inline-start: 5px solid transparent;
+	border-inline-end: 5px solid transparent;
+	border-block-end: 5px solid var( --primary );
+	inset-block-start: -5px;
+	left: calc( 50% - 2.5px );
+}
+
+.theme-switcher__option {
+	display: block;
+	inline-size: 100%;
+}
+
+.theme-switcher__option:focus {
+	outline: 2px var( --secondary ) solid;
+}
+
+.theme-switcher__option[aria-checked=true]:before {
+	content: '✓';
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-inline-end: 0.25em;
+}

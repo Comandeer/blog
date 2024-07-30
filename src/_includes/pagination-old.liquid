@@ -1,0 +1,30 @@
+<!--<nav class="paginator" aria-label="Paginacja">
+	{% if include.paginator.previous_page %}
+	<a href="{{ include.paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
+	{% endif %}
+	<span class="page-number ">Strona: {{ include.paginator.page }} z {{ include.paginator.total_pages }}</span>
+	{% if paginator.next_page %}
+	<a href="{{ include.paginator.next_page_path }}" class="next">Następna Strona</a>
+	{% endif %}
+</nav>-->
+{% assign paginator = include.paginator %}
+
+<nav class="paginator" aria-label="Paginacja">
+	<ol class="paginator-list">
+	{% if paginator.href.previous %}
+	<li class="paginator-item">
+		<a href="{{ paginator.href.previous | replace: '//', '/' }}" class="paginator-link"><span aria-hidden="true">←</span> Poprzednia strona</a>
+	</li>
+	{% endif %}
+
+	{% for page in paginator.pages %}
+		<li><a href="{{ paginator.hrefs[ forloop.index0 ] }}"{% if page.url == paginator.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>Strona {{ forloop.index }}</a></li>
+	{% endfor %}
+
+	{% if paginator.href.next %}
+	<li class="paginator-item">
+		<a href="{{ paginator.href.next | replace: '//', '/' }}" class="paginator-link">Następna strona <span aria-hidden="true">→</span></a>
+	</li>
+	{% endif %}
+	</ol>
+</nav>

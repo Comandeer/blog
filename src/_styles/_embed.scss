@@ -1,0 +1,19 @@
+embed- {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border: 1px var(--primary) solid;
+	margin-block: 0.5rem;
+}
+
+embed-, embed- iframe {
+	inline-size: 100%;
+	aspect-ratio: 16 / 9;
+}
+
+embed- iframe {
+	max-block-size: 100%;
+	border: 0;
+}

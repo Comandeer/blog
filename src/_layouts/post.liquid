@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<html class="no-js" lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+	  {% include 'head' %}
+	  <body>
+		{% include 'header' %}
+		<main id="tresc">
+			<article class="post" typeof="BlogPosting">
+
+				<header class="post__header header">
+				  <h1 class="header__heading" property="name headline">{{ title }}</h1>
+				  {%  include 'post-metadata' date=page.date author=author tags=tags %}
+			  </header>
+
+				<div class="post__content" property="articleBody">
+				  {{ content }}
+				</div>
+
+				{% if comments %}
+				  {% include 'comments' %}
+				{% endif %}
+			</article>
+		</main>
+		{% include 'footer' %}
+	  </body>
+	</html>

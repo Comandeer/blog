@@ -1,0 +1,20 @@
+.cookie-banner {
+	display: none;
+}
+
+.cookie-banner-shown .cookie-banner {
+	display: block;
+}
+
+.cookie-dialog {
+	background-color: var( --primary-bg );
+	color: var( --secondary );
+}
+
+.cookie-dialog__close {
+	float: inline-end;
+}
+
+.cookie-dialog__name {
+	clear: both;
+}

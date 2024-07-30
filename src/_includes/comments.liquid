@@ -1,0 +1,12 @@
+<section class="comments">
+	<h2 class="comments__heading">Komentarze</h2>
+	<div><comments- thread="{{ permalink }}"><p><a href="{{ permalink | commentUrl }}" rel="noreferrer noopener">Przejdź do komentarzy bezpośrednio na Githubie</a>.</comments-></div>
+{% if disqusComments[ permalink ] %}
+	{% assign dC = disqusComments[ permalink ].comments %}
+	<details class="comments__disqus disqus">
+		<summary class="disqus__name">Dawne komentarze</summary>
+		<p class="disqus__info">Ten blog wcześniej korzystał z systemu komentarzy <b>Disqus</b>. Jednakże pożegnaliśmy się i postanowiłem, że zaimportuję do nowej wersji stare komentarze z niego. Cóż, jego system eksportu na wiele nie pozwala…</p>
+		{% disqus dC %}
+	</details>
+	{% endif %}
+</section>

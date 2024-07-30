@@ -1,0 +1,28 @@
+:root {
+	--line-height: 1.75;
+	--font-family: system-ui, sans-serif;
+}
+
+:root,
+:root[data-theme=light] {
+	--primary: #369;
+	--secondary: #111;
+	--primary-bg: #fff;
+	--secondary-bg: #ddd;
+}
+
+:root[data-theme=dark] {
+	--primary: #cacaca;
+	--secondary: #fdfdfd;
+	--primary-bg: #111;
+	--secondary-bg: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-theme=auto] {
+		--primary: #cacaca;
+		--secondary: #fdfdfd;
+		--primary-bg: #111;
+		--secondary-bg: #555;
+	}
+}

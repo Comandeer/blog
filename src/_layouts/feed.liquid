@@ -1,0 +1,36 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="{{ site.url }}/feeds/{{tag | url_encode }}.xml" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}/{{ tag | url_encode }}" rel="alternate" type="text/html" />
+  <updated>{{ page.date | rfc_date }}</updated>
+  <id>{{ site.url }}/feeds/{% if tag %}{{ tag | url_encode }}.xml{% else %}feed.xml{% endif %}</id>
+  <title type="html">Comandeerowy blog</title>
+  {% if tag %}
+  <category term="{{ site.tagNames[ tag ] | xml_escape }}" />
+  <subtitle>Kategoria '{{ site.tagNames[ tag ] | xml_escape }}'</subtitle>
+  {% else %}
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  {% endif %}
+  {% if tag %}
+  {% assign posts = collections[ tag ] %}
+  {% else %}
+  {% assign posts = collections.posts %}
+  {% endif %}
+  {% for post in posts limit:10 %}
+  <entry>
+    <title type="html">{{ post.data.title | xml_escape }}</title>
+    {% if post.data.author %}
+    <author>
+      <name>{{ post.data.author | xml_escape }}</name>
+    </author>
+    {% endif %}
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" />
+    <published>{{ post.date | rfc_date }}</published>
+    <updated>{{ post.date | rfc_date }}</updated>
+    <id>{{ site.url }}{{ post.url }}</id>
+	{% if post.data.description %}
+    <summary><![CDATA[{{ post.data.description }}]]></summary>
+	{% endif %}
+    <content type="html" xml:base="{{ site.url }}{{ post.url }}"><![CDATA[{{ post.content }}]]></content>
+  </entry>
+  {% endfor %}
+</feed>

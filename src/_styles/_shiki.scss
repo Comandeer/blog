@@ -1,0 +1,18 @@
+.shiki {
+	padding: 1rem;
+	border: 1px var(--primary) solid;
+}
+
+@media (prefers-color-scheme: dark) {
+	[data-theme=auto] .shiki,
+	[data-theme=auto] .shiki span {
+	  color: var(--shiki-dark) !important;
+	  background-color: var(--shiki-dark-bg) !important;
+	}
+}
+
+[data-theme=dark] .shiki,
+[data-theme=dark] .shiki span {
+	color: var(--shiki-dark) !important;
+	background-color: var(--shiki-dark-bg) !important;
+}

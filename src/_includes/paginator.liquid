@@ -1,0 +1,19 @@
+{% assign paginator = include.paginator %}
+
+{% if paginator.previous or paginator.next %}
+<nav class="paginator" aria-label="Paginacja">
+	<ol class="paginator__list">
+	{% if paginator.previous %}
+	<li class="paginator__item paginator__item_previous">
+		<a href="{{ paginator.previous | replace: '//', '/' }}" class="paginator__link" rel="nofollow"><span aria-hidden="true">←</span> Nowsze wpisy</a>
+	</li>
+	{% endif %}
+
+	{% if paginator.next %}
+	<li class="paginator__item paginator__item_next">
+		<a href="{{ paginator.next | replace: '//', '/' }}" class="paginator__link" rel="nofollow">Starsze wpisy <span aria-hidden="true">→</span></a>
+	</li>
+	{% endif %}
+	</ol>
+</nav>
+{% endif %}

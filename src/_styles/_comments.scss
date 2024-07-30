@@ -1,0 +1,30 @@
+.comments {
+	border-block-start: 1px var(--primary) solid;
+}
+
+.comments, .disqus-comments {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.disqus__name {
+	cursor: default;
+}
+
+.disqus__info {
+	margin: 1rem;
+	padding: 1rem;
+	border: 1px var(--primary) solid;
+}
+
+.disqus-comments {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.disqus-comment__comments {
+	margin-inline-start: 1rem;
+}

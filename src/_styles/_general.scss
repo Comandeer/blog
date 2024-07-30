@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:root {
+	color-scheme: light dark;
+	box-sizing: border-box;
+	background-color: var(--primary-bg);
+	font-family: var(--font-family);
+	line-height: var(--line-height);
+	color: var(--secondary);
+	accent-color: var(--primary);
+}
+
+:focus-visible {
+	outline: 2px solid var( --secondary );
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	max-inline-size: 80ch;
+	margin: 0 auto;
+	gap: 0.5em;
+}
+
+main {
+	padding-block: 0;
+	padding-inline: 0.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+a {
+	color: var(--primary);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button {
+	padding: 0.5em;
+}
+
+button:focus-visible {
+	outline-offset: 2px;
+}
+
+img {
+	max-inline-size: 100%;
+	block-size: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.5;
+	text-wrap: balance;
+}
+
+hgroup :where( h1, h2, h3, h4, h5, h6 ) {
+	margin-block-end: 0;
+}
+
+hgroup p {
+	font-size: 1.5em;
+	line-height: 1.5;
+	margin: 0;
+}

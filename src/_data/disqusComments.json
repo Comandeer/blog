@@ -1,0 +1,2037 @@
+{
+	"/no-hej.html": {
+		"comments": [
+			{
+				"content": "<p>jej</p>",
+				"author": "soanvig",
+				"date": "2017-02-05T00:08:26Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Uszanowanko!</p>",
+				"author": "dawidgawakiewicz",
+				"date": "2017-02-06T11:59:14Z",
+				"comments": []
+			}
+		]
+	},
+	"/tworzymy-czytnik-ekranowy.html": {
+		"comments": [
+			{
+				"content": "<p>Dobrze posłuchać kogoś kto zna się na ARIA ^^</p>",
+				"author": "paweczochaski",
+				"date": "2017-02-12T09:01:14Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Drogi Autorze! Myślę, że doskonale wiesz, czemu nie można odrzucić HTML, by zastąpić go rolami ARIA. ARIA ma dostarczać także w HTML to, czego HTML dostarczyć nie jest w stanie. To, że można atrybutem role zmienić niejawną rolę każdego innego elementu HTML nie oznacza, że należy, a nawet, że można tak robić. Przeciwnie. Nie należy i jeśli jakieś szczególne względy  tego nie wymuszają, nie powinno się. Ale - jako rzekłem: zapewne wiesz to doskonale.<br>Dyskutowałbym również z tezą, że taki własny czytnik może być \"narzędziem do testowania dostępności stron\". Nie odważyłbym się wykorzystywać w testach, zwłaszcza, że mogę skorzystać z profesjonalnych narzędzi takich jak  NVDA (bezpłatne), Orca (na Linux), VoiceOver (na Maca), Windows-Eyes (bezpłatnie, jeśli mam Office), ChromeVox. Nie wymieniłem tych, za które trzeba słono płacić.</p>",
+				"author": "stefanwajda",
+				"date": "2017-02-13T20:34:40Z",
+				"comments": [
+					{
+						"content": "<p>&gt; Myślę, że doskonale wiesz, czemu nie można odrzucić HTML, by zastąpić go rolami ARIA.</p><p>Myślę, że wystarczająco dokładnie napisałem w tekście, o co z rolami chodzi. W przypadku czytnika ekranowego on i tak nie ma dostępu do DOM i elementów HTML, a jedynie do tego, co udostępnia mu przeglądarka. A przeglądarka wystawia wyłącznie rolę, zatem nie \"element p\", tylko \"role paragraph\", nie \"element h1\" tylko \"role heading, level 1\". Skoro czytniki widzą tylko to (drzewko dostępności), to nie ma sensu opierać implementacji na HTML-u – zwłaszcza, że HTML sam w sobie nie niesie wszystkich potrzebnych informacji. Zresztą HTML cokolwiek dostarcza tylko i wyłącznie dlatego, że istnieją domyślne powiązania poszczególnych tagów z rolami ARIA (o czym też wspominam) i bez tej zależności DOM byłby dla czytnika niewidoczny. Więc pokusiłbym się o stwierdzenie, że bez ról ARIA nie dałoby się nic przekazać czytnikowi.</p><p>&gt; To, że można atrybutem role zmienić niejawną rolę każdego innego elementu HTML nie oznacza, że należy, a nawet, że można tak robić. Przeciwnie. Nie należy i jeśli jakieś szczególne względy tego nie wymuszają, nie powinno się.</p><p>Tylko jakie to ma znaczenie w przypadku czytnika, który musi przeczytać to, co autor strony chciał mu przekazać…? Przecież implementacja, która czytałaby p[role=heading] jako akapit, jest po prostu wadliwą implementacją.</p><p>&gt; Dyskutowałbym również z tezą, że taki własny czytnik może być \"narzędziem do testowania dostępności stron\".</p><p>Jeśli będzie zrobiony _dobrze_ i będzie stanowił wzorcową implementację, to wówczas można go użyć jako papierek lakmusowy dla innych czytników ekranowych. Zwłaszcza, że te cierpią na własne problemy, np. VoiceOver czasami traci się przy [role=listbox], NVDA lubi mieć problemy przy [aria-live], JAWS źle czyta [role=toolbar] etc. Jest jeden standard, a nie istnieje wzorcowa implementacja, co jest IMO dziwne. A ChromeVox akurat jest czytnikiem, który _de facto_ nie działa, a jest oparty przecież na tym samym pomyśle, co ten w artykule (jeśli mówimy o nim jako o dodatku do Chrome; nie wiem jak się sprawuje jako czytnik na Chromebooku).</p>",
+						"author": "Comandeer",
+						"date": "2017-02-13T20:56:31Z",
+						"comments": [
+							{
+								"content": "<p>&gt;&gt; Myślę, że wystarczająco opisałem...<br>Rozumiem Twój tok myślenia. Podzielam. Z punktu widzenia... czytnika :)<br>&gt;&gt;Jeśli będzie zrobiony _dobrze_ i będzie stanowił wzorcową implementację<br>No tak. Z takiego chętnie skorzystam. (Co do ChromeVoxa - trochę z kłopotami, ale skonfigurowałem, niemniej - w pełni się zgadzam się, straciłem czasu mnóstwo i w gruncie rzeczy niepotrzebnie<br>PS To, co napisałem w pierwszym poście, w najmniejszym stopniu nie było krytyką. Ale dzięki Twojej odpowiedzi jeszcze coś zrozumiałem (ten punkt widzenia czytnika, który p przemianowane na h1 musi i słusznie traktować, jako h1). Pozdrawiam. Dzięki, że mogłem się czegoś dowiedzieć i nauczyć :)</p>",
+								"author": "stefanwajda",
+								"date": "2017-02-13T21:59:24Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/o-ikonkach-slow-kilka.html": {
+		"comments": [
+			{
+				"content": "<p>&lt;3</p>",
+				"author": "jestemrugbysta",
+				"date": "2017-03-01T14:48:36Z",
+				"comments": [
+					{
+						"content": "<p>tak tylko się wtrącę, że sr-only już jest zaktualizowany w bs-ie, na pewno w wersji  v4.0.0-alpha.6 bo sprawdzałem osobiście, za wcześniejsze wersje nie ręczę</p>",
+						"author": "dawid_maka",
+						"date": "2017-08-20T20:48:57Z",
+						"comments": [
+							{
+								"content": "<p>Faktycznie, niemniej to wydaje się jakaś inna wersja niż ta w HTML5 Boilerplate. Tak jakbyśmy na chwilę obecną mieli 3 równoległe wersje: starą, BS-a i H5BP</p>",
+								"author": "Comandeer",
+								"date": "2017-08-20T21:31:37Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>SVG w IMG. To jest dobre rozwiązanie gdy ikona jest statyczna. A co zrobić gdy chcemy zrobić efekt hover na niej i zmienić kolor? Jak to ustawić to w css? Mam w pliku SVG coś takiego:<br>&lt;path class=\"zmien-mi-kolor\" fill=\"\" d=\"M24...<br>HTML:<br> &amp;lt;img src=\" img=\"\" icon.svg#zmien-mi-kolor\"=\"\"&gt;<br>CSS:<br>.zmien-mi-kolor {<br>fill: red;<br>}<br>Kombinowałem na wiele sposobów, bez efektów.</p>",
+				"author": "disqus_hXxjAOdpV1",
+				"date": "2017-03-10T12:56:44Z",
+				"comments": [
+					{
+						"content": "<p>Wówczas trzeba niestety zastosować inline SVG, wstawione bezpośrednio do kodu HTML. Na `img` to średnio działa – a szkoda.</p>",
+						"author": "Comandeer",
+						"date": "2017-03-10T13:07:33Z",
+						"comments": [
+							{
+								"content": "<p>Lub użyć JavaScript. A szkoda.</p>",
+								"author": "disqus_hXxjAOdpV1",
+								"date": "2017-03-10T13:37:37Z",
+								"comments": []
+							},
+							{
+								"content": "<p>Ziomeczki, a co z svg use ? Możecie użyć już tego jako zewnętrzny sprite. Ustawiacie fill na pathie jako currentColor. I w css możecie kolorować dowoli! Spoko artykuł <a href=\"https://fvsch.com/code/svg-icons/how-to/#section-sprite\" rel=\"nofollow noopener\" title=\"https://fvsch.com/code/svg-icons/how-to/#section-sprite\">https://fvsch.com/code/svg-...</a></p><p>Dodatkowo przyda się lekki polyfill ( w zależności co musicie supportować ) <a href=\"https://github.com/jonathantneal/svg4everybody\" rel=\"nofollow noopener\" title=\"https://github.com/jonathantneal/svg4everybody\">https://github.com/jonathan...</a></p><p>Ja wraz z nowym rokiem przerzuciłem się właśnie na svg sprites, ponieważ dają nam więcej możliwości, a utrzymywanie ico-fontów wygląda o wiele słabiej - zawsze to utrzymywanie kilka plików, nie jednego. </p>",
+								"author": "disqus_gwHZJD3ChZ",
+								"date": "2017-04-13T08:17:41Z",
+								"comments": [
+									{
+										"content": "<p>Owszem, można, ale i tak ostatecznie to jest wstawienie SVG do HTML-a.</p>",
+										"author": "Comandeer",
+										"date": "2017-04-13T08:20:32Z",
+										"comments": [
+											{
+												"content": "<p>Ładowanie zewnętrznych spritów to jest wstawianie SVG do HTML-a ? Nie miałem na myśli wstawiania na żywca całego kodu ze sprajta w kod HTML. Miałem raczej na myśli  </p><pre><code>&lt;use xlink:href=\"/path/to/icons.svg#tick\"&gt;&lt;/use&gt;</code></pre>",
+												"author": "disqus_gwHZJD3ChZ",
+												"date": "2017-04-13T08:27:27Z",
+												"comments": [
+													{
+														"content": "<p>Noo… To wciąż SVG ;) Owszem, w tym wypadku mamy tylko svg &gt; use, ale to wciąż nie jest to samo, co img. Zwłaszcza, że dostarczenie treści alternatywnej jest nieco udziwnione w takim wypadku.</p><p>Ale fakt, jest to lepsze niż pakowanie całego SVG. Niemniej sprite'y w img też działają niemal wszędzie – oprócz kochanego Safari.</p>",
+														"author": "Comandeer",
+														"date": "2017-04-13T08:33:14Z",
+														"comments": [
+															{
+																"content": "<p>Tylko wtedy z tego co się orientuję, jak ładujesz sprite jako img nie masz właśnie tej możliwości pokolorowania danej ikonki przez css. Co do treści alternatywnych jest to faktycznie trochę udziwnione, ale da się. Generalnie widać, że to się rozwija w dobrym kierunku, w kierunku używalności ;-)</p>",
+																"author": "disqus_gwHZJD3ChZ",
+																"date": "2017-04-13T08:40:41Z",
+																"comments": [
+																	{
+																		"content": "<p>Fakt, nie da się. Ciekawe jak to zmienią, bo nie widzę za dużo możliwości ingerowania w SVG wstawione przez img.</p><p>Chociaż AFAIR byłyby pomysły z przekazywaniem jakoś CSS variables jako części hasha.</p>",
+																		"author": "Comandeer",
+																		"date": "2017-04-13T08:42:31Z",
+																		"comments": [
+																			{
+																				"content": "<p>Nooo to było by piękne, ale narazie musimy zadowolić się tym co jest i balansować w wyborze dobrego rozwiązania. Jeszcze ciekawostka, że zmiennych CSS variables możemy już użyć też w svg inline. <a href=\"https://fvsch.com/code/svg-icons/css-variables/test.html\" rel=\"nofollow noopener\" title=\"https://fvsch.com/code/svg-icons/css-variables/test.html\">https://fvsch.com/code/svg-...</a></p>",
+																				"author": "disqus_gwHZJD3ChZ",
+																				"date": "2017-04-13T08:53:59Z",
+																				"comments": []
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"content": "<p>Nie jestem pewien czy zewnętrzny SVG zaczyta Tobie klasę CSS z innego pliku ? Co innego jak byś tą klasę CSS miał w samym pliku SVG wtedy możesz na pathie ustawić. Najłatwiejszym rozwiązaniem jest to co opisałem poniżej czyli na pathie w SVG ustawiasz fill jako currentColor a w CSS działasz już na właśności 'color'.</p>",
+						"author": "disqus_gwHZJD3ChZ",
+						"date": "2017-04-13T08:35:18Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Czy svg nie powinno byc wstawiane przez &lt;obvject&gt; a nie &lt;img&gt; ?</p>",
+				"author": "disqus_TeyrTDg8dC",
+				"date": "2017-04-13T20:34:04Z",
+				"comments": [
+					{
+						"content": "<p>`object` to pozostałość po dawnej, dawnej erze, gdy przeglądarki nie umiały w SVG. Obecnie stosuje się albo `svg`, albo `img`.</p>",
+						"author": "Comandeer",
+						"date": "2017-04-13T20:42:09Z",
+						"comments": [
+							{
+								"content": "<p>Miałem problem gdzie svg wstawione przez img działało wszędzie tylko nie na chrome. Wstawienie przez object pomogło</p>",
+								"author": "disqus_TeyrTDg8dC",
+								"date": "2017-04-13T21:45:45Z",
+								"comments": [
+									{
+										"content": "<p>A jaki Chrome? Bo od kilkunastu wersji nie powinno być takich problemów.</p>",
+										"author": "Comandeer",
+										"date": "2017-04-13T21:56:54Z",
+										"comments": [
+											{
+												"content": "<p>Jeszcze nie zakopywałbym 'object'. Przekonałem się o tym, gdy chciałem użyć animacji GSAP na zewnętrznym, skomplikowanym svg. Oprócz 'object' mogłem jeszcze użyć ajaxa, aby wstrzyknąć svg do DOM HTML. Ze wspomnianym 'use' nie tylko był problem z wykonaniem animacji (GSAP), ale też z poprawnym wyświetlaniem pliku w Chrome. Nie wiem dlaczego, ale wyświetlał tylko część ilustracji. Nie wgłębiałem się w to zbytnio, bo jak już napisałem, 'object' ocalił mi skórę :)</p>",
+												"author": "disqus_hXxjAOdpV1",
+												"date": "2017-04-19T21:46:29Z",
+												"comments": [
+													{
+														"content": "<p>Hm, ciekawe. Niemniej brzmi bardziej jak edge case.</p>",
+														"author": "Comandeer",
+														"date": "2017-04-19T21:48:12Z",
+														"comments": []
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/comsemrel-co-to.html": {
+		"comments": [
+			{
+				"content": "<p>Jeśli Ci się uda pociągnąć ten temat do końca, to może być z tego niezły kawałek softu :)</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-03-06T18:43:07Z",
+				"comments": []
+			}
+		]
+	},
+	"/szkic-architekturalny.html": {
+		"comments": [
+			{
+				"content": "<p>Brzmi jakbyś miał to dokończyć! ^^</p>",
+				"author": "korneliakobiela",
+				"date": "2017-03-13T22:30:49Z",
+				"comments": [
+					{
+						"content": "<p>Ano, sam siebie zadziwiam.</p>",
+						"author": "Comandeer",
+						"date": "2017-03-13T22:38:26Z",
+						"comments": [
+							{
+								"content": "<p>Mam chyba na ciebie dobry wpływ ^^</p>",
+								"author": "korneliakobiela",
+								"date": "2017-03-13T23:36:07Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Jestem coraz bardziej zaciekawiony tym projektem :)</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-03-14T07:33:57Z",
+				"comments": []
+			}
+		]
+	},
+	"/drzewko-dostepnosci-udostepnione.html": {
+		"comments": [
+			{
+				"content": "<p>Czuje ze Web components + AOM bedzie bardzo mocnym polaczeniem jak komus bedzie sie chcialo.</p>",
+				"author": "grzegorzdyl",
+				"date": "2017-03-27T06:18:00Z",
+				"comments": []
+			}
+		]
+	},
+	"/comsemrel-raport-wojenny-1.html": {
+		"comments": [
+			{
+				"content": "<p>Z tym rollupem to tak trochę na przekór walczysz. Jak się domyślam, lubisz iść pod prąd. Pytanie czy w tym przypadku to jest tego warte?<br>Niemniej jednak, ciągle Ci kibicuję, bo to może być jedno z najfajniejszych narzędzi na rynku :)</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-03-28T06:13:35Z",
+				"comments": [
+					{
+						"content": "<p>Czy jest warte? Rzeknę tak: zapisałem się na ten konkurs, żeby się dobrze bawić. A im coś jest bardziej upierdliwe, tym, o dziwo, lepiej się bawię :D No i to raczej problem z TS-em niźli z rollupem tak naprawdę.</p><p>I dzięki za kredyt zaufania. Mam nadzieję, że przynajmniej to będzie działać ;)</p>",
+						"author": "Comandeer",
+						"date": "2017-03-28T11:02:19Z",
+						"comments": []
+					},
+					{
+						"content": "<p>PS <a href=\"https://github.com/facebook/react/pull/9327\" rel=\"nofollow noopener\" title=\"https://github.com/facebook/react/pull/9327\">https://github.com/facebook...</a> – ten Rollup wcale taki zły nie jest… ;)</p>",
+						"author": "Comandeer",
+						"date": "2017-04-06T19:57:28Z",
+						"comments": [
+							{
+								"content": "<p>Dzięki za link. Poczytam w wolnej chwili :)</p>",
+								"author": "piotr_nalepa",
+								"date": "2017-04-07T06:34:47Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/potrzebujemy-zachowan-nie-dziedziczenia.html": {
+		"comments": [
+			{
+				"content": "<p>Trochę mam dejavu. Podobną drogę przeszliśmy swego czasu z biblioteką UI do CKEditora 5. Z początku wpadliśmy w pułapkę dziedziczenia kiedy to np. konkretna wersja toolbara dziedziczyła z toolbara podstawowego. Nie potrzebowaliśmy na szczęście za dużo czasu by przejrzeć na oczy i zacząć komponować komponenty (masłować masło? :D) z ogólnodostępnych zachowań.</p><p>W przypadku WC zakładam można dziedziczyć zawsze z bazowego HTMLElement, tak? To nie jest takie złe – najprostsze wyjście z tej ciężkiej sytuacji. Chcesz coś nowego, pisz to od zera. NIkt nie każe Ci dziedziczyć akurat z buttona (co rzeczywiście sensu ma niewiele).</p><p>Z drugiej strony, zgadzam się że tego typu podejście mentalnie nastawia nas na pisanie nierozszerzalnych komponentów. Idealnie byłoby gdyby rzeczywiście zezwolić jeszcze na rejestrowanie handlerów atrybutów i na tej podstawie można byłoby robić obie rzeczy – tworzyć komponenty od zera ale i zezwalać na dodawanie funkcjonalności do istniejących (w tym swoich ofc).</p>",
+				"author": "piotrekkoszulinski",
+				"date": "2017-04-09T22:09:22Z",
+				"comments": [
+					{
+						"content": "<p>&gt; Idealnie byłoby gdyby rzeczywiście zezwolić jeszcze na rejestrowanie handlerów atrybutów i na tej podstawie można byłoby robić obie rzeczy – tworzyć komponenty od zera ale i zezwalać na dodawanie funkcjonalności do istniejących</p><p>I dokładnie o to mi chodzi. Do tworzenia własnych, całkowicie customowych komponentów nic nie mam, jedynie rozszerzanie już istniejących jest zrobione po prostu dziwacznie.</p>",
+						"author": "Comandeer",
+						"date": "2017-04-09T22:11:04Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Hello! Custom Elements are good for some things, but your examples show how NOT to use CE.</p><p>I like your \"behaviors\" idea. In fact, I've implemented such a thing! See here: <a href=\"https://github.com/w3c/webcomponents/issues/662\" rel=\"nofollow noopener\" title=\"https://github.com/w3c/webcomponents/issues/662\">https://github.com/w3c/webc...</a></p><p>(specifically, the following comment has the link to the code implementation and example code: <a href=\"https://github.com/w3c/webcomponents/issues/662#issuecomment-340033862)\" rel=\"nofollow noopener\" title=\"https://github.com/w3c/webcomponents/issues/662#issuecomment-340033862)\">https://github.com/w3c/webc...</a></p><p>(notice how many downvotes I got in that thread, many people don't like this \"behaviors\" sort of idea. What's up with them????)</p><p>Also, check out \"Custom Attributes\", which is closer to your idea: <a href=\"https://github.com/matthewp/custom-attributes\" rel=\"nofollow noopener\" title=\"https://github.com/matthewp/custom-attributes\">https://github.com/matthewp...</a></p>",
+				"author": "trusktr",
+				"date": "2018-01-31T22:19:30Z",
+				"comments": [
+					{
+						"content": "<p>Hey, TBH I nearly abandoned whole WC idea as I moved from frontend to more backend JS development. But I saw your implementation and Custom Attributes library (heh, I'm still following discussions in WC repo on GH). Especially Custom Attributes seems like my idea. Unfortunately it also seems as abandoned as my idea…</p><p>Could you elaborate why you think that my examples show hot not to use CE?</p>",
+						"author": "Comandeer",
+						"date": "2018-01-31T23:08:18Z",
+						"comments": [
+							{
+								"content": "<p>I don't remember what I was thinking! Interesting how my behaviors turned out similar to yours (but I hadn't seen yours before). I have something similar to your `attachedBehaviors` in [this example](<a href=\"https://github.com/trusktr/infamous/blob/a41d66bae375e691d88e817a0a5912483d6bbc5a/src/core/Sphere.js#L10)\" rel=\"nofollow noopener\" title=\"https://github.com/trusktr/infamous/blob/a41d66bae375e691d88e817a0a5912483d6bbc5a/src/core/Sphere.js#L10)\">https://github.com/trusktr/...</a>, the difference being that it accepts a function that returns a boolean to indicate if the behavior should be applied, but it also accepts a plain array like yours too.</p><p>I agree with you about the inheritance. The behaviors without inheritance are easy to work with, and also compatible with old browsers (doesn't require native `class`es, etc).</p><p>Honestly I don't remember what I was thinking with that first sentence of mine! I think our behaviors ideas are awesome.</p>",
+								"author": "trusktr",
+								"date": "2018-11-28T21:45:19Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/comsemrel-raport-wojenny-3.html": {
+		"comments": [
+			{
+				"content": "<p>Ej, do roboty! Bo trzymam kciuki i kibicuję. Nawet na blogasku o Tobie wspomniałam ;D</p>",
+				"author": "ladybu9",
+				"date": "2017-04-15T16:00:51Z",
+				"comments": [
+					{
+						"content": "<p>No dobrze, dobrze ;)</p>",
+						"author": "Comandeer",
+						"date": "2017-04-15T16:01:24Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/mam-nierowno-pod-sufitem.html": {
+		"comments": [
+			{
+				"content": "<p>Zauważyłem, że ludziom co raz bardziej się nie chce, wolą rzeczy podane na tacy, w prosty sposób, brakuje im takiego dociekania pewnych kwestii, dlaczego to tak działa, dlaczego tak a nie inaczej itp. <br>Drugim elementem jest polska produkcja tych filmów, Polak będzie bronił swoich treści, odbijając piłeczkę w dość prostacki sposób, nie weryfikując treści, których broni. Wiele razy zdarzało mi się, że treść artykułu była moim rozwiązaniem, lecz nie do końca prawidłowym. Dlatego zawsze trzeba znaleźć punkt odniesienia, kilka wzorców lub nawet samemu coś wymyśleć (to tak można!?). <br>Dlatego czasami warto coś samemu zweryfikować, bo inaczej autor bloga kolokwialnie mówiąc Was wyjaśni. ;)</p>",
+				"author": "kklimczak",
+				"date": "2017-04-14T17:01:12Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Trudno mi jednoznacznie ocenić kursy Pana Zelenta. Z jednej strony zaraz po jego kursie JS zacząłem sam pisać, z drugiej złapałem kilka niezbyt dobrych nawyków, które musiałem korygować.  Użycie podstawowych środków, ma zachęcić do dalszej nauki. Tylko potem zniechęca zbieranie cięgów za np. nieoddzielenie treści od wyglądu. Chyba dobrze, że to jest w Internecie, choć to trochę takie w3schools YouTube'a.</p>",
+				"author": "bartek_kwapisz",
+				"date": "2017-04-14T21:02:09Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Ciekawy artykuł :)</p><p>Dziwi mnie tylko fakt, że Mirosław Zelent nie wykazuje żadnej inicjatywy aby się przyznać do błędu oraz go poprawić, chociażby adnotacją na filmie. Takie rzeczy jak podany w poście kod odpowiedzialny za przewijanie strony, w mojej opinii jeszcze można wybaczyć (chociaż nic nie stoi na przeszkodzie, aby dać inny, np. pokazany przez Tomasza), ale po co specjalnie dodawać część, która z pozoru nie jest do niczego potrzebna, a tak naprawdę poważnie szkodzi? Nie rozumiem :/</p>",
+				"author": "robertorlinski",
+				"date": "2017-04-18T14:59:18Z",
+				"comments": [
+					{
+						"content": "<p><a href=\"https://forum.pasja-informatyki.pl/122259/co-jest-nie-tak-z-najnowszym-odcinkiem-kursu-miroslawa-zelenta\" rel=\"nofollow noopener\" title=\"https://forum.pasja-informatyki.pl/122259/co-jest-nie-tak-z-najnowszym-odcinkiem-kursu-miroslawa-zelenta\">https://forum.pasja-informa...</a></p><p>Tu się nam udało go do tego zmusić. Do dzisiaj to najpotężniejszy wątek na jego (byłym jego) forum.</p>",
+						"author": "soanvig",
+						"date": "2017-04-20T08:49:55Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/comsemrel-raport-wojenny-4.html": {
+		"comments": [
+			{
+				"content": "<p>Widzę, że uparty jesteś.</p>",
+				"author": "korneliakobiela",
+				"date": "2017-04-16T21:39:33Z",
+				"comments": []
+			}
+		]
+	},
+	"/web-components-koszmar-minionego-lata.html": {
+		"comments": [
+			{
+				"content": "<p>Kripne &lt;3</p>",
+				"author": "korneliakobiela",
+				"date": "2017-04-02T20:21:31Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Właśnie z powodu braku standardów nigdy nie byłem zwolennikiem web components. Koniec końców lepiej się wychodzi na innych technologiach, no i łatwiej znaleźć ludzi którzy znają reactjs niż web components. </p>",
+				"author": "piotr_nalepa",
+				"date": "2017-04-03T03:19:23Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Postrzegałem web components jako coś, co warto będzie w najbliższym czasie poznać. Jednak widząc sytuację jaką opisujesz i tabelkę ze wsparciem w przeglądarkach, racjonalne wydaje się odłożenie tego na \"za kilka lat\", jeśli w ogóle kiedykolwiek przyjdzie dobry czas ;)</p>",
+				"author": "buli_waw",
+				"date": "2017-04-03T07:35:14Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Czy coś się zmieniło przez te 2 lata?</p>",
+				"author": "disqus_1Ter2tSOdc",
+				"date": "2018-12-13T19:08:02Z",
+				"comments": [
+					{
+						"content": "<p>Tak, jest lepiej. Jeśli weźmiemy pod uwagę, że Edge jest martwy (co samo w sobie nie jest zbyt pozytywną zmianą…), to Web Components mają wsparcie de facto wszędzie. Powstają też inicjatywy pokroju Custom Elements Everywhere (<a href=\"https://custom-elements-everywhere.com/\" rel=\"nofollow noopener\" title=\"https://custom-elements-everywhere.com/\">https://custom-elements-eve...</a> ) monitorujące poziom zgodności poszczególnych frameworków i bibliotek z WC. Ustabilizował się też nieco ekosystem wokół nich (np. Polymer stał się małą biblioteką, pojawiło się też sporo nowych propozycji, pokroju Stencila czy polskiego Hybrids).</p><p>Niemniej wciąż nie jest to standard w pełni dojrzały, na którym można bezproblemowo pisać spore aplikacje, np. przez to, że do dzisiaj nie poruszono w żaden sposób choby problemu server-side renderingu i nie zanosi się, żeby w najbliższym czasie miało sie to zmienić.</p>",
+						"author": "Comandeer",
+						"date": "2018-12-13T20:52:54Z",
+						"comments": [
+							{
+								"content": "<p>No ale dziś to już chyba jednak żywy i okrzepły standard :-)</p>",
+								"author": "henrykkarowicz",
+								"date": "2021-11-26T13:54:05Z",
+								"comments": [
+									{
+										"content": "<p>Tak, ale nie.</p><p>Owszem, jest o wiele więcej bibliotek ułatwiających tworzenie własnych komponentów, a także coraz więcej design systemów używa WC. Dodatkowo większość ekosystemu JS jest kompatybilna z WC, co pokazuje <a href=\"https://custom-elements-everywhere.com/\" rel=\"nofollow noopener\" title=\"https://custom-elements-everywhere.com/\">https://custom-elements-eve...</a></p><p>A równocześnie rozszerzanie natywnych elementów jest problematyczne i nie działa w Safari, bo Apple powiedziało \"nie\", integracja komponentów z formularzami dopiero się wykuwa (ElementInternals), a obsługa selekcji wewnątrz Shadow DOM wciąż nie istnieje, uniemożliwiając na dobrą sprawę sensowne wykorzystanie WC w przypadku aplikacji pokroju CKEditora.</p>",
+										"author": "Comandeer",
+										"date": "2021-11-26T22:56:41Z",
+										"comments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/no-to-zaczynamy.html": {
+		"comments": [
+			{
+				"content": "<p>Powodzenia przy wskrzeszaniu ;D</p>",
+				"author": "michalkortas",
+				"date": "2017-03-02T13:13:30Z",
+				"comments": []
+			},
+			{
+				"content": "<p>O! Też bierzesz udział! :) Gdzie nie spojrzę, tam Comandeer:&gt; Bardzo dobrze. Powodzenia! :)</p>",
+				"author": "ladybu9",
+				"date": "2017-03-05T20:36:06Z",
+				"comments": [
+					{
+						"content": "<p>O, a co kodzisz?</p>",
+						"author": "Comandeer",
+						"date": "2017-03-05T20:39:06Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/wybor-technologii.html": {
+		"comments": [
+			{
+				"content": "<p>Przejście z JS na TS wygląda masakrycznie. Może kiedyś przełamię tę dumę, że nie wezmę, bo to od MS, ale to nie jest ta chwila. Niemniej wpis fajny. Pozdrawiam</p>",
+				"author": "korneliakobiela",
+				"date": "2017-03-13T10:15:58Z",
+				"comments": []
+			}
+		]
+	},
+	"/odjulianilem-sie.html": {
+		"comments": [
+			{
+				"content": "<p>Kurde ziom, lepiej bym tego nie ujął, ostatnio łapie sie na tym samym... Może czas pisać blogi dla devow na temat jak żyć ? </p>",
+				"author": "disqus_gwHZJD3ChZ",
+				"date": "2017-04-26T18:52:35Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Prędzej medycyna osiągnie poziom, w którym brak będzie niepełnosprawnych, niż sieć stanie się dla nich dostępna</p>",
+				"author": "argeento",
+				"date": "2017-04-26T22:29:38Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Trochę źle do tego podchodzisz. Ty nie możesz wyeliminować niesemantyczności i niedostępnośc w sieci. To niemożliwe. To trochę jak nauczyciel języka polskiego, który ma misję wyeliminować błędy ortograficzne. Zawsze pojawi się ktoś, kto nie chce się nauczyć pisać poprawnie lub dopiero zaczyna się tego uczyć.</p><p>Twoją misią jest uświadomić jak najwięcej ludzi o tym. I to ci się udało, sprawdź ile osób odwiedziło \"Semantyczny blog w HTML5\". Za twoją sprawą, wiele osób z wadami wzroku, ma teraz większy wybór dostępnych stron.   <br>  Może pocieszy cię fakt, że gdyby nie ty, to byłoby o wiele gorzej. Teraz świerzak umieszczający stronę do oceny dostaje garść rad, dotyczącej dostępności i semantyczności. Niekoniecznie od ciebie, tylko od ludzi, którzy mieli styczność z twoim poradami.</p><p>Nidy nie będzie idealnie, ale może być lepiej.</p>",
+				"author": "disqus_hXxjAOdpV1",
+				"date": "2017-04-27T21:53:51Z",
+				"comments": [
+					{
+						"content": "<p>Dzięki c:</p>",
+						"author": "Comandeer",
+						"date": "2017-04-28T06:56:49Z",
+						"comments": []
+					},
+					{
+						"content": "<p>dobrze powiedziane, sam lubie czytać jak Comandeer ocenia projekty innych i przekładać to na swoje prace :)</p>",
+						"author": "erwinheba",
+						"date": "2017-04-28T08:25:49Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Psycholog nie może się łamać gdy pomoże skutecznie tylko 3 na stu pacjentom, mistrz sztuk walki nie może się łamać gdy 2 na stu uczniów stanie się godnym bycia jego następcą, uzdrowiciel/lekarz nie uzdrowi świata ale jak uzdrowi chociaż 1 dziecko to czy jego robota jest Julianizmem bo tylko jednemu dziecku pomógł?</p><p>Comandeer pracujesz dla siebie, natomiast wiedza którą pozostawiasz poza pracą jest dla wielu przydatna i nawet jak nie potrafi/nie chce się jej w całości stosować to jej efekty są. Nawet jak nie widzisz ich gołym okiem. Grunt to robić swoje - skorzysta kto chce.</p>",
+				"author": "disqus_gbqzKXYljD",
+				"date": "2017-05-02T23:22:31Z",
+				"comments": []
+			}
+		]
+	},
+	"/css-w-js-mity-o-mitach.html": {
+		"comments": [
+			{
+				"content": "<p>Nie mógłbym się z Tobą zgodzić mocniej.</p>",
+				"author": "marsjaninzmarsa",
+				"date": "2017-06-12T00:32:19Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Bez kitu... Sporo czytam, ale nie często tak dobre arty jak ten :-) Jakis czas używałem React / React Native... To chyba nie były dobre use case'y bo do dzis mam niesmak. BEM - spoko, CSS modules - no dobra. Styled components - wtf?! Skąd ten zachwyt. Taka bezmyślność na rzucanie się na byle \"trendi\" coś tam, i od razu uznawanie tego za nową religię.</p><p>Argumentując jak hejterzy BEMa - mix tego xmlo-jso-cssa etc, wyglada jak g.... 8-)</p><p> I pyk gó...burza :-)</p><p>Ja tam jednak wolę jak mój kod wyglada jak kod, nie jak mix g... ;-)</p><p>Sorry, ale jeśli tak niby wygląda ewolucja, to ja nie chce znać kolejnego jej etapu :-)</p><p><a href=\"https://cdn-images-1.medium.com/max/1000/1*yBxZo9LNEjRaL7eKUBqRSA.png\" rel=\"nofollow noopener\" title=\"https://cdn-images-1.medium.com/max/1000/1*yBxZo9LNEjRaL7eKUBqRSA.png\">https://cdn-images-1.medium...</a></p><p>Programuję już kilkanaście lat, poprzez różne języki, technologie i podejścia. Teraz robię głównie full-stack; może jestem już dinozaurem... i sam nie widzę nic złego z byciu nieco konserwatywnym :-) Paranoja przyśpiesza -- gonitwa za czymś wspaniałym, \"lepszym\" ... czyli nasze obecne podejście i rozwiązanie zawsze jest do kitu?</p><p>Sam gonię nowoczesność i trendy, ALE jednak potrafię wybrać podejścia które są OK, faktycznie działają i rozwiązują problemy, zamiast ich głównie dostarczać :-) I które sam lubię. Jeśli dobrze się z czymś pracuje, nawet jak projekt i team rosną, to w sumie pozostaje korzystać z tego.</p><p>Zastanawia mnie inna rzecz - skąd w świecie front-end dev tyle over-engineering'u? To jakieś kompleksy, chęć programowania jak PRO, ... Odnajdywanie się w miliardzie tooli, frameworków, approachy, pluginów do frameworka, konwencji i nie wiadomo czego zdaje się stawać co raz trudniejsze. Na razie sobie radzę, i mam nadzieję że już będę na emeryturze gdy to przekroczy masę krytyczną. Wtedy wezmę popcorn i będę patrzył jak kolejne rzesze ludzi tańczą jak im zagra ktoś duży, rzucając kolejny wspaniały pomysł \"na życie developera\" ;-)</p><p>Nie mnie nie oceniać czy X czy Y jest \"be\" czy też nie; to że mój stack wyglada tak a nie inaczej to nie przypadek. Niczego nikomu nie narzucam, ale i mi nikt nie będzie niczego narzucał.</p><p>I nie, nie chcę sie wdawać w dyskusje - po prostu widziałem już tyle przez lata, że czasem mowę odejmuje :-) Nie wariujmy i nie dajmy się zwariować.</p><p>Elo!</p>",
+				"author": "directcode",
+				"date": "2017-09-05T13:00:06Z",
+				"comments": [
+					{
+						"content": "<p>Osobiście bardziej bawię się od kilkunastu lat w Web niż w nim naprawdę pracuję, więc może jestem w sumie lama, ale osobiście wolę stosować po prostu \"waniliowe\" standardy i własne minimalistyczne narzędzia niż walić na stronie kilkaset KB bibliotek, żeby wyświetlić na stronie \"Hellow world\", a widzę, że to jest obecnie jakaś norma.<br>Ale myślę, że działa tutaj podobna \"ekonomia odwrotna\" jak kiedyś odnośnie programowania. Assembler wymiatał, kod był mały i szybki, ale długo i trudno się to pisało. Później kompy zrobiły się szybsze i można było używać nieoptymalnych, ale prostszych w użytkowaniu i bazujących na predefiniowanych gotowcach narzędzi.</p>",
+						"author": "Freja_Draco",
+						"date": "2018-11-24T10:25:20Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>&gt; Czym niby się różni<br>Przyznam, że mi osobiście akurat takiego \"@extend .klasa;\" w CSS brakuje. Nie na tyle, żeby kombinować z preprocesorami i innymi cudami, bo (jak dla mnie) utrudnia to później analizę i trochę pomaga a trochę przeszkadza.</p><p>Ale już tłumaczę, czym się różni klasa_modyfikowana i klasa_modyfikowana (z @extend).</p><p>Otóż w ogólności ułatwia separację HTML i CSS. Owszem, mogę zawsze zamiast <br>class=\"k\" napisać class=\"k km1 km2 km3\"<br>tylko, że to wymaga zaingerowania w HTML, a może ja chcę właśnie mieć niezmienne moduły silnika strony a różne wersje jej wyglądu realizować, modyfikując tylko CSS (bo przecież po to właśnie on powstał i taka jest jego idea).</p><p>Oczywiście, jak nie chcę ruszać HTML, to mogę zawsze modyfikować po prostu sam CSS osobno dla każdej klasy i tak właśnie robię, tylko to bywa czasem trochę redundantne i upierdliwe. Takie np. definicje elastyczności elementów plus ich warianty z przedrostkami to po kilka linijek dodawanych tu i tam. Wygodniej byłoby móc sobie zdefiniować<br>.elastyczny { ... } i później dodawać go w innych klasach przez jakieś @extend czy inne @include.</p><p>p.s. Dzięki za tego bloga, miła odmiana po \"portalach technologicznych\", w których redaktorzy jarają się kształtem nocza w szefyrnastym modelu telefonu.</p>",
+				"author": "Freja_Draco",
+				"date": "2018-11-24T10:10:56Z",
+				"comments": []
+			}
+		]
+	},
+	"/comsemrel-raport-wojenny-7.html": {
+		"comments": [
+			{
+				"content": "<p>Trzymam kciuki za projekt!<br>Gdzie mogę znaleźć jego źródła? Z chęcią przejrzał bym Twój kod.</p>",
+				"author": "piecioshka",
+				"date": "2017-05-08T18:25:06Z",
+				"comments": [
+					{
+						"content": "<p>A dzięki!</p><p>Prawdę mówiąc za dużo do oglądania to tam na razie nie ma, ale skoro chcesz ;) <a href=\"https://github.com/ComSemRel\" rel=\"nofollow noopener\" title=\"https://github.com/ComSemRel\">https://github.com/ComSemRel</a></p>",
+						"author": "Comandeer",
+						"date": "2017-05-08T20:23:41Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/bem-jako-architektura.html": {
+		"comments": [
+			{
+				"content": "<p>Miałeś rację, najciekawsze wpisy wychodzą po 23 :D</p>",
+				"author": "michalkortas",
+				"date": "2017-05-12T22:45:27Z",
+				"comments": [
+					{
+						"content": "<p>no właśnie, 23 - a RSS mówi, że \"2017-05-12T19:00:00+00:00\" i przez to źle się sortuje na polskifrontend... ;)</p>",
+						"author": "bartomiejdybowski",
+						"date": "2017-05-13T06:32:20Z",
+						"comments": [
+							{
+								"content": "<p>Heh, jak na razie jeszcze nie ogarnąłem, w jaki sposób Jekyll sortuje po datach (bo robi to dziwacznie). A że niespecjalnie mi to przeszkadza, czy wpis jest pokazywany z godziną 19 czy 23, to na razie jakoś tego nie ruszam ;)</p>",
+								"author": "Comandeer",
+								"date": "2017-05-13T16:37:41Z",
+								"comments": [
+									{
+										"content": "<p>Jekyll nie wspiera godzin przy publikacji postów.<br>Musisz jawnie podać czas publikacji posta w jego metadanych.</p><p>Przykład z mojego ostatniego wpisu.<br>Plik <code>_posts/2017-05-17-warsawjs-meetup-30.md</code><br></p><pre><code><br>---<br>layout: post<br>title: \"WarsawJS Meetup #30\"<br>image: \"/assets/images/partners/warsawjs/warsawjs-300x300.png\"<br>tags: warsawjs<br>date: Wed, 17 May 2017 23:31:19 +0200<br>---<br><br>Zgodnie z opisem w [tym][1] poście, dziś kolejny wpis, na temat spotkania <br>warszawskich programistów JavaScript, czyli WarsawJS Meetup!<br>...<br></code></pre><p></p><p>Teraz chyba jest okey @Bartłomiej Dybowski, prawda? 😎</p>",
+										"author": "piecioshka",
+										"date": "2017-05-17T23:15:58Z",
+										"comments": [
+											{
+												"content": "<p>No toć mu podaje i za każdym razem i tak jakaś śmieszna wychodzi :P Wygląda na to, że konwertuje to na UTC. Heh, musi być sposób na chama :D</p>",
+												"author": "Comandeer",
+												"date": "2017-05-18T07:16:24Z",
+												"comments": []
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Twoje podejście do BEM jest bardzo podobne do tego, które ja stosuję. Niemniej jednak, narzekając na to, że w wielu wpisach ludzie się skupiają tylko i wyłącznie na konwencji nazewniczej, zapominasz że wielu ludzi nie umie myśleć abstrakcyjnie (w kategoriach wyższego języka opisu). Stąd takie uproszczone przykłady , które niejako mają wprowadzić ludzi w świat BEMa. Bardzo wiele osób, dopiero po obyciu się z konwencją nazw zaczyna sobie zdawać sprawę z tego,że BEM może być DSL i może pomóc projektować stronę czy aplikację w fazie planowania. Dzięki czemu i designerzy i programiści jak i biznes mają wspólny język, którym mogą operować i wspólnie osiągać swoje wymagania.</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-05-13T06:40:19Z",
+				"comments": [
+					{
+						"content": "<p>Ale skoro wszyscy opiszą BEM wyłącznie jako konwencję, to nikt nie pomyśli, że to DSL… ;)</p>",
+						"author": "Comandeer",
+						"date": "2017-05-13T15:26:50Z",
+						"comments": [
+							{
+								"content": "<p>I jak byś teraz tym wszystkim napisał/powiedział że to jest DSL to dopiero by zrobili oczy ze zdziwienia. Większość ludzi potrzebuje zrozumieć proste podejście do sprawy nazywania elementów w aplikacji czy na stronie. DSL może być zbyt skomplikowanym zagadnieniem.</p>",
+								"author": "piotr_nalepa",
+								"date": "2017-05-13T18:13:28Z",
+								"comments": [
+									{
+										"content": "<p>Nie neguję, że łatwiej jest wprowadzić BEM jako konwencję nazewniczą. Niemniej nie podoba mi się fakt, że na tym się poprzestaje, bo to tak jakby o \"Panu Tadeuszu\" poprzestać na stwierdzeniu, że to epopeja narodowa. Można, ale traci się 95% sensu.</p>",
+										"author": "Comandeer",
+										"date": "2017-05-13T18:36:14Z",
+										"comments": [
+											{
+												"content": "<p>Zgadzam się. Spodobało mi się że opisałeś to zagadnienie w ten sposób.</p>",
+												"author": "piotr_nalepa",
+												"date": "2017-05-13T19:22:11Z",
+												"comments": []
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Dlatego podoba mi się, gdy rozgranicza się pojęcia metodologii i metodyki. IMHO metodologia BEM to ta warstwa abstrakcji - metodyka to tylko konwencje nazewnicze.</p>",
+				"author": "tomekralski",
+				"date": "2017-05-14T11:17:09Z",
+				"comments": []
+			},
+			{
+				"content": "<p>rozpaczliwe jest to,  że programiści web muszą przejść strasznie długą drogę,  by dojść do podstaw programowania obiektowego, kompozycji,  reużywalności,  separacji odpowiedzialności.  tak jakby praca z html i dom wkładała im od początku w głowy antypaterny, programowanie spagetti,   masę amorficzną z poprzyczepianymi na lewo i prawo callbackami, danymi w dom-ie i innymi kwiatkami. I nagle odkrywają cudowne lekarstwo BEM,  zapewne w podobnym momencie,  co wycieki pamięci. koszty utrzymania projektu i inne nieuchronne konsekwencje braku podstaw wiedzy o wzorcach projektowych.</p><p>i żeby nie było,  że się mądrzę, sam tam byłem i to frycowe zapłaciłem... </p>",
+				"author": "adamkucharczyk",
+				"date": "2017-06-08T16:16:46Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Nie powiem, nawet jak w projekcie (rails 5.1, webpack, vue, ...) miałem strukturę w której BEM jako konwencja nazw zwyczajnie robił robotę i \"stykał\", to takie spojrzenie jest naprawdę dobre / interesujące ^^ Mam też pomysł opracowania własnego podejścia, które czerpie <a href=\"http://m.in\" rel=\"nofollow noopener\" title=\"m.in\">m.in</a>. z BEMa, tylko jakoś tak BEM mi na razie jakby wystarcza :-) No ale \"czellendżujemy\" dalej i zobaczmy co będzie :-D</p><p>Podziwiam natomiast inną kwestię - że znalazłeś czas na napisanie książki :-) Rewelka!</p><p>\"JavaScript. Programowanie zaawansowane\" i nie ma lipy ^^</p>",
+				"author": "directcode",
+				"date": "2017-09-05T13:25:26Z",
+				"comments": [
+					{
+						"content": "<p>Kiedyś to się miało czas, to i książki się pisało… :D</p>",
+						"author": "Comandeer",
+						"date": "2017-09-05T13:26:33Z",
+						"comments": [
+							{
+								"content": "<p>No jest ten ból xD</p>",
+								"author": "directcode",
+								"date": "2017-09-05T13:30:06Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/reduce-i-formatowanie-tekstu.html": {
+		"comments": [
+			{
+				"content": "<p>Fajny opis zastosowania Array.prototype.reduce inny niż \"typowe\" sumowanie liczb :)<br>Tak się tylko zastanawiam co myślisz o \"przekształcaniu\" NodeList w Array z użyciem:<br></p><pre>var filters = Array.from( container.querySelectorAll( '.filters__value' ) );<br></pre><p><br>kontra wersja z użyciem:<br></p><pre>var filters = [...container.querySelectorAll( '.filters__value' )];<br></pre><p><br>Pozdrawiam,<br>Tomek</p>",
+				"author": "tomasz_sochacki",
+				"date": "2017-05-21T19:33:00Z",
+				"comments": [
+					{
+						"content": "<p>Wersja z operatorem spread jest bardziej \"sexi\" i stosuję ją często. Niemniej Array.from ma jedną (dość wątpliwą w dzisiejszych czasach) przewagę: da się łatwo spolyfillować. Wszak to tylko funkcja. W przypadku nowej składni polyfilla już tak łatwo napisać się nie da.</p><p>No i wydaje mi się, że Array.from jest bardziej zrozumiałe.</p>",
+						"author": "Comandeer",
+						"date": "2017-05-21T19:35:46Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Zadanie domowe - trzeba ładnie rozdzielić łańcuszek, który zwraca callback w replace, aby dostać się do zagnieżdżonych pól interowanego obiektu. Świetnie się tutaj sprawdzi tytułowy reduce<br><a href=\"https://codepen.io/Argeento/pen/rmQQmx?editors=0012\" rel=\"nofollow noopener\" title=\"https://codepen.io/Argeento/pen/rmQQmx?editors=0012\">https://codepen.io/Argeento...</a></p>",
+				"author": "argeento",
+				"date": "2017-05-21T20:44:01Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Ciekawy wpis. Przypomniał mi inny sposób używania reduce. W swoim rozwiązaniu użyłem reduce do utworzenia czegoś na wzór nazwy klasy z danej przestrzeni nazw, z której mogę tworzyć nowe obiekty.</p><p>BTW. Nie jestem przyzwyczajony do Twojego formatowania kodu. Jak dla mnie za dużo łamania linii :)</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-05-21T21:25:55Z",
+				"comments": [
+					{
+						"content": "<p>&gt; W swoim rozwiązaniu użyłem reduce do utworzenia czegoś na wzór nazwy klasy z danej przestrzeni nazw, z której mogę tworzyć nowe obiekty.</p><p>Pewnie coś, jak @argeento:disqus zapodał w swoim komentarzu? ;)</p><p>&gt; Nie jestem przyzwyczajony do Twojego formatowania kodu. Jak dla mnie za dużo łamania linii :)</p><p>Skoro wiem, że nie piszę najlepszego kodu JS w Polsce, to przynajmniej czymś się musi wyróżniać!</p>",
+						"author": "Comandeer",
+						"date": "2017-05-21T21:32:36Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/prymitywna-implementacja-mitycznej-funkcji-react-createelement.html": {
+		"comments": [
+			{
+				"content": "<p>Można by jeszcze sprawdzać, czy <b>child</b> jest instancją <b>HTMLElement</b> lub <b>Text</b></p>",
+				"author": "argeento",
+				"date": "2017-05-29T00:03:45Z",
+				"comments": [
+					{
+						"content": "<p>A nie lepiej sprawdzić, czy nie jest po prostu instancją Node? ;)</p>",
+						"author": "Comandeer",
+						"date": "2017-05-29T06:19:31Z",
+						"comments": [
+							{
+								"content": "<p>Boję się DOM API. Na wszelki wypadek wolałem użyć 'whitelisty'</p>",
+								"author": "argeento",
+								"date": "2017-05-29T10:41:30Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/koniec.html": {
+		"comments": [
+			{
+				"content": "<p>Gratulacje! Udało się nam, było ciężko ale dotrwaliśmy ;)</p>",
+				"author": "supernrm",
+				"date": "2017-06-01T17:24:02Z",
+				"comments": [
+					{
+						"content": "<p>Ano, gratulacje! :D Chociaż jak porównuję swój projekt z innymi… ;)</p>",
+						"author": "Comandeer",
+						"date": "2017-06-01T17:25:49Z",
+						"comments": [
+							{
+								"content": "<p>No niestety ja też projektu nie ukończyłem ale będę go na bank kończył bo jest dla mnie podstawą do kursu o vue dla początkujących. Szkoda, że na czas nie mogłem go pokazać ;(</p>",
+								"author": "supernrm",
+								"date": "2017-06-01T17:37:35Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>\"Rzeknę prosto z mostu owiniętego w bawełnę\" &lt;3 Do swojego idiolektu włączam od dziś. Piękne! ;)</p>",
+				"author": "dev_in_spe",
+				"date": "2017-07-04T16:14:51Z",
+				"comments": []
+			}
+		]
+	},
+	"/to-tylko-niepelnosprawni.html": {
+		"comments": [
+			{
+				"content": "<p>Nie tak dawno mialem przyjemność oglądać prezentację Adriana Roselliego na żywo. Moim zdaniem takiego podejścia do dostępności brakuje i przyznam szczerze, że pierwszy raz widziałem (może niewiele widziałem) jak ktoś z dostępności zrobił atrakcyjny temat.</p><p>Zainteresowanym zostawiam link:<br><a href=\"http://wordpress.tv/2017/06/06/adrian-roselli-selfish-accessibility-2/\" rel=\"nofollow noopener\" title=\"http://wordpress.tv/2017/06/06/adrian-roselli-selfish-accessibility-2/\">http://wordpress.tv/2017/06...</a></p>",
+				"author": "disqus_ZYuR8gdLn0",
+				"date": "2017-06-09T23:17:37Z",
+				"comments": []
+			},
+			{
+				"content": "<p>jako osoba niepełnosprawna (jednoręki programista :D) jestem pod wrażeniem tego artykułu, bo rzadko kto ten temat podnosi, zazwyczaj faktycznie- stronę dostosowaną do osób niepełnosprawnych traktuje się jak coś niezwykłego, a dorzucenie zwykłego triggera do przełączania kontrastu kolorów traktuje się jak feature rodem z NASA. <br>Nie tylko w naszym realnym świecie, ale także w świecie web developingu jest pewna \"znieczulica\"- niepełnosprawność niby jest, ale mało osób ją nie zauważa i stara się pomóc- większość udaje, że pewne rzeczy ich po prostu omijają i ich problem nie dotyczy. Coś w stylu wandalizmu na ulicy- widzisz, że ktoś rozwala śmietnik, ale udajesz że nie widzisz.</p>",
+				"author": "kamil_rogala",
+				"date": "2017-06-10T10:34:45Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Interesujący post, bo zmusza do zastanowienia się nad tematem, który niejednej osobie nigdy nie przyszedłby do głowy. Realia są jednak takie, że umiejętność tworzenia dostępnych aplikacji w wielu przypadkach nie jest w ogóle potrzebna. Autor wydaje się postrzegać zagadnienie tak, jakby to od wykonawcy aplikacji zależał zakres jej funkcjonalności. Prawda jest taka, że jeśli z biznesowego punktu widzenia nie opłaca się tworzyć rozwiązań dostosowanych do potrzeb osób niepełnosprawnych, to świadomość i empatia developera nic tu nie zmieni, bo klient za takie funkcjonalności nie zapłaci.<br>Być może temat stanie się istotny, gdy obecne pokolenie (rozumiane jako grupa ludzi, która nie zaznała życia bez Internetu) zacznie się starzeć?</p>",
+				"author": "disqus_H3MW430lv6",
+				"date": "2017-06-10T20:00:51Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Zawsze mnie zastanawiało, w jaki sposób niewidomy programista mógłby dalej pozostać programistą? Poznałem kilka osób, które dalej zostają w IT mimo problemów ze wzrokiem, ale we wszystkich rozmowach to wygląda jak przypadek, że dalej pracują i dobra wola ich pracodawcy, że dał im inne stanowisko.</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-06-11T16:14:42Z",
+				"comments": [
+					{
+						"content": "<p>Może zainteresuje Cię postać Léonie Watson, która jest członkiem The Paciello Group i współtworzy HTML5 i SVG, a jest niewidoma od lat?</p><p>Inny przykład: Marco Zehe, specjalista od dostępności w Mozilli.</p>",
+						"author": "Comandeer",
+						"date": "2017-06-11T16:33:33Z",
+						"comments": [
+							{
+								"content": "<p>Leonie miałem okazję poznać na Front-Trends.</p>",
+								"author": "piotr_nalepa",
+								"date": "2017-06-13T07:42:27Z",
+								"comments": []
+							}
+						]
+					},
+					{
+						"content": "<p>Istnieją czytniki ekranowe, pisać na klawiaturze można bezwzrokowo (istnieją także klawiatury z alfabetem Braille'a, ale są bardzo drogie). Nomen omen, nie widzę problemu.</p>",
+						"author": "paulinafi",
+						"date": "2018-06-14T11:24:24Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/o-naglowkach-slow-kilka.html": {
+		"comments": [
+			{
+				"content": "<p>Bardzo ciekawy wpis, dzięki!</p>",
+				"author": "wopolow",
+				"date": "2017-07-04T14:55:23Z",
+				"comments": []
+			},
+			{
+				"content": "<p>dobrze wyjaśnione!</p>",
+				"author": "bartomiejdybowski",
+				"date": "2017-07-04T16:18:37Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Bardzo fajnie, że poruszyłeś ten temat. Sam kiedyś byłem zwolennikiem wielu H1 na stronie w zależności od kontekstu, czyli sekcji czy artykułu. Niestety, twórcy przeglądarek uznali ten pomysł za niedopracowany, więc musiałem zmienić swoje podejście i stosuję już h1 i h2 jako tytuł strony/tytuł tekstu zamiennie.</p>",
+				"author": "piotr_nalepa",
+				"date": "2017-07-04T20:29:20Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Świetny wpis !</p>",
+				"author": "elem84",
+				"date": "2017-07-05T11:41:39Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Świetny art! Nareszcie ktoś oficjalnie rozprawił się z algorytmem outline na polskiej scenie.</p>",
+				"author": "disqus_ZndPL2EJrx",
+				"date": "2017-08-08T09:06:43Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Autor nie ma za grosz pojęcia o optymalizacji pod kątem SEO... algorytmy w znaczący sposób analizują nagłówki Hx ponieważ to właśnie one w dużej części określają sens strony.</p><p>Polecam zainteresować się tematem zamiast wciskać kit.</p>",
+				"author": "disqus_qfmPzwOw2c",
+				"date": "2018-05-04T07:09:38Z",
+				"comments": [
+					{
+						"content": "<p>A ja polecam czytać ze zrozumieniem. Fakt, że nagłówki w jakikolwiek sposób wpływają na SEO jest skutkiem ubocznym ich roli. Tylko tyle i aż tyle. Optymalizowanie nagłówków pod wyszukiwarkę jest głupotą.</p>",
+						"author": "Comandeer",
+						"date": "2018-05-04T07:31:02Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Hej Comandeer. Tworzę swoje pierwsze portfolio. Uczę się html5 z dokumentacji oraz z Twoich stron, artykułów jak ten wyżej i Twoich postów na facebooku. Napotkałem na jeden problem i chciałbym się Ciebie zapytać o Twoją opinię. Nie jestem w stanie podać linku do kodu, ale jest to Twój kod z codepena, na facebooku kiedyś go komuś wysłałeś by pokazać jak powinno wyglądać dostępne menu i przycisk, wyglądało to tak: <a href=\"https://jsfiddle.net/f54p3mou/\" rel=\"nofollow noopener\" title=\"https://jsfiddle.net/f54p3mou/\">jsfiddle</a> To jest tylko html, był do tego jeszcze css i js. Ja stworzyłem takie menu według Twojego kodu i mam problem z hierarchią nagłówków i dostępnością. Na stronie główniej nie mam tego problemu bo nagłówek <b>h1</b> jest na samej górze, ale np. na innej stronie w moim przypadku jest to strona 404, dokładnie tutaj <a href=\"https://dawidmmm.github.io/checkShipping/404.html\" rel=\"nofollow noopener\" title=\"https://dawidmmm.github.io/checkShipping/404.html\">moja strona 404.html</a> gdzie nagłówek h1 jest poniżej nagłówka<b> h2 menu</b> i jak sprawdzam outline tej strony tutaj <a href=\"https://validator.w3.org/nu/\" rel=\"nofollow noopener\" title=\"https://validator.w3.org/nu/\">validator.w3.org</a> to pokazuje, że nagłówek <b>h1 is missing</b>, ale on tam jest tylko niżej. Szukałem na innych stronach by sprawdzić jak to robią inni i na Twoich stronach, nie masz w żadnym menu nagłówka  <b>h2 Menu</b> dlatego outline jest w porządku. Sprawdzałem strony, które uważają się za \"dostępne\" i np. tacy <a href=\"http://widzialni.org/\" rel=\"nofollow noopener\" title=\"http://widzialni.org/\">widzialni.org</a> na głównej stronie outline jest w porządku, ale jeśli wczytamy jakiś artykuł to by obejść ten problem o którym wspomniałem wyżej, stosują na samej górze nagłówek <b>h1</b>, który jest praktycznie taki sam jak tytuł artykułu, który znajduje się w nagłówku <b>h2</b> i wygląda to mniej więcej tak:</p><p>h1 Ministerstwo Cyfryzacji opublikowało wzór deklaracji dostępności - Fundacja Widzialni<br>....<br>...<br>h2 Ministerstwo Cyfryzacji opublikowało wzór deklaracji dostępności</p><p>Uważam, że jest to średnie rozwiązanie. Kolejna strona na którą patrzyłem to <a href=\"https://webaim.org/\" rel=\"nofollow noopener\" title=\"https://webaim.org/\">webaim.org</a> i u nich czy strona główna czy artykuł to jest tak samo jak u mnie na stronie 404.html, czyli pierwsze jest ten brakujący nagłówek, czyli <b>h1 is missing</b>, potem <b>h2 Menu</b> i dopiero później jest nagłówek <b>h1</b>. Chciałem się Ciebie zapytać, które rozwiązanie jest według Ciebie lepsze? Może od momentu kiedy napisałeś ten kod, zmieniły się już wytyczne co do nagłówka <b>h2</b> w menu i umieszczanie go nie jest już dobrym rozwiązaniem. Mam też Twój kod, który zamieściłeś w komentarzu pod filmem <b>Jak stworzyć hamburger menu i sidebar</b> od Hello Roman <a href=\"https://codepen.io/Comandeer/pen/aboLmaK\" rel=\"nofollow noopener\" title=\"https://codepen.io/Comandeer/pen/aboLmaK\">tutaj</a> i tam nie zamieściłeś już nagłówka h2.</p>",
+				"author": "davvvaa",
+				"date": "2019-10-17T14:50:00Z",
+				"comments": [
+					{
+						"content": "<p>Prawdę mówiąc nie widzę większego problemu z tym, że nagłówek w menu jest wyżej od głównego nagłówka strony.  Stanowi on przede wszystkim dodatkowy sposób na nawigację do menu (nawigacja do nav, nawigacja po nagłówkach, czasami też nawigacja przez skip linki itd.) oraz identyfikuje, z jakim dokładnie elementem nawigacyjnym mamy do czynienia.</p><p>Niemniej można się zastanawiać właśnie nad tym, czy taki nagłówek nie jest nadmiarowy i nie da się go zastąpić właśnie przez samo nav i skip linki. Zwłaszcza, że nazwę dla menu można dodać przy pomocy np. [aria-label], a i przydaje się głównie wtedy, gdy na stronie mamy kilka elementów nav i trzeba je jakoś odróżniać. Stąd w nowszych materiałach nie umieszczałem nagłówka w menu. Wstawienie tam nagłówka nie jest jednak błędem i być może wkrótce zmieni się specyfikacja HTML, usuwając wymóg umieszczania h1 na samej górze i zamieniając go na wymóg po prostu posiadania h1.</p><p>Co do rozwiązania z dodawaniem dodatkowego h1: jak dla mnie to zły pomysł. Zwłaszcza, że psuje to nawigację przy pomocy nagłówków. Przeskakując do h1, przeskoczymy tak naprawdę na sam początek strony.</p>",
+						"author": "Comandeer",
+						"date": "2019-10-17T23:22:50Z",
+						"comments": [
+							{
+								"content": "<p>Dzięki :)</p>",
+								"author": "davvvaa",
+								"date": "2019-10-29T18:24:01Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Comandeer widzisz mój komentarz jaki tutaj dodałem? Nie ten tylko jeszcze inny. Dasz radę go tutaj przywrócić, bo dwa razy został oznaczony jako spam przez Disqus</p>",
+				"author": "davvvaa",
+				"date": "2019-10-17T15:24:46Z",
+				"comments": [
+					{
+						"content": "<p>Przywrócone.</p>",
+						"author": "Comandeer",
+						"date": "2019-10-17T23:13:42Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/wszechswiaty-rownolegle.html": {
+		"comments": [
+			{
+				"content": "<p>Nigdy się nie bawiłem ramkami w taki sposób. Chyba można trochę uprościć kod zmieniając `getFreshMathMethod` na `getFreshWindowObject`. Dzięki za ciekawy wpis!</p>",
+				"author": "kacperkozak",
+				"date": "2017-08-02T08:28:12Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Dzięki za artykuł. Podasz może rzeczywisty przykład wykorzystania?<br>Rozumiem przedstawione zasady bezpieczeństwa. Jednak zastanawiam się, <br>czy w całej mojej historii developerskiej musiałem tak mocno zabezpieczać się przed nadpisaniem globalnych funkcji.</p><p>Nie wiem czy strony banków nawet powinny tak zabezpieczyć swoją warstwę kliencką.<br>Chciałbym zobaczyć faktyczny przykład jak obejść jakieś zaimplementowane zasady, że np.<br>Math.random musi zawsze zwrócić jakąś pseudo losową wartość bo inaczej to stanie się coś złego.</p><p>Nie wiem czy wchodzimy w zbytnie zabezpieczanie tej warstwy klienckiej - jednak może się mylę.<br>@Comandeer:disqus please powiedz, że się mylę.</p>",
+				"author": "piecioshka",
+				"date": "2017-08-02T10:14:11Z",
+				"comments": [
+					{
+						"content": "<p>W sumie faktycznie jest to bardziej ciekawostka niż realne zabezpieczenie – zwłaszcza, że duża część aplikacji wciąż ma backend, który ostatecznie waliduje wszystkie dane.</p><p>Niemniej chyba sensownym use case'em mogłyby być wszelkiego rodzaju gry przeglądarkowe, w których tego typu nadpisywanie byłoby równoznaczne z cheatowaniem. Z drugiej strony: to może stanowić fajne zabezpieczenie przed źle napisanymi frameworkami, które zmieniają wbudowane obiekty (na ciebie patrzę, MooTools…). Tylko w tym wypadku może to być armata na muchę.</p>",
+						"author": "Comandeer",
+						"date": "2017-08-02T10:22:35Z",
+						"comments": []
+					},
+					{
+						"content": "<p>Dodatkowe zabezpieczenie przy obfuskacji kodu - tworząc nowy realm można pozbyć się wcześniej nałożonych proxy.</p>",
+						"author": "argeento",
+						"date": "2017-08-05T00:24:28Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Heh, o możliwości zabawy z metodami natywnymi i modyfikacji zarówno Math jak i np. Array.prototype wie chyba każdy programista JS ale szczerze mówiąc nie wpadłbym na to, że ta możliwość tak obniża poziom bezpieczeństwa :)</p><p>Można by dyskutować nad faktycznym ryzykiem zaistnienia takiej sytuacji ale tak czy inaczej fajnie, że poruszyłeś ten temat. Warto zdawać sobie sprawę z zagrożeń i samodzielnie podjąć decyzję, czy w danym wypadku to faktycznie istotne czy nie.</p><p>Ale wg mnie to tylko po raz kolejny pokazuje jak ważna jest dobra serwerowa walidacja danych pochodzących od klienta i nie mówię tu tylko o formularzach, ale o wszystkich danych (które jak pokazujesz, mogą zostać zmodyfikowane poprzez nadpisanie metody natywnej). A w tym konkretnym przykładzie to w zasadzie pytanie, czy nie lepiej po prostu byłoby wrzucenie algorytmu losującego na serwer i po prostu zwrócenie do klienta gotowych liczb.</p>",
+				"author": "tomasz_sochacki",
+				"date": "2017-08-02T19:12:54Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Interesting ... ^^</p><p>A przy okazji, jako że nie mam gdzie, to spytam tutaj: @Comandeer:disqus jakie jest Twoje zdanie na temat SPA / single page apps? Jesteś zwolennikiem, a może hejterem SPA? :-)</p>",
+				"author": "directcode",
+				"date": "2017-09-05T15:10:24Z",
+				"comments": [
+					{
+						"content": "<p>Raczej nie przepadam za SPA, bo często są bardzo źle zrobione. Niemniej jeśli jakieś SPA ma bardzo ładne server-side rendering i wie, że zmiana stanu/widoku = zmiana URL-a, to większość rzeczy działa dobrze i sprawnie. Pytanie tylko brzmi, czy to wciąż jest \"czyste\" SPA?</p>",
+						"author": "Comandeer",
+						"date": "2017-09-05T15:13:32Z",
+						"comments": [
+							{
+								"content": "<p>Niestety, dla fanów SPA .. ja również nie przepadam za SPA generalnie (a już na pewno nie za boomem typu \"kurna, przerabiamy wszystko na SPA, bo w sobote oglądałem zaj....e video tutoriale...\" :-))</p><p>Dinozaury i konserwy może już tak mają :-P Sa use case'y dla SPA nie ma co, nie zawsze jednak musi być to najlepszy way dla projektu. Czyste spa - nie wiem, ale właśnie \"bardzo źle zrobione\" spa to chyba ogólna bolączka póki co :-P Zrobione dla sztuki, żeby móc powiedzieć, że Hell yeah, mamy SPA (kij że kod czołg rozjechał...)</p>",
+								"author": "directcode",
+								"date": "2017-09-05T15:18:52Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/zmutowany-dom.html": {
+		"comments": [
+			{
+				"content": "<p>Jak zawsze kawał dobrego 'mięcha' !</p>",
+				"author": "daredzik",
+				"date": "2017-10-02T18:57:57Z",
+				"comments": []
+			}
+		]
+	},
+	"/deklaratywny-shadow-dom.html": {
+		"comments": [
+			{
+				"content": "<p>To poproszę jeszcze o polyfill do Shadow DOM, żebym mógł użyć polyfilla do shadow-root ( ͡° ͜ʖ ͡°)</p>",
+				"author": "soanvig",
+				"date": "2017-10-31T23:10:40Z",
+				"comments": [
+					{
+						"content": "<p>Na dobrą sprawę taki polyfill nie istnieje. Jest jeden, będący częścią webcomponents.js (<a href=\"https://github.com/webcomponents/webcomponentsjs\" rel=\"nofollow noopener\" title=\"https://github.com/webcomponents/webcomponentsjs\">https://github.com/webcompo...</a> ), ale nie grzeszy wydajnością.</p><p>Tego typu mechanizmy bardzo trudno polyfillować, zważając na fakt, że zmieniają podstawowe mechanizmy działania stron WWW.</p>",
+						"author": "Comandeer",
+						"date": "2017-10-31T23:14:56Z",
+						"comments": [
+							{
+								"content": "<p>Myślę, że poczeka się na Liska, aż SD wyjdzie z flag i można się bawić..</p><p>Swoją drogą tabela: <a href=\"https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM#Browser_compatibility\" rel=\"nofollow noopener\" title=\"https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM#Browser_compatibility\">https://developer.mozilla.o...</a><br>jest dziwna, ponieważ Edge niby wspiera Shadow DOM, ale nie wspiera trzonu tej funkcjonalności, czyli Shadow Root (<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot#Browser_compatibility)\" rel=\"nofollow noopener\" title=\"https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot#Browser_compatibility)\">https://developer.mozilla.o...</a>. Caniuse też mówi, że Edge nie wspiera (<a href=\"http://caniuse.com/#search=shadow%20dom)\" rel=\"nofollow noopener\" title=\"http://caniuse.com/#search=shadow%20dom)\">http://caniuse.com/#search=...</a>.</p><p>Trzeba uważać.</p>",
+								"author": "soanvig",
+								"date": "2017-10-31T23:28:26Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/interfejsy-w-js.html": {
+		"comments": [
+			{
+				"content": "<p>Świetny pomysł na tworzenie interfejsów!<br>Ciekawe, czy można coś jeszcze poradzić na składnię, tak, aby była jeszcze bardziej podobna do klasycznych interfejsów.</p>",
+				"author": "piecioshka",
+				"date": "2019-11-03T23:59:53Z",
+				"comments": [
+					{
+						"content": "<p>Myślałem swego czasu o wykorzystaniu tutaj Sweet.js, ale projekt umarł, a ja jakoś straciłem zainteresowanie interfejsami ;) Niemniej to nie byłoby już rozwiązanie w czystym JS-ie.</p>",
+						"author": "Comandeer",
+						"date": "2019-11-04T22:32:46Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/amp-a-na-co-to-komu.html": {
+		"comments": [
+			{
+				"content": "<p>Podzielam Twoje zdanie odnośnie AMP. Nie uważam tego za przełom, tylko za taki \"chłyt marketingowy\" Google'a. AMP używa Custom Elementów ze specki Web Componentów. Już samo to, strasznie ogranicza funkcjonalność rozwiązania (nie jestem fanem Custom Elementów - dla mnie to inna forma diva z klasą CSS).<br>Google jest monopolistą więc robi co chce ze swoimi zabawkami. Bo może.</p>",
+				"author": "piotr_nalepa",
+				"date": "2018-03-01T08:01:50Z",
+				"comments": []
+			}
+		]
+	},
+	"/tdz.html": {
+		"comments": [
+			{
+				"content": "<p>Wydaje mi się, że nie do końca trzeba to traktować jako błąd, może jedynie jako nieco większe uogolnienie. Celem książki jest stworzenie konretnego narzędzia, a nie  omawianie wszystkich podstaw JS bo wtedy musiałaby być 5 razy grubsza :) a poza tym to takie błędne lub mylące informacje są na pewno mniej problematyczne dla początkujących niż błędy w listingach co w wielu książkach się zdarza. A tak na marginesie to kiedy się wezmiesz za książkę o dostępności www? Jak Ty tego nie zrobisz to chyba już nikt nie zrobi :)</p>",
+				"author": "disqus_Sle3kiCPGK",
+				"date": "2018-03-02T11:36:59Z",
+				"comments": [
+					{
+						"content": "<p>Mimo wszystko osobiście uważam to za zbyt duże uogólnienie, a tym samym – błąd. Zwłaszcza, że od samego początku nie do końca chodziło mi o to, co ostatecznie pojawiło się w tekście (chciałem wyjaśnić TDZ bez niepotrzebnego opisywania całego mechanizmu, co wyszło mi po prostu fatalnie).</p><p>Co do książki o dostępności WWW: cóż, nie mówię nie :P</p>",
+						"author": "Comandeer",
+						"date": "2018-03-02T11:40:12Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Znający wartość całości opracowania uznają to niedoprecyzowanie za drobiazg.<br>Dziękuję przy okazji za inspirującą, godną polecenia \"pozycję\"!</p>",
+				"author": "piotr_m_dry",
+				"date": "2018-08-16T14:20:16Z",
+				"comments": []
+			}
+		]
+	},
+	"/headings-first-principle.html": {
+		"comments": [
+			{
+				"content": "<p>\"implicytny\". \"eksplicytny\" heh, nie tylko dobra treść merytorycznie ale i przy okazji uczysz j. polskiego :) I to nie żaden sarkazm itp, broń Boże, wg mnie bardzo dobra \"wartość dodana\" do Twoich materiałów. Sporo nacisku kładziesz na dostępność stron, co jest oczywiście jak najbardziej konieczne, ale mam pytanko tak bardziej praktyczne, masz może jakieś statystyki oglądalności witryn z czytników? Chodzi mi o strony z większą oglądalnością, rzędu powiedzmy 100k+, gdzie można już faktycznie sensownie analizować strukturę ruchu.</p>",
+				"author": "disqus_Sle3kiCPGK",
+				"date": "2018-05-01T19:13:23Z",
+				"comments": [
+					{
+						"content": "<p>Prawdę mówiąc nigdy nie natknąłem się na tego typu statystyki. Niemniej WebAIM robi regularne badania wśród użytkowników czytników ekranowych i są tam ciekawe informacje → <a href=\"https://webaim.org/projects/screenreadersurvey7/#demographics\" rel=\"nofollow noopener\" title=\"https://webaim.org/projects/screenreadersurvey7/#demographics\">https://webaim.org/projects...</a></p><p>Raczej dość trudno wykryć czytnik ekranowy z poziomu strony, stąd być może brak takich statystyk.</p><p>Inna rzecz, że nigdy tego nie analizowałem pod kątem ruchu. Osobiście wyznaję zasadę samolubnej dostępności: im strona dostępniejsza, tym większa szansa, że sam w przyszłości nie będę miał problemów z jej obsługą. A przy moich licznych chorobach to dość silna motywacja ;)</p>",
+						"author": "Comandeer",
+						"date": "2018-05-01T19:38:28Z",
+						"comments": [
+							{
+								"content": "<p>Dzięki za link. Ja generalnie jestem raczej przeciwnikiem prób wykrywania konkretnych urządzeń bo przy dzisiejszym tempie rozwoju technologii takie próby mogą być ryzykowne... Pytałem tak bardziej z ciekawości bo zaczynam powoli prace nad jedną apką, która ma być dostępna jako desktopówka i online i planuję wgłębić się w temat dostępności, bo przyznam, że do tej pory trochę to traktowałem pobocznie :)</p>",
+								"author": "disqus_Sle3kiCPGK",
+								"date": "2018-05-01T20:22:51Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Jeśli chodzi o moje doświadczenia z układem semantycznym strony, to zawsze mam dylemat odnośnie modułów w sidebarach. To znaczy, zastanawiam się, jaki powinien być właściwy, semantyczny priorytet tytułu modułu. Koniec końców, najczęściej forsuję `h3` jako tag dla tytułów modułów.</p>",
+				"author": "piotr_nalepa",
+				"date": "2018-05-02T07:02:48Z",
+				"comments": [
+					{
+						"content": "<p>Tak po prawdzie to powinno zależeć od hierarchii treści na stronie. Jeśli przed sidebarem znajduje się sekcja z nagłówkiem `h2`, to wstawienie `h3` do widgetów sprawi, że staną się one częścią tej sekcji (podsekcjami). Osobiście zrównałbym je ważnością z tą sekcją, co pokazywałoby, że to osobne twory.</p>",
+						"author": "Comandeer",
+						"date": "2018-05-02T09:02:08Z",
+						"comments": [
+							{
+								"content": "<p>Sidebar nigdy nie znajduje się w kontenerze który ma nagłówek h2. Jest jakby osobnym tworem.</p>",
+								"author": "piotr_nalepa",
+								"date": "2018-05-02T09:05:59Z",
+								"comments": [
+									{
+										"content": "<p>Tylko że nagłówki są globalne dla całej strony, więc nie jest istotne, w którym kontenerze jest to `h2`. Istotne jest, że jest to ostatni nagłówek przed nagłówkiem w widgecie. Przykład:</p><p></p><pre><code>&lt;main&gt;<br>&lt;h2&gt;Jestem mistrzem!&lt;h2&gt;<br>&lt;p&gt;Lorem ipsum&lt;/p&gt;<br>&lt;/main&gt;<br>&lt;aside&gt;<br>&lt;div class=\"widget\"&gt;<br>&lt;h3&gt;Widget&lt;/h3&gt;<br>&lt;p&gt;Lorem ipsum&lt;/p&gt;<br>&lt;/div&gt;<br>&lt;/aside&gt;</code></pre><p></p><p>W tym wypadku widget stanie się częścią sekcji stworzonej przez nagłówek \"Jestem mistrzem!\". Tego problemu nie będzie, jeśli widget będzie miał nagłówek `h2`:</p><p></p><pre><code>&lt;main&gt;<br>&lt;h2&gt;Jestem mistrzem!&lt;h2&gt;<br>&lt;p&gt;Lorem ipsum&lt;/p&gt;<br>&lt;/main&gt;<br>&lt;aside&gt;<br>&lt;div class=\"widget\"&gt;<br>&lt;h2&gt;Widget&lt;/h2&gt;<br>&lt;p&gt;Lorem ipsum&lt;/p&gt;<br>&lt;/div&gt;<br>&lt;/aside&gt;</code></pre><p></p><p>W tym momencie widget jest oddzielną częścią strony, bo jest na tym samym poziomie, co \"Jestem mistrzem!\".</p>",
+										"author": "Comandeer",
+										"date": "2018-05-02T09:14:00Z",
+										"comments": [
+											{
+												"content": "<p>To mnie tylko uświadamia, że dla sidebara nagłówki niespecjalnie się przydają jeśli są aplikowane jako tytuł modułu. Jak sądzisz, użycie tagu \"strong\" byłoby lepszym rozwiązaniem (semantycznie)?</p>",
+												"author": "piotr_nalepa",
+												"date": "2018-05-02T09:44:13Z",
+												"comments": [
+													{
+														"content": "<p>Mimo wszystko używałbym nagłówków, bo łatwiej do nich nawigować przy pomocy technologii asystującej. Tak nagłówki stosują <a href=\"http://m.in\" rel=\"nofollow noopener\" title=\"m.in\">m.in</a>. Paciello Group (<a href=\"http://validator.w3.org/nu/?showoutline=yes&amp;doc=https%3A%2F%2Fdeveloper.paciellogroup.com%2Fblog%2F2018%2F04%2Feu-directive-on-the-accessibility-of-public-sector-websites-and-mobile-applications%2F#headingoutline\" rel=\"nofollow noopener\" title=\"http://validator.w3.org/nu/?showoutline=yes&amp;doc=https%3A%2F%2Fdeveloper.paciellogroup.com%2Fblog%2F2018%2F04%2Feu-directive-on-the-accessibility-of-public-sector-websites-and-mobile-applications%2F#headingoutline\">http://validator.w3.org/nu/...</a> )</p>",
+														"author": "Comandeer",
+														"date": "2018-05-02T09:51:32Z",
+														"comments": []
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/asynchroniczny-dom.html": {
+		"comments": [
+			{
+				"content": "<p><a href=\"https://en.wikipedia.org/wiki/Thrashing_(computer_science)\" rel=\"nofollow noopener\" title=\"https://en.wikipedia.org/wiki/Thrashing_(computer_science)\">https://en.wikipedia.org/wi...</a></p>",
+				"author": "Kwpolska",
+				"date": "2018-05-27T19:55:44Z",
+				"comments": [
+					{
+						"content": "<p>Dzięki, poprawione.</p><p>Niemniej mimo wszystko zostawię polską wersję z \"zaśmiecaniem układu strony\", gdyż w końcu to się dzieje – zaśmieca się proces tworzenia układu niepotrzebnymi operacjami.</p>",
+						"author": "Comandeer",
+						"date": "2018-05-27T20:03:04Z",
+						"comments": [
+							{
+								"content": "<p>Na polski tłumaczy się jako szamotanie: <a href=\"https://zapytaj.onet.pl/encyklopedia/90472,,,,szamotanie,haslo.html\" rel=\"nofollow noopener\" title=\"https://zapytaj.onet.pl/encyklopedia/90472,,,,szamotanie,haslo.html\">https://zapytaj.onet.pl/enc...</a></p>",
+								"author": "Kwpolska",
+								"date": "2018-05-27T20:04:35Z",
+								"comments": [
+									{
+										"content": "<p>Tym bardziej zostawię \"zaśmiecanie\" :D Szamotanie brzmi po prostu… głupio.</p>",
+										"author": "Comandeer",
+										"date": "2018-05-27T20:05:01Z",
+										"comments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Czyli poprawa natywnego mechanizmu DOMu oznaczala by, ze po implementacji tych przyspieszaczy biblioteki ktorych glownym atutem jest VIrtual DOM (np. React) wlasciwie nie mialaby juz sensu bytu?</p>",
+				"author": "woutist",
+				"date": "2018-12-08T06:49:33Z",
+				"comments": [
+					{
+						"content": "<p>Nie do końca. React pozwala także renderować strony na serwerze, na co zwykły DOM nie pozwala.</p>",
+						"author": "Comandeer",
+						"date": "2018-12-08T10:18:44Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/uniwersalny-getter.html": {
+		"comments": [
+			{
+				"content": "<p>Hehe dobre... przyznam, że moją współpracę z PHP zakończyłem na wersji 5.6 już jakiś czas temu (jakoś nigdy nie mogliśmy się z PHP polubić...) ale nie miałem potrzeby używania __get, choć pamiętam, że tych magików było chyba całkiem sporo (__sleep, __wakeup, __clone jeśli dobrze pamiętam i nie mylę teraz z czymś...).</p><p>Opisałeś całkiem ciekawy problem, choć nie wiem czy w kodzie produkcyjnym byłoby to dobre... ale może to trochę już przyzwyczajenie to TypeScript i interfejsów, które załatwiają problemy nieistniejących metod i właściwości :)<br>Nie mniej jednak osobiście lubię takie zabawy z JS, których Ty robisz całkiem sporo na swoim blogu :)</p><p>A tak na marginesie.... to co naczelny JS'owiec polskiego internetu robi w PHP ?! (zdrajca świata front-endu :p)</p>",
+				"author": "tomasz_sochacki",
+				"date": "2018-07-31T19:14:35Z",
+				"comments": [
+					{
+						"content": "<p>&gt; nie wiem czy w kodzie produkcyjnym byłoby to dobre</p><p>A czy ja gdzieś napisałem, że to jest dobre…? ;)</p><p>&gt; co naczelny JS'owiec polskiego internetu robi w PHP ?!</p><p>To był język, w którym zaczynałem, zanim nie przesiadłem się na stałe do JS-a.</p>",
+						"author": "Comandeer",
+						"date": "2018-07-31T19:36:15Z",
+						"comments": [
+							{
+								"content": "<pre>A czy ja gdzieś napisałem, że to jest dobre…? ;)</pre><p><br>Gotowiec na zadanie rekturacyjne :p</p><p></p><pre>To był język, w którym zaczynałem, zanim nie przesiadłem się na stałe do JS-a.</pre><p><br>heh, w sumie podobnie jak u mnie... no nie licząc czasów Turbo Pascala i świetności C++ Builder :) ale wtedy webdeweloperka była leciutko inna...</p>",
+								"author": "tomasz_sochacki",
+								"date": "2018-07-31T19:41:06Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Reflect chyba jest także bardziej użyteczny, jeśli ktoś doda obiekt `{foo: undefined}` żeby sprawdzić czy obiekt posiada pole to trzeba by użyć `hasOwnProperty`, ale wtedy nie będzie obsługiwany `prototype`. A już `<a href=\"http://Foo.prototype.foo\" rel=\"nofollow noopener\" title=\"Foo.prototype.foo\">Foo.prototype.foo</a> = undefined` nie ma jak sprawdzić bez `Reflect.has`.</p>",
+				"author": "jcubic",
+				"date": "2018-08-18T07:17:24Z",
+				"comments": [
+					{
+						"content": "<p>A cóż z nieczęsto spotykanym `if (... in ...)`? Osobiście używam tej konstrukcji ponieważ jest po prostu zrozumiała i krótka w zapisie - niekoniecznie znaczy to, że jest najlepszą - coś_z_nią_nie_tak/po_prosstu_inna_\"tradycyjna\"_metoda/rzecz_faktycznie_mało_znana?</p><p>(Po prostu wątek który rozpocząłeś mi jakoś pasuje do tego pytania, wiec tutaj zapytuję ;x)</p>",
+						"author": "Evolveye",
+						"date": "2018-08-22T17:52:51Z",
+						"comments": [
+							{
+								"content": "<p>Zawsze myślałem że Reflect to przerost formy nad treścią ten wpis zmienił moje zdanie gdy sprawdziłem jak działa alternatywa z hasOwnProperty i sprawdzaniu `typeof target[name]` a nie pomyślałem o `name in target`. Dzięki, sprawiłeś że znowu myślę że Reflect nie ma sensu, bo można normalne w ES5 sprawdzić czy element ma właściwość.</p>",
+								"author": "jcubic",
+								"date": "2018-08-22T18:15:04Z",
+								"comments": [
+									{
+										"content": "<p>Nie przesadzajmy, że nie ma sensu.</p><p>Po pierwsze: uważam, że jest o wiele bardziej elegancki, co czyni kod czytelniejszym.</p><p>Po drugie: `Reflect` zaczyna robić sensy, gdy połączymy go w parę z `Proxy`. Wystarczy porównać metody refleksji z pułapkami proxy: <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct\" rel=\"nofollow noopener\" title=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct\">https://developer.mozilla.o...</a> vs <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct\" rel=\"nofollow noopener\" title=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct\">https://developer.mozilla.o...</a></p><p>Zgadza się zarówno nazwa metody, jak i przekazywane parametry. Wniosek: `Reflect` dostarcza domyślne zachowanie pułapek, które można zaimplementować w `Proxy`. Mówiąc inaczej: w końcu JS udostępnia nam domyślne zachowanie obiektów jako zestaw podręcznych funkcji. Samo w sobie może nie ma to jakiejś niesamowitej wartości, ale już przy metaprogramowaniu z wykorzystaniem `Proxy` – jak najbardziej.</p>",
+										"author": "Comandeer",
+										"date": "2018-08-23T14:14:09Z",
+										"comments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/kwacze-jak-kaczka.html": {
+		"comments": [
+			{
+				"content": "<p>Dzięki, zastanawiałem o co chodzi z default przy okazji pisania wpisu o Meta Programowaniu</p><p><a href=\"https://jcubic.pl/2017/10/metaprogramowanie-javascript.html#konwersja-typ%C3%B3w\" rel=\"nofollow noopener\" title=\"https://jcubic.pl/2017/10/metaprogramowanie-javascript.html#konwersja-typ%C3%B3w\">https://jcubic.pl/2017/10/m...</a></p>",
+				"author": "jcubic",
+				"date": "2018-09-01T07:18:13Z",
+				"comments": []
+			},
+			{
+				"content": "<p>&gt; \"Natomiast konwersja typu 'default' nie zachodzi w czasie konwersji na typ boolowski i obiekty w JS zawsze zwracają true. A szkoda, bo byłby to dobry materiał na trolling.\"</p><p>Ojoj, to byłaby masakra :) Ale fajnie, że o tym powiedziałeś bo w środku czytania wpisu właśnie się zastanawiałem, czy silnik nam na to pozwoli. Przyjemny wpis jak zwykle, dzięki!</p>",
+				"author": "wopolow",
+				"date": "2018-11-02T22:17:33Z",
+				"comments": []
+			}
+		]
+	},
+	"/niestandardowe-zdarzenia-w-workerach.html": {
+		"comments": [
+			{
+				"content": "<p>WOW. Zarąbisty artykuł. Dziękuje za niego! <br>Jeszcze tak z 2 razy go przeczytam i powinienem w 100% zaczaić. :P</p><p>Pozdrawiam!</p>",
+				"author": "dawidrybacki",
+				"date": "2018-10-01T06:39:22Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Wchodzą tu wiedziałem, że znowu dowiem się czegoś nowego :) Chyba jako jedyny w polskich internetach piszesz w faktycznie zaawansowany sposób o JS. Ale brakuje mi jednego tematu, w sumie chyba jednego z ważniejszych, jak wygląda kwestia testowania tych rozwiązań, bo bez tego raczej nie widzę ich w kodzie produkcyjnym...</p>",
+				"author": "tomasz_sochacki",
+				"date": "2018-10-02T17:18:59Z",
+				"comments": [
+					{
+						"content": "<p>Dzięki!</p><p>Co do testowania, to przyznam szczerze, że nie jest to temat, który spędza mi sen z powiek w przypadku tego typu rozwiązań. Bardziej mnie interesuje, czy moje pomysły w ogóle mają prawo działać ;)</p><p>Niemniej w tym wypadku testowanie nie wydaje się specjalnie trudne. Jeśli założymy, że mamy jakiś build system, który składa naszego workera z pojedynczych modułów, to wówczas możemy sobie te moduły standardowo przetestować jak każdą Node'ową bibliotekę. Dopiero samo publiczne API workera (czyli wywoływanie zdarzeń i sprawdzanie, czy jest zwracana odpowiednia odpowiedź do strony) trzeba testować w przeglądarce. Tutaj na pomoc przyszłaby karma.</p>",
+						"author": "Comandeer",
+						"date": "2018-10-02T19:58:39Z",
+						"comments": [
+							{
+								"content": "<pre>Co do testowania, to przyznam szczerze, że nie jest to temat, <br>który spędza mi sen z powiek w przypadku tego typu rozwiązań. <br>Bardziej mnie interesuje, czy moje pomysły w ogóle mają prawo działać<br></pre><p><br>Muszę to wydrukować i powiesić w biurze, najlepiej tak, aby i testerzy to widzieli :D</p>",
+								"author": "tomasz_sochacki",
+								"date": "2018-10-02T20:51:43Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>fajny artykuł, aby odwrócić kolejność self.on i listener-a wystarczy usunąć drugi addEventListener i wstawić wywołanie self.on przed dispatch<br></p><pre>if ( typeof self[ `on${ eventName }` ] === 'function' ) {<br>    self[ `on${ eventName }` ].call( self, event );<br>}<br>self.dispatchEvent( event );<br></pre>",
+				"author": "jcubic",
+				"date": "2018-10-03T14:20:00Z",
+				"comments": [
+					{
+						"content": "<p>Hmm, przed? Przecież wówczas ten handler odpali się _przed_ wszystkimi listenerami przypiętymi przy pomocy `addEventListener`, nie _po_ wszystkich.</p><p>Niemniej można przenieść go po `dispatchEvent`, zważając na fakt, że tak odpalone zdarzenia są synchroniczne (<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent#Notes\" rel=\"nofollow noopener\" title=\"https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent#Notes\">https://developer.mozilla.o...</a> ).</p>",
+						"author": "Comandeer",
+						"date": "2018-10-04T21:19:35Z",
+						"comments": [
+							{
+								"content": "<p>Ah, faktycznie nie doczytałem myślałe,  że miały się uruchamiać przed listenerami, w takim razie masz race za `dispatchEvent`, ale chodziło mi, że mogą być w tym pierwszym listenerze to wtedy ten komentarz odnoście tego, że nie działa dokładnie tak jak powinno nie będzie potrzebny.</p>",
+								"author": "jcubic",
+								"date": "2018-10-05T06:10:39Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/przesuniecie-sourcemapy.html": {
+		"comments": [
+			{
+				"content": "<p>Ty to masz te tematy na blogu... głowa pęka normalnie :)<br>Ale fajnie, że poruszyłeś source maps, zastanawiałem się kiedyś jak one są robione \"od środka\" ale nigdy nie intrygowało mnie to na tyle, aby zaglądać do specyfikacji :)</p>",
+				"author": "tomasz_sochacki",
+				"date": "2018-10-10T19:28:51Z",
+				"comments": []
+			}
+		]
+	},
+	"/konferencja-confrontjs.html": {
+		"comments": [
+			{
+				"content": "<p><a href=\"https://www.luna-lang.org/\" rel=\"nofollow noopener\" title=\"https://www.luna-lang.org/\">https://www.luna-lang.org/</a> &lt;- tak będzie wyglądała przyszłość js'a. Nie mówię że zniknie ale pojawią się jakieś nakładki do wizualnego programowania ;)</p><p>Co do  css+html będzie się generować jakimś ML'em z PSD'ków&lt;- <a href=\"https://blog.floydhub.com/turning-design-mockups-into-code-with-deep-learning/\" rel=\"nofollow noopener\" title=\"https://blog.floydhub.com/turning-design-mockups-into-code-with-deep-learning/\">https://blog.floydhub.com/t...</a></p><p>Myślę też że oprócz frontu i backendu pojawi się jakiś middleware oparty na WASM</p>",
+				"author": "disqus_iAiSIuf21E",
+				"date": "2018-10-17T19:01:49Z",
+				"comments": [
+					{
+						"content": "<p>Gratuluję wygranej! :) Proszę o kontakt pod adresem comandeer@comandeer.pl w celu odebrania biletu.</p>",
+						"author": "Comandeer",
+						"date": "2018-10-23T22:01:46Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Ja znam web jeszcze z czasów, gdzie layouty robiło się na tabelkach, a moim pierwszym telefonem był alcatel one touch easy i gdybyś mi wtedy powiedział, że na telefonie będę oglądał filmy i pisał e-maile to bym Cię wyśmiał :)</p><p>Dzisiaj strony wyglądają zupełnie inaczej, obecnie dominuje one-page co mi nie do końca się podoba ale to już rzecz gustu, a jak to mówią, o gustach się nie dyskutuje :)</p><p>Ale tak wracając do tematu to wydaje mi się, że za parę lat (pewnie nawet szybciej niż za 10) będzie wyraźny podział na front do prostych stron www, sklepów itp. oraz front do SPA. W przypadku tych pierwszych moim zdaniem pojawi się na rynku wiele darmowych i płatnych apek do samodzielnego tworzenia stron. Na przykład otwieram pizzerię i zamiast szukać programisty po prostu wpiszę w google hasło \"strona internetowa pizzerii\" i wyskoczy mi lista apek, w których ogarnę taką stronę w dwa dni nie wiedząc nawet co to html.</p><p>Można dyskutować czy to dobre czy złe rozwiązanie, będą zwolennicy jakości kodu, dostępności itp. jak również zwolennicy szybkiej i wygodnej usługi dla osób nie znających się na programowaniu - tutaj myślę, że raczej nie ma co wchodzić w polemikę bo spotkają się dwa przeciwstawne obozy.</p><p>Z kolei w kwestii SPA to właśnie tutaj widzę miejsce dla front-endowców jako pełnoprawnych programistów. Dzisiaj frameworki front-endowe rozwijają się bardzo dynamicznie i coraz więcej firm decyduje się właśnie na SPA. Dodatkowo google również coraz lepiej na nie \"patrzy\", mamy PWA, Service Worker itp. itd. Moje własne obserwacje na małym PoC potwierdzają, że google indeksuje treść generowaną przez JS nawet bez SSR, co prawda z pewnymi ograniczeniami ale jednak, więc jak najbardziej widzą ten trend i wydaje mi się, że będą za nim podążać.</p><p>Co więcej, ciekawym kierunkiem jest moim zdaniem rozwój w stronę mikroserwisów front-endowych. Rozumiem przez to np. połączenie w jednej apce wielu różnych SPA, czasami napisanych w różnych frameworkach itp. Sam obecnie pracuję właśnie przy takim dużym projekcie, gdzie każdy zespół front-endowy opiekuje się wybranymi apkami tworzącymi w ostateczności kompleksowy produkt dla klienta. Ma to swoje plusy i minusy, ale w mnie jest to dobry kierunek. Na przykład niedawno robiliśmy migrację z angularJS na Angular 6 i możliwe było przetestowanie tego tylko na jednej drobnej mikro-apce poddanej intensywnym testom performance itp. W żaden sposób nie dotyka się pozostałej części aplikacji i innych zespołów.</p><p>Mam tylko cichą nadzieję, że nie cofniemy się i nie wrócimy do wielkich monolitów z back-endem PHP gdzie templatki generowaliśmy w Smarty/Twig i każdy pull request zmergowany do mastera rozwali wszystkie inne PR wiszące na CR :) To jest właśnie też moim zdaniem duży plus mikro-apek, a mianowicie łatwiejszy development i wdrażanie nowych ficzerów. Każdy zespół robi swoje zmiany, swoje PR i CR i swoje buildy na prodzie.</p><p>PS. Jakby co to nie uczestniczę w konkursie, na ten kwartał mam już dosyć wyjazdów i konferencji :)</p>",
+				"author": "tomasz_sochacki",
+				"date": "2018-10-17T19:34:21Z",
+				"comments": []
+			}
+		]
+	},
+	"/bujajac-sie-na-galezi-ast.html": {
+		"comments": [
+			{
+				"content": "<p>Alternatywą jest biblioteka taka jak falafel, jej kod jest bardzo krótki i prosty ale za to kod zamiany console.log na customLog można napisać tak:</p><p></p><pre><code><br>var falafel = require(\"falafel\");<br><br>var output = falafel(code, function (node) {<br>    if (node.type === 'CallExpression' &amp;&amp;<br>        node.callee &amp;&amp;<br>        node.callee.type == 'MemberExpression' &amp;&amp;<br>        node.callee.object.name == 'console' &amp;&amp;<br>        node.callee.property.name == 'log') {<br>        node.update(node.source().replace(/^console.log/, 'customLog'));<br>    }<br>});<br></code><br></pre><p></p><p>praktycznie API falafela to tylko dwie funkcje <code>update</code> i <code>source</code>. I dodatkowo na samym <code>node.source()</code> można już operować wyrażeniami regularnymi ponieważ pojedyncze wyrażenie raczej jest regularne.</p>",
+				"author": "jcubic",
+				"date": "2018-12-01T20:54:16Z",
+				"comments": [
+					{
+						"content": "<p>Pytanie, czy w tym momencie kogoś te wyrażenia regularne ucieszą, skoro i tak całe filtrowanie odbywa się na poziomie AST ;)</p><p>IMO czytelniejsi są wizytatorzy z Babela → <a href=\"https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#toc-visitors\" rel=\"nofollow noopener\" title=\"https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md#toc-visitors\">https://github.com/jamiebui...</a></p><p>Jest też <a href=\"https://github.com/estools/esquery\" rel=\"nofollow noopener\" title=\"https://github.com/estools/esquery\">https://github.com/estools/...</a> czyli narzędzie do przeszukiwania AST przy pomocy selektorów pseudo-CSS-owych.</p>",
+						"author": "Comandeer",
+						"date": "2018-12-01T22:18:49Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/o-abstrakcji-slow-kilka.html": {
+		"comments": [
+			{
+				"content": "<p>wszystko spoko ale warto moim zdaniem wziąć pod uwagę jeszcze jeden fakt... gdy zrobisz w firrmie własną abtrakcje dająca duże możliwości to musisz poświęcić sporo czasu na nauczenie tego nowych programistow i to nie tylko juniorow... to jest zaleta np. angular.... nawet junior może wejść do nowego projektu znając juz sam framework i skupia się tylko na poznaniu logiki biznesowej... a tak poza tym to nie dramatyzowalbym z tą wydajnością... pracuję obecnie przy dużym projekcie gdzie jest wiele mikro apek SPA angular/react i wszystko działa ładnie, nawet w pikach odwiedzin... także wszystko dla ludzi, tylko trzeba tego używać rozsądnie...</p>",
+				"author": "disqus_Sle3kiCPGK",
+				"date": "2018-12-24T17:59:07Z",
+				"comments": [
+					{
+						"content": "<p>To mrzonka z tym, co mówisz, choć bardzo popularna i też powtarzałem w życiu takie tezy, wynikające z braku szerszej perspektywy, przepracowanych lat, obserwacji. Skoro ktoś jest juniorem to tak samo podejdzie do autorskiego frameworka jak do Angulara. Junior znający Angulara jest nadal juniorem i nadal będzie popełniał to samo spektrum błędów wynikające z lat doświadczenia, tyle że w środowisku Angulara. API to API, jedno łatwiejsze, drugie trudniejsze, ale nadal to tylko API.</p>",
+						"author": "damian_wielgosik",
+						"date": "2018-12-25T22:00:36Z",
+						"comments": [
+							{
+								"content": "<p>wszystko zależy od tego kogo rozumiemy przez juniora, czy osobę ktora tylko słyszała że jest takie coś jak angular, czu tez osobę, ktora zna dobrze podstawy angular jak service, directives, pipes, routing, rxjs itd. tylko ma małe doswiadczenie, głównie w paru wlasnych apkach. Ba, nawet spotkałem się jakiś czas temu z opinią, że juniorowi można wybaczyć jak nie wie co to async/await i ogolnie asynchronicznosc w js... gdzie dzis jest to podstawa chyba każdej aplikacji webowej...<br>ale masz racje, api to api, kwestia poczytania docs, czasem samego kodu, unit testow itp.</p>",
+								"author": "disqus_Sle3kiCPGK",
+								"date": "2018-12-26T09:39:44Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<blockquote>Czy jest jakiś kompromis? Pewnie się powtórzę, ale widzę go w przejściu od frameworków do kompilatorów. Tym samym biblioteki pokroju Reacta służyłyby do pisania kodu w przyjaznych i łatwych do zrozumienia abstrakcjach, a do przeglądarki trafiałby skrajnie zoptymalizowany kod, wykorzystujący natywne mechanizmy przeglądarki (i tutaj Web Components by błyszczały!). I to już zaczyna się dziać!</blockquote><p></p><p>Myślę, że trzeba robić swoje i coraz odważniej mieć w nosie to, co mówią gadające głowy na Twitterze, w końcu z tego żyją i w taki sposób realizują swoje aspiracje – gdyby nic nie wymyślali musieliby skończyć swoją \"medialną\" karierę, wielu też nie wytrzymałoby przymusu tworzenia czegoś w publicznej domenie ;-). Dla mnie cały czas rzekomy rozwój ekosystemu przeglądarkowego odbywa się poprzez dodawanie nowych API, które w wielu przypadkach nie rozwiązują niskopoziomowych problemów, a dają jedynie pożywkę developerom, by spędzili te 2-3 lata na naukę nowych frameworków, które od początku webu mają za zadanie w 9x% przypadków obsłużyć mouse click i wyrenderować coś użytkownikowi na stronie. Takie odmienianie design patternów przez różne przypadki, aż w końcu się one skończą i znowu trzeba będzie wrócić do mianownika. No i biznes oraz koniunktura muszą się kręcić (posiadanie w swojej stajni Reacta jest dla FB narzędziem wpływu na naszą branże, tak marketingowym (cool kids, come to us) ale i politycznym: \"słuchajcie, zobaczcie jakie to popularne jest teraz, jak chcecie coś zmieniać w działaniu sieci musicie wziąć nasz głos pod uwagę\" etc.).</p>",
+				"author": "damian_wielgosik",
+				"date": "2018-12-25T22:14:13Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Cześć Comandeer. Oczywiście świetny artykuł. Próbuję sobie napisać funkcję rotate wzorując się na Twojej i z racji tego, że mam małe doświadczenie jeśli chodzi o javascript to chciałbym się Ciebie zapytać jak poprawnie poradzić sobie z parametrem <b>direction</b>. U ciebie jest tak <b>direction = 'left'</b> i jak to później zastosować w funkcji jeśli chciałbym obrócić w prawo? Napisałem coś takiego:</p><p><a href=\"https://codepen.io/adaaBy/pen/qgJJJg?editors=1010\" rel=\"nofollow noopener\" title=\"https://codepen.io/adaaBy/pen/qgJJJg?editors=1010\">https://codepen.io/adaaBy/p...</a></p><p>warunkiem <b>if</b> trzeba sprawdzić jaki chcemy kierunek a dopiero potem przypisać odpowiednią wartość do direction? Czy tak się powinno robić, jeśli nie to bardzo bym Cię prosił, żebyś pokazał mi jak to prawidłowo rozwiązać bo często mam takie sytuacje i mam z nimi problem. Dziękuję.</p>",
+				"author": "davvvaa",
+				"date": "2019-02-15T13:19:51Z",
+				"comments": [
+					{
+						"content": "<p>Jeśli są możliwe wyłącznie wartości left i right, to przy left wystarczy pomnożyć wartość deg przez -1, coś typu <a href=\"https://codepen.io/Comandeer/pen/Rveqrr\" rel=\"nofollow noopener\" title=\"https://codepen.io/Comandeer/pen/Rveqrr\">https://codepen.io/Comandee...</a></p>",
+						"author": "Comandeer",
+						"date": "2019-02-15T13:43:05Z",
+						"comments": [
+							{
+								"content": "<p>Tego potrzebowałem bo właśnie takiego myślenia jak Twoja funkcja mi jeszcze brakuje w javascript. Dziękuję Ci bardzo. Miłego weekendu.</p>",
+								"author": "davvvaa",
+								"date": "2019-02-15T14:15:33Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/system-polyfillow.html": {
+		"comments": [
+			{
+				"content": "<p>Polyfille stosuje się by obsłużyć w inny sposób przeglądarki nie obsługujące jakichś funkcji. Często polyfilli potrzebują po prostu stare wersje przeglądarek - w związku z tym, czy używane \"const\" zamiast \"var\", stosowanie zapisu z \"=&gt;\" itd. nie warto inaczej zapisać, zdaje się staruszki tego systemu nie obsłużą?</p>",
+				"author": "disqus_gbqzKXYljD",
+				"date": "2019-02-21T00:38:36Z",
+				"comments": [
+					{
+						"content": "<p>W produkcyjnej wersji takiego systemu jak najbardziej. Wówczas warto używać jak najbardziej podstawowego JS-a. Niemniej na potrzeby artykułu pozwoliłem sobie na dodatkowe założenie, czyli brak wsparcia dla IE, co wyeliminowało problem nierozumienia ES6 → <a href=\"https://blog.comandeer.pl/eksperymenty/javascript/2019/01/31/system-polyfillow.html#dodatkowe-za%C5%82o%C5%BCenie\" rel=\"nofollow noopener\" title=\"https://blog.comandeer.pl/eksperymenty/javascript/2019/01/31/system-polyfillow.html#dodatkowe-za%C5%82o%C5%BCenie\">https://blog.comandeer.pl/e...</a></p>",
+						"author": "Comandeer",
+						"date": "2019-02-21T17:03:36Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/czy-div-jest-dostepny.html": {
+		"comments": [
+			{
+				"content": "<p>Super, że upowszechniasz informacje na temat dostępności, bo zagadnienia te są nadal często ignorowane i to nie tylko w małych stronkach \"wizytówkach\" gdzie jeszcze można by przymknąć oko (i w tym miejscu Comandeer daje bana :P), ale również w dużych serwisach i aplikacjach...<br>Jedyne co, to uważałbym ze stwierdzeniem \"A jeśli musimy wspierać IE i Edge’a\"... Edge ma dość spory udział w rynku i jest dostępny na nowych windach co \"pogarsza\" sprawę deweloperom... co ciekawe jest to dosć nietypowy produkt... dość ładnie wspiera co prawda ES6+ ale nie wspiera SSE... :) także podchodzą tak trochę wybiórczo do jego aktualizacji co nie ułatwia nam sprawy...<br>Oczywiście jak zawsze należy jasno sobie odpowiedzieć na pytanie, na ile te kilka % ruchu jest dla nas istotne... nie zawsze fakt zarzucenia IE11 na rzecz nowych technologii, rozwiązań itp. spotka się z aprobatą biznesu gdy te kilka procent przekłada się na realne pieniążki i to nie małe... Swoją drogą płakać mi się chciało, jak zobaczyłem na win10 IE11 :( ale nie mniej problemów też potrafi czasem sprawić np. Safari... teoretycznie również z nie aż tak wielkim ruchem, aczkolwiek znacznie większym niż IE... ale no nic... możemy się jako deweloperzy czasem wypłakać na boku, a potem odpalać browserstacka i jechać z testami :)</p>",
+				"author": "tomasz_sochacki",
+				"date": "2019-02-16T10:16:49Z",
+				"comments": [
+					{
+						"content": "<p>Ja postrzegam Edge już jako martwy projekt, bo przechodzi na Chromium w najbliższych miesiącach. Niemniej w tym kontekście chodziło wyłącznie o to, że przeglądarki od MS nie umieją w `all`.</p>",
+						"author": "Comandeer",
+						"date": "2019-02-16T10:20:12Z",
+						"comments": [
+							{
+								"content": "<p>Niedawno gdzieś spotkałem opinię, że IE to taki produkt w wersji beta, w którym programiści zapomnieli, żeby wydać kiedyś release produkcyjny :)</p>",
+								"author": "tomasz_sochacki",
+								"date": "2019-02-16T12:14:47Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<blockquote>Nie można bowiem zapomnieć, że w obecnym świecie HTML jest uniwersalnym językiem wymiany informacji – popularniejszym nawet od JSON. To język, na bazie którego zbudowano WWW. To język, na bazie którego powoli powstaje Semantyczna Sieć. W końcu to język, który traktuje się po macoszemu i odrzuca w pełni jego semantykę… Przez lata wypracowano rozwiązania pokroju RDF, RDFa, mikrodanych, <a href=\"http://Schema.org\" rel=\"nofollow noopener\" title=\"Schema.org\">Schema.org</a>, mikroformatów, JSON-LD i wielu innych, by teraz porzucić to wszystko na rzecz divowej zupy, niemającej jakiejkolwiek semantycznej wartości.</blockquote><p></p><p>Pardon, ale to jest mrzonka dla geeków, by się mieli czym podniecać, ustalać między sobą hierarchie na tych co znają i nie znają, i nie nudzić się w robocie. Na koniec i tak liczy się to co użytkownik widzi i jak realizuje swoje cele w sieci plus kasa i władza (może NSA już nie jest potrzebna semantyczna sieć hehheh). To nie pierwszy raz, że ktoś duży taki jak Twitter ma w pompie dostępność, semantykę czy coś w tym stylu, a eksperci się na to zapowietrzają. Dopóki nie będzie wielkich kosztów takich decyzji nic się nie zmieni, bo to nie szczytne idee rządzą światem.</p>",
+				"author": "damian_wielgosik",
+				"date": "2019-02-17T21:36:45Z",
+				"comments": [
+					{
+						"content": "<p>Ty nazywasz to mrzonką dla geeków, ja nazywam po prostu dbaniem o ludzką przyzwoitość. A koszty będą – w USA już zaczynają się procesy cywilne przeciwko firmom posiadającym niedostępne strony.</p>",
+						"author": "Comandeer",
+						"date": "2019-02-17T22:21:10Z",
+						"comments": [
+							{
+								"content": "<p>Chyba będziesz musiał zejść na ziemię w końcu. Też jestem za dostępnością, ale sam widzisz jak jest i było. Wygrywają miliony i tak jest od początku. W efekcie czego takie artykuły są dobre, ale dla koneserów jak my. A czy sieć jako wojskowy projekt tak do końca zbudowano na \"wartościach\" to jednak bym się mocno zastanowił. ;-)</p>",
+								"author": "damian_wielgosik",
+								"date": "2019-02-18T08:35:35Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/sto-lat-www.html": {
+		"comments": [
+			{
+				"content": "<p>Imo jeden z najważniejszych wynalazków Świata, spowodował gigantyczny boost w rozwoju ludzkości. Dziś każdy może nauczyć się praktycznie wszystkiego nawet nie ruszając się z domu, wystarczy zaangażowanie.</p>",
+				"author": "wojtek_sadowski",
+				"date": "2019-03-12T20:05:31Z",
+				"comments": []
+			}
+		]
+	},
+	"/aktualna-data-bez-daty.html": {
+		"comments": [
+			{
+				"content": "<p>Fajna ciekawostka. Dobra jako zagadnienie do rozmów kwalifikacyjnych! :)</p>",
+				"author": "piotr_nalepa",
+				"date": "2019-04-04T21:13:14Z",
+				"comments": [
+					{
+						"content": "<p>A jaki jest sens zadawania takich pytań?</p>",
+						"author": "osobno",
+						"date": "2019-04-04T23:25:18Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Wiesz Tomek, ja słyszałem, że można zrobić \"Tekst do pogrubienia\".bold()...</p>",
+				"author": "damian_wielgosik",
+				"date": "2019-04-05T13:46:14Z",
+				"comments": [
+					{
+						"content": "<p>Ano, można. Jest to opisane w aneksie B specyfikacji ECMAScript, opisującym dodatkowe ficzery, które powinny być w przeglądarce → <a href=\"https://tc39.github.io/ecma262/#sec-additional-properties-of-the-string.prototype-object\" rel=\"nofollow noopener\" title=\"https://tc39.github.io/ecma262/#sec-additional-properties-of-the-string.prototype-object\">https://tc39.github.io/ecma...</a></p><p>Co ciekawe w Node.js  też są, łącznie z obsługą komentarzy HTML-owych. V8 ewidentnie był (i wciąż jest) pisany pod uruchamianie tylko w jednym typie hostów ES.</p>",
+						"author": "Comandeer",
+						"date": "2019-04-05T13:50:57Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Nie powinno być „znacznik czasu Uniksa” zamiast „znacznik czasu Unixa”? Z tego, co wiem, „x” zamienia się na „ks” w odmianie.</p>",
+				"author": "tomaszgasior",
+				"date": "2019-08-23T02:42:32Z",
+				"comments": [
+					{
+						"content": "<p>Obydwie formy są poprawne: <a href=\"https://sjp.pwn.pl/so/Unix;4961176.html\" rel=\"nofollow noopener\" title=\"https://sjp.pwn.pl/so/Unix;4961176.html\">https://sjp.pwn.pl/so/Unix;...</a></p><p>De facto wymóg wymiany \"x\" na \"ks\" istnieje wyłącznie w skrótowcach, ale ustalenie co jest skrótowcem a co nie to już całkowicie odrębny problem → <a href=\"https://sjp.pwn.pl/poradnia/haslo/Cezex-Hortex-i-PAX;697.html\" rel=\"nofollow noopener\" title=\"https://sjp.pwn.pl/poradnia/haslo/Cezex-Hortex-i-PAX;697.html\">https://sjp.pwn.pl/poradnia...</a></p>",
+						"author": "Comandeer",
+						"date": "2019-08-25T21:18:30Z",
+						"comments": [
+							{
+								"content": "<p>Senkju, prezesie — nie wiedziałem. Co nie zmienia faktu, że me oczy pozostają zrażone iksem odmienionym. :P</p>",
+								"author": "tomaszgasior",
+								"date": "2019-08-25T21:20:15Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/20-lat-wcag.html": {
+		"comments": [
+			{
+				"content": "<p>panie komu to potrzebne... a tak serio to niedawno bylem 2 dni bez mychy na priv kompie PC i Ci powiem że internet to była jakas masakra... a najgorsze te modale o cookies, newslettery czy reklamy... nie szło tego pozamykac, kilkalem taba jak glupi i nie wiesz gdzie jestes :) zacząłem nieco inaczej na to patrzeć :)</p>",
+				"author": "tomasz_sochacki",
+				"date": "2019-05-05T19:06:19Z",
+				"comments": []
+			}
+		]
+	},
+	"/html-nie-zyje-niech-zyje-html.html": {
+		"comments": [
+			{
+				"content": "<p>Super! Pozwoliłem sobie zapisać ten dzień w kartotece: <a href=\"https://piecioshka.pl/historia-front-endu/\" rel=\"nofollow noopener\" title=\"https://piecioshka.pl/historia-front-endu/\">https://piecioshka.pl/histo...</a></p>",
+				"author": "piecioshka",
+				"date": "2019-12-01T09:48:48Z",
+				"comments": []
+			}
+		]
+	},
+	"/komu-tosta.html": {
+		"comments": [
+			{
+				"content": "<p>Toast to bardziej toast jak na imprezie z kieliszkiem a nie tost z chleba. Wiec raczej tytuł by pasował \"Dla kogo toast?\"</p>",
+				"author": "jcubic",
+				"date": "2019-06-30T19:59:04Z",
+				"comments": [
+					{
+						"content": "<p>Nie mogę się zgodzić. W całej tej dyskusji praktycznie nikt ani razu nie użył tego słowa jako odniesienia do toastu, zawsze jako tost. Za taką interpretacją przemawia też fakt, że konkurencyjnym wzorcem są… snack bars.</p>",
+						"author": "Comandeer",
+						"date": "2019-06-30T20:22:38Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/stylowalne-ikonki-svg.html": {
+		"comments": [
+			{
+				"content": "<p>Świetny wpis, tyle razy człowiek kombinował... ;)</p>",
+				"author": "przemysawplackowski",
+				"date": "2019-07-26T05:58:20Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Zasadniczo Custom Element w Twoim przykładzie mało co ukrywa, jeśli chodzi o szczegóły implementacji. Według mnie gra tutaj bardziej rolę Proxy, proponując ładniejsze API do użycia. Myślę, że klient, który byłby tak wymagający (wcześniejsze kroki), jednocześnie miałby węża w kieszeni i nie chciał słyszeć o robieniu Custom Elementów tylko dla jednego projektu, jeśli nie miałby interesu w jego releasie  gdzieś dalej na Githubie, bo rozsądnym devom starczyłoby podawanie parametrów w urlu. ;-)</p><p>Tak się zastanawiam na marginesie, szukając obrony rozwiązania z CE, że fajnie byłoby gdybym mógł napisać w jakimś pliku .css icon.mojaIkonka { hover-background: red; } i ten JS by to jakoś przechwycił. Nie jestem na bieżąco z nowymi API, czy jest to możliwe bez jakichś hacków.</p><p>Ciekawy artykuł ogólnie, dzięki.</p>",
+				"author": "damian_wielgosik",
+				"date": "2019-07-26T11:05:44Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Chociaż rozumiem, że w CE da się zrobić tak, że pobiorę sobie referencję do &lt;icon&gt; via JS do myIcon i robiąc <code>myIcon.setAttribute(\"hover-background\", \"red\");</code> wszystko się ładnie odświeży i zaaplikuje?</p>",
+				"author": "damian_wielgosik",
+				"date": "2019-07-26T11:15:43Z",
+				"comments": [
+					{
+						"content": "<p>Nie do końca. Da się obserwować tylko zmiany w atrybutach o określonych nazwach. Jeśli chcemy obserwować dowolne atrybuty, trzeba wykorzystać do tego dodatkowo `MutationObserver` (<a href=\"https://github.com/w3c/webcomponents/issues/565#issuecomment-345556883\" rel=\"nofollow noopener\" title=\"https://github.com/w3c/webcomponents/issues/565#issuecomment-345556883\">https://github.com/w3c/webc...</a> ), co trochę zabija sens używania CE. W obecnej postaci CE aktualizuje się tylko raz, przy wstawianiu do dokumentu.</p>",
+						"author": "Comandeer",
+						"date": "2019-07-26T12:13:56Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Comandeerze, nie raz pisałeś, że trzeba pamiętać o tych użytkownikach, którzy mają wyłączony javascript? A więc co z nimi? Bo ostatni \"najlepszy\" sposób nie działa bez js-a.</p>",
+				"author": "davvvaa",
+				"date": "2019-08-06T14:34:16Z",
+				"comments": [
+					{
+						"content": "<p>Bo to eksperyment, nie zaś produkcyjne rozwiązanie. Zauważ, że nie zajmuję się tutaj także kwestią dostępności takiego rozwiązania, co również mogłoby być wyzwaniem (bo mamy object zamiast standardowych img czy svg).</p><p>Gdybyśmy rozważali użycie tego w produkcyjnej aplikacji, trzeba by było zadbać właśnie o dostępność i być może dla CE zastosować coś w ten deseń:</p><p><code><br>&lt;icon- name=\"facebook\" width=\"32\" height=\"32\" normal-background=\"#f00\" normal-fill=\"blue\" hover-background=\"#0f0\" hover-fill=\"orange\"&gt;<br>    &lt;object data=\"/images/sprite.svg?normal-background=%23f00&amp;normal-fill=blue&amp;hover-background=%230f0&amp;hover-fill=orange#facebook\" type=\"image/svg+xml\" width=\"32\" height=\"32\"&gt;&lt;/object&gt;<br>&lt;/icon-&gt;<br></code></p>",
+						"author": "Comandeer",
+						"date": "2019-08-06T20:09:28Z",
+						"comments": [
+							{
+								"content": "<p>Nie wiedziałem, że to taki eksperyment. Dziękuję. Wyjaśnione.</p>",
+								"author": "davvvaa",
+								"date": "2019-08-08T08:39:16Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/ujemne-indeksy-tablicy.html": {
+		"comments": [
+			{
+				"content": "<p>Coś mi nie dawało spokoju to, że w ES5 nie da się zrobić tak, by Array.isArray było też true. Swego czasu mocno się interesowałem różnymi tego typu eksperymentami, więc postanowiłem pogooglować i chyba da się zrobić też to subclassowanie po staremu – wziąłem po prostu kod stąd i dodałem Twoje zmiany: <a href=\"https://davidtang.io/2017/09/21/subclassing-arrays-in-es2015.html\" rel=\"nofollow noopener\" title=\"https://davidtang.io/2017/09/21/subclassing-arrays-in-es2015.html\">https://davidtang.io/2017/0...</a>. Nie sprawdzałem zbyt wiele niuansów, ale podstawowe asserty dają true.</p><p><code>function translateProperty( target, property ) { // 1<br>  const propertyAsNumber = Number( property ); // 2<br><br>  if ( Number.isNaN( propertyAsNumber ) || propertyAsNumber &gt; 0 ) { // 3<br>    return property; // 4<br>  }<br><br>  const translatedProperty = target.length - Math.abs( propertyAsNumber ); // 5<br><br>  if ( translatedProperty &lt; 0 ) { // 6<br>    throw new RangeError( 'Array index out of range' ); // 7<br>  }<br><br>  return translatedProperty; // 8<br>}<br><br>function Collection(...args) {<br>  Object.setPrototypeOf(args, Collection.prototype);<br>  return new Proxy( args, {<br>      get( target, property, ...args ) {<br>        const translatedProperty = translateProperty( target, property );<br><br>        return Reflect.get( target, translatedProperty, ...args );<br>      }<br>  });<br>}<br>Collection.prototype = Object.create(Array.prototype);<br>Collection.prototype.constructor = Collection;<br>Collection.prototype.average = function(callback) {<br>  let total = this.reduce((total, item) =&gt; {<br>    return total + callback(item);<br>  }, 0);<br><br>  return total / this.length;<br>};<br><br>const myArray = new Collection();<br><br>console.log( myArray instanceof Array ); // true<br>console.log( Array.isArray( myArray ) ); // true<br><br>myArray[ 0 ] = 'whatever';<br><br>console.log( myArray.length ); // 1<br>console.log(myArray[-1]); // 'whatever'</code></p>",
+				"author": "damian_wielgosik",
+				"date": "2019-09-02T08:57:35Z",
+				"comments": [
+					{
+						"content": "<p>Jest tylko jeden haczyk: to używa funkcji, które pojawiły się dopiero w ES6 →  <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#Specifications\" rel=\"nofollow noopener\" title=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#Specifications\">https://developer.mozilla.o...</a></p><p>Co więcej to nie jest już subclassing, a po prostu nadpisanie prototypu obiektu na żywca.</p>",
+						"author": "Comandeer",
+						"date": "2019-09-02T10:14:00Z",
+						"comments": [
+							{
+								"content": "<p>Kiedyś to się robiło przez __proto__, jeśli chciałeś na siłę zrobić setPrototypeOf. Dla takich \"eksperymentów\" brak standaryzacji i to o czym MDN tam pisze, było ciche przyzwolenie, zresztą artykuł Bynensa jest z 2018 roku dopiero. ;-). Inna sprawa, że nikt by tego w produkcji raczej nie używał.</p><p>Nie rozumiem Twojej uwagi \"to nie jest już subclassing\". Javy z JSa nie zrobisz. To język idealny do przeróżnego kombinowania i knucia, byleby zadziałało. Szczególnie kiedyś, bo dzisiaj, jak Twój artykuł udowadnia, jest o wiele łatwiej o \"normalność\".</p><p>Przy okazji natknąłem się na klasykę kina akcji tablicowej: <a href=\"http://perfectionkills.com/how-ecmascript-5-still-does-not-allow-to-subclass-an-array/\" rel=\"nofollow noopener\" title=\"http://perfectionkills.com/how-ecmascript-5-still-does-not-allow-to-subclass-an-array/\">http://perfectionkills.com/...</a> ;-)</p>",
+								"author": "damian_wielgosik",
+								"date": "2019-09-02T10:57:23Z",
+								"comments": [
+									{
+										"content": "<p>Subclassing, czyli przypisanie do naszej klasy zachowania innej klasy tak, aby nasz obiekt był zarówno instancją naszej klasy (NegativeArray/Collection), jak i klasy, od której przypisujemy (Array). Nie da się tego zrobić bez składni klas.</p><p>Twój sposób tego nie robi. Twój sposób po prostu zmienia prototyp gotowego obiektu na inny. Co więcej, w Twoim przykładzie przebiega to w drugą stronę: do tablicy przypisujesz prototyp nowej klasy Collection. Gdybyśmy tej tablicy nie zwracali, całość nie byłaby możliwa.</p><p>Zatem: tak, da się nadpisać prototyp tablicy tak, żeby udawała nasz obiekt. Nie, nie da się stworzyć konstruktora, który rozszerza tablicę.</p>",
+										"author": "Comandeer",
+										"date": "2019-09-02T11:56:19Z",
+										"comments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/ale-ten-internet-stary.html": {
+		"comments": [
+			{
+				"content": "<p>Myślę, że tak naprawdę nigdy tej prywatności w Internecie do końca nie ma i my się z każdym rokiem o tym coraz bardziej, jako pierwsze pokolenie userów mających internet od dziecka, przekonujemy, jednocześnie próbując wypierać ten fakt.</p>",
+				"author": "damian_wielgosik",
+				"date": "2019-10-29T20:14:32Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Moim zdaniem na pewno utracimy całkowicie swoją prywatność w internecie. Jak na przykład w Anglii by oglądać filmy porno musisz udowodnić, że masz skończone 18 lat poprzez dowód osobisty, kartę kredytową czy na przykład paszport, ustawa została opóźniona, ale wszystko wskazuje na to, że prędzej czy później wejdzie w życie. W Australii trwają aktualnie prace nad ustawą, która będzie wymagała skanu Twojej twarzy albo tak jak w Anglii jakiegoś dowodu tożsamości na potwierdzenie swojej pełnoletności, jeśli będziesz chciał oglądać porno czy grać w hazard. Chyba każdy zdaje sobie sprawę, że na porno i hazardzie się nie skończy. W Chinach chcą w ogóle skanować twarz za sam dostęp do internetu, a ich chiński model \"oceny obywateli\" chociaż to nic innego jak totalna kontrola, staje się coraz bardziej chętniej testowany w Europie. Weźmy jeszcze pod uwagę Google, które posiada coraz większy monopol i zaczyna narzucać swoje zasady. Moim zdaniem na pewno pojawią się jakieś nowe alternatywy na to co się dzieje z \"internetem\", ale czy ujrzą światło dzienne, albo czy te stare zyskają na popularności to już czas pokaże. W każdym bądź razie nie podoba mi się to co się teraz dzieje. To wszystko tylko znowu napędzi czarny rynek. Za to co mogłeś spokojnie robić dzisiaj w internecie, za kilka lat może będzie to już wykroczeniem albo przestępstwem.</p>",
+				"author": "davvvaa",
+				"date": "2019-10-31T14:00:47Z",
+				"comments": []
+			}
+		]
+	},
+	"/i-ciecie.html": {
+		"comments": [
+			{
+				"content": "<p>Świetny wpis! Sympatycznie opisany AbortController :)</p>",
+				"author": "piecioshka",
+				"date": "2020-02-01T11:49:47Z",
+				"comments": []
+			},
+			{
+				"content": "<p>A to da się uzyskać tworząc custom event, nie?<br>W sensie, AbortController nie ma żadnych unikalnych właściwości.</p>",
+				"author": "lukaszpolowczyk",
+				"date": "2020-02-01T20:12:42Z",
+				"comments": [
+					{
+						"content": "<p>W przypadku własnego API faktycznie dałoby się to zastąpić jakimś eventem. Nie da się tego zrobić jednak w przypadku natywnych API, gdzie zwykły event nie spowodowałby przerwania operacji asynchronicznej. Poza tym AbortSignal ma odpowiednią semantykę, a custom event – niekoniecznie.</p>",
+						"author": "Comandeer",
+						"date": "2020-02-01T20:36:18Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>A najmniej \"nieelegancka\" metoda w NodeJS? :)</p>",
+				"author": "PanLydka",
+				"date": "2020-02-04T15:50:17Z",
+				"comments": [
+					{
+						"content": "<p>process.exit() :P</p><p>A tak na serio, to w sumie nie wiem. Niby są  jakieś porty AbortControllera na npm, niemniej nie wiem, na ile to faktycznie działa (w sensie nie tylko odrzuca obiecankę, ale przerywa równocześnie asynchroniczną operację w tle).</p>",
+						"author": "Comandeer",
+						"date": "2020-02-04T15:55:21Z",
+						"comments": [
+							{
+								"content": "<p>Backendu nie piszę, ale nodeJS tak się spopularyzował, że powstają naprawdę wymagające i poważne aplikacje, systemy itd. Brak jakiejś ludzkiej formy przerwania zadania asynchronicznego... wydaje się to aż niemożliwe, szczególnie że przypuszczam, że na backendzie jest to jeszcze częstsza czynność, niż na froncie.</p>",
+								"author": "PanLydka",
+								"date": "2020-02-05T09:38:31Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"content": "<p>Jeśli jednym z powodów tej 'dziwnej popularności' jest mój ostani artykuł to warto było go napisać :D Fajnie, że podjąłeś temat! Jak zwykle dobry art.</p>",
+				"author": "bartoce",
+				"date": "2020-02-16T10:02:15Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Czy ja dobrze zrozumiałem, że cała koncepcja polega na tym, żeby wywołać reject() używając mechanizmu domknięcia? Jeśli tak, to status promisa dałoby się zmienić synchronicznie, czyli szybciej, wystarczy zapisać funkcję reject lub resume do jakiejś zmiennej z zewnętrznej przestrzeni zmiennych i wywołać ją w odpowiednim momencie.</p>",
+				"author": "denisnowakow",
+				"date": "2020-02-19T16:08:25Z",
+				"comments": [
+					{
+						"content": "<p>Nie, to zupełnie nie dotyczy domknięć. Chodzi o to, że AbortController kończy obiecankę, równocześnie <em>anulując</em> to, co dzieje się w tle (np. dla fetcha przerwie żądanie HTTP). W przypadku własnego API co prawda i tak trzeba sobie to zaimplementować samemu, ale AbortController pozwala przerwać obiecankę bez potrzeby wyciekania jej wewnętrznej implementacji (to obiecanka decyduje, w jaki sposób przerwać dane operacje asynchroniczne, nie kod, który chce jej przerwania).</p>",
+						"author": "Comandeer",
+						"date": "2020-02-19T16:19:33Z",
+						"comments": [
+							{
+								"content": "<p>W takim razie funkcję, wywoływaną zwrotnie podczas wydarzenia 'abort', można zapisać do zmiennej z zewnętrznej przestrzeni zmiennych i wywoływać synchronicznie. W ten sposób obietnica przejdzie w stan rejected nawet wtedy, gdy funkcja wywołująca resolved() jest już dodana do kolejki wywołań zwrotnych (callback queue).</p>",
+								"author": "denisnowakow",
+								"date": "2020-02-19T16:39:38Z",
+								"comments": [
+									{
+										"content": "<p>Ale po co? To znowu spowoduje wyciek implementacji obiecanki. Zewnętrzny kod nie powinien wiedzieć, jak operacja asynchroniczna jest zatrzymywana. On po prostu informuje, że dana operacja asynchroniczna nie jest potrzebna i można ją ubić – na tym jego zadanie się kończy.</p>",
+										"author": "Comandeer",
+										"date": "2020-02-19T16:43:50Z",
+										"comments": [
+											{
+												"content": "<p>A jaka różnica w jaki sposób informuje? Równie dobrze może \"informować\" wywołując tą funkcję synchronicznie. Pisałem już, że to będzie szybsze. Wydaje mi się, że to jest istotny powód. Uwzględniając to, że teoretycznie można zapobiec zbędnemu \"odpaleniu\" się kodu zależnego od rozwiązania obietnicy, wydaje się, że jest to nawet bardziej wydajne, chociaż być może zależy to od sytuacji.</p>",
+												"author": "denisnowakow",
+												"date": "2020-02-19T17:49:26Z",
+												"comments": [
+													{
+														"content": "<p>W takim, że zaproponowany przez Ciebie sposób wymusza przeniesienie odpowiedzialności za operację asynchroniczną do głównego przepływu i lamie zasady enkapsulacji. Po to tworzę obiecankę jako cały osobny przeplyw, żeby reszta programu wiedziała jedynie to, że kiedyś otrzyma wynik i że może taką operację przerwać. To wszystko co program powinien wiedzieć. Cała reszta to odpowiedzialność obiecanki. Problem szybkości zatrzymania jest mało istotny tak po prawdzie.</p><p>Co więcej, mieszanie synchronicznego kodu z asynchronicznym (a już używanie synchronicznego kodu do sterowania asynchronicznym) powoduje niepotrzebny chaos i narzut mentalny.</p>",
+														"author": "Comandeer",
+														"date": "2020-02-19T21:08:39Z",
+														"comments": [
+															{
+																"content": "<p>Wywołanie metody abort() też może zależeć od głównego przepływu. Jaka więc różnica co się wywołuje? Metoda raczej też jest wykonywana synchronicznie. A jak już coś wykonujemy to lepiej robić to efektywnie.</p>",
+																"author": "denisnowakow",
+																"date": "2020-02-19T21:55:54Z",
+																"comments": [
+																	{
+																		"content": "<p>Wydajnośc praktycznie nigdy nie jest najważniejszym wyznacznikiem jakości oprogramowania. O wiele ważniejsze są choćby utrzymywalność czy modularyzacja.</p><p>A różnica jest spora. Powtórzę po raz kolejny: wywołanie abortController.abort() NIE WYMAGA łamania granic odpowiedzialności pomiędzy głównym przepływem a obiecanką. Jedyne, co robimy, to informujemy obiecankę poprzez zdarzenie na AbortSignal, że ma przerwać operację. W przypadku przeniesienia całej logiki do głównego przepływu, przenosimy złożoność związaną z asynchronicznym zadaniem z powrotem tam, skąd ją usunęliśmy.</p>",
+																		"author": "Comandeer",
+																		"date": "2020-02-19T22:31:22Z",
+																		"comments": [
+																			{
+																				"content": "<p>Przecież obsługę synchronicznego przerywania obietnic też można przenieść do modułu i nie będzie złamana zasada inkapsulacji. Główny przepływ będzie tylko wiedział jaką wywołać metodę, tak samo jak w przypadku abortController.abort();. Po co czekać na efekty wykonania abortController.abort() i wykonywać callbacki przekazane np. do thenów, których wywołanie miało anulować wykonanie tej metody?</p>",
+																				"author": "denisnowakow",
+																				"date": "2020-02-20T12:38:59Z",
+																				"comments": [
+																					{
+																						"content": "<p>Sam fakt, że główny przepływ woła bezpośrednio metodę anulującą operację asynchroniczną, jest złamaniem enkapsulacji. Główny przepływ nie powinien wiedzieć nic o tym, jak jest wykonywana operacja asynchroniczna. Jedyne, co powinien wiedzieć, to to, że takowa się wykonuje. Stąd też nie powinien mieć dostępu bezpośrednio do metody anulującej taką operację.</p><p>Zresztą to, że zgłaszamy chęć anulowania asynchronicznej aplikacji, nie jest jednoznaczne z _wymuszeniem_ jej zatrzymania. O tym, jak zostanie taka operacja zatrzymana, decyduje obsługujący ją kod. Zresztą po to wgl wprowadzono AbortSignal.</p><p>No i zostaje jeszcze kwestia spójności. Jeśli natywne APIs korzystają z AbortControllera, nie widzę powodu, dla którego mielibyśmy dla własnego kodu implementować całkowicie inny mechanizm.</p>",
+																						"author": "Comandeer",
+																						"date": "2020-02-20T23:26:41Z",
+																						"comments": [
+																							{
+																								"content": "<p>Przecież podczas tworzenia obsługi zdarzenia 'abort' (abortSignal.addEventListener( 'abort',...) korzystamy z funkcji reject(), czyli musimy wiedzieć jak jest obsługiwana operacja asynchroniczna. Jaka więc różnica, czy wie o tym abortSignal czy jakiś nasz moduł?</p><p>Jeżeli asynchroniczna operacja trafiła do kolejki wywołań zwrotnych (message queue, calback queue, task queue, macrotask queue) to już jej nic nie zatrzyma oprócz zablokowania event loopa. Ewentualnie może ona trafić również do kolejki mikrotasków. Możemy jednak szybciej i efektywniej anulować trafienie jej do którejś z tych kolejek, a to może być wystarczający powód, żeby zaimplementować taki mechanizm.</p>",
+																								"author": "denisnowakow",
+																								"date": "2020-02-21T13:19:34Z",
+																								"comments": [
+																									{
+																										"content": "<p>Nie, AbortSignal nic o tym nie wie. AbortSignal jedynie jest nośnikiem zdarzenia, cała reszta jest zamknięta w funkcji tworzącej obiecankę.</p><p>Poza tym obiecanka != operacja asynchroniczna. Promise jest reprezentacją aktualnego stanu takiej operacji. Dobrze to widać po fetch, w którym operacją asynchroniczną jest pobieranie zasobów przez Sieć, a obiecanka jedynie wskazuje, czy pobieranie się zakończyło, czy wciąż trwa. Samo zatrzymanie obiecanki nie zatrzymuje operacji asynchronicznej.</p>",
+																										"author": "Comandeer",
+																										"date": "2020-02-21T13:39:52Z",
+																										"comments": [
+																											{
+																												"content": "<p>Jak to nie wie?</p><p>abortSignal.addEventListener( 'abort', () =&gt; {<br>clearTimeout( timeout );<br>reject( error );<br>} );</p><p>Przekazujemy reject() do funkcji wywoływanej przez wydarzenie generowane przez abortSignal, czyli wie on, że coś musimy przekazać.</p><p>Równie dobrze moglibyśmy wysłać rejecta do naszego modułu.</p><p>W przedstawionym w artykule przykładzie, najpierw czekamy aż się wykona callback ze zdarzenia 'click', potem aż się wykona callback ze zdarzenia 'abort'. To dwa obroty event loopa. Gdyby podczas kliknięcia odrzucić promise synchronicznie, byłoby szybciej i efektywniej.</p>",
+																												"author": "denisnowakow",
+																												"date": "2020-02-21T14:05:56Z",
+																												"comments": [
+																													{
+																														"content": "<p>&gt; Równie dobrze moglibyśmy wysłać rejecta do naszego modułu.</p><p>Nie, nie moglibyśmy. Powtórzę po raz ostatni: w tym momencie cała logika dotycząca operacji asynchronicznej zamknięta jest WE WŁASNEJ FUNKCJI. A więc odseparowana jest od głównego przepływu. Po to używamy obiecanki i po to wgl deleguje coś do asynchronicznego przepływu, żeby wyciągnąć to z głównego przepływu. Dodatkowo funkcja opakowująca obiecankę ZAWIERA CAŁĄ LOGIKĘ DOTYCZĄCĄ DANEJ OPERACJI. To zapewnia enkapsulację operacji w jednym miejscu zamiast rozbijania jej na cieknące moduły, które byłyby ściśle ze sobą powiązane i dodatkowo WIEDZIAŁYBY O SZCZEGÓŁACH IMPLEMENTACYJNYCH OBIECANKI. Taki kod byłby nie dość, że niezwykle trudny w utrzymaniu, to dodatkowo całkowicie nielogiczny, z trudnym do wytłumaczenia zachowaniem (np. dlaczego reject jest wyciągany gdzieś do osobnego modułu i jest wywoływany poza jakąkolwiek kontrolą obiecanki?).</p><p>&gt; Przekazujemy reject() do funkcji wywoływanej przez wydarzenie generowane przez abortSignal, czyli wie on, że coś musimy przekazać.</p><p>Ale to się odbywa wewnątrz funkcji enkapsulującej całą logikę związaną z tą konkretną operacją asynchroniczną. Poza tym AbortSignal nie wie o tym, on wie tyle, że zaszło zdarzenie. Tyle.</p><p>&gt; W przedstawionym w artykule przykładzie, najpierw czekamy aż się wykona callback ze zdarzenia 'click', potem aż się wykona callback ze zdarzenia 'abort'. To dwa obroty event loopa. Gdyby podczas kliknięcia odrzucić promise synchronicznie, byłoby szybciej i efektywniej.</p><p>Ale co by to dało? Przecież to bez sensu… Nie ma absolutnie żadnej korzyści z odrzucania Promise'a synchronicznie. Ale za to są liczne wady związane z mieszaniem przepływów synchronicznego i asynchronicznego → <a href=\"https://blog.izs.me/2013/08/designing-apis-for-asynchrony\" rel=\"nofollow noopener\" title=\"https://blog.izs.me/2013/08/designing-apis-for-asynchrony\">https://blog.izs.me/2013/08...</a><br>Poza tym niekoniecznie, bo część zdarzeń jest synchroniczna.</p>",
+																														"author": "Comandeer",
+																														"date": "2020-02-21T14:16:37Z",
+																														"comments": [
+																															{
+																																"content": "<p>Jak to nie ma sensu?</p><p>Załóżmy, że chcemy odrzucić promise.</p><p>1. Robimy to przy użyciu abortSignal, czyli wywołujemy metodę abort(), która generuje event 'abort' i wysyłamy callbacka wywołującego reject() do kolejki. Jednak zanim następuje pobranie tego callbacka z tej kolejki, może zmienić nam się status promisa na resolved. Niepotrzebnie odpali się kod zależny od rozwiązania się obietnicy, jego wykonanie zajmie czas i zasoby, w tym możliwe, że również zasoby serwera. Następnie wywoła się callback, który miał zapobiec wykonaniu kodu który się już wykonał. Wykonanie tego callbacka też zajmuje czas i zasoby, jednocześnie jest już zupełnie niepotrzebne. Odkłada to w czasie wykonanie innych oczekujących wywołań zwrotnych z kolejki.</p><p>2. Robimy to synchronicznie. Już, zrobione.</p>",
+																																"author": "denisnowakow",
+																																"date": "2020-02-21T16:00:40Z",
+																																"comments": [
+																																	{
+																																		"content": "<p>To dalej nie rozwiązuje żadnego z problemów, o jakich wspominałem we wcześniejszych komentarzach. Nie widzę sensu w optymalizowaniu pod edge case, jeśli ma to spowodować znaczne pogorszenie jakości kodu aplikacji.</p><p>No i jeszcze raz powtórzę: tu nie chodzi o odrzucenie obiecanki, bo to można rozwiązać na miliard innych sposobów. Tutaj odrzucenie obiecanki jest tylko efektem ubocznym ubicia operacji asynchronicznej. Taka operacja może być wykonywana na różne sposoby i nie pozwalać ubić się natychmiast. Sama specyfikacja zakłada, że ubicie następuje w _sensowny_ sposób → <a href=\"https://dom.spec.whatwg.org/#abortsignal-abort-algorithms\" rel=\"nofollow noopener\" title=\"https://dom.spec.whatwg.org/#abortsignal-abort-algorithms\">https://dom.spec.whatwg.org...</a></p><p>Stąd jeszcze raz powtórzę: jak najszybsze zabicie operacji nie jest istotne. O wiele istotniejsze jest zachowanie wyraźnego podziału odpowiedzialności, niedopuszczenie do ścisłego powiązania poszczególnych fragmentów kodu i zapewnienie, że wewnętrzna implementacja obiecanki i operacji asynchronicznej nie wycieknie na zewnątrz.</p>",
+																																		"author": "Comandeer",
+																																		"date": "2020-02-21T16:16:01Z",
+																																		"comments": [
+																																			{
+																																				"content": "<p>Owszem jeżeli to nie są problemy hipotetyczne, wyimaginowane bądź nieistotne, nie mi o tym sądzić. Możliwe, że zależy to od sytuacji. Nikt przecież nie odwołał odwiecznego dylematu, pisać czystszy kod czy szybszy.</p><p>I jakież to są inne sposoby na odrzucenie obietnicy? Bardzo mnie to zaciekawiło.</p>",
+																																				"author": "denisnowakow",
+																																				"date": "2020-02-21T16:18:59Z",
+																																				"comments": [
+																																					{
+																																						"content": "<p>Nie zauważyłem, że w promisie jest if ( abortSignal.aborted ).</p>",
+																																						"author": "denisnowakow",
+																																						"date": "2020-02-26T17:11:15Z",
+																																						"comments": []
+																																					}
+																																				]
+																																			},
+																																			{
+																																				"content": "<p>Odnośnie lepszej utrzymywalności - nie zawsze jest istotna. Jeżeli \"bardzo łatwo utrzymywalny\" kod generuje koszty obsługi infrastruktury sieciowej na poziomie  200 000 $ miesięcznie, to lepiej wydać dodatkowe 20 000 $, żeby utrzymywano \"ciężko utrzymywalny kod\" kod generujący koszty 100 000$. Natomiast jeżeli ktoś robi landing page'a, który odwiedza 100 osób rocznie, pewnie nawet abortSignal będzie niepotrzebny.</p>",
+																																				"author": "denisnowakow",
+																																				"date": "2020-02-21T16:32:33Z",
+																																				"comments": []
+																																			}
+																																		]
+																																	}
+																																]
+																															}
+																														]
+																													}
+																												]
+																											}
+																										]
+																									}
+																								]
+																							}
+																						]
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/hipermodularyzacja-czyli-rzym-plonie.html": {
+		"comments": [
+			{
+				"content": "<p>Rome trochę mi przypomina YUI3</p>",
+				"author": "piotr_nalepa",
+				"date": "2020-03-01T07:37:16Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Powiedzmy sobie szczerze - z perspektywy użytkownika, czytając \"It includes a compiler, linter, formatter, bundler, testing framework and more. It aims to be a comprehensive tool for anything related to the processing of JavaScript source code.\", bardziej to wygląda jak \"Rome is on fire\" zamiast \"Rzym płonie\". Z perspektywy konsumenta to rozwiązanie idealne - pralkosuszarka. Dodajmy do tego standardowe podejście do oceny rozwiązań (if Facebook then) i mamy prawie gotowy przepis na sukces. Kontrybutorom jednak nie zazdroszczę i sam jestem ciekaw jak ten model się sprawdzi.</p>",
+				"author": "przemeksmyrdek",
+				"date": "2020-04-14T21:44:29Z",
+				"comments": [
+					{
+						"content": "<p>Pytanie, czy ludziom będzie się opłacać porzucać obecne stacki oparte na Babelu/TypeScripcie, webpacku i ESLincie  na rzecz nowego rozwiązania. Hype hype'em, ale stabilność i pewność konkretnych rozwiązań to jednak zupełnie inna bajka.</p>",
+						"author": "Comandeer",
+						"date": "2020-04-14T21:58:43Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>jedna sprawa, co do lodasha, jego modularyzacja to ogromna zaleta gdyż nie trzeba ładować całej biblioteki jeśli potrzebujesz na froncie użyć jednej metody, co może mieć duży wpływ na performance</p>",
+				"author": "goq123",
+				"date": "2020-05-01T15:21:07Z",
+				"comments": []
+			}
+		]
+	},
+	"/toc-to-najprawdziwsza-twarz.html": {
+		"comments": [
+			{
+				"content": "<p>Literóweczka w \"Komenda ta ściągnie i urochomi\". Dzięki za artykuł!</p>",
+				"author": "maciejjanyska",
+				"date": "2020-05-04T16:21:40Z",
+				"comments": []
+			}
+		]
+	},
+	"/o-semantyce-slow-kilka.html": {
+		"comments": [
+			{
+				"content": "<p>Bardzo ciekawy artykuł. Mam proste, może głupie pytanie. Jakich znaczników powinno się używać do budowania układów strony? Bo wydaje mi się, że jeżeli strona jest podzielona na nawigację, nagłówek, treść główną i stopkę to właśnie powinny to być znaczniki nav header main footer? Pytam <a href=\"http://m.in\" rel=\"nofollow noopener\" title=\"m.in\">m.in</a>. odnośnie tego, że robiąc egzaminy zawodowe w technikum informatycznym z kwalifikacji E.14 czy EE.09 w zadaniach jest napisane \"Do zbudowania układu strony użyj znaczników sekcji\".<br></p><blockquote>As a \"pure\" container, the &lt;div&gt; element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the class or id attributes, <b>marking a section of a document</b> as being written in a different language (using the lang attribute), and so on.</blockquote><p>. I nie bardzo wiem jak to rozumieć. Wiele stron internetowych w sieci (nawet tych, które pojawiły się np. w tym roku jest zbudowana na divach. Wynika to z braku wsparcia dla tych \"nowych\" znaczników HTML 5? Chyba nie...?</p>",
+				"author": "disqus_RIdKNiN3gR",
+				"date": "2020-06-20T07:43:25Z",
+				"comments": [
+					{
+						"content": "<p>Wiele stron jest po prostu niepoprawnie skonstruowanych. Zresztą divy nie są całkowicie wyparte, do wielu rzeczy wciąż są najlepszym wyborem (np. mniej szkody wyrządzi źle dobrany div niż źle dobrany article).</p><p>Co do zacytowanego fragmentu specyfikacji: zauważ, że tam fragment o sekcji dotyczy fragmentów tekstu napisanych w innych języku (\"marking a section of a document as being written in a different language\"). I faktycznie, jeśli większy fragment tekstu wewnątrz article czy section jest napisany w innym języku, to otoczenie go przy pomocy div[lang] wydaje się najsensowniejszą opcją. Niemniej jest to dość niefortunne językowo sformułowanie, bo sekcje w HTML-u oznaczają coś zupełnie innego.</p>",
+						"author": "Comandeer",
+						"date": "2020-06-20T12:49:52Z",
+						"comments": []
+					},
+					{
+						"content": "<p>Egzamin EE.09 sam w sobie posiada <b>wiele </b>błędów!<br>@Comandeer:disqus myślę, że to dobry pomysł na jakiś artykuł, w końcu to egzamin państwowy.</p>",
+						"author": "myfoxCode",
+						"date": "2021-05-17T19:54:04Z",
+						"comments": [
+							{
+								"content": "<p>Przepraszam, umknął mi jakoś ten komentarz.</p><p>Faktycznie, jest to temat, któremu można się kiedyś przyjrzeć.</p>",
+								"author": "Comandeer",
+								"date": "2021-07-01T18:48:33Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/hot16challenge2.html": {
+		"comments": [
+			{
+				"content": "<p>Cholera, na to samo wpadłem w piątek i nawet przygotowałem demo ale nie zdążyłem nagrać wideo / napisać bloga o tym <a href=\"http://devstage.co.uk/c16c/code16challenge.html\" rel=\"nofollow noopener\" title=\"http://devstage.co.uk/c16c/code16challenge.html\">http://devstage.co.uk/c16c/...</a> wyprzedziłeś mnie!! :D</p>",
+				"author": "webdevinsider",
+				"date": "2020-06-09T09:21:04Z",
+				"comments": []
+			}
+		]
+	},
+	"/nowe-ie.html": {
+		"comments": [
+			{
+				"content": "<p>To dlaczego WebKit wygląda tak jak wygląda jest spowodowane tym że Apple zarabia ogromne pieniądze na swoim sklepiku z aplikacjami na iOS. I gdyby Safari pozwalało na PWA tak jak Chrome to potencjalnie mogłoby zagrozić zyskom Apple.</p><p>W przypadku Firefox to odkąd Brendan Eich został niejako zmuszony opuścił Mozillę z powodów które nie miały nic wspólnego z jego kompetencjami. To już w tedy wiedziałem że dobrze się nie skończy dla Mozilli. Także kwestią czasu jest to kiedy Mozilla przestanie istnieć.</p><p>Co do określenia nowe IE. Kiedyś tak myślałem o Chrome. Ale Chrome ratuje to że Blink i V8 są projektami o otwartym kodzie źródłowym. Dzięki czemu każdy kto chce stworzyć przeglądarkę nie musi przepalać środków na rozwój silników. A może skorzystać z gotowych rozwiązań i dostosować je do swoich potrzeb.<br>Aczkolwiek monopol nigdy nie jest czymś dobrym a sieć powinna być oparta na standardach i konsensusie. A nie na łasce jednej firmy.</p>",
+				"author": "konradchmielecki",
+				"date": "2020-08-28T08:09:41Z",
+				"comments": []
+			}
+		]
+	},
+	"/ascss.html": {
+		"comments": [
+			{
+				"content": "<p>Nie podoba mi się koncept tailwinda w ogóle. Taki sposób budowania klas i stylów przypomina mi nadmierne korzystanie z mixinów i tym podobnych narzędzi. Być może na początku to fajnie działa, ale utrzymanie takiego projektu długoterminowo się nie sprawdzi.</p>",
+				"author": "piotr_nalepa",
+				"date": "2020-09-30T06:31:49Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Od czasu powstania tego wpisu minęło już kilka miesięcy, a Tailwind mocno się rozwinął. Ciekawy jestem czy i Twoja opinia uległa modyfikacji. Z jednej strony rozumiem developerów, którzy lubią Tailwinda: szybkość budowania UI, spójność UI itp. Z drugiej strony nie rozumiem w czym pisanie tego samego w CSS z pomocą PostCSS jest wolniejsze czy mniej spójne. Mam trochę wrażenie, że Tailwind napędzają developerzy Reacta, którzy chyba w ogólności nie za bardzo lubią CSS, bo mają z nim problem organizacyjny (Styled Components, CSS modules w osobnych plikach itd.) Poza tym praca w React sprzyja zacieraniu granic między HTML, CSS i JS. Piszę to z własnego doświadczenia, bo od pięciu lat sam pracuję zawodowo w React. Ale jestem krytyczny, po pracy wolę Vue czy ostatnio Svelte, które moim zdaniem kierują wyobraźnię developera we właściwszym kierunku niż React. Mam na myśli, że komponenty w Svelte czy Vue rozdzielają HTML, CSS i JS oraz sugerują, że najważniejszy jest HTML, CSS jest dodatkiem a JS przyprawą, z którą trzeba ostrożnie.</p>",
+				"author": "tomekralski",
+				"date": "2021-08-13T10:49:17Z",
+				"comments": [
+					{
+						"content": "<p>Tailwind się rozwinął, ale po wejściu na jego stronę wciąż widzę ten sam tekst:<br></p><blockquote>“Best practices” don’t actually work.</blockquote><p><br>Nie miałbym problemu z Tailwindem, gdyby reklamował się jako rozwiązanie konkretnych problemów. Niemniej kreuje się na wielką rewolucję – a tym najzwyczajniej w świecie nie jest.</p><p>Moja opinia nie zmieniła się za bardzo, dalej uważam, że tego typu rozwiązanie ma większy sens jako preprocesor. Albo jako warstwa pośrednicząca między design systemem a implementacją. Narzędzie, które automatycznie generuje mi zmienne CSS na podstawie tego, co tworzę w Figmie albo innym narzędziu, brzmi jak coś, czego bym z przyjemnością używał.</p>",
+						"author": "Comandeer",
+						"date": "2021-08-13T20:06:14Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/jak-dziala-narzedzie-do-code-coverage.html": {
+		"comments": [
+			{
+				"content": "<p>Super! Dzięki za wyjaśnienie. Kiedyś się chwilę interesowałem AST aby zrobić odpowiedni linter do eslinta.<br>BTW. czy zmieniłeś formatowanie kodu na 8 spacji? Dla przejrzystości tekstu lepiej byłoby dać mniejszy spacing aby nie scrollować tak bardzo na komórce.</p>",
+				"author": "piotr_nalepa",
+				"date": "2021-02-01T07:32:02Z",
+				"comments": [
+					{
+						"content": "<p>Hm, nic nie zmieniałem, jest nawet specjalnie ustawiony `tab-size: 4` dla kodu. Dziwne, że się rozjechało.</p>",
+						"author": "Comandeer",
+						"date": "2021-02-03T22:13:14Z",
+						"comments": [
+							{
+								"content": "<p>W Firefox tab-size wymaga prefixu.</p>",
+								"author": "pjetrucha",
+								"date": "2021-02-08T09:13:02Z",
+								"comments": [
+									{
+										"content": "<p>Faktycznie, dzięki – poprawione.</p>",
+										"author": "Comandeer",
+										"date": "2021-02-08T22:26:31Z",
+										"comments": []
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/rewolucja-klasowa.html": {
+		"comments": [
+			{
+				"content": "<p>Piękne podsumowanie w ostatnim zdaniu :D.</p>",
+				"author": "disqus_nZQc0TDaUw",
+				"date": "2022-06-07T08:56:49Z",
+				"comments": []
+			}
+		]
+	},
+	"/jak-strzelic-sobie-rozdzka-w-stope.html": {
+		"comments": [
+			{
+				"content": "<p>Plik d.ts możesz dodać do pakietu npm w pliku package.json nie musisz wrzucać ich do defintlyTyped. I działa to automatycznie. W package.json dodajesz tylko</p><p><code>\"typings\": \"plik.d.ts\",</code></p><p>W <a href=\"http://npmjs.org\" rel=\"nofollow noopener\" title=\"npmjs.org\">npmjs.org</a> pojawi się też że pakiet ma typy. Ale widać że już to masz w projekcie więc widać że VSCode jest do bani (nie bardzo inteli jak go piszą) skoro nie potrafi przeczytać plików z typami z zainstalowanej paczki.</p><p>Skoro używasz VSCode to chyba nie jesteś takim tradycjonalistą jak piszesz.</p>",
+				"author": "jcubic",
+				"date": "2021-07-15T10:56:45Z",
+				"comments": [
+					{
+						"content": "<p>Sorry, że dopiero teraz zaakceptowałem komentarz (muszę częściej zaglądać do panelu Disqusa, bo coś mnie nie powiadamia…).</p><p></p><blockquote>Skoro używasz VSCode to chyba nie jesteś takim tradycjonalistą jak piszesz.</blockquote><p></p><p>Vima też mi się zdarza używać ;)</p>",
+						"author": "Comandeer",
+						"date": "2021-07-26T22:46:08Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/jeden-znak-jest-warty-wiecej-niz-tysiac-ifow.html": {
+		"comments": [
+			{
+				"content": "<p>Pierwszy raz z tym mechanizmem natknąłem sie czytając ten artykuł w <a href=\"https://typeofweb.com/asi-czyli-automatyczne-wstawianie-srednikow\" rel=\"nofollow noopener\" title=\"https://typeofweb.com/asi-czyli-automatyczne-wstawianie-srednikow\">TypeOfWeb</a>.<br>Też podobny przypadek i wniosek.</p><p>Dlatego dla mnie średnik jest \"świętą krową\" i trzeba zwracać na to uwagę, żeby uniknąć takich smaczków spowodowanych przez ASI.</p>",
+				"author": "mikulew",
+				"date": "2021-09-12T12:39:08Z",
+				"comments": []
+			}
+		]
+	},
+	"/devjs-summit-2021.html": {
+		"comments": [
+			{
+				"content": "<p>Gratuluję. Postaram się włączyć na twoją prezentację!</p>",
+				"author": "piotr_nalepa",
+				"date": "2021-10-03T14:19:50Z",
+				"comments": []
+			}
+		]
+	},
+	"/najprostszy-event-emitter-w-przegladarce.html": {
+		"comments": [
+			{
+				"content": "<p>Ciekawe, może się przydać przy budowaniu jakieś biblioteki.</p>",
+				"author": "jcubic",
+				"date": "2022-01-26T21:27:31Z",
+				"comments": [
+					{
+						"content": "<p>Neh, raczej ZAMIAST jakiejś biblioteki ;-)</p>",
+						"author": "piecioshka",
+						"date": "2023-06-11T16:24:03Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	},
+	"/bramkarz.html": {
+		"comments": [
+			{
+				"content": "<p>Jak zwykle wartościowy post 👌🏼</p>",
+				"author": "wiktorwiniewski",
+				"date": "2022-07-31T21:23:31Z",
+				"comments": []
+			}
+		]
+	},
+	"/cienie-przeszlosci.html": {
+		"comments": [
+			{
+				"content": "<p>Bardzo dobry artykuł</p>",
+				"author": "wiktorwiniewski",
+				"date": "2023-02-24T23:04:22Z",
+				"comments": []
+			},
+			{
+				"content": "<p>Bardzo ciekawy artykuł. Jeszcze jedna cegiełka do arsenału, który może pomóc w debugowaniu kodu początkujących programistów.</p>",
+				"author": "jcubic",
+				"date": "2023-03-01T12:03:11Z",
+				"comments": []
+			}
+		]
+	},
+	"/dostepnosc-w-nieoczekiwanych-miejscach.html": {
+		"comments": [
+			{
+				"content": "<p>A kiedy będziesz oferować dostępność feedu kanału komentarzy do wpisu?</p>",
+				"author": "spexpl",
+				"date": "2023-05-19T22:51:41Z",
+				"comments": [
+					{
+						"content": "<p>W tym celu najpierw musiałbym zmigrować z Disqusa… A, prawdę mówiąc, komentarzy pojawia się tak mało pod wpisami, że poważnie zastanawiam się nad tym, żeby ich całkowicie nie usunąć.</p>",
+						"author": "Comandeer",
+						"date": "2023-05-19T23:17:07Z",
+						"comments": [
+							{
+								"content": "<p>Prosiłbym o nie, co czasem warto jednak o coś zapytać. Ale powiem szczerze ostatnio Disqus coraz bardziej przeszkadza, nic pomaga w komentarzach. Nie da się już tak łatwo (jako gość) przejść do komentowanej strony itp. Disqus strasznie próbuje ruch zatrzymać u siebie.</p>",
+								"author": "spexpl",
+								"date": "2023-05-20T22:15:32Z",
+								"comments": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"/uparte-narzedzia.html": {
+		"comments": [
+			{
+				"content": "<p>Z tego, co wiem, PHP-FIG nie jest już uznawane przez najważniejsze frameworki. Symfony ma swój własny odpowiednik — Symfony Contracts.</p><p>Narzędzia nie powinny być opinionated. Powinny być elastyczne, aby można było je dostosować do specyficznych wymagań projektu. Ale powinny mieć na tyle dobre defaulty, że nikomu nie chce się tego zmieniać, chyba że jest to do czegoś potrzebne.</p>",
+				"author": "tomaszgasior",
+				"date": "2024-03-01T18:42:46Z",
+				"comments": [
+					{
+						"content": "<p>&gt; Symfony ma swój własny odpowiednik — Symfony Contracts</p><p>Z <a href=\"https://github.com/symfony/contracts#how-is-this-different-from-php-figs-psrs\" rel=\"nofollow noopener\" title=\"https://github.com/symfony/contracts#how-is-this-different-from-php-figs-psrs\">oficjalnego repo Contracts</a>:</p><p>&gt; When applicable, the provided contracts are built on top of PHP-FIG's PSRs.</p><p>Więc oficjalnie Symfony nie jest częścią PHP-FIG, ale i tak trzyma się ich standardów tam, gdzie się da. No bo tak naprawdę nie da się ich nie przestrzegać. Nie w momencie, gdy Composer wymaga choćby autloadingu zgodnego z PSR.</p>",
+						"author": "Comandeer",
+						"date": "2024-03-05T10:10:07Z",
+						"comments": []
+					}
+				]
+			},
+			{
+				"content": "<p>Mhmm, już jakiś czas temu czytałem o pomysłach (np. <a href=\"https://stackoverflow.com/questions/71698049/is-there-a-way-to-put-every-configuration-file-to-a-config-directory-rather-than\" rel=\"nofollow noopener\" title=\"https://stackoverflow.com/questions/71698049/is-there-a-way-to-put-every-configuration-file-to-a-config-directory-rather-than\">link1</a>, <a href=\"https://github.com/nodejs/tooling/issues/79\" rel=\"nofollow noopener\" title=\"https://github.com/nodejs/tooling/issues/79\">link2</a>) przeniesienia plików konfiguracyjnych do innego folderu. Rozumiem głosy obu stron -- byłoby to i dobre i złe.</p><p><a href=\"https://github.com/nodejs/tooling/issues/79#issuecomment-1348576368\" rel=\"nofollow noopener\" title=\"https://github.com/nodejs/tooling/issues/79#issuecomment-1348576368\">Jeden z głosów</a> można by uznać, ze wpasowuje się w temat wpisu -- umieścić informację w <code>package.json</code>. Trudno byłoby zgubić taki folder mając go jawnie w najważniejszym pliku w projekcie. Jednak pomyślałbym o rozwinięciu tej idei i udostępnieniu możliwości dziedziczenia(?) konfiguracji z pomocą instalowalnych modułów (np. z NPMa), trochę podobnie jak to robi ESLint.</p><p>Wydaje mi się, że takie rozwiązanie udostępniałoby wolność w konfiguracji (dowolna, instalowalna od tak), konkretność w jej wskazaniu (za pomocą package.json), oraz \"czystość\" przestrzeni roboczej (brak 20 plików konfiguracyjnych).</p><p>---</p><p>Inna kwestia to czy nie wypadałoby przepisać jakichś starych rozwiązań ze względu na ich gorsze przystosowanie do współczesnych rozwiązań? Może gdyby takie narzędzie zacząć tworzyć <i>dziś</i> z dzisiejszym bagażem doświadczeń, to można by było stworzyć coś zarówno wydajniejszego i uwzgledniającego więcej przypadków (wchłaniając kilka konfiguracji do jednej). Ale to luźne przemyślenie wykreowane w trakcie pisania.</p><p>Ciekaw jestem jaką opinię na ten temat ma Pan Comandeer, prosiłbym o odpowiedź lub opisanie zagadnienia w dedykowanym wpisie ;p</p>",
+				"author": "Evolveye",
+				"date": "2024-03-04T23:42:59Z",
+				"comments": [
+					{
+						"content": "<p>Przeniesienie wszystkiego do `package.json` jest IMO średnim pomysłem. Ten plik bowiem zostaje opublikowany do rejestru npm, więc nie powinien być za duży. A jeśli będzie puchnął za bardzo od devowych rzeczy, to pakiety w npm-ie będą niepotrzebnie duże – co ostatecznie jest problemem dla całego ekosystemu. To, o co mi chodziło z `package.json`, to po prostu używanie przez narzędzia informacji, które już tam są standardowo.</p><p>Więc szczerze, to najbardziej mi się podoba przeniesienie configu do osobnego katalogu. Tylko że to bardziej zamiatanie problemu pod dywan, niż faktyczne jego rozwiązanie. Ale chyba jedyne, jakie pozwoli uporządkować ten bałagan, bo wspólny format konfiguracji dla różnych tooli to totalna utopia – zwłaszcza w ekosystemie JS. No chyba że nagle Biome czy podobny projekt zażre i jedno narzędzie zastąpi wszystkie inne.</p>",
+						"author": "Comandeer",
+						"date": "2024-03-05T10:07:19Z",
+						"comments": []
+					}
+				]
+			}
+		]
+	}
+}

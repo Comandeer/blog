@@ -1,0 +1,15 @@
+.paginator__list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.paginator__item {
+	font-size: 1.25em;
+}
+
+.paginator__item_next {
+	margin-inline-start: auto;
+}

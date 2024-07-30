@@ -1,0 +1,17 @@
+{
+	"name": "Comandeerowy blog",
+	"short_name": "Comandeerowy",
+	"theme_color": "#336699",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"id": "/",
+	"icons": [
+		{
+			"src": "/assets/logo-light.svg",
+			"type": "image/svg+xml",
+			"sizes": "any"
+		}
+	]
+  }

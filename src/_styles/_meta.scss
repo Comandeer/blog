@@ -1,0 +1,24 @@
+.meta {
+	display: flex;
+	flex-wrap: wrap;
+	margin-inline-start: 0;
+	gap: 0.5em;
+}
+
+.meta__item {
+	margin-block-start: 0;
+}
+
+.meta__value {
+	font-style: normal;
+	margin-inline-start: 0;
+}
+
+.meta__value::after {
+	content: '•';
+	margin-inline-start: 0.5em;
+}
+
+.meta__value:last-child::after {
+	content: '';
+}
