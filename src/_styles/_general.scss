@@ -22,6 +22,7 @@ body {
 	flex-direction: column;
 	max-inline-size: 80ch;
 	margin: 0 auto;
+	gap: 0.5em;
 }
 
 main {
@@ -29,7 +30,7 @@ main {
 	padding-inline: 0.5em;
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.5em;
 }
 
 a {

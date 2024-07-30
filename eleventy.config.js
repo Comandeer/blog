@@ -8,6 +8,7 @@ const site = require( './src/_data/site' );
 const markdownIt = require( './plugins/markdownIt' );
 const minifyJS = require( './plugins/minifyJS' );
 const imageShortCode = require( './shortcodes/image' );
+const disqusShortCode = require( './shortcodes/disqus' );
 
 /**
  *
@@ -130,6 +131,7 @@ module.exports = function( eleventyConfig ) {
 	} );
 
 	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
+	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
 
 	return {
 		dir: {
