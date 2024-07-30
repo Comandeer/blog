@@ -2,6 +2,7 @@
  * @typedef CookiePreferences
  * @property {boolean} prefs
  * @property {boolean} embed
+ * @property {boolean} comments
  */
 
 /**
@@ -11,7 +12,8 @@ let cookiePrefences = localStorage.getItem( 'cookiePreferences' ) ?
 	JSON.parse( localStorage.getItem( 'cookiePreferences' ) ) :
 	{
 		prefs: false,
-		embed: false
+		embed: false,
+		comments: false
 	};
 
 const themeSwitcherInvoker = document.querySelector( '.theme-switcher__invoker' );
@@ -144,7 +146,8 @@ const cookieDialogForm = document.querySelector( '#cookie-dialog-form' );
 cookieBannerButtonAll.addEventListener( 'click', () => {
 	setCookiePreferences( {
 		prefs: true,
-		embed: true
+		embed: true,
+		comments: true
 	} );
 
 	closeCookieBanner();
@@ -153,7 +156,8 @@ cookieBannerButtonAll.addEventListener( 'click', () => {
 cookieBannerButtonNone.addEventListener( 'click', () => {
 	setCookiePreferences( {
 		prefs: false,
-		embed: false
+		embed: false,
+		comments: false
 	} );
 
 	closeCookieBanner();
@@ -173,7 +177,8 @@ cookieSettingsButton.addEventListener( 'click', () => {
 cookieDialogForm.addEventListener( 'submit', ( evt ) => {
 	setCookiePreferences( {
 		prefs: evt.target.elements.prefs.checked,
-		embed: evt.target.elements.embed.checked
+		embed: evt.target.elements.embed.checked,
+		comments: evt.target.elements.comments.checked
 	} );
 } );
 
@@ -189,6 +194,7 @@ function closeCookieBanner() {
 function updateCookieDialog() {
 	cookieDialogForm.elements.prefs.checked = cookiePrefences.prefs;
 	cookieDialogForm.elements.embed.checked = cookiePrefences.embed;
+	cookieDialogForm.elements.comments.checked = cookiePrefences.comments;
 }
 
 function setCookiePreferences( preferences ) {
@@ -219,7 +225,7 @@ class EmbedComponent extends HTMLElement {
 
 		[ 'https://www.youtube.com',  ( url ) => {
 			return String( url ).replace( 'youtube.com/watch?v=', 'youtube-nocookie.com/embed/' );
-		}]
+		} ]
 	] );
 
 	connectedCallback() {
@@ -260,3 +266,45 @@ class EmbedComponent extends HTMLElement {
 }
 
 customElements.define( 'embed-', EmbedComponent );
+
+class CommentsComponent extends HTMLElement {
+	connectedCallback() {
+		if ( !cookiePrefences.comments ) {
+			return;
+		}
+
+		const theme = this.#getTheme();
+		const script = document.createElement( 'script' );
+
+		script.setAttribute( 'data-repo', 'Comandeer/blog' );
+		script.setAttribute( 'data-repo-id', 'MDEwOlJlcG9zaXRvcnk4MDkyMTIyOA==' );
+		script.setAttribute( 'data-category', 'Announcements' );
+		script.setAttribute( 'data-category-id', 'DIC_kwDOBNLCjM4ChGfo' );
+		script.setAttribute( 'data-mapping', 'specific' );
+		script.setAttribute( 'data-term', this.getAttribute( 'thread' ) );
+		script.setAttribute( 'data-strict', '0' );
+		script.setAttribute( 'data-reactions-enabled', '0' );
+		script.setAttribute( 'data-emit-metadata', '1' );
+		script.setAttribute( 'data-input-position', 'top' );
+		script.setAttribute( 'data-theme', theme );
+		script.setAttribute( 'data-lang', 'pl' );
+		script.setAttribute( 'data-loading', 'lazy' );
+		script.crossOrigin = 'anonymous';
+		script.async = true;
+		script.src = 'https://giscus.app/client.js';
+
+		this.replaceWith( script );
+	}
+
+	#getTheme() {
+		const currentTheme = document.documentElement.dataset.theme;
+
+		if ( currentTheme === 'auto' ) {
+			return 'preferred_color_scheme';
+		}
+
+		return currentTheme;
+	}
+}
+
+customElements.define( 'comments-', CommentsComponent );

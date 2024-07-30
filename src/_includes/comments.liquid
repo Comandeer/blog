@@ -1,22 +1,6 @@
 <section class="comments">
 	<h2 class="comments__heading">Komentarze</h2>
-	<script src="https://giscus.app/client.js"
-        data-repo="Comandeer/blog"
-        data-repo-id="MDEwOlJlcG9zaXRvcnk4MDkyMTIyOA=="
-        data-category="Announcements"
-        data-category-id="DIC_kwDOBNLCjM4ChGfo"
-        data-mapping="specific"
-        data-term="{{ permalink }}"
-        data-strict="0"
-        data-reactions-enabled="0"
-        data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="pl"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+	<div><comments- thread="{{ permalink }}"><p><a href="{{ permalink | commentUrl }}" rel="noreferrer noopener">Przejdź do komentarzy bezpośrednio na Githubie</a>.</comments-></div>
 {% if disqusComments[ permalink ] %}
 	{% assign dC = disqusComments[ permalink ].comments %}
 	<details class="comments__disqus disqus">

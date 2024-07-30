@@ -129,6 +129,13 @@ module.exports = function( eleventyConfig ) {
 
 		return '';
 	} );
+	eleventyConfig.addFilter( 'commentUrl', ( permalink ) => {
+		const searchParams = new URLSearchParams();
+
+		searchParams.set( 'discussions_q', `category:Announcements ${ permalink }` );
+
+		return `https://github.com/Comandeer/blog/discussions/categories/announcements?${ searchParams.toString() }`;
+	} );
 
 	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
