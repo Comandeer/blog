@@ -2,13 +2,15 @@
 layout: post
 title:  "Zwrot deklaratywny"
 author: Comandeer
-date:   2024-06-30 22:51:00 +0200
-categories: html-css refleksje
+date: 2024-06-30T22:51:00+0200
+tags:
+  - html-css
+  - refleksje
 comments: true
 permalink: /zwrot-deklaratywny.html
 ---
 
-Webdevelopment przyzwyczaił nas już do tego, że pewnych rzeczy bez JS-a nie da się zrobić. Niektóre ficzery przeglądarkowe są bowiem dostępne tylko z poziomu JS-owych API. Inne rzeczy w ogóle nie są dostępne w przeglądarce i trzeba sobie je samemu napisać w – a jakże! – JS-ie. Niemniej ostatnio można zaobserwować pewien deklaratywny zwrot w standardach sieciowych.
+Webdevelopment przyzwyczaił nas już do tego, że pewnych rzeczy bez JS-a nie da się zrobić. Niektóre ficzery przeglądarkowe są bowiem dostępne tylko z poziomu JS-owych API. Inne rzeczy w ogóle nie są dostępne w przeglądarce i trzeba sobie je samemu napisać w – a jakże! – JS-ie. Niemniej ostatnio można zaobserwować pewien deklaratywny zwrot w standardach sieciowych.<!--more-->
 
 ## Na początku był popup
 
@@ -38,12 +40,7 @@ Sama możliwość tworzenia wyskakujących okienek przy pomocy dwóch linijek HT
 
 Tutaj jednak na scenę wkracza kolejna nowość, na razie dostępna tylko w Chrome – [CSS <i lang="en">anchor positioning</i> (kotwiczenie pozycjonowania)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning/Using). Pozwala ona "przypiąć" dany element do innego elementu. Dzięki temu można uzyskać choćby wspomniane wcześniej rozwijane przyciskiem menu:
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBGzJQm" data-pen-title="Untitled" data-user="Comandeer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Comandeer/pen/qBGzJQm">
-  Untitled</a> by Comandeer (<a href="https://codepen.io/Comandeer">@Comandeer</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{% include 'embed' src="https://codepen.io/Comandeer/pen/qBGzJQm" %}
 
 Kotwiczenie pozycjonowania to, wbrew pozorom, nie jest łatwy do rozwiązania problem. Wystarczy spojrzeć, jak popularne są rozwiązania pokroju [Floating UI](https://floating-ui.com/) (dawny Popper), które ma [**ponad 11 milionów pobrań tygodniowo**](https://www.npmjs.com/package/@floating-ui/dom). A mówimy tutaj wyłącznie o wersji vanilla JS – jeśli zliczyć także integracje z popularnymi frameworkami oraz poprzednią wersję, Poppera, ta liczba spokojnie się _podwoi_. I nie jest to jedyna biblioteka od tego. Zapotrzebowanie jest więc bardzo duże i miło zobaczyć, że przeglądarki zaczynają to robić za nas. Co w teorii oznacza, że powinno to działać wydajniej i… czyściej. W końcu obliczanie pozycji w JS-ie od zawsze brzmiało na obejście ograniczeń CSS-a.
 
