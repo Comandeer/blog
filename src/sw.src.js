@@ -6,6 +6,8 @@ const CACHEABLE_EXTENSIONS = [
 	'webp',
 	'svg',
 	'png',
+	'jpg',
+	'gif',
 	'css',
 	'html'
 ];
