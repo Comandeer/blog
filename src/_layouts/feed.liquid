@@ -23,14 +23,14 @@
       <name>{{ post.data.author | xml_escape }}</name>
     </author>
     {% endif %}
-    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" />
+    <link href="{{ site.url }}{{ post.url | cfUrl }}" rel="alternate" type="text/html" />
     <published>{{ post.date | rfc_date }}</published>
     <updated>{{ post.date | rfc_date }}</updated>
-    <id>{{ site.url }}{{ post.url }}</id>
+    <id>{{ site.url }}{{ post.url | cfUrl }}</id>
 	{% if post.data.description %}
     <summary><![CDATA[{{ post.data.description }}]]></summary>
 	{% endif %}
-    <content type="html" xml:base="{{ site.url }}{{ post.url }}"><![CDATA[{{ post.content }}]]></content>
+    <content type="html" xml:base="{{ site.url }}{{ post.url | cfUrl }}"><![CDATA[{{ post.content }}]]></content>
   </entry>
   {% endfor %}
 </feed>

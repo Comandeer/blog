@@ -132,10 +132,11 @@ module.exports = function( eleventyConfig ) {
 	eleventyConfig.addFilter( 'commentUrl', ( permalink ) => {
 		const searchParams = new URLSearchParams();
 
-		searchParams.set( 'discussions_q', `category:Announcements ${ permalink }` );
+		searchParams.set( 'discussions_q', `category:Announcements ${ cfUrl( permalink ) }` );
 
 		return `https://github.com/Comandeer/blog/discussions/categories/announcements?${ searchParams.toString() }`;
 	} );
+	eleventyConfig.addFilter( 'cfUrl', cfUrl );
 
 	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
@@ -148,3 +149,7 @@ module.exports = function( eleventyConfig ) {
 		}
 	};
 };
+
+function cfUrl( url ) {
+	return url.replace( /index\.html$/, '' ).replace( /\.html$/, '' );
+}

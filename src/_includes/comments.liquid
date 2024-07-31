@@ -1,6 +1,6 @@
 <section class="comments">
 	<h2 class="comments__heading">Komentarze</h2>
-	<div><comments- thread="{{ permalink }}"><p><a href="{{ permalink | commentUrl }}" rel="noreferrer noopener">Przejdź do komentarzy bezpośrednio na Githubie</a>.</comments-></div>
+	<div><comments- thread="{{ permalink | cfUrl }}"><p><a href="{{ permalink | commentUrl }}" rel="noreferrer noopener">Przejdź do komentarzy bezpośrednio na Githubie</a>.</comments-></div>
 {% if disqusComments[ permalink ] %}
 	{% assign dC = disqusComments[ permalink ].comments %}
 	<details class="comments__disqus disqus">
