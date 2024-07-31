@@ -3,6 +3,8 @@
 	flex-wrap: wrap;
 	margin-inline-start: 0;
 	gap: 0.5em;
+	border-inline-start: 4px var(--primary) solid;
+    padding-inline-start: 0.5em;
 }
 
 .meta__item {
