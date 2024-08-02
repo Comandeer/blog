@@ -25,6 +25,7 @@
 	padding-block: 0;
 	padding-inline: 1em;
 	block-size: 100%;
+	min-block-size: 1em;
 }
 
 .theme-switcher__list {
@@ -36,7 +37,6 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	margin-block-start: -0.5em;
 	border: 1px solid var( --primary );
 }
 
