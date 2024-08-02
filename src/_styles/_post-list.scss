@@ -2,10 +2,17 @@
 	padding-inline-start: 0;
 	list-style: none;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
 }
 
-.post-list__post + .post-list__post {
-	border-block-start: 1px solid var(--primary);
+.post-list__post {
+	border-block-end: 1px solid var(--primary);
+}
+
+.post-list__post:last-child {
+	border-block-end: none;
 }
 
 .rss-subscribe {
