@@ -92,6 +92,7 @@ module.exports = function( eleventyConfig ) {
 	[
 		'src/assets/',
 		'src/favicon.ico',
+		'src/apple-touch-icon.png',
 		'src/manifest.webmanifest',
 		'src/_redirects'
 	].forEach( ( path ) => {
