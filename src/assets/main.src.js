@@ -86,7 +86,6 @@ themeSwitcherList.addEventListener( 'mouseover', ( evt ) => {
 	currentFocusIndex = index;
 } );
 
-updateThemePreferences( currentTheme );
 updateThemeSwitcherMenu( currentTheme );
 
 function toggleThemeSwitcher( forcedVisibility ) {
