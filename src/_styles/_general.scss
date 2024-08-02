@@ -44,6 +44,9 @@ a:hover {
 
 button {
 	padding: 0.5em;
+	background: var(--primary-bg);
+	color: var(--primary);
+	border: 1px var(--primary) solid;
 }
 
 button:focus-visible {
