@@ -23,9 +23,13 @@ const themeSwitcherOptions = Array.from( themeSwitcherList.querySelectorAll( '.t
 let currentFocusIndex = -1;
 let currentTheme = localStorage.getItem( 'theme' ) ?? 'auto';
 
-themeSwitcherInvoker.addEventListener( 'click', toggleThemeSwitcher );
-
 document.addEventListener( 'click', ( evt ) => {
+	if ( evt.target.closest( '.theme-switcher__invoker' ) ) {
+		toggleThemeSwitcher();
+
+		return;
+	}
+
 	if ( themeSwitcherList.hidden ) {
 		return;
 	}
@@ -40,7 +44,7 @@ document.addEventListener( 'click', ( evt ) => {
 		return;
 	}
 
-	if ( evt.target.closest( '.theme-switcher__list, .theme-switcher__invoker' ) ) {
+	if ( evt.target.closest( '.theme-switcher__list' ) ) {
 		return;
 	}
 
