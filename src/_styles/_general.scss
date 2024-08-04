@@ -49,6 +49,15 @@ button {
 	border: 1px var(--primary) solid;
 }
 
+button:hover {
+	background: var(--secondary-bg);
+}
+
+button:active {
+	background: var(--primary);
+	color: var(--primary-bg);
+}
+
 button:focus-visible {
 	outline-offset: 2px;
 }
