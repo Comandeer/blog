@@ -1,3 +1,4 @@
+/* global localStorage, HTMLElement, document, window, customElements */
 /**
  * @typedef CookiePreferences
  * @property {boolean} prefs
@@ -8,8 +9,7 @@
 /**
  * @type CookiePreferences
  */
-let cookiePrefences = localStorage.getItem( 'cookiePreferences' ) ?
-	JSON.parse( localStorage.getItem( 'cookiePreferences' ) ) :
+let cookiePrefences = getFromStorage( 'cookiePreferences' ) ??
 	{
 		prefs: false,
 		embed: false,
@@ -21,7 +21,7 @@ const themeSwitcherInvokerIcon = document.querySelector( '.theme-switcher__invok
 const themeSwitcherList = document.querySelector( '.theme-switcher__list' );
 const themeSwitcherOptions = Array.from( themeSwitcherList.querySelectorAll( '.theme-switcher__option' ) );
 let currentFocusIndex = -1;
-let currentTheme = localStorage.getItem( 'theme' ) ?? 'auto';
+let currentTheme = getFromStorage( 'theme' ) ?? 'auto';
 
 document.addEventListener( 'click', ( evt ) => {
 	if ( evt.target.closest( '.theme-switcher__invoker' ) ) {
@@ -114,7 +114,7 @@ function updateThemePreferences( theme ) {
 	document.documentElement.dataset.theme = theme;
 
 	if ( cookiePrefences.prefs ) {
-		localStorage.setItem( 'theme', theme );
+		saveToStorage( 'theme', theme );
 	}
 }
 
@@ -201,9 +201,25 @@ function updateCookieDialog() {
 }
 
 function setCookiePreferences( preferences ) {
-	localStorage.setItem( 'cookiePreferences', JSON.stringify( preferences ) );
+	saveToStorage( 'cookiePreferences', preferences );
 
 	cookiePrefences = preferences;
+}
+
+function getFromStorage( key ) {
+	try {
+		return JSON.parse( localStorage.getItem( key ) );
+	} catch {
+		return undefined;
+	}
+}
+
+function saveToStorage( key, value ) {
+	try {
+		localStorage.setItem( key, JSON.stringify( value ) );
+	} catch {
+		// noop
+	}
 }
 
 class EmbedComponent extends HTMLElement {

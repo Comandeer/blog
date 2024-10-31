@@ -19,12 +19,20 @@
 	<script>
 		document.documentElement.classList.remove( 'no-js' );
 
-		if ( !localStorage.getItem( 'cookiePreferences' ) ) {
+		try {
+			if ( !localStorage.getItem( 'cookiePreferences' ) ) {
+				document.documentElement.classList.add( 'cookie-banner-shown' );
+			}
+		} catch {
 			document.documentElement.classList.add( 'cookie-banner-shown' );
 		}
 
-		const theme = localStorage.getItem( 'theme' ) ?? 'auto';
-		document.documentElement.dataset.theme = theme;
+		try {
+			const theme = JSON.parse( localStorage.getItem( 'theme' ) ) ?? 'auto';
+			document.documentElement.dataset.theme = theme;
+		} catch {
+			document.documentElement.dataset.theme = 'auto';
+		}
 	</script>
 	<link rel="manifest" href="/manifest.webmanifest">
 	<link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
@@ -50,9 +58,11 @@
 	<script src="{{ "/assets/main.js" | rev }}" type="module"></script>
 	<script type="module">
 		if ( 'serviceWorker' in navigator ) {
-			await navigator.serviceWorker.register( '{{ "/sw.js" | rev }}', {
-				scope: '/'
-			} );
+			try {
+				await navigator.serviceWorker.register( '{{ "/sw.js" | rev }}', {
+					scope: '/'
+				} );
+			} catch {}
 		}
 	</script>
 </head>
