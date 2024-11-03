@@ -200,12 +200,23 @@ function updateCookieDialog() {
 	cookieDialogForm.elements.comments.checked = cookiePrefences.comments;
 }
 
+/**
+ * @param {CookiePreferences} preferences
+ */
 function setCookiePreferences( preferences ) {
 	saveToStorage( 'cookiePreferences', preferences );
+
+	if ( !preferences.prefs ) {
+		removeFromStorage( 'theme' );
+	}
 
 	cookiePrefences = preferences;
 }
 
+/**
+ * @param {string} key
+ * @returns {unknown | undefined}
+ */
 function getFromStorage( key ) {
 	try {
 		return JSON.parse( localStorage.getItem( key ) );
@@ -214,9 +225,25 @@ function getFromStorage( key ) {
 	}
 }
 
+/**
+ *
+ * @param {string} key
+ * @param {unknown} value
+ */
 function saveToStorage( key, value ) {
 	try {
 		localStorage.setItem( key, JSON.stringify( value ) );
+	} catch {
+		// noop
+	}
+}
+
+/**
+ * @param {string} key
+ */
+function removeFromStorage( key ) {
+	try {
+		localStorage.removeItem( key );
 	} catch {
 		// noop
 	}
