@@ -322,7 +322,7 @@ class CommentsComponent extends HTMLElement {
 			return 'preferred_color_scheme';
 		}
 
-		return currentTheme;
+		return `${ currentTheme }_high_contrast`;
 	}
 }
 
