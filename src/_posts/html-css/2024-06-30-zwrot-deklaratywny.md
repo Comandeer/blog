@@ -25,12 +25,7 @@ Ale to ostatnio się zmieniło, za sprawą nowego [Popover API](https://develope
 
 Ba, nic nie stoi na przeszkodzie, by połączyć Popover API z elementem `<dialog>`:
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GRaWPPy" data-pen-title="Untitled" data-user="Comandeer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/Comandeer/pen/GRaWPPy">
-  Untitled</a> by Comandeer (<a href="https://codepen.io/Comandeer">@Comandeer</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{% include 'embed' src="https://codepen.io/Comandeer/pen/GRaWPPy" %}
 
 Zarówno element `<dialog>`, jak i Popover API nie wydają się być strasznie przełomowe. Niemniej diabeł tkwi w szczegółach! Własnoręczne rzeźbienie wyskakujących okienek wiąże się ze sporą liczbą wyzwań, wśród których wymienić można choćby odpowiednie zarządzanie focusem. Rzut oka na [<cite lang="en">ARIA Practices</cite>](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/) pokazuje, jak dużo trzeba zrobić, żeby wyskakujące okienko było dostępne. W przypadku `<dialog>`u i Popover API te wszystkie rzeczy robi (a przynajmniej: powinna robić) za nas przeglądarka. Przeszliśmy dzięki temu od mówienia przeglądarce, _jak_ coś zrobić do mówienia, _co_ chcemy zrobić, a przeglądarka załatwia już całą resztę.
 
