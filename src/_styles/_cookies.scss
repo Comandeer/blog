@@ -10,6 +10,7 @@
 .cookie-dialog {
 	background-color: var( --primary-bg );
 	color: var( --secondary );
+	max-inline-size: 80ch;
 }
 
 .cookie-dialog__close {

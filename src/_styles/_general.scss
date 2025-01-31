@@ -1,3 +1,9 @@
+@media not ( prefers-reduced-motion ){
+	@view-transition {
+		navigation: auto;
+	}
+}
+
 *,
 *::before,
 *::after {
