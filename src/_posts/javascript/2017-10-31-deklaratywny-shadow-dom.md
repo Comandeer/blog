@@ -32,7 +32,7 @@ shadow.innerHTML = '<p>Some HTML here</p>';
 
 W ten sposób stworzyliśmy element `div`, którego wnętrzności są ukryte.
 
-{% image "../../images/div-sd.png" "Shadow DOM widziany z poziomu dev tools Chrome'a." %}
+{% include 'figure' src="../../images/div-sd.png" alt="Shadow DOM widziany z poziomu dev tools Chrome'a." %}
 
 Nie będę w tym miejscu rozpisywał się o szczegółach tego kodu. Ważne jedynie, by pamiętać, że `attachShadow` zawsze musi przyjąć jako parametr obiekt z własnością `mode`, która może przyjąć wartość `'open'` lub `'closed'`. Natomiast faktyczny Shadow DOM (czyli to, co zwróci nam `attachShadow`) pozwala nam wyszukiwać elementy przez `querySelector*`, dodawać i usuwać nowe elementy przez tradycyjne metody DOM-we oraz dodatkowo ustawiać treść przy pomocy `innerHTML`.
 
