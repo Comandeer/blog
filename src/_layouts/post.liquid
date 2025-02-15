@@ -8,8 +8,8 @@
 
 				<header class="post__header header">
 				  <h1 class="header__heading" property="name headline">{{ title }}</h1>
-				  {%  include 'post-metadata' date=page.date author=author tags=tags %}
-			  </header>
+				  {%  include 'post-metadata' date=page.date author=author tags=tags project=project %}
+				</header>
 
 				<div class="post__content" property="articleBody">
 				  {{ content }}

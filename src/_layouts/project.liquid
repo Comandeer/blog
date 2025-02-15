@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html class="no-js" lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+		{% capture title %}Wpisy o projekcie {{ site.projectNames[ project ] | escape }}, strona {{ pagination.pageNumber | plus: 1 }}{% endcapture %}
+		{% capture description %}Zachęcam do przeglądnięcia wpisów o projekcie {{ site.projectNames[ project ] | escape }} – a nuż coś Cię zaciekawi!{% endcapture %}
+		{% include 'head' %}
+		<body>
+			{% include 'header' %}
+			<main id="tresc">
+				<hgroup>
+					<h1>Wpisy o projekcie {{ site.projectNames[ project ] | escape }}</h1>
+					<p>Strona {{ pagination.pageNumber | plus: 1 }}</p>
+				</hgroup>
+
+
+				{{ content }}
+
+				{% include 'post-list' posts=pagination %}
+
+				<p class="rss-subscribe">
+					{% capture rss_link %}/feeds/{{ tag | url_encode }}.xml{% endcapture %}
+					<a href="{{ rss_link }}" class="rss-subscribe">
+					<img src="/assets/rss.svg" alt="" width="32" height="32"> Subskrybuj wpisy o projekcie {{ site.projectNames[ project ] }}
+					</a>
+				</p>
+			</main>
+			{% include 'footer' %}
+		</body>
+	</html>

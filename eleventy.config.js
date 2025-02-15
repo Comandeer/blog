@@ -66,10 +66,21 @@ module.exports = function( eleventyConfig ) {
 	} );
 
 	eleventyConfig.addCollection( 'posts', ( collection ) => {
-		return collection.getFilteredByGlob( 'src/_posts/**/*.md' ).
+		return collection.
+			getFilteredByGlob( 'src/_posts/**/*.md' ).
 			sort( ( a, b ) => {
 				return b.date - a.date;
 			} );
+	} );
+
+	Object.keys( site.projectNames ).forEach( ( project ) => {
+		eleventyConfig.addCollection( `project-${ project }`, ( collection ) => {
+			return collection.
+				getFilteredByGlob( `src/_posts/projects/${ project }/*.md` ).
+				sort( ( a, b ) => {
+					return b.date - a.date;
+				} );
+		} );
 	} );
 
 	const tags = Object.keys( site.tagNames );

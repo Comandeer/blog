@@ -13,5 +13,8 @@ module.exports = {
 		'standardy-sieciowe': 'Standardy sieciowe',
 		wspolpraca: 'Współpraca',
 		'daj-sie-poznac-2017': 'Daj się poznać 2017'
+	},
+	projectNames: {
+		'czasomierze': 'Czasomierze'
 	}
 };

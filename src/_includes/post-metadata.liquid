@@ -1,15 +1,32 @@
 {% assign date = include.date %}
 {% assign author = include.author %}
 {% assign tags = include.tags %}
+{% assign project = include.project %}
 
 <dl class="meta">
-	<dt class="meta__item visually-hidden">Opublikowany:</dt>
-	<dd class="meta__value"><time datetime="{{ include.date | date: "%Y-%m-%d" }}">{{ include.date | date: "%d-%m-%Y" }}</time></dd>
+	<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
+			<use href="/assets/icons.svg#published"></use>
+		</svg><span
+		class="visually-hidden">Opublikowany:</span></dt>
+	<dd class="meta__value"><time datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%d-%m-%Y" }}</time></dd>
 	{% if author %}
-		<dt class="meta__item visually-hidden">Autor:</dt>
+		<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
+				<use href="/assets/icons.svg#author"></use>
+			</svg><span
+			class="visually-hidden">Autor:</span></dt>
 		<dd class="meta__value">{{ author }}</dd>
 	{% endif %}
-	<dt class="meta__item visually-hidden">Kategorie:</dt>
+	{%  if project %}
+		<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
+				<use href="/assets/icons.svg#project"></use>
+			</svg><span
+			class="visually-hidden">Projekt:</span></dt>
+		<dd class="meta__value"><a href="/projekty/{{ project | escape }}">{{  site.projectNames[ project ] }}</a></dd>
+	{% endif %}
+	<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
+				<use href="/assets/icons.svg#category"></use>
+			</svg><span
+		class="visually-hidden">Kategorie:</span></dt>
 	{% for tag in tags %}
 		<dd class="meta__value"><a href="/{{ tag | url_encode }}">{{ site.tagNames[ tag ] }}</a></dd>
 	{% endfor %}
