@@ -74,4 +74,4 @@ Podsumowując: ComSemRel to będzie lepsze (bo _własne_) semantic-release. Ambi
 
 PS przygarnę PR-a z ładnym logo!
 
-{% include 'figure' alt="KILL ALL HUMANS" src="../../images/bender-kill.jpg" %}
+{% figure "../../images/bender-kill.jpg" "KILL ALL HUMANS" %}

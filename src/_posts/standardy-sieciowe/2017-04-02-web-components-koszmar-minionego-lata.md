@@ -25,7 +25,7 @@ Nieskażone idee zawsze są piękne, czyż nie? Nie było inaczej i w przypadku 
 
 Żeby było jeszcze lepiej, to mądrzy ludzie stwierdzili, że skoro już pozwalamy tworzyć własne znaczniki, to zróbmy to dobrze, czyli pozwólmy robić to, co przeglądarki mogą od dawna: ukrywać różne, dziwne bebechy i pokazywać jedynie znacznik (jak to ma miejsce choćby z `video`)!
 
-{% include 'figure' alt="Shadow DOM tagu video w przeglądarce Chrome" src="../../images/video-SD.png" %}
+{% figure "../../images/video-SD.png" "Shadow DOM tagu video w przeglądarce Chrome" %}
 
 Tak oto narodził się Shadow DOM (SD).
 

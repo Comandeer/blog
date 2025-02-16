@@ -12,7 +12,7 @@ permalink: /konferencja-confrontjs-2019.html
 
 Podobnie jak w tamtym roku, tak i w tym objąłem patronatem medialnym (ależ to dumnie brzmi!) [konferencję ConFrontJS](https://2019.confrontjs.com/), która będzie miała swoją drugą edycję już 7 grudnia w Warszawie!<!--more-->
 
-{% include 'figure' src="../../images/konferencja-confrontjs-2019/banner.gif" link="https://confrontjs.com/" alt="" %}
+{% figure "../../images/konferencja-confrontjs-2019/banner.gif" "ConFrontJS – strona WWW" "" "https://confrontjs.com/" %}
 
 ## Moje typy
 

@@ -98,9 +98,9 @@ I choć dodatek do przeglądarki opierający się na znacznikach HTML, by budow
 
 Problem ten dotyczy nie tylko niestandardowych arkuszy stylów użytkownika, ale także [wbudowanego w Windows trybu wysokiego kontrastu](https://www.scottohara.me/blog/2019/02/12/high-contrast-aria-and-images.html). Usuwa on bowiem wszystkie style nadane elementom przez developera i na podstawie domyślnych arkuszy stylów przeglądarki oraz _semantyki_ poszczególnych elementów wyświetla wszystkie elementy. W tym momencie przyciski oparte na `div` przestaną pełnić swoją funkcję. Dzieje się tak, ponieważ w ich przypadku dostępność jest ściśle połączona z ich prezentacją – tych dwóch aspektów nie da się rozdzielić.
 
-{% include 'figure' src="../../images/czy-div-jest-dostepny/rnw-button-hc.png" alt="Brak ramki i innych wyznaczników, że jest to przycisk; został sam tekst." caption="Przycisk z RNW w trybie wysokiego kontrastu" %}
+{% figure "../../images/czy-div-jest-dostepny/rnw-button-hc.png" "Brak ramki i innych wyznaczników, że jest to przycisk; został sam tekst." "Przycisk z RNW w trybie wysokiego kontrastu" %}
 
-{% include 'figure' src="../../images/czy-div-jest-dostepny/native-button-hc.png" alt="Ramka wyraźnie wskazuje, w którym miejscu znajduje się przycisk." caption="Natywny przycisk w trybie wysokiego kontrastu" %}
+{% figure "../../images/czy-div-jest-dostepny/native-button-hc.png" "Ramka wyraźnie wskazuje, w którym miejscu znajduje się przycisk." "Natywny przycisk w trybie wysokiego kontrastu" %}
 
 Przycisk na `div` przestaje być przyciskiem w chwili, gdy przestaje wyglądać. Z kolei `button` ma przypisaną "przyciskowość" niejako do własnej tożsamości. Tak jak wilk przebrany za owcę nigdy nie stanie się prawdziwą owcą, tak przycisk na `div` nigdy nie stanie się tym samym co `button`. W wielu przypadkach może się sprawdzić, ale w wielu – spektakularnie się wyglebi.
 

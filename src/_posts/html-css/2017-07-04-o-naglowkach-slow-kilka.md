@@ -51,7 +51,7 @@ Niemal wszystkie czytniki ekranowe traktują nagłówki jako <i>punkty nawigacyj
 
 I tutaj ważna uwaga: jak już wspominałem w [artykule o tworzeniu czytnika ekranowego](https://blog.comandeer.pl/eksperymenty/a11y/2017/02/11/tworzymy-czytnik-ekranowy.html), technologia asystująca wie tyle, ile powie jej przeglądarka. Jak poszczególne nagłówki są oznajmiane technologii asystującej, można zobaczyć np. w narzędziach programistycznych przeglądarki Chrome w zakładce "Accessibility":
 
-{% include 'figure' alt="Screenshot otwartych narzędzi programistycznych Chrome, w których podglądany w zakładce Accessibility jest tag h2" src="../../images/devtools-a11y.png" %}
+{% figure "../../images/devtools-a11y.png" "Screenshot otwartych narzędzi programistycznych Chrome, w których podglądany w zakładce Accessibility jest tag h2" %}
 
 Jak widać, nagłówek `h2` jest przedstawiany jako element o roli `heading` (nagłówek) i poziomie 2 – zatem wszystko się zgadza.
 
@@ -73,7 +73,7 @@ Tak brzmiała teoria. Rzeczywistość okazała się brutalna, bo [żadna przegl�
 
 Zobaczmy zatem, czy Chrome faktycznie tak przedstawia ten nagłówek technologii asystującej:
 
-{% include 'figure' alt="Screenshot otwartych narzędzi programistycznych Chrome, w których podglądany w zakładce Accessibility jest tag section > h1" src="../../images/devtools-a11y-h1.png" %}
+{% figure "../../images/devtools-a11y-h1.png" "Screenshot otwartych narzędzi programistycznych Chrome, w których podglądany w zakładce Accessibility jest tag section > h1" %}
 
 Jak widać, nagłówek wewnątrz sekcji wciąż jest przedstawiany jako nagłówek pierwszego stopnia. To oznacza, że wykorzystanie kilku nagłówków `h1` na stronie (mimo stosowania równolegle tagów sekcjonujących) tworzy **płaską hierarchię treści**. Tego typu hierarchia jest całkowicie nieprzydatna z punktu widzenia użytkownika – zwłaszcza takiego, który posługuje się dodatkowo technologią asystującą.
 

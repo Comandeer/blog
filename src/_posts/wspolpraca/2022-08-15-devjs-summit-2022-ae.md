@@ -14,6 +14,6 @@ permalink: /devjs-summit-2022-ae.html
 
 Rejestracja i udział w konferencji są w pełni bezpłatne z poziomu [oficjalnej strony dev.js Summitu](https://devjssummit.pl/). Zapraszam!
 
-{% include 'figure' src="../../images/devjs-summit-2022-ae/banner.png" link="https://devjssummit.pl/" alt="dev.js Summit 2022 Autumn Edition – zarezerwuj bilet" %}
+{% figure "../../images/devjs-summit-2022-ae/banner.png" "dev.js Summit 2022 Autumn Edition – zarezerwuj bilet" "" "https://devjssummit.pl/" %}
 
 W tej edycji polecam prelekcję Kornelii Kobieli (którą możecie kojarzyć jako [Kota Źródłowego](https://kot-zrodlowy.pl/)). Jej szczegóły wkrótce powinny pojawić się na stronie wydarzenia, ale mogę zapewnić, że będzie ciekawie!

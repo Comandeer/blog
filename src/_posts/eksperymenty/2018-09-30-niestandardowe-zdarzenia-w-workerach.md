@@ -97,7 +97,7 @@ const event = new CustomEvent( 'mycustomevent' );
 worker.dispatchEvent( event );
 ```
 
-{% include 'figure' src="../../images/niestandardowe-zdarzenia-w-workerach/console.jpg" alt="Informacja o zaszłym zdarzeniu w konsoli Chrome" %}
+{% figure "../../images/niestandardowe-zdarzenia-w-workerach/console.jpg" "Informacja o zaszłym zdarzeniu w konsoli Chrome" %}
 
 Jak widać, w konsoli wyświetliły się informacje o zdarzeniu oraz informacja o tym, że zaszło w pliku `test.html`, nie zaś – w pliku `worker.js`. To oznacza, że faktycznie zdarzenia odpalone na obiekcie `worker` nie wychodzą poza stronę. [Przykład na żywo, jakby ktoś nie wierzył](https://embed.plnkr.co/gfcs2RZUqmINSa2av8fO/).
 
@@ -120,7 +120,7 @@ worker.postMessage( event );
 
 Sprawdźmy, co się stanie.
 
-{% include 'figure' src="../../images/niestandardowe-zdarzenia-w-workerach/clone-error.jpg" alt="Błąd w konsoli Chrome: &quot;Uncaught DOMException: Failed to execute 'postMessage' on 'Worker': CustomEvent object could not be cloned.&quot;" %}
+{% figure "../../images/niestandardowe-zdarzenia-w-workerach/clone-error.jpg" "Błąd w konsoli Chrome: &quot;Uncaught DOMException: Failed to execute 'postMessage' on 'Worker': CustomEvent object could not be cloned.&quot;" %}
 
 Z racji tego, że przekazanie do workera danych bezpośrednio mogłoby stanowić lukę w zabezpieczeniach, wszystkie dane są tak naprawdę klonowane przed wysłaniem i worker otrzymuje ich dokładne kopie. Niestety, niektórych obiektów nie da się sklonować. Należą do nich wszystkie te obiekty, które posiadają metody. A zdarzenia mają mnóstwo metod (`preventDefault`, `stopPropagation`, `stopImmediatePropagation` itd.). Tym samym nie możemy posłać zdarzenia bezpośrednio, musimy je wcześniej zmienić na zwykły obiekt. Najprostszy sposób na taką transformację obiektów to przepuszczenie ich przez `JSON.stringify` + `JSON.parse`. Niemniej w przypadku zdarzenia da to raczej nieoczekiwany rezultat:
 
@@ -167,7 +167,7 @@ self.addEventListener( 'mycustomevent', console.log );
 
 Sprawdźmy, czy całość działa.
 
-{% include 'figure' src="../../images/niestandardowe-zdarzenia-w-workerach/customevent.jpg" alt="Obiekt zdarzenia zalogowany w konsoli Chrome" %}
+{% figure "../../images/niestandardowe-zdarzenia-w-workerach/customevent.jpg" "Obiekt zdarzenia zalogowany w konsoli Chrome" %}
 
 Działa! I wcale nie zajęło to dużo kodu. Dodajmy zatem możliwość przekazywania danych do zdarzenia. Po stronie strony wystarczy je przekazać jako nową własność wysyłanego obiektu:
 
@@ -236,7 +236,7 @@ self.onmycustomevent = console.warn;
 
 Sprawdźmy, czy wszystko działa:
 
-{% include 'figure' src="../../images/niestandardowe-zdarzenia-w-workerach/globalhandler.jpg" alt="Działanie globalnego listenera w konsoli Chrome: zostało wyświetlone ostrzeżenie zawierające obiekt zdarzenia" %}
+{% figure "../../images/niestandardowe-zdarzenia-w-workerach/globalhandler.jpg" "Działanie globalnego listenera w konsoli Chrome: zostało wyświetlone ostrzeżenie zawierające obiekt zdarzenia" %}
 
 Działa!
 

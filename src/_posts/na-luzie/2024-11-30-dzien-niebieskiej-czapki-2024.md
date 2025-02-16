@@ -13,7 +13,7 @@ permalink: /dzien-niebieskiej-czapki-2024.html
 
 Nadszedł kolejny 30 listopada, a więc – zgodnie z tradycją – czas na świętowanie kolejnego <b>Dnia Niebieskiej Czapki</b>! Wszystkiego najlepszego z tej okazji, Drogie Osoby Webdeveloperskie – niech Wasze strony będą zgodne ze standardami i dostępne!<!--more-->
 
-{% include 'figure' src="../../images/dzien-niebieskiej-czapki-2024/ja-w-czapce.jpg" alt="Ja, o rok starszy, ale w tej samej ciepłej wełnianej czapce." %}
+{% figure "../../images/dzien-niebieskiej-czapki-2024/ja-w-czapce.jpg" "Ja, o rok starszy, ale w tej samej ciepłej wełnianej czapce." %}
 
 ## Niebieska czapka?
 

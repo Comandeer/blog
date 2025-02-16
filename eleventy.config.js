@@ -7,8 +7,8 @@ const sassPlugin = require( 'eleventy-sass' );
 const site = require( './src/_data/site' );
 const markdownIt = require( './plugins/markdownIt' );
 const minifyJS = require( './plugins/minifyJS' );
-const imageShortCode = require( './shortcodes/image' );
 const disqusShortCode = require( './shortcodes/disqus' );
+const figureShortcode = require('./shortcodes/figure' );
 
 /**
  *
@@ -150,7 +150,7 @@ module.exports = function( eleventyConfig ) {
 	} );
 	eleventyConfig.addFilter( 'cfUrl', cfUrl );
 
-	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
+	eleventyConfig.addAsyncShortcode( 'figure', figureShortcode );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
 
 	return {

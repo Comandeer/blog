@@ -26,7 +26,7 @@ Policzmy zatem, jaki jest kontrast w tęczy!
 
 Zatem weźmy na tapet oryginalną flagę:
 
-{% include 'figure' src="../../images/dostepna-tecza/original.svg" alt="Tęczowa flaga z poziomymi pasami kolorów, od góry: czerwony, pomarańczowy, żółty, zielony, niebieski i fioletowy." %}
+{% figure "../../images/dostepna-tecza/original.svg" "Tęczowa flaga z poziomymi pasami kolorów, od góry: czerwony, pomarańczowy, żółty, zielony, niebieski i fioletowy." %}
 
 Plan jest taki, by zacząć od górnego koloru i sprawdzać przy pomocy narzędzia takiego jak [contrast ratio](https://contrast-ratio.com/). Na samej górze mamy czerwony (`#750787`). [Jego kontrast względem białego tła strony wynosi 4.86:1](https://contrast-ratio.com/#%23e40303-on-#fff). Jak na razie jest dobrze! Sprawdźmy zatem kontrast z kolejnym kolorem, pomarańczowym (`#ff8c00`) – [2.08:1](https://contrast-ratio.com/#%23e40303-on-%23ff8c00). Tu już zdecydowanie gorzej… Takie testy przeprowadzić trzeba dla każdej kombinacji kolorów. Wyniki przedstawiam w tabeli poniżej:
 
@@ -60,7 +60,7 @@ Nowe kolory dobrane względem tła prezentują się następująco:
 
 W zasadzie tylko dwa kolory się zmieniły, bo reszta dobrze kontrastowała od samego początku.
 
-{% include 'figure' src="../../images/dostepna-tecza/contrast-background.svg" alt="Tęczowa flaga dostosowana pod kontrast z białym tłem – zmienione zostały odcienie pomarańczowego i żółtego." %}
+{% figure "../../images/dostepna-tecza/contrast-background.svg" "Tęczowa flaga dostosowana pod kontrast z białym tłem – zmienione zostały odcienie pomarańczowego i żółtego." %}
 
 Z kolei kolory przygotowane z myślą o kontraście między poszczególnymi kolorami na fladze wyglądają następująco:
 
@@ -75,7 +75,7 @@ Z kolei kolory przygotowane z myślą o kontraście między poszczególnymi kolo
 
 W tej wersji kontrast z tłem można załatwić przy pomocy sztuczki: flaga wyświetlona zostanie z 2-pikselową, czarną ramką. Dzięki temu kontrast będzie wymagany właśnie między tą ramką a tłem, a na szczęście [czarny dobrze kontrastuje z bielą](https://contrast-ratio.com/#%23000-on-%23fff). Dlaczego sztuczka z ramką działa? Ponieważ wówczas tło strony sąsiaduje nie bezpośrednio z kolorami na fladze a właśnie z ramką. Oczywiście inną kwestią jest, czy ramka kontrastuje z kolorami na fladze… ale wówczas wracamy do punktu wyjścia, bo ramka musiałaby kontrastować zarówno z kolorami na fladze, jak i kolorem tła. Uznajmy, że skoro kontrastuje z tłem, to spełnia swoje zadanie. Nawet, jeśli będzie się zlewała z niektórymi kolorami na fladze, to powinna pokazywać zarys całej flagi (np. dolna część zleje się z fioletowym kolorem, ale już na górze ramka będzie się dobrze kontrastowała z żółtym i pomarańczowym).
 
-{% include 'figure' src="../../images/dostepna-tecza/contrast-colors.svg" style="border: 2px solid #000;" alt="Tęczowa flaga dostosowana pod kontrast pomiędzy poszczególnymi kolorami oraz z czarną ramką zapewniającą kontrast z białym tłem." %}
+{% figure "../../images/dostepna-tecza/contrast-colors.svg" "Tęczowa flaga dostosowana pod kontrast pomiędzy poszczególnymi kolorami oraz z czarną ramką zapewniającą kontrast z białym tłem." "" "" %}
 
 Tutaj zmian było już zdecydowanie więcej, jedynie dwa kolory ostały się bez zmian.
 

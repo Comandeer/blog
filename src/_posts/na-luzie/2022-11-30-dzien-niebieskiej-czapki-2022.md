@@ -15,13 +15,7 @@ Dzisiaj 30 listopada – a więc Dzień Niebieskiej Czapki. Wszystkiego najlepsz
 
 W tym roku naprawdę się postarałem i mam niebieską czapkę (dzięki, 🐈!):
 
-{% include 'figure' src="../../images/dzien-niebieskiej-czapki-2022/ja-w-czapce.jpg" alt="Ja w ciepłej i przyjemnej wełnianej czapce." %}
-
-<!-- <picture class="figure">
-	<source srcset="/assets/images/dzien-niebieskiej-czapki-2022/ja-w-czapce.avif" type="image/avif">
-	<source srcset="/assets/images/dzien-niebieskiej-czapki-2022/ja-w-czapce.webp" type="image/webp">
-	<img src="/assets/images/dzien-niebieskiej-czapki-2022/ja-w-czapce.jpg" alt="Ja w ciepłej i przyjemnej wełnianej czapce." class="figure__image">
-</picture> -->
+{% figure "../../images/dzien-niebieskiej-czapki-2022/ja-w-czapce.jpg" "Ja w ciepłej i przyjemnej wełnianej czapce." %}
 
 ## Niebieska czapka?
 

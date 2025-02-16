@@ -13,13 +13,7 @@ permalink: /dzien-niebieskiej-czapki-2023.html
 
 Dzisiaj 30 listopada, zatem kolejny Dzień Niebieskiej Czapki. Co oznacza: wszystkiego najlepszego, Drogie Osoby Webdeveloperskie! 🎉 Mam nadzieję, że nie zapominacie o standardach sieciowych w swoich projektach.<!--more-->
 
-{% include 'figure' src="../../images/dzien-niebieskiej-czapki-2023/ja-w-czapce.jpg" alt="Ja w ciepłej i przyjemnej wełnianej czapce." %}
-
-<!-- <picture class="figure">
-	<source srcset="/assets/images/dzien-niebieskiej-czapki-2023/ja-w-czapce.avif" type="image/avif">
-	<source srcset="/assets/images/dzien-niebieskiej-czapki-2023/ja-w-czapce.webp" type="image/webp">
-	<img src="/assets/images/dzien-niebieskiej-czapki-2023/ja-w-czapce.jpg" alt="Ja w ciepłej i przyjemnej wełnianej czapce." class="figure__image">
-</picture> -->
+{% figure "../../images/dzien-niebieskiej-czapki-2023/ja-w-czapce.jpg" "Ja w ciepłej i przyjemnej wełnianej czapce." %}
 
 ## Niebieska czapka?
 
