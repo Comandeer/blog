@@ -11,6 +11,15 @@
 	margin-block-start: 0;
 }
 
+.meta__item::before {
+	content: '•';
+	margin-inline-end: 0.5em;
+}
+
+.meta__item:first-child::before {
+	content: '';
+}
+
 .meta__icon {
 	fill: var( --primary );
 	inline-size: 1.2rem;
@@ -24,11 +33,6 @@
 	margin-inline-start: 0;
 }
 
-.meta__value::after {
-	content: '•';
-	margin-inline-start: 0.5em;
-}
-
-.meta__value:last-child::after {
-	content: '';
+.meta__value:has( + .meta__value )::after {
+	content: ', ';
 }
