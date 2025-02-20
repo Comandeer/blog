@@ -12,6 +12,8 @@ const CACHEABLE_EXTENSIONS = [
 	'html'
 ];
 
+const cacheKeyRegex = /(.+)?-[\w]+\.(css|js)/;
+
 self.addEventListener( 'install', () => {
 	self.skipWaiting();
 } );
@@ -35,8 +37,9 @@ async function networkThenCache( request ) {
 
 	try {
 		const response = await fetch( request );
+		const responseClone = response.clone();
 
-		await cache.put( requestClone, response.clone() );
+		await updateCache( cache, requestClone, responseClone );
 
 		return response;
 	} catch {
@@ -70,13 +73,49 @@ async function cacheThenNetwork( request ) {
 
 		const requestClone = request.clone();
 		const response = await fetch( request );
+		const responseClone = response.clone();
 
-		await cache.put( requestClone, response.clone() );
+		await updateCache( cache, requestClone, responseClone );
 
 		return response;
 	} catch {
 		return getFallback();
 	}
+}
+
+/**
+ * @param {Cache} cache
+ * @param {Request} request
+ * @param {Response} response
+ * @returns {Promise<void>}
+ */
+async function updateCache( cache, request, response ) {
+	await cache.put( request, response );
+
+	const url = new URL( request.url );
+	const { pathname: path } = url;
+
+	if ( !path.endsWith( '.css' ) && !path.endsWith( '.js' ) ) {
+		return;
+	}
+
+	const matchedPath = path.match( cacheKeyRegex );
+
+	if ( matchedPath === undefined ) {
+		return;
+	}
+
+	const [ , pathStart, extension ] = matchedPath;
+
+	const keys = await cache.keys();
+
+	keys.forEach( ( key ) => {
+		const { pathname: path } = new URL( key.url );
+
+		if ( path.startsWith( pathStart )  && path.endsWith( extension ) && key.url !== request.url ) {
+			cache.delete( key );
+		}
+	} );
 }
 
 async function getFallback() {
