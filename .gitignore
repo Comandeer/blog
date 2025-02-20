@@ -3,3 +3,4 @@ dist/
 .jekyll-metadata
 .DS_STORE
 node_modules
+.idea/
