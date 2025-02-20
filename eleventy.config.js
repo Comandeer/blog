@@ -8,7 +8,8 @@ const site = require( './src/_data/site' );
 const markdownIt = require( './plugins/markdownIt' );
 const minifyJS = require( './plugins/minifyJS' );
 const disqusShortCode = require( './shortcodes/disqus' );
-const figureShortcode = require('./shortcodes/figure' );
+const figureShortcode = require( './shortcodes/figure' );
+const { rssLink, rssLabel } = require( './shortcodes/rss' );
 
 /**
  *
@@ -83,7 +84,7 @@ module.exports = function( eleventyConfig ) {
 		} );
 	} );
 
-	const tags = Object.keys( site.tagNames );
+	const tags = Object.keys( site.categoryNames );
 
 	tags.forEach( ( tag ) => {
 		eleventyConfig.addCollection( tag, ( collection ) => {
@@ -152,6 +153,8 @@ module.exports = function( eleventyConfig ) {
 
 	eleventyConfig.addAsyncShortcode( 'figure', figureShortcode );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
+	eleventyConfig.addShortcode( 'rss_link', rssLink );
+	eleventyConfig.addShortcode( 'rss_label', rssLabel );
 
 	return {
 		dir: {

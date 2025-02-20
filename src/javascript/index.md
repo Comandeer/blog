@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: javascript
 pagination:
   data: collections.javascript

@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: standardy-sieciowe
 pagination:
   data: collections.standardy-sieciowe

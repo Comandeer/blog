@@ -15,13 +15,7 @@
 				{{ content }}
 
 				{% include 'post-list' posts=pagination %}
-
-				<p class="rss-subscribe">
-					{% capture rss_link %}/feeds/{{ tag | url_encode }}.xml{% endcapture %}
-					<a href="{{ rss_link }}" class="rss-subscribe">
-					<img src="/assets/rss.svg" alt="" width="32" height="32"> Subskrybuj wpisy o projekcie {{ site.projectNames[ project ] }}
-					</a>
-				</p>
+				{% include 'rss-subscribe' %}
 			</main>
 			{% include 'footer' %}
 		</body>

@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: html-css
 pagination:
   data: collections.html-css

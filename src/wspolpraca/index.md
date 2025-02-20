@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: wspolpraca
 pagination:
   data: collections.wspolpraca

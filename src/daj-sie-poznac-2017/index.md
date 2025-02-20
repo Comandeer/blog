@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: daj-sie-poznac-2017
 pagination:
   data: collections.daj-sie-poznac-2017

@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: eksperymenty
 pagination:
   data: collections.eksperymenty

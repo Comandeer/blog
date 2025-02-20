@@ -3,7 +3,7 @@ module.exports = {
 	title: 'Comandeerowy blog',
 	description: 'Kolejny nudny blog kolejnego nudnego fanatyka JS-a. Nie czytać, nie warto tracić czasu.',
 	timezone: 'Europe/Warsaw',
-	tagNames: {
+	categoryNames: {
 		'na-luzie': 'Na luzie',
 		javascript: 'JavaScript',
 		a11y: 'Dostępność',

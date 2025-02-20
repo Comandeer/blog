@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: refleksje
 pagination:
   data: collections.refleksje

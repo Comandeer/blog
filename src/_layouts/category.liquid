@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 	<html class="no-js" lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
-		{%  if pagination.pageNumber > 0 %}
-		{% capture title %}Najnowsze wpisy, strona {{ pagination.pageNumber | plus: 1 }}{% endcapture %}
-		{% endif %}
+		{% capture title %}Wpisy z kategorii {{ site.categoryNames[ tag ] | escape }}, strona {{ pagination.pageNumber | plus: 1 }}{% endcapture %}
+		{% capture description %}Zachęcam do przeglądnięcia wpisów z kategorii {{ site.categoryNames[ tag ] | escape }} – a nuż coś Cię zaciekawi!{% endcapture %}
 		{% include 'head' %}
 		<body>
 			{% include 'header' %}
 			<main id="tresc">
 				<hgroup>
-					<h1>Najnowsze wpisy</h1>
-					{%  if pagination.pageNumber > 0 %}
+					<h1>Wpisy z kategorii {{ site.categoryNames[ tag ] | escape }}</h1>
 					<p>Strona {{ pagination.pageNumber | plus: 1 }}</p>
-					{% endif %}
 				</hgroup>
+
 
 				{{ content }}
 

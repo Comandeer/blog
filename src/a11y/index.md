@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: "a11y"
 pagination:
   data: collections.a11y

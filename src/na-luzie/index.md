@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: category
 tag: na-luzie
 pagination:
   data: collections.na-luzie

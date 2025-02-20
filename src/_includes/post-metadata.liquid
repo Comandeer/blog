@@ -28,6 +28,6 @@
 			</svg><span
 		class="visually-hidden">Kategorie:</span></dt>
 	{% for tag in tags %}
-		<dd class="meta__value"><a href="/{{ tag | url_encode }}">{{ site.tagNames[ tag ] }}</a></dd>
+		<dd class="meta__value"><a href="/{{ tag | url_encode }}">{{ site.categoryNames[ tag ] }}</a></dd>
 	{% endfor %}
 </dl>
