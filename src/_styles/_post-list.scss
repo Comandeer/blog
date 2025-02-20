@@ -15,7 +15,18 @@
 	border-block-end: none;
 }
 
-.rss-subscribe {
-	display: flex;
+.rss-subscribe__link {
+	display: inline-flex;
 	gap: 0.25em;
+	align-items: flex-end;
+}
+
+.rss-subscribe__icon {
+	width: 2rem;
+	height: 2rem;
+	fill: var(--secondary);
+}
+
+.rss-subscribe__link:where(:hover, :focus) .rss-subscribe__icon {
+	opacity: 0.8;
 }
