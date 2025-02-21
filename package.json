@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "lint": "eslint .eleventy.js",
+    "lint": "eslint eleventy.config.js",
     "clean": "rimraf ./dist",
     "start": "eleventy --serve",
     "prebuild": "pnpm run clean",
@@ -17,24 +17,24 @@
   "author": "Comandeer",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.8",
-    "@comandeer/eslint-config": "^0.13.1",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.1",
+    "@comandeer/eslint-config": "^0.16.0",
     "@toycode/markdown-it-class": "^1.2.4",
-    "date-fns": "^3.6.0",
-    "eslint": "8",
+    "date-fns": "^4.1.0",
+    "eslint": "^9.21.0",
     "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-anchor": "^9.2.0",
     "markdown-it-emoji": "^3.0.0",
     "markdown-it-link-attributes": "^4.0.1",
-    "rimraf": "^5.0.7",
+    "rimraf": "^6.0.1",
     "sass": "^1.85.0",
     "slugify": "^1.6.6"
   },
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "dependencies": {
-    "shiki": "^1.11.0",
-    "terser": "^5.31.3"
+    "shiki": "^3.0.0",
+    "terser": "^5.39.0"
   }
 }
