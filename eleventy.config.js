@@ -2,11 +2,9 @@
 
 const path = require( 'node:path' );
 const { formatRFC3339 } = require( 'date-fns' );
-const revPlugin = require( 'eleventy-plugin-rev' );
-const sassPlugin = require( 'eleventy-sass' );
 const site = require( './src/_data/site' );
 const markdownIt = require( './plugins/markdownIt' );
-const minifyJS = require( './plugins/minifyJS' );
+const assetPipeline = require( './plugins/assetPipeline' );
 const disqusShortCode = require( './shortcodes/disqus' );
 const figureShortcode = require( './shortcodes/figure' );
 const { rssLink, rssLabel } = require( './shortcodes/rss' );
@@ -17,11 +15,10 @@ const { rssLink, rssLabel } = require( './shortcodes/rss' );
  */
 module.exports = function( eleventyConfig ) {
 	eleventyConfig.ignores.add( '/images/**' );
+	eleventyConfig.ignores.add( '/assets/main.{scss,src.js}' );
+	eleventyConfig.addWatchTarget( './src/_styles/**/*.scss' );
 
-	eleventyConfig.addPlugin( revPlugin );
-	eleventyConfig.addPlugin( sassPlugin, {
-		rev: true
-	} );
+	eleventyConfig.addPlugin( assetPipeline );
 
 	eleventyConfig.setLibrary( 'md', markdownIt );
 	eleventyConfig.amendLibrary( 'md', () => {} );
@@ -110,8 +107,6 @@ module.exports = function( eleventyConfig ) {
 	].forEach( ( path ) => {
 		return eleventyConfig.addPassthroughCopy( path );
 	} );
-
-	minifyJS( eleventyConfig );
 
 	eleventyConfig.addFilter( 'rfc_date', ( date ) => {
 		return formatRFC3339( date );
