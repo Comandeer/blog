@@ -3,7 +3,31 @@ import markdownItAnchor from 'markdown-it-anchor';
 import markdownItClass from '@toycode/markdown-it-class';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
 import { full as markdownItEmoji } from 'markdown-it-emoji';
+import { createHighlighter } from 'shiki';
 import slugify from 'slugify';
+
+const highlighter = await createHighlighter( {
+	themes: [
+		'github-light',
+		'github-dark'
+	],
+	langs: [
+		'bash',
+		'css',
+		'diff',
+		'html',
+		'html-derivative',
+		'javascript',
+		'json',
+		'php',
+		'python',
+		'scss',
+		'sh',
+		'shell',
+		'typescript',
+		'xml'
+	]
+} );
 
 const SLUG_PLACEHOLDER = '™™©©®®';
 
@@ -38,7 +62,16 @@ export const markdownIt = markdownItConstructor ( {
 	html: true,
 	breaks: true,
 	linkify: true,
-	typographer: true
+	typographer: true,
+	highlight: ( code, lang ) => {
+		return highlighter.codeToHtml( code, {
+			lang,
+			themes: {
+				light: 'github-light',
+				dark: 'github-dark'
+			}
+		} );
+	}
 } ).use( markdownItAnchor, {
 	slugify: ( str ) => {
 		str = str.
