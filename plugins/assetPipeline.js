@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { writeFile, readFile } from 'node:fs/promises';
+import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { resolve as resolvePath } from 'node:path';
 import { cwd } from 'node:process';
 import { compileAsync } from 'sass';
@@ -10,14 +10,13 @@ import { minify } from 'terser';
  */
 const hashedAssets = new Map();
 
-/**
- * @typedef {Object} CompilationResult
- * @property {string} content
- * @property {string} hash
- */
-
 export function assetPipeline( eleventyConfig ) {
 	eleventyConfig.on( 'eleventy.before', async () => {
+		const distPath = resolvePath( cwd(), 'dist', 'assets' );
+
+		await mkdir( distPath, {
+			recursive: true
+		} );
 		await compileSCSS();
 		await compileJS();
 	} );
@@ -63,7 +62,7 @@ async function compileJS() {
 
 /**
  * @param {string} string
- * @returns {string}
+ * @returns {Promise<string>}
  */
 async function hashString( string ) {
 	return crypto.
