@@ -1,9 +1,9 @@
-const markdownIt = require( 'markdown-it' );
-const markdownItAnchor = require( 'markdown-it-anchor' );
-const markdownItClass = require( '@toycode/markdown-it-class' );
-const markdownItLinkAttributes = require( 'markdown-it-link-attributes' );
-const markdownItEmoji = require( 'markdown-it-emoji' ).full;
-const slugify = require( 'slugify' );
+import markdownItConstructor from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+import markdownItClass from '@toycode/markdown-it-class';
+import markdownItLinkAttributes from 'markdown-it-link-attributes';
+import { full as markdownItEmoji } from 'markdown-it-emoji';
+import slugify from 'slugify';
 
 const SLUG_PLACEHOLDER = '™™©©®®';
 
@@ -34,7 +34,7 @@ slugify.extend( {
 	'+': SLUG_PLACEHOLDER
 } );
 
-module.exports = markdownIt ( {
+export const markdownIt = markdownItConstructor ( {
 	html: true,
 	breaks: true,
 	linkify: true,

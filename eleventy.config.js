@@ -1,19 +1,17 @@
-/* global module */
-
-const path = require( 'node:path' );
-const { formatRFC3339 } = require( 'date-fns' );
-const site = require( './src/_data/site' );
-const markdownIt = require( './plugins/markdownIt' );
-const assetPipeline = require( './plugins/assetPipeline' );
-const disqusShortCode = require( './shortcodes/disqus' );
-const figureShortcode = require( './shortcodes/figure' );
-const { rssLink, rssLabel } = require( './shortcodes/rss' );
+import { formatRFC3339 } from 'date-fns';
+import site from './src/_data/site.js';
+import { markdownIt } from './plugins/markdownIt.js';
+import { assetPipeline } from './plugins/assetPipeline.js';
+import { disqusShortCode } from './shortcodes/disqus.js';
+import { figureShortCode } from './shortcodes/figure.js';
+import { rssLink, rssLabel } from './shortcodes/rss.js';
 
 /**
  *
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
  */
-module.exports = function( eleventyConfig ) {
+// eslint-disable-next-line no-restricted-syntax
+export default function( eleventyConfig ) {
 	eleventyConfig.ignores.add( '/images/**' );
 	eleventyConfig.ignores.add( '/assets/main.{scss,src.js}' );
 	eleventyConfig.addWatchTarget( './src/_styles/**/*.scss' );
@@ -146,7 +144,7 @@ module.exports = function( eleventyConfig ) {
 	} );
 	eleventyConfig.addFilter( 'cfUrl', cfUrl );
 
-	eleventyConfig.addAsyncShortcode( 'figure', figureShortcode );
+	eleventyConfig.addAsyncShortcode( 'figure', figureShortCode );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
 	eleventyConfig.addShortcode( 'rss_link', rssLink );
 	eleventyConfig.addShortcode( 'rss_label', rssLabel );
@@ -158,7 +156,7 @@ module.exports = function( eleventyConfig ) {
 			output: 'dist'
 		}
 	};
-};
+}
 
 function cfUrl( url ) {
 	return url.replace( /index\.html$/, '' ).replace( /\.html$/, '' );

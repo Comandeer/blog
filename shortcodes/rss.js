@@ -1,6 +1,7 @@
-const site = require( '../src/_data/site.js' );
+import site from '../src/_data/site.js';
 
-exports.rssLink = function() {
+export function rssLink() {
+	// eslint-disable-next-line @babel/no-invalid-this
 	const url = parsePageUrl( this.page.url );
 
 	if ( url === '' ) {
@@ -8,9 +9,10 @@ exports.rssLink = function() {
 	}
 
 	return `/feeds/${ url }.xml`;
-};
+}
 
-exports.rssLabel = function() {
+export function rssLabel() {
+	// eslint-disable-next-line @babel/no-invalid-this
 	const url = parsePageUrl( this.page.url );
 
 	if ( url === '' ) {
@@ -23,7 +25,7 @@ exports.rssLabel = function() {
 	}
 
 	return `Subskrybuj kategorię ${ site.categoryNames[ url ] }`;
-};
+}
 
 function parsePageUrl( pageUrl ) {
 	const [ url ] = pageUrl.split( '/strona-' );

@@ -1,9 +1,9 @@
-const crypto = require( 'node:crypto' );
-const { writeFile, readFile } = require( 'node:fs/promises' );
-const { resolve: resolvePath } = require( 'node:path' );
-const { cwd } = require( 'node:process' );
-const { compileAsync } = require( 'sass' );
-const { minify } = require( 'terser' );
+import crypto from 'node:crypto';
+import { writeFile, readFile } from 'node:fs/promises';
+import { resolve as resolvePath } from 'node:path';
+import { cwd } from 'node:process';
+import { compileAsync } from 'sass';
+import { minify } from 'terser';
 
 /**
  * @type {Map<string, string>}
@@ -16,9 +16,8 @@ const hashedAssets = new Map();
  * @property {string} hash
  */
 
-module.exports = function assetPipeline( eleventyConfig ) {
-	eleventyConfig.on( 'eleventy.before', async ( evt ) => {
-		console.log( 'asset pipeline', evt );
+export function assetPipeline( eleventyConfig ) {
+	eleventyConfig.on( 'eleventy.before', async () => {
 		await compileSCSS();
 		await compileJS();
 	} );
@@ -26,7 +25,7 @@ module.exports = function assetPipeline( eleventyConfig ) {
 	eleventyConfig.addFilter( 'asset', ( asset ) => {
 		return hashedAssets.get( asset ) ?? asset;
 	} );
-};
+}
 
 async function compileSCSS() {
 	const { css } = await compileAsync( 'src/assets/main.scss', {

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "private": true,
+  "type": "module",
   "scripts": {
     "lint": "eslint eleventy.config.js",
     "clean": "rimraf ./dist",

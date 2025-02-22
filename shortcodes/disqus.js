@@ -1,4 +1,4 @@
-const htmlmin = require('html-minifier-terser');
+import htmlmin from 'html-minifier-terser';
 
 /**
  *
@@ -15,7 +15,7 @@ const htmlmin = require('html-minifier-terser');
  * @param {boolean} [isSubThread=false]
  * @returns {string}
  */
-module.exports = async function disqusShortCode( comments, isSubThread = false ) {
+export async function disqusShortCode( comments, isSubThread = false ) {
 	if ( comments.length === 0 ) {
 		return '';
 	}
@@ -38,14 +38,14 @@ module.exports = async function disqusShortCode( comments, isSubThread = false )
 		}
 
 		html += '</li>';
-	};
+	}
 
 	html += '</ol>';
 
 	return htmlmin.minify( html, {
 		collapseWhitespace: true
 	} );
-};
+}
 
 function formatDate( dateString ) {
 	const date = new Date( dateString );

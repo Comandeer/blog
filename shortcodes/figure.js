@@ -1,11 +1,11 @@
 // Adapted from https://github.com/madrilene/eleventy-excellent/blob/9e17d9582151e5e1026e24539fd2338cc8d5a29e/config/shortcodes/image/index.js
 // ISC License, Copyright (c) 2022 Lene Saile
 
-const path = require( 'node:path' );
-const image = require( '@11ty/eleventy-img' );
-const htmlmin = require('html-minifier-terser');
+import path from 'node:path';
+import image from '@11ty/eleventy-img';
+import htmlmin from 'html-minifier-terser';
 
-module.exports = async function figureShortCode(
+export async function figureShortCode(
 	src,
 	alt = '',
 	caption = null,
@@ -17,6 +17,7 @@ module.exports = async function figureShortCode(
 	widths = [ 440, 880, 1024, 1360 ],
 	formats = [ 'avif', 'webp' ]
 ) {
+	// eslint-disable-next-line @babel/no-invalid-this
 	const { inputPath } = this.page;
 	const currentDir = path.dirname( inputPath );
 	const imgSrc = path.resolve( currentDir, src );
@@ -74,7 +75,7 @@ module.exports = async function figureShortCode(
 	return htmlmin.minify( figureElement, {
 		collapseWhitespace: true
 	} );
-};
+}
 
 function getOutputPaths( src ) {
 	const srcDir = path.dirname( src.replace( /^((..\/)+|\.?\/)images\//, '' ) );

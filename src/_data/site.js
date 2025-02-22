@@ -1,4 +1,5 @@
-module.exports = {
+// eslint-disable-next-line no-restricted-syntax
+export default {
 	url: 'https://blog.comandeer.pl',
 	title: 'Comandeerowy blog',
 	description: 'Kolejny nudny blog kolejnego nudnego fanatyka JS-a. Nie czytać, nie warto tracić czasu.',
