@@ -306,7 +306,7 @@ Zacznijmy od `clearTimeout()`. Funkcja ta pozwala anulować odliczanie przy pomo
 
 ## Lepszy format czasu
 
-Trzecim wymienionym przeze mnie problemem był niewygodny format czasu. Czasomierze akceptują bowiem wyłącznie liczbę milisekund, a ja chciałbym podawać czas w bardziej przystępnym, tekstowym formacie:
+Trzecim wymienionym przeze mnie problemem był [nieprzyjazny format czasu](https://blog.comandeer.pl/tik-tak#nieprzyjazny-format-czasu). Czasomierze akceptują bowiem wyłącznie liczbę milisekund, a ja chciałbym podawać czas w bardziej przystępnym, tekstowym formacie:
 
 ```
 99h55m33s124ms
@@ -500,6 +500,101 @@ Zmienił się typ zwracanych wartości funkcji – `setTimeout()` zwraca teraz `
 <p class="note">Aktualny znacznik czasu niekoniecznie jest szczególnie przydatny w przypadku pojedynczego wywołania <code>setTimeout()</code>, ale w przypadku <code>setInterval()</code> może być przydatny do wykorzystania w technice <a href="https://en.wikipedia.org/wiki/Delta_timing"><i lang="en">delta timing</i></a>.</p>
 
 Kolejnym usprawnieniem, jakie wprowadziłbym, jest… zmiana nazw w naszym API. Istniejące w przeglądarkach czasomierze są na tyle znane, że "podszywanie się" pod nie niekoniecznie jest dobrym pomysłem. Zwłaszcza, że nasze API działa całkowicie inaczej. Nie dość, że zmieniło się zachowanie funkcji `setTimeout()` i `setInterval()`, to dodatkowo `clearTimeout()` i `clearInterval()` nie działają w ogóle. Dlatego, żeby nie wprowadzać niepotrzebnego chaosu, nasze `setTimeout()` będzie nazywać się `wait()`, a `setInterval()` – `tick()`.
+
+## Całość kodu
+
+Ostatecznie nasz kod powinien wyglądać mniej więcej tak:
+
+```typescript
+type Hours = `${ number }h`;
+type Minutes = `${ number }m`;
+type Seconds = `${ number }s`;
+type MiliSeconds = `${ number }ms`;
+type Delay =
+| number
+| Exclude<
+	`${ Hours | ''}${ Minutes | '' }${ Seconds | '' }${ MiliSeconds | ''}`,
+	''
+>;
+
+interface SetTimeoutOptions {
+	signal?: AbortSignal;
+}
+
+async function wait(
+	delay: Delay,
+	{ signal }: SetTimeoutOptions = {}
+): Promise<number> {
+	return new Promise( ( resolve, reject ) => {
+		if ( signal?.aborted ) {
+			reject( signal.reason );
+
+			return;
+		}
+
+		const delayInMs = convertDelayToMs( delay );
+		const timeoutId = globalThis.setTimeout( () => {
+			resolve( Date.now() );
+		}, delayInMs );
+
+		if ( signal !== undefined ) {
+			signal.addEventListener( 'abort', () => {
+				clearTimeout( timeoutId );
+				reject( signal.reason );
+			} );
+		}
+	} );
+}
+
+async function* tick(
+	tick: Delay,
+	options: SetTimeoutOptions = {}
+): AsyncIterableIterator<number> {
+	while ( true ) {
+		yield wait( tick, options );
+	}
+}
+
+interface DelayGroups {
+	hours?: Hours;
+	minutes?: Minutes;
+	seconds?: Seconds;
+	miliseconds?: MiliSeconds;
+}
+
+function convertDelayToMs( delay: Delay ): number {
+	if ( typeof delay === 'number' ) {
+		return delay;
+	}
+
+	const delayRegex = /^(?<hours>\d+h)?(?<minutes>\d+m(?!s))?(?<seconds>\d+s)?(?<miliseconds>\d+ms)?$/;
+	const matched = delay.match( delayRegex );
+	const { hours, minutes, seconds, miliseconds } = matched.groups as DelayGroups;
+	let totalDelay = 0;
+
+	if ( hours !== undefined ) {
+		totalDelay += removeUnit( hours ) * 3600000;
+	}
+
+	if ( minutes !== undefined ) {
+		totalDelay += removeUnit( minutes ) * 60000;
+	}
+
+	if ( seconds !== undefined ) {
+		totalDelay += removeUnit( seconds ) * 1000;
+	}
+
+	if ( miliseconds !== undefined ) {
+		totalDelay += removeUnit( miliseconds );
+	}
+
+	return totalDelay;
+}
+
+function removeUnit( delay: Hours | Minutes | Seconds | MiliSeconds ): number {
+	return Number( delay.replaceAll( /[a-z]/g, '' ) );
+}
+```
 
 ## Co dalej?
 
