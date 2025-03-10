@@ -1,0 +1,37 @@
+{% capture projectName %}project-{{ include.project }}{% endcapture %}
+{% assign projectPosts = collections[ projectName ] | reverse %}
+{% assign previousPost = projectPosts | getPreviousCollectionItem %}
+{% assign nextPost = projectPosts | getNextCollectionItem %}
+
+<nav class="paginator paginator_separate" aria-labelledby="project-navigation-label">
+	<h2 class="paginator__title" id="project-navigation-label">Pozostałe wpisy o projekcie <b>{{ site.projectNames[ project] }}</b></h2>
+	<ol class="paginator__list">
+	{% if previousPost %}
+	<li class="paginator__item paginator__item_previous">
+		<a href="{{ previousPost.url | cfUrl }}" class="paginator__link" rel="nofollow"><span
+			aria-hidden="true">←</span> Poprzedni wpis:<wbr> <b>{{ previousPost.data.title | escape }}</b></a>
+	</li>
+	{% endif %}
+
+	{% if nextPost %}
+	<li class="paginator__item paginator__item_next">
+		<a href="{{ nextPost.url | cfUrl }}" class="paginator__link"
+			rel="nofollow">Następny wpis:<wbr> <b>{{  nextPost.data.title | escape }}</b> <span aria-hidden="true">→</span></a>
+	</li>
+	{% endif %}
+	</ol>
+
+	<details class="paginator_all details">
+		<summary class="details__summary">Wszystkie wpisy</summary>
+
+		<ol class="details__list">
+			{% for post in projectPosts %}
+			  <li class="details__list-item">
+					  <a class="details__link{% if post.url == page.url %} details__link_emphased{% endif %}"
+						href="{{ post.url | cfUrl }}" {% if post.url == page.url %}aria-current="page"{% endif %}>{{ post.data.title | escape }}</a>
+			  </li>
+			{% endfor %}
+		  </ol>
+	</details>
+</nav>
+

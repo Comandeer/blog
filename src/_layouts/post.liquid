@@ -19,6 +19,9 @@
 				  {% include 'comments' %}
 				{% endif %}
 			</article>
+			{% if project %}
+				{%  include 'project-navigation' project=project %}
+			{% endif %}
 		</main>
 		{% include 'footer' %}
 	  </body>

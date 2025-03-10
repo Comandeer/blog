@@ -1,3 +1,10 @@
+.paginator_separate {
+	border-block-start: 1px var(--primary) solid;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
 .paginator__list{
 	margin: 0;
 	padding: 0;
@@ -8,8 +15,11 @@
 
 .paginator__item {
 	font-size: 1.25em;
+	width: 50%;
+	text-align: start;
 }
 
 .paginator__item_next {
 	margin-inline-start: auto;
+	text-align: end;
 }
