@@ -3,19 +3,21 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	gap: 0.5rem;
 }
 
-.paginator__list{
+.paginator__list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
+	inline-size: 100%;
 }
 
 .paginator__item {
 	font-size: 1.25em;
-	width: 50%;
+	max-inline-size: 50%;
 	text-align: start;
 }
 
