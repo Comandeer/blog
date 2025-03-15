@@ -1,8 +1,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<link href="{{ site.url }}/feeds/{{ tag | url_encode }}.xml" rel="self" type="application/atom+xml"/>
-	<link href="{{ site.url }}/{{ tag | url_encode }}" rel="alternate" type="text/html"/>
+	{% capture selfUrl %}{{ site.url }}/feeds/{% if tag %}kategorie/{{ tag | url_encode }}{% elsif project %}projekty/{{ project | url_encode }}{% else %}feed{% endif %}.xml{%  endcapture %}
+	{% capture alternateUrl %}{{ site.url }}/{% if tag %}kategorie/{{ tag | url_encode }}{% elsif project %}projekty/{{ project | url_encode }}{% endif %}{%  endcapture %}
+	<link href="{{ selfUrl }}" rel="self" type="application/atom+xml"/>
+	<link href="{{ alternateUrl }}" rel="alternate" type="text/html"/>
 	<updated>{{ page.date | rfc_date }}</updated>
-	<id>{{ site.url }}/feeds/{% if tag %}{{ tag | url_encode }}{% elsif project %}projekty/{{ project | url_encode }}{% else %}feed{% endif %}.xml</id>
+	<id></id>
 	<title type="html">Comandeerowy blog</title>
 	{% if tag %}
 		<category term="{{ site.categoryNames[ tag ] | xml_escape }}"/>

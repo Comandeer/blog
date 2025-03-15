@@ -2,6 +2,6 @@
 layout: feed
 tag: eksperymenty
 date: Last Modified
-permalink: /feeds/eksperymenty.xml
+permalink: /feeds/kategorie/eksperymenty.xml
 ---
 

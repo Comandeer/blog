@@ -2,5 +2,5 @@
 layout: feed
 tag: javascript
 date: Last Modified
-permalink: /feeds/javascript.xml
+permalink: /feeds/kategorie/javascript.xml
 ---

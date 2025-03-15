@@ -2,6 +2,6 @@
 layout: feed
 tag: refleksje
 date: Last Modified
-permalink: /feeds/refleksje.xml
+permalink: /feeds/kategorie/refleksje.xml
 ---
 

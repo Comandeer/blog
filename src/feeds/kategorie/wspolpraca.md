@@ -2,6 +2,6 @@
 layout: feed
 tag: wspolpraca
 date: Last Modified
-permalink: /feeds/wspolpraca.xml
+permalink: /feeds/kategorie/wspolpraca.xml
 ---
 

@@ -2,6 +2,6 @@
 layout: feed
 tag: standardy-sieciowe
 date: Last Modified
-permalink: /feeds/standardy-sieciowe.xml
+permalink: /feeds/kategorie/standardy-sieciowe.xml
 ---
 

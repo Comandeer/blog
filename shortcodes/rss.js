@@ -21,10 +21,13 @@ export function rssLabel() {
 
 	if ( url.startsWith( 'projekty/' ) ) {
 		const projectId = url.replace( 'projekty/', '' );
+
 		return `Subskrybuj wpisy o projekcie ${ site.projectNames[ projectId ] }`;
 	}
 
-	return `Subskrybuj kategorię ${ site.categoryNames[ url ] }`;
+	const categoryId = url.replace( 'kategorie/', '' );
+
+	return `Subskrybuj kategorię ${ site.categoryNames[ categoryId ] }`;
 }
 
 function parsePageUrl( pageUrl ) {
