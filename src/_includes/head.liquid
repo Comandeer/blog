@@ -20,14 +20,6 @@
 		document.documentElement.classList.remove( 'no-js' );
 
 		try {
-			if ( !localStorage.getItem( 'cookiePreferences' ) ) {
-				document.documentElement.classList.add( 'cookie-banner-shown' );
-			}
-		} catch {
-			document.documentElement.classList.add( 'cookie-banner-shown' );
-		}
-
-		try {
 			const theme = JSON.parse( localStorage.getItem( 'theme' ) ) ?? 'auto';
 			document.documentElement.dataset.theme = theme;
 		} catch {

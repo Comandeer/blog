@@ -138,6 +138,7 @@ function moveFocus( direction ) {
 	themeSwitcherOptions[ currentFocusIndex ].focus();
 }
 
+const cookieBanner = document.querySelector( '#cookie-banner' );
 const cookieBannerButtonAll = document.querySelector( '#cookie-banner-button-all' );
 const cookieBannerButtonNone = document.querySelector( '#cookie-banner-button-none' );
 const cookieBannerButtonChoose = document.querySelector( '#cookie-banner-button-choose' );
@@ -191,7 +192,7 @@ cookieDialogCloseButton.addEventListener( 'click', () => {
 } );
 
 function closeCookieBanner() {
-	document.documentElement.classList.remove( 'cookie-banner-shown' );
+	cookieBanner.hidden = true;
 }
 
 function updateCookieDialog() {
