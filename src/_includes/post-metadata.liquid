@@ -8,7 +8,7 @@
 			<use href="/assets/icons.svg#published"></use>
 		</svg><span
 		class="visually-hidden">Opublikowany:</span></dt>
-	<dd class="meta__value"><time datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%d.%m.%Y" }}</time></dd>
+	<dd class="meta__value"><time datetime="{{ date | date: "%Y-%m-%d", "Europe/Warsaw" }}">{{ date | date: "%d.%m.%Y", "Europe/Warsaw" }}</time></dd>
 	{% if author %}
 		<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
 				<use href="/assets/icons.svg#author"></use>
