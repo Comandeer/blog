@@ -1,7 +1,7 @@
 {
 	"name": "Comandeerowy blog",
 	"short_name": "Comandeerowy",
-	"theme_color": "#336699",
+	"theme_color": "#dddddd",
 	"background_color": "#ffffff",
 	"display": "standalone",
 	"scope": "/",
