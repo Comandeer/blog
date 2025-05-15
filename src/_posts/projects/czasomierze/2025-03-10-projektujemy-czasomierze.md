@@ -17,7 +17,7 @@ permalink: /projektujemy-czasomierze.html
 
 Zajmiemy się wszystkimi wspomnianymi problemami po kolei, próbując ich rozwiązania zamknąć w spójne, sensowne API. Będziemy korzystać z już istniejących rozwiązań, żeby podpatrzeć, jak można pewne rzeczy zrobić. Będziemy też całość pisać w [TypeScripcie](https://www.typescriptlang.org/), dzięki czemu za darmo dostaniemy ładne typy. Oficjalna strona TypeScriptu udostępnia [miejsce do testowania kodu online](https://www.typescriptlang.org/play/).
 
-<p class="note">Część przykładów z tego artykułu może nie chcieć się uruchomić we wspomnianym wyżej narzędziu, narzekając na obecność <a href-"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await">top-level <code>await</code></a>. W takim wypadku wystarczy wymusić traktowanie kodu jako modułu ES poprzez dodanie, czy to na początku, czy na końcu, pustego eksportu (<code>export {}</code>) lub otoczyć całość w <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">samowywołującą się asynchroniczną funkcję</a>.</p>
+<p class="note">Część przykładów z tego artykułu może nie chcieć się uruchomić we wspomnianym wyżej narzędziu, narzekając na obecność <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await">top-level <code>await</code></a>. W takim wypadku wystarczy wymusić traktowanie kodu jako modułu ES poprzez dodanie, czy to na początku, czy na końcu, pustego eksportu (<code>export {}</code>) lub otoczyć całość w <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">samowywołującą się asynchroniczną funkcję</a>.</p>
 
 Obecnie kod TS można także [uruchomić bezpośrednio w Node.js](https://nodejs.org/en/learn/typescript/run-natively):
 
