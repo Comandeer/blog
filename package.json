@@ -30,7 +30,7 @@
     "markdown-it-emoji": "^3.0.0",
     "markdown-it-link-attributes": "^4.0.1",
     "rimraf": "^6.0.1",
-    "sass": "^1.85.0",
+    "sass": "^1.89.2",
     "slugify": "^1.6.6"
   },
   "engines": {
