@@ -16,6 +16,7 @@ export default {
 		'daj-sie-poznac-2017': 'Daj się poznać 2017'
 	},
 	projectNames: {
-		'czasomierze': 'Czasomierze'
+		'czasomierze': 'Czasomierze',
+		'doco': 'Doco'
 	}
 };
