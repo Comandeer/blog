@@ -17,14 +17,17 @@ export async function figureShortCode(
 	widths = [ 440, 880, 1024, 1360 ],
 	formats = [ 'avif', 'webp' ]
 ) {
-	// eslint-disable-next-line @babel/no-invalid-this
 	const { inputPath } = this.page;
 	const currentDir = path.dirname( inputPath );
 	const imgSrc = path.resolve( currentDir, src );
 	const originalFormat = path.extname( src ).replace( /^\./, '' );
 	const { dir, url } = getOutputPaths( src );
 
-	formats.push( originalFormat );
+	if ( originalFormat === 'svg' ) {
+		formats = [ 'svg' ];
+	} else {
+		formats.push( originalFormat );
+	}
 
 	const metadata = await image( imgSrc, {
 		widths: [ ...widths ],
@@ -93,7 +96,7 @@ function getLowSrc( metadata, originalFormat ) {
 }
 
 function getHDSrc( metadata ) {
-	return metadata.avif.at( -1 );
+	return metadata.svg?.at( -1 ) ?? metadata.avif.at( -1 );
 }
 
 function stringifyAttributes( attributeMap ) {
