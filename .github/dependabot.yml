@@ -1,0 +1,9 @@
+version: 2
+updates:
+    - package-ecosystem: 'npm'
+      schedule:
+          interval: 'weekly'
+          day: 'monday'
+          time: '18:00'
+          timezone: 'Europe/Warsaw'
+      versioning-strategy: 'increase'
