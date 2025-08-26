@@ -23,7 +23,7 @@
     "@comandeer/eslint-config": "^0.17.0",
     "@toycode/markdown-it-class": "^1.2.4",
     "date-fns": "^4.1.0",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
