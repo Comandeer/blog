@@ -19,11 +19,13 @@ const highlighter = await createHighlighter( {
 		'html-derivative',
 		'javascript',
 		'json',
+		'jsx',
 		'php',
 		'python',
 		'scss',
 		'sh',
 		'shell',
+		'tsx',
 		'typescript',
 		'xml'
 	]
