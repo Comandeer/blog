@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      shiki:
-        specifier: ^3.12.2
-        version: 3.12.2
-      terser:
-        specifier: ^5.44.0
-        version: 5.44.0
     devDependencies:
       '@11ty/eleventy':
         specifier: ^3.1.2
@@ -54,9 +47,15 @@ importers:
       sass:
         specifier: ^1.92.1
         version: 1.92.1
+      shiki:
+        specifier: ^3.12.2
+        version: 3.12.2
       slugify:
         specifier: ^1.6.6
         version: 1.6.6
+      terser:
+        specifier: ^5.44.0
+        version: 5.44.0
 
 packages:
 
