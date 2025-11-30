@@ -1,0 +1,11 @@
+{% assign posts = include.posts %}
+
+<ul class="advent-calendar">
+  {% for post in posts reversed %}
+	<li class="advent-calendar__item advent-item">
+		<a href="{{ post.url | cfUrl }}" class="advent-item__link" rel="bookmark">
+			<div class="advent-item__flip-card flip-card"><span class="flip-card__title">{{ post.data.title | escape }}</span></div>
+		</a>
+	</li>
+  {% endfor %}
+</ul>

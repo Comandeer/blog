@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+	<html class="no-js" lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+		{% capture title %}{{ site.categoryNames[ tag ] | escape }}{% endcapture %}
+		{% capture description %}Zachęcam do przeglądnięcia wpisów z kategorii {{ site.categoryNames[ tag ] | escape }} – a nuż coś Cię zaciekawi!{% endcapture %}
+		{% include 'head' %}
+		<body>
+			<style>
+.advent-calendar {
+	counter-reset: advent-calendar;
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 10rem, auto ) );
+	gap: 1rem;
+	.advent-item {
+		counter-increment: advent-calendar;
+		list-style: none;
+		aspect-ratio: 1;
+		order: random( 1, 24 );
+
+		.advent-item__link {
+			block-size: 100%;
+
+			&:hover > .advent-item__flip-card,
+			&:focus > .advent-item__flip-card{
+				transform: rotateY( -180deg );
+			}
+		}
+	}
+}
+
+.flip-card {
+	display: block;
+	block-size: 100%;
+	transform-style: preserve-3d;
+	position: relative;
+	font-weight: bold;
+
+	@media ( prefers-reduced-motion: no-preference ) {
+		& {
+			transition: transform 0.3s;
+		}
+	}
+
+	&::before, .flip-card__title {
+		display: block;
+		block-size: 100%;
+		inline-size: 100%;
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		backface-visibility: hidden;
+		overflow: hidden;
+		text-grow: consistent font-size 4rem;
+	}
+
+	&::before {
+		background-image: linear-gradient(135deg, #40b82b 25%, #e82e00 25%, #e82e00 50%, #40b82b 50%, #40b82b 75%, #e82e00 75%, #e82e00 100%);
+		background-size: 56.57px 56.57px;
+		color: #fff;
+		content: counter( advent-calendar );
+		font-size: 4rem;
+		align-content: center;
+		text-align: center;
+	}
+
+	.flip-card__title {
+		padding: 1rem;
+		transform: rotateY( -180deg );
+		background: var(--secondary-bg);
+		color: var(--secondary);
+	}
+}
+			</style>
+			{% include 'header' %}
+			<main id="tresc">
+				<hgroup>
+					<h1>{{ site.categoryNames[ tag ] | escape }}</h1>
+				</hgroup>
+
+
+				{{ content }}
+
+				{% include 'advent-calendar' posts=collections[ tag ] %}
+				{% include 'rss-subscribe' %}
+			</main>
+			{% include 'footer' %}
+		</body>
+	</html>

@@ -13,7 +13,8 @@ export default {
 		refleksje: 'Refleksje',
 		'standardy-sieciowe': 'Standardy sieciowe',
 		wspolpraca: 'Współpraca',
-		'daj-sie-poznac-2017': 'Daj się poznać 2017'
+		'daj-sie-poznac-2017': 'Daj się poznać 2017',
+		'adwent-2025': 'Adwent 2025'
 	},
 	projectNames: {
 		'czasomierze': 'Czasomierze',
