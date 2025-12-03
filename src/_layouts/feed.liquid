@@ -1,10 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/feeds/stylesheet.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{% capture selfUrl %}{{ site.url }}/feeds/{% if tag %}kategorie/{{ tag | url_encode }}{% elsif project %}projekty/{{ project | url_encode }}{% else %}feed{% endif %}.xml{%  endcapture %}
 	{% capture alternateUrl %}{{ site.url }}/{% if tag %}kategorie/{{ tag | url_encode }}{% elsif project %}projekty/{{ project | url_encode }}{% endif %}{%  endcapture %}
 	<link href="{{ selfUrl }}" rel="self" type="application/atom+xml"/>
 	<link href="{{ alternateUrl }}" rel="alternate" type="text/html"/>
 	<updated>{{ page.date | rfc_date }}</updated>
-	<id></id>
+	<id>{{ selfUrl }}</id>
 	<title type="html">Comandeerowy blog</title>
 	{% if tag %}
 		<category term="{{ site.categoryNames[ tag ] | xml_escape }}"/>
@@ -38,8 +40,7 @@
 			{% if post.data.description %}
 				<summary><![CDATA[{{ post.data.description }}]]></summary>
 			{% endif %}
-			<content type="html" xml:base="{{ site.url }}{{ post.url | cfUrl }}"><![CDATA[{{ post.content }}]]>
-			</content>
+			<content type="html" xml:base="{{ site.url }}{{ post.url | cfUrl }}"><![CDATA[{{ post.content }}]]></content>
 		</entry>
 	{% endfor %}
 </feed>

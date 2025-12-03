@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:atom="http://www.w3.org/2005/Atom">
+	<xsl:output method="html" doctype-system="about:legacy-compat" indent="yes" />
+
+	<xsl:template match="/atom:feed">
+		<html lang="pl" data-theme="dark">
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" type="image/svg+xml" href="{{ site.url }}/assets/logo.svg" />
+				<link rel="icon" href="{{ site.url }}/favicon.ico" sizes="32x32" />
+				<link rel="stylesheet" href="{{ "/assets/main.css" | asset }}" />
+				<title><xsl:value-of select="./atom:title" /></title>
+			</head>
+			<body>
+				<nav class="navbar">
+					<a class="navbar__logo" href="{{ site.url }}"><span class="navbar__logo-name">Comandeerowy blog</span></a>
+				</nav>
+				<main>
+					<hgroup>
+						<h1><xsl:value-of select="./atom:title" /></h1>
+						<p><xsl:value-of select="./atom:subtitle" /></p>
+					</hgroup>
+
+					<ul class="post-list">
+						<xsl:for-each select="./atom:entry">
+							<li class="post-list__post post">
+								<h1 class="post__title">
+									<a class="post__link" href="{ ./atom:link[@href]/@href }">
+										<xsl:value-of select="./atom:title" disable-output-escaping="yes" />
+									</a>
+								</h1>
+								<dl class="meta">
+									<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
+											<use href="/assets/icons.svg#published"></use>
+										</svg><span class="visually-hidden">Opublikowany:</span></dt>
+									<dd class="meta__value"><time datetime="{ ./atom:published }">
+										<xsl:value-of select="./atom:published" />
+									</time></dd>
+									<dt class="meta__item"><svg class="meta__icon" aria-hidden="true" width="16" height="16">
+											<use href="/assets/icons.svg#author"></use>
+										</svg><span class="visually-hidden">Autor:</span></dt>
+									<dd class="meta__value"><xsl:value-of select="./atom:author/atom:name" /></dd>
+								</dl>
+								<div class="post__content">
+									<xsl:value-of select="./atom:content" disable-output-escaping="yes" />
+								</div>
+							</li>
+						</xsl:for-each>
+					</ul>
+				</main>
+				<footer class="footer">
+					<p><small>Ikony pochodzą z <a href="https://iconic.app/"><b>Iconic</b></a>.</small></p>
+					<p>Copyright © <a href="https://www.comandeer.pl">Comandeer</a></p>
+				</footer>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>
