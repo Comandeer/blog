@@ -18,6 +18,7 @@ export default {
 	},
 	projectNames: {
 		'czasomierze': 'Czasomierze',
-		'doco': 'Doco'
+		'doco': 'Doco',
+		'blog': 'Blog'
 	}
 };
