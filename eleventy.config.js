@@ -5,6 +5,7 @@ import { assetPipeline } from './plugins/assetPipeline.js';
 import { disqusShortCode } from './shortcodes/disqus.js';
 import { figureShortCode } from './shortcodes/figure.js';
 import { rssLink, rssLabel } from './shortcodes/rss.js';
+import { createNoteShortCode } from './shortcodes/note.js';
 
 /**
  *
@@ -107,6 +108,7 @@ export default function( eleventyConfig ) {
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
 	eleventyConfig.addShortcode( 'rss_link', rssLink );
 	eleventyConfig.addShortcode( 'rss_label', rssLabel );
+	eleventyConfig.addPairedShortcode( 'note', createNoteShortCode( markdownIt ) );
 
 	return {
 		dir: {

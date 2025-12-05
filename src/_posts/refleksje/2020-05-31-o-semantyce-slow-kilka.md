@@ -19,7 +19,7 @@ W świecie webdevu semantyka to dość modne słowo. Tylko co to tak naprawdę j
 
 Najczęściej słowo to przejawia się w sformułowaniu "znaczniki/elementy semantyczne" lub "nowe znaczniki/elementy semantyczne w HTML5". Przyznaję, że sam niejednokrotnie używałem tych zwrotów (zwłaszcza pierwszego), niemniej ostatnio staram się ich wystrzegać. A to dlatego, że są mocno nieprecyzyjne.
 
-<p class="note">Warto zwrócić uwagę na różnicę między elementami a znacznikami. W potocznym języku często te dwie nazwy używa się zamiennie, ale nie są one w pełni równoważne. Element oznacza znacznik początkowy (otwierający), znacznik końcowy (zamykający) oraz treść pomiędzy nimi. Z kolei znaczniki są niejako "ogranicznikami" elementu. <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML#concept_and_syntax" rel="noreferrer noopener">Infografika na MDN-ie</a> dobrze tłumaczy tę różnicę.</p>
+{% note %}Warto zwrócić uwagę na różnicę między elementami a znacznikami. W potocznym języku często te dwie nazwy używa się zamiennie, ale nie są one w pełni równoważne. Element oznacza znacznik początkowy (otwierający), znacznik końcowy (zamykający) oraz treść pomiędzy nimi. Z kolei znaczniki są niejako "ogranicznikami" elementu. <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML#concept_and_syntax" rel="noreferrer noopener">Infografika na MDN-ie</a> dobrze tłumaczy tę różnicę.{% endnote %}
 
 Nie istnieje coś takiego, jak elementy semantyczne. **Każdy element w HTML-u jest semantyczny, bo ma określone znaczenie**. Nawet ten nieszczęsny `div` jest semantyczny, bo [_specyfikacja opisuje jego znaczenie_](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element):
 

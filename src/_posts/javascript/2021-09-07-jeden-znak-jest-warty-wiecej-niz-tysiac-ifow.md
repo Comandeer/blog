@@ -94,7 +94,7 @@ undefined[ box2 ] // itd.
 
 Czyli dokładnie to, o czym mówi błąd w Chrome: próbujemy pobrać z `undefined` właściwość o nazwie stworzonej z elementu `div` .
 
-<p class="note">Co Bardziej Rozgarnięty Czytelnik zapewne zapyta w tym momencie, czy ten błąd by się pojawił, gdybyśmy zamiast wymieniać poszczególne elementy w tablicy, użyli zapisu <code>[ ...document.querySelectorAll( '.box' ) ]</code>. Otóż nie, ten błąd by się nie pojawił, za to rzucony byłby błąd składni. Nie można bowiem użyć mechanizmu spread w nazwie właściwości.</p>
+{% note %}Co Bardziej Rozgarnięty Czytelnik zapewne zapyta w tym momencie, czy ten błąd by się pojawił, gdybyśmy zamiast wymieniać poszczególne elementy w tablicy, użyli zapisu <code>[ ...document.querySelectorAll( '.box' ) ]</code>. Otóż nie, ten błąd by się nie pojawił, za to rzucony byłby błąd składni. Nie można bowiem użyć mechanizmu spread w nazwie właściwości.{% endnote %}
 
 ## Morał
 

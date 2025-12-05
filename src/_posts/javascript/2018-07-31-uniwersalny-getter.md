@@ -95,7 +95,7 @@ console.log( proxy.a ); // ¯\_(ツ)_/¯
 
 I już, tyle. Teraz każda właściwość będzie zwracała shruga.
 
-<p class="note">Warto zauważyć, że w przypadku używania proxy, wszystkie operacje wykonujemy właśnie na nim. W zależności od zdefiniowanych pułapek, nasze działania na proxy będą miały odpowiednie odbicie na rzeczywistym obiekcie.</p>
+{% note %}Warto zauważyć, że w przypadku używania proxy, wszystkie operacje wykonujemy właśnie na nim. W zależności od zdefiniowanych pułapek, nasze działania na proxy będą miały odpowiednie odbicie na rzeczywistym obiekcie.{% endnote %}
 
 I mówiąc _każda_ mam na myśli naprawdę _każdą_:
 
@@ -142,6 +142,6 @@ console.log( proxy.b ); // ¯\_(ツ)_/¯
 
 Używamy tutaj mechanizmu refleksji do sprawdzenia, czy oryginalny obiekt ma odpowiednią właściwość (1), a jeśli tak – zwracamy ją (2). W innym wypadku zwracamy shruga (3).
 
-<p class="note">Oczywiście można zastosować bardziej tradycyjne metody niż refleksja (<code>for...in</code> i <code>target[ property ]</code>), niemniej uważam, że refleksja jest po prostu czytelniejsza i bardziej elegancka. No i co najważniejsze: `Reflect` ma metody odpowiadające pułapkom `Proxy`. Te mechanizmy doskonale się uzupełniają i wręcz grzechem byłoby ich nie wykorzystać razem.</p>
+{% note %}Oczywiście można zastosować bardziej tradycyjne metody niż refleksja (<code>for...in</code> i <code>target[ property ]</code>), niemniej uważam, że refleksja jest po prostu czytelniejsza i bardziej elegancka. No i co najważniejsze: `Reflect` ma metody odpowiadające pułapkom `Proxy`. Te mechanizmy doskonale się uzupełniają i wręcz grzechem byłoby ich nie wykorzystać razem.{% endnote %}
 
 I to tyle. Małym nakładem środków udało nam się odtworzyć _magię PHP-a_, yay!

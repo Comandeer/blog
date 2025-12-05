@@ -32,7 +32,7 @@ Button/
 
 Przy tego typu podejściu warstwy są dzielone tak samo jak poszczególne technologie (treść/szablon – HTML, prezentacja – CSS, zachowanie – JS). To oznacza, że – jeśli nie używamy żadnego narzędzia budującego – przeglądarka będzie musiała wczytać wszystkie 3 pliki. Stąd też pojawił się pomysł, żeby pozostawić podział na warstwy, ale nie robić podziału na poszczególne technologie. Tak zrodziły się jednoplikowe komponenty.
 
-<p class="note">Zwykle jestem sceptycznie nastawiony do pojęcia "podział na technologie". Wynika to jednak z tego, że pojawia się ono najczęściej jako <a href="https://medium.com/@hayavuk/regardless-of-how-it-relates-to-styled-components-which-i-could-not-care-less-about-this-1c75825582d0">wytłumaczenie, czemu w danym projekcie podział na warstwy jest odrzucony</a> – a przecież te dwie kwestie tak naprawdę są całkowicie oddzielne!</p>
+{% note %}Zwykle jestem sceptycznie nastawiony do pojęcia "podział na technologie". Wynika to jednak z tego, że pojawia się ono najczęściej jako <a href="https://medium.com/@hayavuk/regardless-of-how-it-relates-to-styled-components-which-i-could-not-care-less-about-this-1c75825582d0">wytłumaczenie, czemu w danym projekcie podział na warstwy jest odrzucony</a> – a przecież te dwie kwestie tak naprawdę są całkowicie oddzielne!{% endnote %}
 
 Komponent `Button` w postaci jednoplikowej wyglądałby mniej więcej tak:
 
@@ -173,7 +173,7 @@ Jeśli teraz sprawdzimy, co zwraca `loadComponent`, zauważymy, że jest to komp
 
 I mówiąc "kompletne" mam na myśli _naprawdę_ kompletne. W tym wypadku dostajemy pełnoprawny dokument HTML, z `head` i `body`. Jak widać, zawartość naszego komponentu trafiła do `head`. Jest to spowodowane tym, w jaki sposób parser HTML wykonuje swoją pracę.  [Algorytm budowania drzewa DOM](https://html.spec.whatwg.org/multipage/parsing.html#tree-construction) jest opisany dokładnie w specyfikacji HTML LS. W największym uproszczeniu można przyjąć, że konstruując takie drzewko, parser będzie umieszczał wszystko w `head` tak długo, aż nie natknie się na element, który jest dozwolony tylko w `body`. Wszystkie wykorzystane przez nas elementy (`template`, `style`, `script`) są dozwolone w `head`, stąd otrzymujemy taki wynik. Gdybyśmy na początek naszego komponentu dodali np. pusty znacznik `p`, wówczas cała jego zawartość znalazłaby się w `body` dokumentu stworzonego przez parser.
 
-<p class="note">Tak naprawdę nasz komponent jest traktowany jako <em>niepoprawny</em> dokument HTML, ponieważ nie zaczyna się od <code>DOCTYPE</code>. Tym samym powstały z niego dokument znajduje się w tzw. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode"><i>trybie quirks</i></a>. Na szczęście dla nas nie ma to znaczenia, bo wykorzystujemy parser DOM wyłącznie do pocięcia naszego komponentu na potrzebne nam później części.</p>
+{% note %}Tak naprawdę nasz komponent jest traktowany jako <em>niepoprawny</em> dokument HTML, ponieważ nie zaczyna się od <code>DOCTYPE</code>. Tym samym powstały z niego dokument znajduje się w tzw. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode"><i>trybie quirks</i></a>. Na szczęście dla nas nie ma to znaczenia, bo wykorzystujemy parser DOM wyłącznie do pocięcia naszego komponentu na potrzebne nam później części.{% endnote %}
 
 Mając już całe drzewko DOM, możemy z niego wyciągnąć tylko potrzebne nam rzeczy:
 
@@ -227,7 +227,7 @@ window.loadComponent = ( function() {
 }() );
 ```
 
-<p class="note">Fetch API to nie jedyny sposób pobrania drzewka DOM z zewnętrznego dokumentu. <a href="https://jsfiddle.net/Comandeer/rokoxp7d/"><code>XMLHttpRequest</code> ma dedykowany tryb <code>document</code></a>, który pozwala pominąć etap samodzielnego parsowania DOM. Jednak coś za coś: <code>XMLHttpRequest</code> nie ma API opartego na <code>Promise</code>, co wymuszałoby jego dodanie własnymi siłami.</p>
+{% note %}Fetch API to nie jedyny sposób pobrania drzewka DOM z zewnętrznego dokumentu. <a href="https://jsfiddle.net/Comandeer/rokoxp7d/"><code>XMLHttpRequest</code> ma dedykowany tryb <code>document</code></a>, który pozwala pominąć etap samodzielnego parsowania DOM. Jednak coś za coś: <code>XMLHttpRequest</code> nie ma API opartego na <code>Promise</code>, co wymuszałoby jego dodanie własnymi siłami.{% endnote %}
 
 ## Rejestrowanie komponentu
 
@@ -317,7 +317,7 @@ Na poziomie pliku komponentu wygląda to bardzo ładnie i nic nie wypływa na ze
 
 I zanim się poddamy i zmienimy nasz ładny sposób na jakiś brzydszy (`componentsSettings.push( settingsObject )`), to pora wyciągnąć z szafy ~~tru~~ ohydny hack. Istnieją co najmniej 2 sposoby, by nakłonić przeglądarkę, żeby dany tekst uważała za plik: [Data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) oraz [Object URI](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL). Przyjrzyjmy się im pokrótce.
 
-<p class="note"><a href="https://stackoverflow.com/a/46086545">Na Stack Overflow sugerowane jest użycie Service Workera</a>. W naszym wypadku to typowa armata na muchę, ale warto mieć świadomość istnienia kolejnego rozwiązania.</p>
+{% note %}<a href="https://stackoverflow.com/a/46086545">Na Stack Overflow sugerowane jest użycie Service Workera</a>. W naszym wypadku to typowa armata na muchę, ale warto mieć świadomość istnienia kolejnego rozwiązania.{% endnote %}
 
 ### Data URI i Object URI
 

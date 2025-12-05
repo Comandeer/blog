@@ -17,7 +17,7 @@ Wytrzymałem jakieś 2 tygodnie. Okazało się, że tempo jednego commita dzienn
 
 <!--more-->
 
-<p class="note">Tak, zdaję sobie sprawę, że nie dokończyłem jeszcze <a href="https://blog.comandeer.pl/projekty/czasomierze/">czasomierzy</a>. Ale hej, zawsze lepiej nie dokończyć dwóch projektów niż jednego!</p>
+{% note %}Tak, zdaję sobie sprawę, że nie dokończyłem jeszcze <a href="https://blog.comandeer.pl/projekty/czasomierze/">czasomierzy</a>. Ale hej, zawsze lepiej nie dokończyć dwóch projektów niż jednego!{% endnote %}
 
 ## Oto Doco
 

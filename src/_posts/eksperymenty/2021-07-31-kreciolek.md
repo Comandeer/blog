@@ -108,7 +108,7 @@ function drawFrame() {
 
 Pojawiła się funkcja `process.stdout.write` (1). Służy ona do wysyłania danych do strumienia. Funkcja ta przyjmuje trzy argumenty: tekst (dane), który chcemy umieścić w strumieniu, kodowanie tego tekstu oraz callback, który zostanie wywołany po umieszczeniu danych w strumieniu. W naszym wypadku po prostu kolejkujemy rysowanie kolejnej klatki (2).
 
-<p class="note">Bardzo często spinnery są wyświetlane w <code>stderr</code> (czyli strumieniu przeznaczonym na błędy). Jest to związane z niepisaną konwencją, według której <a href="https://web.archive.org/web/20201111211140/https://www.jstorimer.com/blogs/workingwithcode/7766119-when-to-use-stderr-instead-of-stdout" rel="noreferrer noopener">wszystkie diagnostyczne rzeczy powinny trafiać właśnie tam</a>.</p>
+{% note %}Bardzo często spinnery są wyświetlane w <code>stderr</code> (czyli strumieniu przeznaczonym na błędy). Jest to związane z niepisaną konwencją, według której <a href="https://web.archive.org/web/20201111211140/https://www.jstorimer.com/blogs/workingwithcode/7766119-when-to-use-stderr-instead-of-stdout" rel="noreferrer noopener">wszystkie diagnostyczne rzeczy powinny trafiać właśnie tam</a>.{% endnote %}
 
 Jeśli odpalimy program teraz, zauważymy, że kolejne klatki co prawda wyświetlają się w tej samej linii, ale poprzednie nie są usuwane. A to dlatego, że nie usuwamy tego, co jest w tej linii. W tym celu najlepiej będzie zmienić funkcję `prepareFrame`, by dodawała do klatki także odpowiednie sekwencje ucieczki:
 

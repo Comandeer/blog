@@ -97,7 +97,7 @@ Natomiast, gdybyśmy chcieli rozkodować dane binarne do formatu strawnego dla l
     Int16Array [ 78, 0, 1, 11 ] ] ]
 ```
 
-<p class="note"><code>Int16Array</code> to jedna z tzw. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray" hreflang="en" rel="noreferrer noopener">Typed Arrays</a> (ang. Typowane Tablice). Ten szczegół dla nas jest całkowicie nieistotny, bo tablica ta zachowuje się praktycznie tak samo jak normalna.</p>
+{% note %}<code>Int16Array</code> to jedna z tzw. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray" hreflang="en" rel="noreferrer noopener">Typed Arrays</a> (ang. Typowane Tablice). Ten szczegół dla nas jest całkowicie nieistotny, bo tablica ta zachowuje się praktycznie tak samo jak normalna.{% endnote %}
 
 Najbardziej zewnętrzna tablica reprezentuje cały plik. Wewnątrz niej znajdują się tablice reprezentujące linie. W naszym wypadku kod jest tylko w jednej linii, więc mamy tylko jedną tablicę. Natomiast w jej środku – jak łatwo się domyślić – znajdują się tablice reprezentujące poszczególne segmenty. Przyjrzyjmy się jednemu z nich:
 

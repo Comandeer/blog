@@ -85,7 +85,7 @@ W celu ładnego zobaczenia AST posłużymy się z kolei narzędziem [AST Explor
 
 Można zauważyć, że tak jak w przypadku `document` w DOM, w AST JS-a mamy do czynienia z `File` (rozważam to z punktu widzenia Babela; w innych parserach – pomimo istnienia jednego, wspólnego standardu – wygląda to nieco inaczej), w nim z kolei znajduje się `Program` (odpowiednik `document.documentElement` w DOM). Idąc dalej zauważymy, że cała nasza linijka kodu (wraz ze średnikiem) jest traktowana jako węzeł typu `ExpressionStatement`, a zatem – wyrażenie będące równocześnie instrukcją. Natomiast fragment bez średnika stanowi z kolei `CallExpression` – czyli wyrażenie zawierające wywołanie funkcji, itd. itp.
 
-<p class="note">Instrukcja posiada wewnątrz sobie średnik, bo <a href="https://tc39.github.io/ecma262/#prod-ExpressionStatement">zgodnie ze specyfikacją ECMAScript jest to znak kończący instrukcję</a>. Teoretycznie kod bez średnika na końcu byłby niepoprawny składniowo, gdyby nie <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">mechanizm automatycznego wstawiania średników</a>.</p>
+{% note %}Instrukcja posiada wewnątrz sobie średnik, bo <a href="https://tc39.github.io/ecma262/#prod-ExpressionStatement">zgodnie ze specyfikacją ECMAScript jest to znak kończący instrukcję</a>. Teoretycznie kod bez średnika na końcu byłby niepoprawny składniowo, gdyby nie <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">mechanizm automatycznego wstawiania średników</a>.{% endnote %}
 
 Każdy węzeł AST zawiera informacje o węźle poprzedzającym (`left`) i następującym po nim (`right`). Co ciekawe, każdy węzeł AST posiada też informację odnośnie tego, w którym miejscu kodu źródłowego się znajdował (`loc`). Średnio przydatne do większości zastosowań, ale np. przy tworzeniu sourcemap może się przydać.
 
@@ -171,11 +171,11 @@ traverse( ast, { // 1
 
 Jak widać, moduł ten ma domyślny eksport będący funkcją (1), który jako argument przyjmuje AST oraz obiekt ustawień. Metoda `enter` (2) tego obiektu oznacza, że chcemy odpalać jakąś akcję przy wejściu do danego węzła. Istnieje też metoda `exit`, odpalana przy wychodzeniu z węzła. Dla nas ta różnica nie jest obecnie istotna, więc pozwolę sobie ją pominąć.
 
-<p class="note">Jeśli zastanawiasz się, czemu domyślny eksport modułu wymaga odwołania się bezpośrednio do <code>default</code>, to jest to <a href="http://2ality.com/2017/01/babel-esm-spec-mode.html">efekt transpilacji modułu ES do formatu CJS, z zachowaniem semantyki opisanej w specyfikacji ECMAScript</a>.</p>
+{% note %}Jeśli zastanawiasz się, czemu domyślny eksport modułu wymaga odwołania się bezpośrednio do <code>default</code>, to jest to <a href="http://2ality.com/2017/01/babel-esm-spec-mode.html">efekt transpilacji modułu ES do formatu CJS, z zachowaniem semantyki opisanej w specyfikacji ECMAScript</a>.{% endnote %}
 
 Parametr `path`, przekazywany do `enter`, to z kolei obiekt opakowujący węzeł AST. Zawiera on dodatkowe metody i własności, pozwalające ustalić, z kim sąsiaduje dany węzeł, ale także pozwalające zmienić sam węzeł. Wszystkie operacje są wykonywane na przekazanym drzewie `ast`, które jest w pełni żywe i mutowalne.
 
-<p class="note">Niestety, nigdzie nie udało mi się znaleźć dokumentacji obiektu <code>path</code>. Najbliżej tego znajduje się <a href="https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md">Babel Plugin Handbook</a>.</p>
+{% note %}Niestety, nigdzie nie udało mi się znaleźć dokumentacji obiektu <code>path</code>. Najbliżej tego znajduje się <a href="https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md">Babel Plugin Handbook</a>.{% endnote %}
 
 Spróbujmy zatem odsiać te węzły, które nas nie interesują. My potrzebujemy tylko wywołań `console.log`, a zatem na pewno potrzebujemy znaleźć `CallExpression`. Dodatkowo powinno ono w sobie zawierać `MemberExpression`, czyli odwołanie do własności obiektu (którym `console.log` bez wątpienia jest). Napiszmy zatem odpowiedni kod z perspektywy `console.log`:
 

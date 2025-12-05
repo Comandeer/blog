@@ -15,7 +15,7 @@ redirect_from:
 
 Ostatnio miałem przyjemność przeczytać [książkę Nicholása Bevacquy <cite>Mastering Modular JavaScript</cite>](https://helion.pl/ksiazki/mastering-modular-javascript-nicolas-bevacqua,e_0xjn.htm#format/e). Z racji tego, że książka ta porusza bardzo szeroko rolę abstrakcji w tworzeniu oprogramowania, stwierdziłem, że najwyższy czas spisać także garść własnych przemyśleń.<!--more-->
 
-<p class="note">To faktycznie garść przemyśleń, które od dość dawna kotłowały mi się w głowie. Pod żadnym pozorem nie jest to poradnik, jak tworzyć dobre abstrakcje. Raczej garść przemyśleń starego, zrzędliwego programisty. Jeśli szukasz faktycznego poradnika, polecam wymienioną wyżej książkę!</p>
+{% note %}To faktycznie garść przemyśleń, które od dość dawna kotłowały mi się w głowie. Pod żadnym pozorem nie jest to poradnik, jak tworzyć dobre abstrakcje. Raczej garść przemyśleń starego, zrzędliwego programisty. Jeśli szukasz faktycznego poradnika, polecam wymienioną wyżej książkę!{% endnote %}
 
 ## Abstrakcja – co to takiego?
 
@@ -306,7 +306,7 @@ class Store {
 
 Uzyskaliśmy zatem prostą klasę `Store`, realizującą wszystkie zadania z powyższej listy z dodatkową metodą `getAllTasks` do pobrania wszystkich istniejących zadań. Możemy ją teraz zapisać jako osobny moduł naszej aplikacji, `Store.js`.
 
-<p class="note">Jeśli zastanawiasz się, dlaczego wszystkie metody tej klasy są asynchroniczne, to pomyśl, skąd zwykle takie dane się pobiera. Zarówno komunikacja z API, jak i bazą danych, w przypadku JavaScriptu – będącego od zawsze jednowątkowym językiem – po prostu <em>musi</em> być asynchroniczna. W innym wypadku będzie blokować główny wątek przeglądarki. Stąd dla spójności z tymi najpopularniejszymi sposobami przechowywania danych wszystkie implementacje powinny być asynchroniczne.</p>
+{% note %}Jeśli zastanawiasz się, dlaczego wszystkie metody tej klasy są asynchroniczne, to pomyśl, skąd zwykle takie dane się pobiera. Zarówno komunikacja z API, jak i bazą danych, w przypadku JavaScriptu – będącego od zawsze jednowątkowym językiem – po prostu <em>musi</em> być asynchroniczna. W innym wypadku będzie blokować główny wątek przeglądarki. Stąd dla spójności z tymi najpopularniejszymi sposobami przechowywania danych wszystkie implementacje powinny być asynchroniczne.{% endnote %}
 
 ### Zamienne implementacje
 

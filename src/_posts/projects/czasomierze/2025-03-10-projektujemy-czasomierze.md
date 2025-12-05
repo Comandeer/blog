@@ -17,7 +17,7 @@ permalink: /projektujemy-czasomierze.html
 
 Zajmiemy się wszystkimi wspomnianymi problemami po kolei, próbując ich rozwiązania zamknąć w spójne, sensowne API. Będziemy korzystać z już istniejących rozwiązań, żeby podpatrzeć, jak można pewne rzeczy zrobić. Będziemy też całość pisać w [TypeScripcie](https://www.typescriptlang.org/), dzięki czemu za darmo dostaniemy ładne typy. Oficjalna strona TypeScriptu udostępnia [miejsce do testowania kodu online](https://www.typescriptlang.org/play/).
 
-<p class="note">Część przykładów z tego artykułu może nie chcieć się uruchomić we wspomnianym wyżej narzędziu, narzekając na obecność <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await">top-level <code>await</code></a>. W takim wypadku wystarczy wymusić traktowanie kodu jako modułu ES poprzez dodanie, czy to na początku, czy na końcu, pustego eksportu (<code>export {}</code>) lub otoczyć całość w <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">samowywołującą się asynchroniczną funkcję</a>.</p>
+{% note %}Część przykładów z tego artykułu może nie chcieć się uruchomić we wspomnianym wyżej narzędziu, narzekając na obecność <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await">top-level <code>await</code></a>. W takim wypadku wystarczy wymusić traktowanie kodu jako modułu ES poprzez dodanie, czy to na początku, czy na końcu, pustego eksportu (<code>export {}</code>) lub otoczyć całość w <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">samowywołującą się asynchroniczną funkcję</a>.{% endnote %}
 
 Obecnie kod TS można także [uruchomić bezpośrednio w Node.js](https://nodejs.org/en/learn/typescript/run-natively):
 
@@ -233,7 +233,7 @@ async function setTimeout( delay: number, { signal }: SetTimeoutOptions = {} ): 
 
 Tak naprawdę nie potrzebujemy dodatkowego owijania we własny `AbortError`, możemy skorzystać bezpośrednio z `AbortSignal#reason`. Co też robimy (1). I to w sumie jedyna zmiana. Jeśli teraz odpalimy nasz kod, zauważymy, że powód odrzucenia obietnicy się zmienił – teraz jest to błąd typu [`DOMException`](https://developer.mozilla.org/en-US/docs/Web/API/DOMException) z komunikatem `signal is aborted without reason` (testowane w Chrome).
 
-<p class="note">Możemy podać dokładny powód przerwania operacji, przekazując go jako argument do <code>AbortController#abort()</code>. Można tam przekazać dowolną wartość, ale przekazywanie <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">błędów</a> w takich przypadkach jest w miarę powszechnie stosowaną dobrą praktyką.</p>
+{% note %}Możemy podać dokładny powód przerwania operacji, przekazując go jako argument do <code>AbortController#abort()</code>. Można tam przekazać dowolną wartość, ale przekazywanie <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">błędów</a> w takich przypadkach jest w miarę powszechnie stosowaną dobrą praktyką.{% endnote %}
 
 Jest jeszcze jedna sytuacja, którą powinniśmy wziąć pod uwagę: co jeśli do `setTimeout()` zostanie przekazany już "wykorzystany" sygnał? Może to nastąpić, gdy `AbortController#abort()` zostało wywołane przed wywołaniem `setTimeout()`. Obsługa zdarzenia `abort` tego nie wykryje, bo ono jest w stanie wykryć jedynie przerwanie tu i teraz (tak samo jak np. zdarzenie `click` nie zareaguje na kliknięcie sprzed 10 minut). Na szczęście istnieje [własność `AbortSignal#aborted`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/aborted), która informuje o stanie sygnału:
 
@@ -465,7 +465,7 @@ Dodatkowo grupa dla minut stosuje tzw. [negatywne rozglądnięcie się do przodu
 
 Taki zapis oznacza "znajdź liczbę, po której następuje litera `m`, po której _nie_ następuje litera `s`".
 
-<p class="note">Stosując pozytywne rozglądnięcie się do przodu (ang. <i lang="en">positive lookahead assertion</i>) można całe wyrażenie regularne napisać tak, aby wykrywało same wartości liczbowe, przyporządkowując je do konkretnych nazwanych grup na podstawie następujących po nich liter.</p>
+{% note %}Stosując pozytywne rozglądnięcie się do przodu (ang. <i lang="en">positive lookahead assertion</i>) można całe wyrażenie regularne napisać tak, aby wykrywało same wartości liczbowe, przyporządkowując je do konkretnych nazwanych grup na podstawie następujących po nich liter.{% endnote %}
 
 ## Dodatkowe poprawki
 
@@ -497,7 +497,7 @@ async function* setInterval(
 
 Zmienił się typ zwracanych wartości funkcji – `setTimeout()` zwraca teraz `Promise<number>` (1), a `setInterval()` – `AsyncIterableIterator<number>` (2). W `setTimeout()` zaszła jeszcze jedna zmiana – `resolve()` nie jest już przekazywany bezpośrednio jako callback. Został owinięty w [funkcję strzałkową](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (3), a do samego `resolve()` przekazywana jest wartość [`Date.now()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) (4).
 
-<p class="note">Aktualny znacznik czasu niekoniecznie jest szczególnie przydatny w przypadku pojedynczego wywołania <code>setTimeout()</code>, ale w przypadku <code>setInterval()</code> może być przydatny do wykorzystania w technice <a href="https://en.wikipedia.org/wiki/Delta_timing"><i lang="en">delta timing</i></a>.</p>
+{% note %}Aktualny znacznik czasu niekoniecznie jest szczególnie przydatny w przypadku pojedynczego wywołania <code>setTimeout()</code>, ale w przypadku <code>setInterval()</code> może być przydatny do wykorzystania w technice <a href="https://en.wikipedia.org/wiki/Delta_timing"><i lang="en">delta timing</i></a>.{% endnote %}
 
 Kolejnym usprawnieniem, jakie wprowadziłbym, jest… zmiana nazw w naszym API. Istniejące w przeglądarkach czasomierze są na tyle znane, że "podszywanie się" pod nie niekoniecznie jest dobrym pomysłem. Zwłaszcza, że nasze API działa całkowicie inaczej. Nie dość, że zmieniło się zachowanie funkcji `setTimeout()` i `setInterval()`, to dodatkowo `clearTimeout()` i `clearInterval()` nie działają w ogóle. Dlatego, żeby nie wprowadzać niepotrzebnego chaosu, nasze `setTimeout()` będzie nazywać się `wait()`, a `setInterval()` – `tick()`.
 

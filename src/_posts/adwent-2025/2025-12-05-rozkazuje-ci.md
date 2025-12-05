@@ -16,7 +16,7 @@ W 2024 wspominałem o [zwrocie deklaratywnym w standardach sieciowych](https://b
 
 ## Wyzwalacze
 
-<p class="note">Tak, w 2024 zaproponowałem nazwę <q>wywoływacze</q>, ale im częściej jej używałem, tym bardziej mi się ona nie podobała. Dlatego od teraz będę to API nazywał <q>wyzwalaczami</q></p>
+{% note %}Tak, w 2024 zaproponowałem nazwę <q>wywoływacze</q>, ale im częściej jej używałem, tym bardziej mi się ona nie podobała. Dlatego od teraz będę to API nazywał <q>wyzwalaczami</q>{% endnote %}
 
 Wyzwalacze, a dokładniej [<i lang="en">Invoker Commands API</i> (API Komend Wyzwalacza)](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API), dodają dwa nowe atrybuty: [`[command]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#command) oraz [`[commandfor]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#commandfor). Można ich użyć do przypięcia komend do określonych elementów:
 
@@ -31,7 +31,7 @@ W powyższym przykładzie nie ma ani linijki JS-a. Zarówno otwarcie, jak i zamk
 </dialog>
 ```
 
-Tworzymy przycisk (1), któremu dodajemy dwa atrybuty: `[command]`, z nazwą komendy, którą chcemy wywołać (w tym wypadku `show-modal`), oraz `[commandfor]`, zawierający identyfikator elementu, któremu chcemy tę komendę wydać (w tym wypadku `dialog`). Oczywiście taki element też musimy dodać do kodu (2). W ten prosty sposób możemy otwierać modale bez udziału JS-a! 
+Tworzymy przycisk (1), któremu dodajemy dwa atrybuty: `[command]`, z nazwą komendy, którą chcemy wywołać (w tym wypadku `show-modal`), oraz `[commandfor]`, zawierający identyfikator elementu, któremu chcemy tę komendę wydać (w tym wypadku `dialog`). Oczywiście taki element też musimy dodać do kodu (2). W ten prosty sposób możemy otwierać modale bez udziału JS-a!
 
 Warto przy tym zauważyć, że komendy można wywoływać wyłącznie przy pomocy elementu `button`. Atrybuty nie zadziałają na żadnym innym. Dzięki temu prostemu zabiegowi nie da się stworzyć całkowicie niedostępnej komendy. Przycisk bowiem został stworzony dokładnie do takich rzeczy i po prostu [robi to najlepiej](https://blog.comandeer.pl/czy-div-jest-dostepny).
 
@@ -46,7 +46,7 @@ A jakie komendy są dostępne? Na ten moment jest ich [niewiele](https://html.sp
 
 Jak widać, można podzielić te komendy na dwie grupy: te do sterowania popoverami oraz te do sterowania modalami/dialogami. W przyszłości prawdopodobnie będą dodawane kolejne komendy.
 
-<p class="note">Tak, wyzwalacze nieco duplikują to, na co pozwalają atrybuty z Popover API (<code>[popovertarget]</code> i <code>[popovertargetaction]</code>). Osobiście raczej będę używał tylko wyzwalaczy, żeby niepotrzebnie nie wprowadzać zamieszania w kodzie.</p>
+{% note %}Tak, wyzwalacze nieco duplikują to, na co pozwalają atrybuty z Popover API (`[popovertarget]` i `[popovertargetaction]`). Osobiście raczej będę używał tylko wyzwalaczy, żeby niepotrzebnie nie wprowadzać zamieszania w kodzie.{% endnote %}
 
 ## Niestandardowe komendy
 
@@ -77,6 +77,6 @@ Efekt końcowy wygląda tak:
 
 {% include 'embed' src="https://codepen.io/Comandeer/pen/WbwaLBg" %}
 
-<p class="note">Dla wbudowanych komend zdarzenie <code>command</code> również się odpali.</p>
+{% note %}Dla wbudowanych komend zdarzenie `command` również się odpali.{% endnote %}
 
 I to w sumie tyle! Małe, przyjemne API, pozwalające się pozbyć kolejnego fragmentu JS-a. Jedynym minusem jest [niepełne wsparcie przeglądarek](https://caniuse.com/wf-invoker-commands). Ale gdy tylko Safari nadgoni, raz na zawsze pozbędę się tych wszystkich [`showModal()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal) z mojego kodu JS!

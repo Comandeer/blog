@@ -14,7 +14,7 @@ permalink: /w-labiryncie-zadan.html
 
 Praktycznie od samego początku istnienia Node'a towarzyszył mu framework [Express.js](https://expressjs.com/), który pozwala tworzyć backend. I ma też jeden ficzer, który dzisiaj jest w światku backendowego JS-a standardem: [ścieżki (routing)](https://expressjs.com/en/starter/basic-routing.html).<!--more-->
 
-<p class="note">Nie twierdzę, że Express.js wynalazł ścieżki. Niemniej zdecydowanie przyczynił się do tego, jak wyglądają w ekosystemie JS-a.</p>
+{% note %}Nie twierdzę, że Express.js wynalazł ścieżki. Niemniej zdecydowanie przyczynił się do tego, jak wyglądają w ekosystemie JS-a.{% endnote %}
 
 ## Ścieżki
 
@@ -401,6 +401,6 @@ Natomiast jeśli wejdziemy pod adres `http://localhost:3000/user/Comandeer`, pow
 
 Jeśli wpiszemy dowolny nieobsługiwany adres (np. `http://localhost:3000/whatever`), przeglądarka powinna wyświetlić domyślny błąd 404.
 
-<p class="note">Oczywiście ten prymitywny serwer <strong>NIE NADAJE SIĘ DO CELÓW PRODUKCYJNCH</strong>. Powstał jedynie po to, by pokazać, jak można wykorzystać <code>URLPattern</code> w praktyce.</p>
+{% note %}Oczywiście ten prymitywny serwer <strong>NIE NADAJE SIĘ DO CELÓW PRODUKCYJNCH</strong>. Powstał jedynie po to, by pokazać, jak można wykorzystać <code>URLPattern</code> w praktyce.{% endnote %}
 
 Całość kodu, wraz z dokumentacją w formacie [JSDoc](https://en.wikipedia.org/wiki/JSDoc), znajduje się w [Giście](https://gist.github.com/Comandeer/1588f257b94182f02989c7f36ca7fccf).

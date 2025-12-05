@@ -71,7 +71,7 @@ Skoro nasz obiekt `worker` posiada metodę `addEventListener`, to prawdopodobnie
 (new Worker( '' ) ) instanceof EventTarget; // true
 ```
 
-<p class="note">W specyfikacjach wykorzystuje się <a href="https://heycam.github.io/webidl/" rel="noreferrer noopener">pseudojęzyk WebIDL</a> do opisu zależności pomiędzy poszczególnymi klasami i obiektami definiowanymi przez różne standardy. Stąd pojawiają się też interfejsy czy mixiny, które normalnie w JS nie występują.</p>
+{% note %}W specyfikacjach wykorzystuje się <a href="https://heycam.github.io/webidl/" rel="noreferrer noopener">pseudojęzyk WebIDL</a> do opisu zależności pomiędzy poszczególnymi klasami i obiektami definiowanymi przez różne standardy. Stąd pojawiają się też interfejsy czy mixiny, które normalnie w JS nie występują.{% endnote %}
 
 Zatem obsługa niestandardowych zdarzeń powinna być banalnie prosta i sprowadzać się do:
 
@@ -240,7 +240,7 @@ Sprawdźmy, czy wszystko działa:
 
 Działa!
 
-<p class="note">Jedyny problem z naszą implementacją <code>onmycustomevent</code> to fakt, że jest wywoływany <em>przed</em> innymi listenerami. Tradycyjnie listenery przypięte przez <code>on…</code> wywołują się na końcu. Wydaje mi się jednak, że tego typu szczegół – zwłaszcza przy własnej implementacji zdarzeń – jest mało istotny i można go pominąć.</p>
+{% note %}Jedyny problem z naszą implementacją <code>onmycustomevent</code> to fakt, że jest wywoływany <em>przed</em> innymi listenerami. Tradycyjnie listenery przypięte przez <code>on…</code> wywołują się na końcu. Wydaje mi się jednak, że tego typu szczegół – zwłaszcza przy własnej implementacji zdarzeń – jest mało istotny i można go pominąć.{% endnote %}
 
 ## Ostateczna refaktoryzacja
 
@@ -300,7 +300,7 @@ Tym razem stworzyliśmy funkcję z dwoma parametrami: nazwą metody wywołujące
 
 Tym sposobem uzyskaliśmy minimalistyczną bibliotekę przeznaczoną do tworzenia własnych, niestandardowych zdarzeń w workerach! [Przykład na żywo](https://embed.plnkr.co/paXQMzkeXRX8AozeJUIp/).
 
-<p class="note">Jeśli zastanawiasz się, czy ten przykład zadziała także we wspomnianych Service Workerach, to śpieszę powiedzieć, że jak najbardziej! Prawdopodobnie zajdzie jedynie konieczność dodania naszej metody <code>raiseEvent</code> również do <code>ServiceWorker.prototype</code>.</p>
+{% note %}Jeśli zastanawiasz się, czy ten przykład zadziała także we wspomnianych Service Workerach, to śpieszę powiedzieć, że jak najbardziej! Prawdopodobnie zajdzie jedynie konieczność dodania naszej metody <code>raiseEvent</code> również do <code>ServiceWorker.prototype</code>.{% endnote %}
 
 ## Podejście alternatywne
 

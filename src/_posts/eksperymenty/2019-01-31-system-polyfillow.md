@@ -64,7 +64,7 @@ Skrypty takie mają dwie pomocne właściwości: zawsze wczytują się w takiej 
 
 I tak upewniliśmy się, że polyfille zostaną zawsze wczytane przed aplikacją.
 
-<p class="note">Innym sposobem jest wykorzystanie faktu, że moduły ES (<code>script[type=module]</code>) domyślnie zachowują się jak <code>script[defer]</code>. Jeśli zatem nasza aplikacja to moduł, nic nie stoi na przeszkodzie, by wykorzystać tę nowszą metodę.</p>
+{% note %}Innym sposobem jest wykorzystanie faktu, że moduły ES (<code>script[type=module]</code>) domyślnie zachowują się jak <code>script[defer]</code>. Jeśli zatem nasza aplikacja to moduł, nic nie stoi na przeszkodzie, by wykorzystać tę nowszą metodę.{% endnote %}
 
 ### Polyfille powinny być dobierane na podstawie feature detection
 
@@ -78,7 +78,7 @@ Najlepszym przykładem działania feature detection jest [biblioteka Modernizr](
 
 ### Nie chcemy opierać się na zewnętrznej usłudze
 
-<p class="note">⚠️ Ostatnio wspomniana niżej usługa zmieniła właściciela i <a href="https://sansec.io/research/polyfill-supply-chain-attack" rel="noreferrer noopener">złapano ją na rozprowadzaniu malware</a>. To w sumie dobrze podsumowuje rozważania z tej sekcji o zewnętrznych usługach jako kolejnych zależnościach, a tym samym – potencjalnych dziurach…</p>
+{% note %}⚠️ Ostatnio wspomniana niżej usługa zmieniła właściciela i <a href="https://sansec.io/research/polyfill-supply-chain-attack" rel="noreferrer noopener">złapano ją na rozprowadzaniu malware</a>. To w sumie dobrze podsumowuje rozważania z tej sekcji o zewnętrznych usługach jako kolejnych zależnościach, a tym samym – potencjalnych dziurach…{% endnote %}
 
 Choć większość opisanych założeń spełnia usługa polyfill [dot] io, to nie chcemy się na niej opierać. Każda zewnętrzna usługa to tak naprawdę kolejna zależność naszej aplikacji. W tym momencie działanie naszej aplikacji uzależnialibyśmy od działania zewnętrznej usługi wczytującej polyfille. Gdyby zaliczyła ona pada, nasza aplikacja również by klęknęła i to całkowicie nie z naszej winy.
 
@@ -319,7 +319,7 @@ Object.entries( features ).forEach( ( [ feature, test ] ) => {
 } );
 ```
 
-<p class="note">Warto jednak zauważyć, że w tym wypadku nie zadziała <code>map</code>, ponieważ tworzy on nową tablicę o tej samej długości, co pierwotna. A to oznacza, że nawet dla obsługiwanych ficzerów tworzyłby elementy tablicy, nawet jeśli miałoby się tam znaleźć <code>undefined</code>.</p>
+{% note %}Warto jednak zauważyć, że w tym wypadku nie zadziała <code>map</code>, ponieważ tworzy on nową tablicę o tej samej długości, co pierwotna. A to oznacza, że nawet dla obsługiwanych ficzerów tworzyłby elementy tablicy, nawet jeśli miałoby się tam znaleźć <code>undefined</code>.{% endnote %}
 
 Mając już tablicę wszystkich nieobsługiwanych ficzerów, można skonstruować odpowiedni znacznik `script` do wczytania ich polyfillów:
 

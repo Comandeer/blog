@@ -110,7 +110,7 @@ Wywołanie jej pokazuje okienko instalacji aplikacji. Nie ma żadnego magicznego
 
 Kliknięcie takiego przycisku zainstaluje daną stronę. Jedynym wymogiem jest istnienie manifestu aplikacji webowej z określonym `id` aplikacji.
 
-<p class="note">Z uwagi na to, że API jest w fazie testów, wymogi względem stron WWW mogą się jeszcze zmienić.</p>
+{% note %}Z uwagi na to, że API jest w fazie testów, wymogi względem stron WWW mogą się jeszcze zmienić.{% endnote %}
 
 Niemniej to tylko połowa możliwości tego API! Bo to API pozwala także instalować inne PWA:
 
