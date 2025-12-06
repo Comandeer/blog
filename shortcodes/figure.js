@@ -5,79 +5,81 @@ import path from 'node:path';
 import image from '@11ty/eleventy-img';
 import htmlmin from 'html-minifier-terser';
 
-export async function figureShortCode(
-	src,
-	alt = '',
-	caption = null,
-	link = null,
-	style = '',
-	className,
-	loading = 'lazy',
-	sizes = '90vw',
-	widths = [ 440, 880, 1024, 1360 ],
-	formats = [ 'avif', 'webp' ]
-) {
-	const { inputPath } = this.page;
-	const currentDir = path.dirname( inputPath );
-	const imgSrc = path.resolve( currentDir, src );
-	const originalFormat = path.extname( src ).replace( /^\./, '' );
-	const { dir, url } = getOutputPaths( src );
+export function createFigureShortCode( markdownIt ) {
+	return async function figureShortCode(
+		src,
+		alt = '',
+		caption = null,
+		link = null,
+		style = '',
+		className,
+		loading = 'lazy',
+		sizes = '90vw',
+		widths = [ 440, 880, 1024, 1360 ],
+		formats = [ 'avif', 'webp' ]
+	) {
+		const { inputPath } = this.page;
+		const currentDir = path.dirname( inputPath );
+		const imgSrc = path.resolve( currentDir, src );
+		const originalFormat = path.extname( src ).replace( /^\./, '' );
+		const { dir, url } = getOutputPaths( src );
 
-	if ( originalFormat === 'svg' ) {
-		formats = [ 'svg' ];
-	} else {
-		formats.push( originalFormat );
-	}
-
-	const metadata = await image( imgSrc, {
-		widths: [ ...widths ],
-		formats: [ ...formats ],
-		urlPath: url,
-		outputDir: dir,
-		filenameFormat: ( id, src, width, format ) => {
-			const extension = path.extname( src );
-			const name = path.basename( src, extension );
-
-			return `${ name }-${ width }w.${ format }`;
+		if ( originalFormat === 'svg' ) {
+			formats = [ 'svg' ];
+		} else {
+			formats.push( originalFormat );
 		}
-	} );
 
-	const lowSrc = getLowSrc( metadata, originalFormat );
-	const imageSources = Object.values( metadata ).
-		map( ( imageFormat ) => {
-			return `  <source type="${ imageFormat[ 0 ].sourceType }" srcset="${ imageFormat.
-				map( ( entry ) => {
-					return entry.srcset;
-				} ).
-				join( ', ' ) }" sizes="${ sizes }">`;
-		} ).
-		join( '\n' );
+		const metadata = await image( imgSrc, {
+			widths: [ ...widths ],
+			formats: [ ...formats ],
+			urlPath: url,
+			outputDir: dir,
+			filenameFormat: ( id, src, width, format ) => {
+				const extension = path.extname( src );
+				const name = path.basename( src, extension );
 
-	const imgageAttributes = stringifyAttributes( {
-		src: lowSrc.url,
-		width: lowSrc.width,
-		height: lowSrc.height,
-		style: `aspect-ratio: ${ lowSrc.width } / ${ lowSrc.height }`,
-		alt: alt.replace( /"/g, '&quot;' ),
-		loading,
-		decoding: 'async'
-	} );
+				return `${ name }-${ width }w.${ format }`;
+			}
+		} );
 
-	const imageElement = `<picture ${ className ? `class="${ className }"` : '' }${ style ? ` style="${ style }"` : '' }>
-		${ imageSources }
-		<img
-		${ imgageAttributes }>
-	</picture>`;
-	link = link ? link : getHDSrc( metadata ).url;
-	caption = caption ? caption : 'Kliknij obrazek, aby go powiększyć';
-	const figureElement = `<figure class="figure">
-		<a href="${ link }">${ imageElement }</a>
-		<figcaption>${ caption }</figcaption>
-	</figure>`;
+		const lowSrc = getLowSrc( metadata, originalFormat );
+		const imageSources = Object.values( metadata ).
+			map( ( imageFormat ) => {
+				return `  <source type="${ imageFormat[ 0 ].sourceType }" srcset="${ imageFormat.
+					map( ( entry ) => {
+						return entry.srcset;
+					} ).
+					join( ', ' ) }" sizes="${ sizes }">`;
+			} ).
+			join( '\n' );
 
-	return htmlmin.minify( figureElement, {
-		collapseWhitespace: true
-	} );
+		const imgageAttributes = stringifyAttributes( {
+			src: lowSrc.url,
+			width: lowSrc.width,
+			height: lowSrc.height,
+			style: `aspect-ratio: ${ lowSrc.width } / ${ lowSrc.height }`,
+			alt: alt.replace( /"/g, '&quot;' ),
+			loading,
+			decoding: 'async'
+		} );
+
+		const imageElement = `<picture ${ className ? `class="${ className }"` : '' }${ style ? ` style="${ style }"` : '' }>
+			${ imageSources }
+			<img
+			${ imgageAttributes }>
+		</picture>`;
+		link = link ? link : getHDSrc( metadata ).url;
+		caption = caption ? markdownIt.render( caption ) : 'Kliknij obrazek, aby go powiększyć';
+		const figureElement = `<figure class="figure">
+			<a href="${ link }">${ imageElement }</a>
+			<figcaption>${ caption }</figcaption>
+		</figure>`;
+
+		return htmlmin.minify( figureElement, {
+			collapseWhitespace: true
+		} );
+	};
 }
 
 function getOutputPaths( src ) {
