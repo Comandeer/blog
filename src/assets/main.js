@@ -325,7 +325,7 @@ class CommentsComponent extends HTMLElement {
 
 		script.setAttribute( 'data-repo', 'Comandeer/blog' );
 		script.setAttribute( 'data-repo-id', 'MDEwOlJlcG9zaXRvcnk4MDkyMTIyOA==' );
-		script.setAttribute( 'data-category', 'Announcements' );
+		script.setAttribute( 'data-category', 'Komentarze' );
 		script.setAttribute( 'data-category-id', 'DIC_kwDOBNLCjM4ChGfo' );
 		script.setAttribute( 'data-mapping', 'specific' );
 		script.setAttribute( 'data-term', this.getAttribute( 'thread' ) );

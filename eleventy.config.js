@@ -3,7 +3,7 @@ import site from './src/_data/site.js';
 import { markdownIt } from './plugins/markdownIt.js';
 import { assetPipeline } from './plugins/assetPipeline.js';
 import { disqusShortCode } from './shortcodes/disqus.js';
-import { figureShortCode } from './shortcodes/figure.js';
+import { createFigureShortCode } from './shortcodes/figure.js';
 import { rssLink, rssLabel } from './shortcodes/rss.js';
 import { createNoteShortCode } from './shortcodes/note.js';
 
@@ -98,13 +98,13 @@ export default function( eleventyConfig ) {
 	eleventyConfig.addFilter( 'commentUrl', ( permalink ) => {
 		const searchParams = new URLSearchParams();
 
-		searchParams.set( 'discussions_q', `category:Announcements ${ cfUrl( permalink ) }` );
+		searchParams.set( 'discussions_q', `category:Komentarze ${ cfUrl( permalink ) }` );
 
-		return `https://github.com/Comandeer/blog/discussions/categories/announcements?${ searchParams.toString() }`;
+		return `https://github.com/Comandeer/blog/discussions/categories/komentarze?${ searchParams.toString() }`;
 	} );
 	eleventyConfig.addFilter( 'cfUrl', cfUrl );
 
-	eleventyConfig.addAsyncShortcode( 'figure', figureShortCode );
+	eleventyConfig.addAsyncShortcode( 'figure', createFigureShortCode( markdownIt ) );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
 	eleventyConfig.addShortcode( 'rss_link', rssLink );
 	eleventyConfig.addShortcode( 'rss_label', rssLabel );
