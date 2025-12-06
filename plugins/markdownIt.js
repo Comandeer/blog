@@ -20,6 +20,9 @@ const highlighter = await createHighlighter( {
 		'javascript',
 		'json',
 		'jsx',
+		'liquid',
+		'markdown',
+		'mdx',
 		'php',
 		'python',
 		'scss',
@@ -27,7 +30,8 @@ const highlighter = await createHighlighter( {
 		'shell',
 		'tsx',
 		'typescript',
-		'xml'
+		'xml',
+		'yaml'
 	]
 } );
 
