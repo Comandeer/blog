@@ -27,8 +27,7 @@ const octokit = new Octokit();
 await main();
 
 async function main() {
-	const fullPostsDirPath = resolvePath( cwd(), env.POSTS_DIR_PATH );
-	const postFiles = getPostFiles( env.GITHUB_SHA, env.POSTS_DIR_PATH, fullPostsDirPath );
+	const postFiles = getPostFiles( env.GITHUB_SHA, env.POSTS_DIR_PATH );
 	const posts = await getPostMetadata( postFiles );
 	const missingPosts = await getPostsWithoutDiscussions( {
 		posts,
@@ -157,6 +156,11 @@ async function getPostsWithoutDiscussions( options ) {
 	return postsWithoutDiscussions;
 }
 
+/**
+ * @param {string} repository
+ * @param {string} title
+ * @returns {Promise<boolean>}
+ */
 async function isMissingDiscussion( repository, title ) {
 	const searchQuery = `repo:${ repository } in:title "${ title }"`;
 	const graphqlQuery = `
