@@ -24,10 +24,10 @@ Zatem policzmy na szybko:
 1. Przy pomocy [JS-owego API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close).
 2. Przy pomocy formularza z atrybutem [`[method=dialog]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form#method).
 3. Przy pomocy klawiatury (naciśnięcie <kbd>Esc</kbd>).
-4. Przy pomocy kliknięcia w tło (dzięki atrybutowyi [`[closedby]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby)).
+4. Przy pomocy kliknięcia w tło (dzięki atrybutowi [`[closedby]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby)).
 5. Przy pomocy przycisku "Wstecz" na Androidzie (przycisku _telefonu_, nie przeglądarki!).
 
-Jestem pewien, że gdyby się uprzeć, dałoby się znaleźć jeszcze kilka innych metod. Niemniej jedno jest pewne: element `dialog` można zamknąć na zaskakująco dużo sposobów.
+Jestem pewien, że gdyby się uprzeć, dałoby się znaleźć jeszcze kilka innych metod. Niemniej jedno jest pewne: [element `dialog`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) można zamknąć na zaskakująco dużo sposobów.
 
 ## Platformowe zamykanie
 
