@@ -6,6 +6,7 @@ import { disqusShortCode } from './shortcodes/disqus.js';
 import { createFigureShortCode } from './shortcodes/figure.js';
 import { rssLink, rssLabel } from './shortcodes/rss.js';
 import { createNoteShortCode } from './shortcodes/note.js';
+import { createLiquidPreprocessor } from './plugins/liquidPreprocessor.js';
 
 /**
  *
@@ -109,6 +110,8 @@ export default function( eleventyConfig ) {
 	eleventyConfig.addShortcode( 'rss_link', rssLink );
 	eleventyConfig.addShortcode( 'rss_label', rssLabel );
 	eleventyConfig.addPairedShortcode( 'note', createNoteShortCode( markdownIt ) );
+
+	createLiquidPreprocessor( eleventyConfig );
 
 	return {
 		dir: {
