@@ -87,8 +87,8 @@ Wygląd w dużej mierze zostawiłem ten sam, pozbyłem się jedynie tego dziwneg
 
 Przy okazji postanowiłem też poprawić sposób wstawiania dygresji. Odszedłem od czystego HTML-a na rzecz tzw. [<i lang="en">shortcode</i> (krótkiego kodu; _krodu_)](https://www.11ty.dev/docs/shortcodes/), a dokładniej jego [parzystej odmiany](https://www.11ty.dev/docs/shortcodes/#paired-shortcodes). W moim przypadku nazwałem krod `note`:
 
-```
-{\% note %}Treść dygresji{\% endnote %}
+```liquid
+{% note %}Treść dygresji{% endnote %}
 ```
 
 {% note %}W rzeczywistości znaki ucieczki (`\`) nie powinny się znajdować w krodzie. Niemniej to był jedyny sposób, by go pokazać w [Eleventy](https://www.11ty.dev/) (moim systemie blogowym).{% endnote %}

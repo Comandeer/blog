@@ -201,7 +201,7 @@ formatString( [
 		name: 'test2',
 		value: 2
 	}
-], '{% raw %}{{ name }}{% endraw %} = {% raw %}{{ value }}{% endraw %}', '\n' );
+], '{{ name }} = {{ value }}', '\n' );
 ```
 
 Ten kod da nam taki wynik:
@@ -257,7 +257,7 @@ formatString( [
 		name: 'test2',
 		value: 2
 	}
-], {% raw %}'{{ name }}{% endraw %} = {% raw %}{{ value }}{% endraw %}', ';' ); // test1 = 1;test2 = 2
+], '{{ name }} = {{ value }}', ';' ); // test1 = 1;test2 = 2
 ```
 
 Działa!
@@ -289,7 +289,7 @@ formatString( [
 			name: 'test'
 		}
 	}
-], {% raw %}'{{ sub.name }}'{% endraw %}, ';' );
+], '{{ sub.name }}', ';' );
 ```
 
 Podpowiedź: [Ferrante fajną funkcję napisał](http://ferrante.pl/frontend/javascript/namespace-w-javascript/).
