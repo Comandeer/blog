@@ -51,3 +51,12 @@ blockquote {
 .note__content {
 	padding-inline: 1rem;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px var(--primary) solid;
+	padding: 0.5rem;
+}
