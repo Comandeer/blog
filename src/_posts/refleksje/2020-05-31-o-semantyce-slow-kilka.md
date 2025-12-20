@@ -19,7 +19,7 @@ W świecie webdevu semantyka to dość modne słowo. Tylko co to tak naprawdę j
 
 Najczęściej słowo to przejawia się w sformułowaniu "znaczniki/elementy semantyczne" lub "nowe znaczniki/elementy semantyczne w HTML5". Przyznaję, że sam niejednokrotnie używałem tych zwrotów (zwłaszcza pierwszego), niemniej ostatnio staram się ich wystrzegać. A to dlatego, że są mocno nieprecyzyjne.
 
-{% note %}Warto zwrócić uwagę na różnicę między elementami a znacznikami. W potocznym języku często te dwie nazwy używa się zamiennie, ale nie są one w pełni równoważne. Element oznacza znacznik początkowy (otwierający), znacznik końcowy (zamykający) oraz treść pomiędzy nimi. Z kolei znaczniki są niejako "ogranicznikami" elementu. <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML#concept_and_syntax" rel="noreferrer noopener">Infografika na MDN-ie</a> dobrze tłumaczy tę różnicę.{% endnote %}
+{% note %}Warto zwrócić uwagę na różnicę między elementami a znacznikami. W potocznym języku często te dwie nazwy używa się zamiennie, ale nie są one w pełni równoważne. Element oznacza znacznik początkowy (otwierający), znacznik końcowy (zamykający) oraz treść pomiędzy nimi. Z kolei znaczniki są niejako "ogranicznikami" elementu. [Infografika na MDN-ie](https://developer.mozilla.org/en-US/docs/Glossary/HTML#concept_and_syntax) dobrze tłumaczy tę różnicę.{% endnote %}
 
 Nie istnieje coś takiego, jak elementy semantyczne. **Każdy element w HTML-u jest semantyczny, bo ma określone znaczenie**. Nawet ten nieszczęsny `div` jest semantyczny, bo [_specyfikacja opisuje jego znaczenie_](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element):
 
@@ -40,10 +40,11 @@ Podsumowując: `div` jest elementem semantycznym, ponieważ ma znaczenie: nic ni
 
 Spróbujmy jednak połapać się w tym galimatiasie!
 
-<div class="note">
-    <p>Z "nowymi znacznikami semantycznymi w HTML5" istnieje jeszcze jeden problem: one nie są nowe. Można by wręcz powiedzieć, że jak na standardy Sieci są wręcz <em>antyczne</em>. Pierwsze wersje większości "nowych" elementów pojawiły się co najmniej w roku 2005, jeszcze w czasach, gdy HTML5 nawet się tak nie nazywał. Wówczas było to <a href="https://whatwg.org/specs/web-apps/2005-09-01/">Web Applications 1.0</a>. W tym standardzie można odnaleźć elementy takie jak <code>section</code>, <code>article</code>, <code>aside</code>, <code>header</code>, <code>footer</code>, <code>canvas</code>… Były też <a href="https://whatwg.org/specs/web-apps/2005-09-01/#other">inne elementy</a>, które nie przetrwały do dziś, np. <code>calendar</code>, <code>switch</code> czy <code>datagrid</code>. Ba, był już nawet <a href="https://whatwg.org/specs/web-apps/2005-09-01/#outlines">nieszczęsny algorytm outline'u</a>. Zatem "nowe" to dość odważne słowo w tym wypadku.</p>
-    <p>Zresztą część tych pomysłów jest jeszcze starsza i sięga wstecz co najmniej do 2002 roku, do czasów niesławnego XHTML 2.0 (dzięki któremu, nomen omen, powstało HTML5). Ta specyfikacja zawiera m.in. <a href="https://www.w3.org/TR/2002/WD-xhtml2-20020805/mod-text.html#sec_8.18.">element <code>section</code></a> czy… <a href="https://www.w3.org/TR/2002/WD-xhtml2-20020805/mod-text.html#sec_8.11.">algorytm outline'u</a>. Część z tych pomysłów przekopiowano następnie do nowego HTML-a oraz dodano nowe. Więc tak po prawdzie "nowe znaczniki semantyczne w HTML5" nie są ani nowe, ani niekoniecznie są z HTML5.</p>
-</div>
+{% note %}
+Z "nowymi znacznikami semantycznymi w HTML5" istnieje jeszcze jeden problem: one nie są nowe. Można by wręcz powiedzieć, że jak na standardy Sieci są wręcz _antyczne_. Pierwsze wersje większości "nowych" elementów pojawiły się co najmniej w roku 2005, jeszcze w czasach, gdy HTML5 nawet się tak nie nazywał. Wówczas było to [Web Applications 1.0](https://whatwg.org/specs/web-apps/2005-09-01/). W tym standardzie można odnaleźć elementy takie jak `section`, `article`, `aside`, `header`, `footer`, `canvas`… Były też [inne elementy](https://whatwg.org/specs/web-apps/2005-09-01/#other), które nie przetrwały do dziś, np. `calendar`, `switch` czy `datagrid`. Ba, był już nawet [nieszczęsny algorytm outline'u](https://whatwg.org/specs/web-apps/2005-09-01/#outlines). Zatem "nowe" to dość odważne słowo w tym wypadku.
+
+Zresztą część tych pomysłów jest jeszcze starsza i sięga wstecz co najmniej do 2002 roku, do czasów niesławnego XHTML 2.0 (dzięki któremu, nomen omen, powstało HTML5). Ta specyfikacja zawiera m.in. [element `section`](https://www.w3.org/TR/2002/WD-xhtml2-20020805/mod-text.html#sec_8.18.) czy… [algorytm outline'u](https://www.w3.org/TR/2002/WD-xhtml2-20020805/mod-text.html#sec_8.11.). Część z tych pomysłów przekopiowano następnie do nowego HTML-a oraz dodano nowe. Więc tak po prawdzie "nowe znaczniki semantyczne w HTML5" nie są ani nowe, ani niekoniecznie są z HTML5.</p>
+{% endnote %}
 
 ## Definicja semantyki
 

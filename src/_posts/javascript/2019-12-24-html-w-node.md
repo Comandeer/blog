@@ -87,7 +87,7 @@ Cóż, tak, ale nie. Nie, ponieważ im więcej różnych dziwnych rzeczy będzie
 
 Najnowsze wersje Node'a (12+) doczekały się – eksperymentalnej na chwilę obecną – obsługi modułów ES. Nie da się ukryć, że ich składnia jest przyjemniejsza od tej, która jest dostępna w modułach CJS. Dodatkowo specjalnie dla ESM powstał [oficjalny sposób rozszerzania mechanizmu wczytującego moduły](https://nodejs.org/docs/latest-v12.x/api/esm.html#esm_experimental_loader_hooks). Przy jego wykorzystaniu możemy w prosty sposób stworzyć obsługę plików JS. Zacznijmy od stworzenia pliku `html-loader.mjs`.
 
-{% note %}Przy tworzeniu modułów ES trzeba pamiętać, że powinny mieć one rozszerzenie <code>.mjs</code>. To standardowe rozszerzenie dla modułów, a w dodatku wymagane przez Node.js, by dany plik był w ogóle parsowany jako moduł.{% endnote %}
+{% note %}Przy tworzeniu modułów ES trzeba pamiętać, że powinny mieć one rozszerzenie `.mjs`. To standardowe rozszerzenie dla modułów, a w dodatku wymagane przez Node.js, by dany plik był w ogóle parsowany jako moduł.{% endnote %}
 
 Będzie on zawierał dwie funkcje asynchroniczne: `resolve` oraz `dynamicInstantiate`. Pierwsza z funkcji służy do poinformowania Node.js, gdzie dokładnie szukać konkretnego modułu oraz z jakim typem pliku ma do czynienia. Druga funkcja służy do stworzenia modułu w locie. Dopiero połączenie tych dwóch funkcji daje nam ekwiwalent hooków dla `require`.
 

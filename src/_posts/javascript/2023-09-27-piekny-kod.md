@@ -129,7 +129,7 @@ export default function BooleanLiteral( context: FormatterContext ): string { //
 
 Formater przyjmuje jako argument kontekst (o nim za chwilę) i zwraca ciąg znaków (1). Na samym początku następuje sprawdzenie, czy na pewno mamy do czynienia z booleanem (2) przy pomocy funkcji udostępnianej przez samego Babela (3). Jeśli nie, rzucamy błąd (4). Taka sytuacja nigdy nie powinna się zdarzyć, a samo sprawdzenie jest w sumie kompromisem, na jaki poszedłem z TS-em, żeby niepotrzebnie nie komplikować typów w innych miejscach. Dlatego praktycznie zawsze zwracana jest tekstowa reprezentacja węzła (5). W przypadku booleana całość to po prostu skonwertowanie wartości węzła do stringu. W innych przypadkach konwersja może być zdecydowanie bardziej skomplikowana.
 
-{% note %}Tak, przesiadłem się na TS. Głównym powodem był… brak dobrych podpowiedzi w <a href="https://code.visualstudio.com/" hreflang="en" rel="noreferrer noopener">VSC</a> dla czystego JS-a.{% endnote %}
+{% note %}Tak, przesiadłem się na TS. Głównym powodem był… brak dobrych podpowiedzi w [VSC](https://code.visualstudio.com/) dla czystego JS-a.{% endnote %}
 
 ### Konteksty
 

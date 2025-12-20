@@ -32,7 +32,7 @@ Button/
 
 Przy tego typu podejściu warstwy są dzielone tak samo jak poszczególne technologie (treść/szablon – HTML, prezentacja – CSS, zachowanie – JS). To oznacza, że – jeśli nie używamy żadnego narzędzia budującego – przeglądarka będzie musiała wczytać wszystkie 3 pliki. Stąd też pojawił się pomysł, żeby pozostawić podział na warstwy, ale nie robić podziału na poszczególne technologie. Tak zrodziły się jednoplikowe komponenty.
 
-{% note %}Zwykle jestem sceptycznie nastawiony do pojęcia "podział na technologie". Wynika to jednak z tego, że pojawia się ono najczęściej jako <a href="https://medium.com/@hayavuk/regardless-of-how-it-relates-to-styled-components-which-i-could-not-care-less-about-this-1c75825582d0">wytłumaczenie, czemu w danym projekcie podział na warstwy jest odrzucony</a> – a przecież te dwie kwestie tak naprawdę są całkowicie oddzielne!{% endnote %}
+{% note %}Zwykle jestem sceptycznie nastawiony do pojęcia "podział na technologie". Wynika to jednak z tego, że pojawia się ono najczęściej jako [wytłumaczenie, czemu w danym projekcie podział na warstwy jest odrzucony](https://medium.com/@hayavuk/regardless-of-how-it-relates-to-styled-components-which-i-could-not-care-less-about-this-1c75825582d0) – a przecież te dwie kwestie tak naprawdę są całkowicie oddzielne!{% endnote %}
 
 Komponent `Button` w postaci jednoplikowej wyglądałby mniej więcej tak:
 
@@ -173,7 +173,7 @@ Jeśli teraz sprawdzimy, co zwraca `loadComponent`, zauważymy, że jest to komp
 
 I mówiąc "kompletne" mam na myśli _naprawdę_ kompletne. W tym wypadku dostajemy pełnoprawny dokument HTML, z `head` i `body`. Jak widać, zawartość naszego komponentu trafiła do `head`. Jest to spowodowane tym, w jaki sposób parser HTML wykonuje swoją pracę.  [Algorytm budowania drzewa DOM](https://html.spec.whatwg.org/multipage/parsing.html#tree-construction) jest opisany dokładnie w specyfikacji HTML LS. W największym uproszczeniu można przyjąć, że konstruując takie drzewko, parser będzie umieszczał wszystko w `head` tak długo, aż nie natknie się na element, który jest dozwolony tylko w `body`. Wszystkie wykorzystane przez nas elementy (`template`, `style`, `script`) są dozwolone w `head`, stąd otrzymujemy taki wynik. Gdybyśmy na początek naszego komponentu dodali np. pusty znacznik `p`, wówczas cała jego zawartość znalazłaby się w `body` dokumentu stworzonego przez parser.
 
-{% note %}Tak naprawdę nasz komponent jest traktowany jako <em>niepoprawny</em> dokument HTML, ponieważ nie zaczyna się od <code>DOCTYPE</code>. Tym samym powstały z niego dokument znajduje się w tzw. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode"><i>trybie quirks</i></a>. Na szczęście dla nas nie ma to znaczenia, bo wykorzystujemy parser DOM wyłącznie do pocięcia naszego komponentu na potrzebne nam później części.{% endnote %}
+{% note %}Tak naprawdę nasz komponent jest traktowany jako _niepoprawny_ dokument HTML, ponieważ nie zaczyna się od `DOCTYPE`. Tym samym powstały z niego dokument znajduje się w tzw. [trybie quirks](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Na szczęście dla nas nie ma to znaczenia, bo wykorzystujemy parser DOM wyłącznie do pocięcia naszego komponentu na potrzebne nam później części.{% endnote %}
 
 Mając już całe drzewko DOM, możemy z niego wyciągnąć tylko potrzebne nam rzeczy:
 
@@ -227,7 +227,7 @@ window.loadComponent = ( function() {
 }() );
 ```
 
-{% note %}Fetch API to nie jedyny sposób pobrania drzewka DOM z zewnętrznego dokumentu. <a href="https://jsfiddle.net/Comandeer/rokoxp7d/"><code>XMLHttpRequest</code> ma dedykowany tryb <code>document</code></a>, który pozwala pominąć etap samodzielnego parsowania DOM. Jednak coś za coś: <code>XMLHttpRequest</code> nie ma API opartego na <code>Promise</code>, co wymuszałoby jego dodanie własnymi siłami.{% endnote %}
+{% note %}Fetch API to nie jedyny sposób pobrania drzewka DOM z zewnętrznego dokumentu. [`XMLHttpRequest` ma dedykowany tryb `document`](https://jsfiddle.net/Comandeer/rokoxp7d/), który pozwala pominąć etap samodzielnego parsowania DOM. Jednak coś za coś: `XMLHttpRequest` nie ma API opartego na `Promise`, co wymuszałoby jego dodanie własnymi siłami.{% endnote %}
 
 ## Rejestrowanie komponentu
 
@@ -317,7 +317,7 @@ Na poziomie pliku komponentu wygląda to bardzo ładnie i nic nie wypływa na ze
 
 I zanim się poddamy i zmienimy nasz ładny sposób na jakiś brzydszy (`componentsSettings.push( settingsObject )`), to pora wyciągnąć z szafy ~~tru~~ ohydny hack. Istnieją co najmniej 2 sposoby, by nakłonić przeglądarkę, żeby dany tekst uważała za plik: [Data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) oraz [Object URI](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL). Przyjrzyjmy się im pokrótce.
 
-{% note %}<a href="https://stackoverflow.com/a/46086545">Na Stack Overflow sugerowane jest użycie Service Workera</a>. W naszym wypadku to typowa armata na muchę, ale warto mieć świadomość istnienia kolejnego rozwiązania.{% endnote %}
+{% note %}[Na Stack Overflow sugerowane jest użycie Service Workera](https://stackoverflow.com/a/46086545). W naszym wypadku to typowa armata na muchę, ale warto mieć świadomość istnienia kolejnego rozwiązania.{% endnote %}
 
 ### Data URI i Object URI
 
@@ -457,9 +457,11 @@ function getSettings( { template, style, script } ) {
 
 Nasza funkcja zrobiła się skomplikowana. W jej wnętrzu pojawiła się kolejna funkcja pomocnicza, `getListeners` (1). Przekazujemy do niej eskport naszego modułu (2). Następnie iterujemy po wszystkich właściwościach tego obiektu przy pomocy `Object.entries` (3). Jeśli nazwa danej właściwości zaczyna się od `on…` (4), to  dodajemy wartość danej właściwości do obiektu `listeners`, pod kluczem równym `setting[ 2 ].toLowerCase() + setting.substr( 3 )` (5). Klucz uzyskujemy po obcięciu `on` i zamianie pierwszej litery na małą (zatem z naszego `onClick` otrzymamy `click`). Tak skonstruowany obiekt przekazujemy następnie dalej (6).
 
-<div class="note">
-<p>Zamiast <code>[].forEach</code> można tutaj zastosować też <code>[].reduce</code>, co pozwoli wyeliminować zmienną <code>listeners</code>:</p>
-<div class="highlight"><pre><code class="language-javascript">function getListeners( settings ) {
+{% note %}
+Zamiast `[].forEach` można tutaj zastosować też `[].reduce`, co pozwoli wyeliminować zmienną `listeners`:
+
+```javascript
+function getListeners( settings ) {
 	return Object.entries( settings ).reduce( ( listeners, [ setting, value ] ) => {
 		if ( setting.startsWith( 'on' ) ) {
 			listeners[ setting[ 2 ].toLowerCase() + setting.substr( 3 ) ] = value;
@@ -467,8 +469,9 @@ Nasza funkcja zrobiła się skomplikowana. W jej wnętrzu pojawiła się kolejn
 
 		return listeners;
 	}, {} );
-}</code></pre></div>
-</div>
+}
+```
+{% endnote %}
 
 Teraz wystarczy już tylko podpiąć te listenery w naszej klasie komponentu:
 

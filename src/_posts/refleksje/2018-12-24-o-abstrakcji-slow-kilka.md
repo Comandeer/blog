@@ -306,7 +306,7 @@ class Store {
 
 Uzyskaliśmy zatem prostą klasę `Store`, realizującą wszystkie zadania z powyższej listy z dodatkową metodą `getAllTasks` do pobrania wszystkich istniejących zadań. Możemy ją teraz zapisać jako osobny moduł naszej aplikacji, `Store.js`.
 
-{% note %}Jeśli zastanawiasz się, dlaczego wszystkie metody tej klasy są asynchroniczne, to pomyśl, skąd zwykle takie dane się pobiera. Zarówno komunikacja z API, jak i bazą danych, w przypadku JavaScriptu – będącego od zawsze jednowątkowym językiem – po prostu <em>musi</em> być asynchroniczna. W innym wypadku będzie blokować główny wątek przeglądarki. Stąd dla spójności z tymi najpopularniejszymi sposobami przechowywania danych wszystkie implementacje powinny być asynchroniczne.{% endnote %}
+{% note %}Jeśli zastanawiasz się, dlaczego wszystkie metody tej klasy są asynchroniczne, to pomyśl, skąd zwykle takie dane się pobiera. Zarówno komunikacja z API, jak i bazą danych, w przypadku JavaScriptu – będącego od zawsze jednowątkowym językiem – po prostu _musi_ być asynchroniczna. W innym wypadku będzie blokować główny wątek przeglądarki. Stąd dla spójności z tymi najpopularniejszymi sposobami przechowywania danych wszystkie implementacje powinny być asynchroniczne.{% endnote %}
 
 ### Zamienne implementacje
 

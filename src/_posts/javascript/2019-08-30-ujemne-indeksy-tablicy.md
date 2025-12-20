@@ -88,7 +88,7 @@ console.log( myArray.length ); // 1
 
 Jak widać, teraz wszystko działa tak, jak powinno. Dzieje się tak, ponieważ `extends` pozwala także na dziedziczenie wszelkich niestandardowych zachowań tzw. [obiektów egzotycznych](https://tc39.es/ecma262/#sec-exotic-object). Jak się nietrudno domyślić, `Array` to właśnie przykład obiektu egzotycznego. Oznacza to mniej więcej tyle, że w jego zachowaniu pojawia się odstępstwo w stosunku do innych, "normalnych" obiektów w JS. W przypadku tablic tym odstępstwem jest oczywiście dostęp (dodawanie/usuwanie) do elementów tablicy przy pomocy indeksów numerycznych oraz powiązana z tym własność `length`.
 
-{% note %}<a href="https://exploringjs.com/es6/ch_classes.html#_why-cant-you-subclass-built-in-constructors-in-es5" rel="noreferrer noopener">Więcej o różnicy pomiędzy dziedziczeniem w ES5 i ES6 napisał Axel Rauschmayer</a>.{% endnote %}
+{% note %}[Więcej o różnicy pomiędzy dziedziczeniem w ES5 i ES6 napisał Axel Rauschmayer](https://exploringjs.com/es6/ch_classes.html#_why-cant-you-subclass-built-in-constructors-in-es5).{% endnote %}
 
 Zaopatrzeni w tę wiedzę, napiszmy szkielet naszego rozwiązania:
 

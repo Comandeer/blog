@@ -401,6 +401,6 @@ Natomiast jeśli wejdziemy pod adres `http://localhost:3000/user/Comandeer`, pow
 
 Jeśli wpiszemy dowolny nieobsługiwany adres (np. `http://localhost:3000/whatever`), przeglądarka powinna wyświetlić domyślny błąd 404.
 
-{% note %}Oczywiście ten prymitywny serwer <strong>NIE NADAJE SIĘ DO CELÓW PRODUKCYJNCH</strong>. Powstał jedynie po to, by pokazać, jak można wykorzystać <code>URLPattern</code> w praktyce.{% endnote %}
+{% note %}Oczywiście ten prymitywny serwer **NIE NADAJE SIĘ DO CELÓW PRODUKCYJNCH**. Powstał jedynie po to, by pokazać, jak można wykorzystać `URLPattern` w praktyce.{% endnote %}
 
 Całość kodu, wraz z dokumentacją w formacie [JSDoc](https://en.wikipedia.org/wiki/JSDoc), znajduje się w [Giście](https://gist.github.com/Comandeer/1588f257b94182f02989c7f36ca7fccf).

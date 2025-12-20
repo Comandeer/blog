@@ -47,7 +47,7 @@ Otwórzmy terminal wewnątrz katalogu repozytorium. Żeby stworzyć WB, użyjemy
 ```bash
 npx wbn --dir public --baseURL https://tutorials.comandeer.pl/ --output tutorials.wbn
 ```
-{% note %}Komenda <code>npx</code> to narzędzie dołączane do nowszych wersji npm-a, które pozwala uruchamiać dowolne pakiety npm bez ich uprzedniej instalacji.{% endnote %}
+{% note %}Komenda `npx` to narzędzie dołączane do nowszych wersji npm-a, które pozwala uruchamiać dowolne pakiety npm bez ich uprzedniej instalacji.{% endnote %}
 
 Uruchamiamy komendę `wbn` przy pomocy `npx`-a. Parametr `--dir` określa ścieżkę zawierającą zawartość WB (czyli katalog `public` w tym wypadku), `--baseURL` zawiera adres URL strony (czyli wersję online zawartości WB), a `--output` to nazwa generowanego pliku. Po wywołaniu tej komendy, w katalogu repozytorium powinien pojawić się nowy plik, `tutorials.wbn`.
 

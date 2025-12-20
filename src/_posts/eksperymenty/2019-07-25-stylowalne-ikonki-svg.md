@@ -218,10 +218,11 @@ Teraz możemy sterować kolorami SVG, przekazując odpowiednie parametry w URL-u
 <object data="/images/facebook.svg?normal-background=%23f00&normal-fill=blue&hover-background=%230f0&hover-fill=orange" type="image/svg+xml" width="32" height="32"></object>
 ```
 
-<div class="note">
-    <p>Warto zauważyć, że <code>img</code> po raz kolejny tutaj nie zadziała. Osadzanie obrazków w taki sposób uniemożliwia odpalenie się skryptów JS.</p>
-    <p>Dodatkowo warto zauważyć, że wszystkie parametry przekazywane do naszego SVG muszą być dostosowane do składni URL-ów, a zatem <code>#f00</code> zamienia się na <code>%23f00</code>. Takie kodowanie można uzyskać np. w JS przy pomocy <code>encodeURIComponent</code>.</p>
-</div>
+{% note %}
+    Warto zauważyć, że `img` po raz kolejny tutaj nie zadziała. Osadzanie obrazków w taki sposób uniemożliwia odpalenie się skryptów JS.
+
+    Dodatkowo warto zauważyć, że wszystkie parametry przekazywane do naszego SVG muszą być dostosowane do składni URL-ów, a zatem `#f00` zamienia się na `%23f00`. Takie kodowanie można uzyskać np. w JS przy pomocy `encodeURIComponent`.</p>
+{% endnote %}
 
 ## Rozwiązanie #3: dobre
 

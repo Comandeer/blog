@@ -74,7 +74,7 @@ W tym przykładzie znowu mamy `obj` z jedną własnością `a` (1), ale mamy tak
 
 Na całe szczęście [tryb ścisły nie pozwala używać `with()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#removal_of_the_with_statement), dzięki czemu – w modularnym świecie – instrukcja ta jest spotykana naprawdę rzadko.
 
-{% note %}Tryb ścisły w świecie <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ESM</a> ma spore znaczenie, ponieważ kod JS wczytany jako moduł jest uruchamiany w trybie ścisłym.{% endnote %}
+{% note %}Tryb ścisły w świecie [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) ma spore znaczenie, ponieważ kod JS wczytany jako moduł jest uruchamiany w trybie ścisłym.{% endnote %}
 
 ## Mroczny sekret `[onclick]`
 

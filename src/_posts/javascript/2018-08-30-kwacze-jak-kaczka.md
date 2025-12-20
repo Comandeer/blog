@@ -132,7 +132,7 @@ Innym przykładem konwersji typu `'default'` jest operator równości (`==`). W 
 
 Natomiast konwersja typu `'default'` nie zachodzi w czasie konwersji na typ boolowski i obiekty w JS zawsze zwracają `true`. A szkoda, bo byłby to dobry materiał na trolling.
 
-{% note %}Istnieje jeden, szczególny przypadek obiektu, który zwraca <code>false</code> po konwersji na typ boolowski. Jest to <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmlallcollection-interface" hreflang="en" rel="noreferrer noopener"><code>document.all</code></a>.{% endnote %}
+{% note %}Istnieje jeden, szczególny przypadek obiektu, który zwraca `false` po konwersji na typ boolowski. Jest to [`document.all`](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmlallcollection-interface).{% endnote %}
 
 ## Internet Explorer atakuje!
 
@@ -140,7 +140,7 @@ Zaimplementowaliśmy konwersję przy pomocy symboli, więc fajrant, co? Figa! Sz
 
 I zanim zaczniesz wyrywać włosy z głowy, pozwól, że przedstawię Ci parę niezwykle pomocnych metod – [`valueOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) i [`toString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 
-{% note %}Co prawda wsparcie dla IE8 wymusza używanie starej składni ES5, ale pozwólcie, że założę istnienie <a href="http://babeljs.io/" hreflang="en" rel="noreferrer noopener">Babela</a> gdzieś po drodze.{% endnote %}
+{% note %}Co prawda wsparcie dla IE8 wymusza używanie starej składni ES5, ale pozwólcie, że założę istnienie [Babela](http://babeljs.io/) gdzieś po drodze.{% endnote %}
 
 ### toString
 

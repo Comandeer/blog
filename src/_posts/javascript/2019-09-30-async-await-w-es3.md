@@ -89,7 +89,7 @@ try {
 }
 ```
 
-{% note %}Warto zauważyć, że <code>throw</code> działa z dowolną wartością, nie tylko obiektem <code>Error</code>. To sprawia, że można rzucić np. <code>Promise</code>.{% endnote %}
+{% note %}Warto zauważyć, że `throw` działa z dowolną wartością, nie tylko obiektem `Error`. To sprawia, że można rzucić np. `Promise`.{% endnote %}
 
 Powyższy kod wyświetli w konsoli:
 
