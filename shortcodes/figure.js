@@ -1,9 +1,5 @@
-// Adapted from https://github.com/madrilene/eleventy-excellent/blob/9e17d9582151e5e1026e24539fd2338cc8d5a29e/config/shortcodes/image/index.js
-// ISC License, Copyright (c) 2022 Lene Saile
-
-import path from 'node:path';
-import image from '@11ty/eleventy-img';
 import htmlmin from 'html-minifier-terser';
+import { imageShortCode } from './image.js';
 
 export function createFigureShortCode( markdownIt ) {
 	return async function figureShortCode(
@@ -18,58 +14,8 @@ export function createFigureShortCode( markdownIt ) {
 		widths = [ 440, 880, 1024, 1360 ],
 		formats = [ 'avif', 'webp' ]
 	) {
-		const { inputPath } = this.page;
-		const currentDir = path.dirname( inputPath );
-		const imgSrc = path.resolve( currentDir, src );
-		const originalFormat = path.extname( src ).replace( /^\./, '' );
-		const { dir, url } = getOutputPaths( src );
-
-		if ( originalFormat === 'svg' ) {
-			formats = [ 'svg' ];
-		} else {
-			formats.push( originalFormat );
-		}
-
-		const metadata = await image( imgSrc, {
-			widths: [ ...widths ],
-			formats: [ ...formats ],
-			urlPath: url,
-			outputDir: dir,
-			filenameFormat: ( id, src, width, format ) => {
-				const extension = path.extname( src );
-				const name = path.basename( src, extension );
-
-				return `${ name }-${ width }w.${ format }`;
-			}
-		} );
-
-		const lowSrc = getLowSrc( metadata, originalFormat );
-		const imageSources = Object.values( metadata ).
-			map( ( imageFormat ) => {
-				return `  <source type="${ imageFormat[ 0 ].sourceType }" srcset="${ imageFormat.
-					map( ( entry ) => {
-						return entry.srcset;
-					} ).
-					join( ', ' ) }" sizes="${ sizes }">`;
-			} ).
-			join( '\n' );
-
-		const imgageAttributes = stringifyAttributes( {
-			src: lowSrc.url,
-			width: lowSrc.width,
-			height: lowSrc.height,
-			style: `aspect-ratio: ${ lowSrc.width } / ${ lowSrc.height }`,
-			alt: alt.replace( /"/g, '&quot;' ),
-			loading,
-			decoding: 'async'
-		} );
-
-		const imageElement = `<picture ${ className ? `class="${ className }"` : '' }${ style ? ` style="${ style }"` : '' }>
-			${ imageSources }
-			<img
-			${ imgageAttributes }>
-		</picture>`;
-		link = link ? link : getHDSrc( metadata ).url;
+		const imageElement = await imageShortCode.call( this,  src, alt, style, className, loading, sizes, widths, formats );
+		link = link ? link : getHDSrc( imageElement );
 		caption = caption ? markdownIt.render( caption ) : 'Kliknij obrazek, aby go powiększyć';
 		const figureElement = `<figure class="figure">
 			<a href="${ link }">${ imageElement }</a>
@@ -82,32 +28,11 @@ export function createFigureShortCode( markdownIt ) {
 	};
 }
 
-function getOutputPaths( src ) {
-	const srcDir = path.dirname( src.replace( /^((..\/)+|\.?\/)images\//, '' ) );
+function getHDSrc( imageElement ) {
+	const source = imageElement.match( /<source type="image\/(?:avif|svg\+xml)" srcset="(?<srcset>[^"]+)"/ );
+	const srcset = source.groups.srcset.trim();
+	const srcs = srcset.split( ', ' );
+	const [ hdSrc ] = srcs.at( -1 ).split( ' ' );
 
-	return {
-		dir: path.join( './dist/assets/images/', srcDir ),
-		url: path.join( '/assets/images/', srcDir )
-	};
-}
-
-function getLowSrc( metadata, originalFormat ) {
-	const formatKey = originalFormat === 'jpg' ? 'jpeg' : originalFormat;
-
-	return metadata[ formatKey ].at( -1 );
-}
-
-function getHDSrc( metadata ) {
-	return metadata.svg?.at( -1 ) ?? metadata.avif.at( -1 );
-}
-
-function stringifyAttributes( attributeMap ) {
-	return Object.entries( attributeMap ).
-		map( ( [ attribute, value ] ) => {
-			if ( typeof value === 'undefined' ) {
-				return '';
-			}
-			return `${attribute}="${value}"`;
-		} ).
-		join( ' ' );
+	return hdSrc;
 }

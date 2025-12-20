@@ -7,6 +7,7 @@ import { createFigureShortCode } from './shortcodes/figure.js';
 import { rssLink, rssLabel } from './shortcodes/rss.js';
 import { createNoteShortCode } from './shortcodes/note.js';
 import { createLiquidPreprocessor } from './plugins/liquidPreprocessor.js';
+import { imageShortCode } from './shortcodes/image.js';
 
 /**
  *
@@ -105,6 +106,7 @@ export default function( eleventyConfig ) {
 	} );
 	eleventyConfig.addFilter( 'cfUrl', cfUrl );
 
+	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
 	eleventyConfig.addAsyncShortcode( 'figure', createFigureShortCode( markdownIt ) );
 	eleventyConfig.addAsyncShortcode( 'disqus', disqusShortCode );
 	eleventyConfig.addShortcode( 'rss_link', rssLink );
