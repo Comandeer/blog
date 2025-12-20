@@ -51,6 +51,18 @@ document.addEventListener( 'click', ( evt ) => {
 	toggleThemeSwitcher();
 } );
 
+document.addEventListener( 'click', async ( evt ) => {
+	const isCopyButton = evt.target.closest( '.code__copy' );
+
+	if ( !isCopyButton ) {
+		return;
+	}
+
+	const closestCode = evt.target.closest( '.code' ).querySelector( '.code__code' );
+
+	await navigator.clipboard.writeText( closestCode.innerText );
+} );
+
 themeSwitcherInvoker.addEventListener( 'keydown', ( evt ) => {
 	switch ( evt.key ) {
 		case 'ArrowDown':

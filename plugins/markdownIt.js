@@ -5,34 +5,37 @@ import markdownItLinkAttributes from 'markdown-it-link-attributes';
 import { full as markdownItEmoji } from 'markdown-it-emoji';
 import { createHighlighter } from 'shiki';
 import slugify from 'slugify';
+import MarkdownIt from 'markdown-it';
+
+const langs = {
+	'bash': 'Bash',
+	'css': 'CSS',
+	'diff': 'Git diff',
+	'html': 'HTML',
+	'html-derivative': 'HTML',
+	'javascript': 'JavaScript',
+	'json': 'JSON',
+	'jsx': 'JSX',
+	'liquid': 'Liquid',
+	'markdown': 'Markdown',
+	'mdx': 'MDX',
+	'php': 'PHP',
+	'python': 'Python',
+	'scss': 'SCSS',
+	'sh': 'Shell',
+	'shell': 'Shell',
+	'tsx': 'TSX',
+	'typescript': 'TypeScript',
+	'xml': 'XML',
+	'yaml': 'YAML'
+};
 
 const highlighter = await createHighlighter( {
 	themes: [
 		'github-light',
 		'github-dark'
 	],
-	langs: [
-		'bash',
-		'css',
-		'diff',
-		'html',
-		'html-derivative',
-		'javascript',
-		'json',
-		'jsx',
-		'liquid',
-		'markdown',
-		'mdx',
-		'php',
-		'python',
-		'scss',
-		'sh',
-		'shell',
-		'tsx',
-		'typescript',
-		'xml',
-		'yaml'
-	]
+	langs: Object.keys( langs )
 } );
 
 const SLUG_PLACEHOLDER = '™™©©®®';
@@ -110,4 +113,29 @@ export const markdownIt = markdownItConstructor ( {
 			}
 		}
 	] ).
-	use( markdownItEmoji );
+	use( markdownItEmoji ).
+	use( markdownItCodeBlock );
+
+/**
+ *
+ * @param {MarkdownIt} markdownIt
+ */
+function markdownItCodeBlock( markdownIt ) {
+	const originalFenceRule = markdownIt.renderer.rules.fence;
+
+	markdownIt.renderer.rules.fence = ( tokens, idx, options, env, slf ) => {
+		const token = tokens[ idx ];
+		const lang = token.info ? token.info.trim() : '';
+		const renderedCodeBlock = originalFenceRule( tokens, idx, options, env, slf );
+
+		return `<figure class="code" typeof="SoftwareSourceCode">
+			<figcaption class="code__caption">
+				<span class="code__title" property="programmingLanguage">${ langs[ lang ] ?? '' }</span>
+				<button class="code__copy">Kopiuj</button>
+			</figcaption>
+			<div class="code__code" translate="no" property="text">
+				${ renderedCodeBlock }
+			</div>
+		</figure>`;
+	};
+}
