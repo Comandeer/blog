@@ -1,11 +1,8 @@
-import markdownItConstructor from 'markdown-it';
+import MarkdownIt from 'markdown-it';
 import markdownItAnchor from 'markdown-it-anchor';
-import markdownItClass from '@toycode/markdown-it-class';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
-import { full as markdownItEmoji } from 'markdown-it-emoji';
 import { createHighlighter } from 'shiki';
 import slugify from 'slugify';
-import MarkdownIt from 'markdown-it';
 
 const langs = {
 	'bash': 'Bash',
@@ -67,7 +64,7 @@ slugify.extend( {
 	'+': SLUG_PLACEHOLDER
 } );
 
-export const markdownIt = markdownItConstructor ( {
+export const markdownIt = new MarkdownIt ( {
 	html: true,
 	breaks: true,
 	linkify: true,
@@ -102,7 +99,6 @@ export const markdownIt = markdownItConstructor ( {
 	tabIndex: false,
 	permalink: markdownItAnchor.permalink.headerLink()
 } ).
-	use( markdownItClass, {} ).
 	use( markdownItLinkAttributes, [
 		{
 			matcher( href ) {
@@ -113,7 +109,6 @@ export const markdownIt = markdownItConstructor ( {
 			}
 		}
 	] ).
-	use( markdownItEmoji ).
 	use( markdownItCodeBlock );
 
 /**

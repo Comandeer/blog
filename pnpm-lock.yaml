@@ -17,9 +17,6 @@ importers:
       '@comandeer/eslint-config':
         specifier: ^0.17.0
         version: 0.17.0(eslint@9.39.2)(typescript@5.4.5)
-      '@toycode/markdown-it-class':
-        specifier: ^1.2.4
-        version: 1.2.4
       cheerio:
         specifier: ^1.1.2
         version: 1.1.2
@@ -35,9 +32,6 @@ importers:
       markdown-it-anchor:
         specifier: ^9.2.0
         version: 9.2.0(@types/markdown-it@14.1.1)(markdown-it@14.1.0)
-      markdown-it-emoji:
-        specifier: ^3.0.0
-        version: 3.0.0
       markdown-it-link-attributes:
         specifier: ^4.0.1
         version: 4.0.1
@@ -928,9 +922,6 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=9.0.0'
-
-  '@toycode/markdown-it-class@1.2.4':
-    resolution: {integrity: sha512-hA4gHBK8moObkOYdWTjhy1wYcYy0MJeM3JjSKbsXHRpRMvIKhk6Jm+t3bXsSScTdz/byWqQbs8YIwVYjHp+SlQ==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -1847,9 +1838,6 @@ packages:
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
-
-  markdown-it-emoji@3.0.0:
-    resolution: {integrity: sha512-+rUD93bXHubA4arpEZO3q80so0qgoFJEKRkRbjKX8RTdca89v2kfyF+xR3i2sQTwql9tpPZPOQN5B+PunspXRg==}
 
   markdown-it-link-attributes@4.0.1:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
@@ -3515,8 +3503,6 @@ snapshots:
       - supports-color
       - typescript
 
-  '@toycode/markdown-it-class@1.2.4': {}
-
   '@types/estree@1.0.8': {}
 
   '@types/hast@3.0.4':
@@ -4449,8 +4435,6 @@ snapshots:
     dependencies:
       '@types/markdown-it': 14.1.1
       markdown-it: 14.1.0
-
-  markdown-it-emoji@3.0.0: {}
 
   markdown-it-link-attributes@4.0.1: {}
 

@@ -18,7 +18,6 @@ const MORE_COMMENT_REGEX = /<!--\s*more\s*-->/;
  *
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig
  */
-// eslint-disable-next-line no-restricted-syntax
 export default function( eleventyConfig ) {
 	eleventyConfig.ignores.add( 'images/**' );
 	eleventyConfig.ignores.add( 'assets/main.{scss,src.js}' );
