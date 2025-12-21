@@ -1,4 +1,4 @@
-import { formatRFC3339 } from 'date-fns';
+import { load } from 'cheerio';
 import site from './src/_data/site.js';
 import { markdownIt } from './plugins/markdownIt.js';
 import { assetPipeline } from './plugins/assetPipeline.js';
@@ -8,6 +8,8 @@ import { rssLink, rssLabel } from './shortcodes/rss.js';
 import { createNoteShortCode } from './shortcodes/note.js';
 import { createLiquidPreprocessor } from './plugins/liquidPreprocessor.js';
 import { imageShortCode } from './shortcodes/image.js';
+
+const MORE_COMMENT_REGEX = /<!--\s*more\s*-->/;
 
 /**
  *
@@ -71,12 +73,14 @@ export default function( eleventyConfig ) {
 		return eleventyConfig.addPassthroughCopy( path );
 	} );
 
-	eleventyConfig.addFilter( 'rfc_date', ( date ) => {
-		return formatRFC3339( date );
+	eleventyConfig.addFilter( 'rfc_date', ( dateString ) => {
+		const date = new Date( dateString );
+
+		return date.toISOString();
 	} );
 
 	eleventyConfig.addFilter( 'excerpt', ( content ) => {
-		const [ excerpt ] = content.split( /<!--\s*more\s*-->/ );
+		const [ excerpt ] = content.split( MORE_COMMENT_REGEX );
 
 		return excerpt.trim();
 	} );
@@ -108,6 +112,21 @@ export default function( eleventyConfig ) {
 		return `https://github.com/Comandeer/blog/discussions/categories/komentarze?${ searchParams.toString() }`;
 	} );
 	eleventyConfig.addFilter( 'cfUrl', cfUrl );
+
+	eleventyConfig.addFilter( 'rss_content', ( post ) => {
+		const postURL = cfUrl( new URL( post.data.permalink, post.data.site.url ).href );
+		const $ = load( post.content );
+
+		$( ':where(h1, h2, h3, h4, h5, h6) a' ).each( ( _, link ) => {
+			const $link = $( link );
+			const originalHref = $link.attr( 'href' );
+
+			$link.attr( 'href', postURL + originalHref );
+		} );
+		$( '.code__copy' ).remove();
+
+		return $( 'body' ).html().replace( MORE_COMMENT_REGEX, '' );
+	} );
 
 	eleventyConfig.addAsyncShortcode( 'image', imageShortCode );
 	eleventyConfig.addAsyncShortcode( 'figure', createFigureShortCode( markdownIt ) );

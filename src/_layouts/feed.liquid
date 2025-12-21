@@ -40,7 +40,7 @@
 			{% if post.data.description %}
 				<summary><![CDATA[{{ post.data.description }}]]></summary>
 			{% endif %}
-			<content type="html" xml:base="{{ site.url }}{{ post.url | cfUrl }}"><![CDATA[{{ post.content }}]]></content>
+			<content type="html" xml:base="{{ site.url }}{{ post.url | cfUrl }}"><![CDATA[{{ post | rss_content }}]]></content>
 		</entry>
 	{% endfor %}
 </feed>
