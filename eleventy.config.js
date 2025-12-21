@@ -130,7 +130,7 @@ export default function( eleventyConfig ) {
 	eleventyConfig.addFilter( 'cfUrl', cfUrl );
 
 	eleventyConfig.addFilter( 'rss_content', ( post ) => {
-		const postURL = cfUrl( new URL( post.data.permalink, post.data.site.url ).href );
+		const postURL = cfUrl( new URL( post.url, post.data.site.url ).href );
 		const $ = load( post.content );
 
 		$( ':where(h1, h2, h3, h4, h5, h6) a' ).each( ( _, link ) => {
