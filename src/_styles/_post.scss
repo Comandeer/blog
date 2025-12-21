@@ -36,36 +36,6 @@ blockquote {
 	padding-inline-start: 1em;
 }
 
-.note, .code {
-	border: 1px var(--primary) solid;
-	margin-block: 1rem;
-}
-
-.note__label {
-	background-color: var(--secondary-bg);
-	margin-block: 0;
-	font-size: 1.25rem;
-	text-align: center;
-}
-
-.note__content {
-	padding-inline: 1rem;
-}
-
-.code__caption {
-	background-color: var(--secondary-bg);
-	margin-block: 0;
-	padding-inline-start: 0.5rem;
-	font-size: 1.25rem;
-	display: flex;
-	justify-content: space-between;
-}
-
-.code__code .shiki {
-	border: none;
-	margin: 0;
-}
-
 table {
 	border-collapse: collapse;
 }

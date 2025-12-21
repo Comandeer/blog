@@ -16,10 +16,10 @@ export function createFigureShortCode( markdownIt ) {
 	) {
 		const imageElement = await imageShortCode.call( this,  src, alt, style, className, loading, sizes, widths, formats );
 		link = link ? link : getHDSrc( imageElement );
-		caption = caption ? markdownIt.render( caption ) : 'Kliknij obrazek, aby go powiększyć';
+		caption = caption ? markdownIt.render( caption ) : '<p>Kliknij obrazek, aby go powiększyć</p>';
 		const figureElement = `<figure class="figure">
-			<a href="${ link }">${ imageElement }</a>
-			<figcaption>${ caption }</figcaption>
+			<a class="figure__link" href="${ link }">${ imageElement }</a>
+			<figcaption class="figure__caption">${ caption }</figcaption>
 		</figure>`;
 
 		return htmlmin.minify( figureElement, {

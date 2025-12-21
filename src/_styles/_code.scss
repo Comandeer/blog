@@ -1,7 +1,34 @@
+.code {
+	border: 1px var(--primary) solid;
+	margin-block: 1rem;
+	margin-inline: 0;
+}
+
+.code__caption {
+	background-color: var(--secondary-bg);
+	margin-block: 0;
+}
+
+.code__caption {
+	padding-inline-start: 0.5rem;
+	font-size: 1.25rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.code__caption a {
+	color: var(--secondary);
+}
+
 .shiki {
 	padding: 1rem;
 	border: 1px var(--primary) solid;
 	tab-size: 4;
+}
+
+.code__code .shiki {
+	border: none;
+	margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
