@@ -34,7 +34,10 @@ export default function( eleventyConfig ) {
 	Object.keys( site.projectNames ).forEach( ( project ) => {
 		eleventyConfig.addCollection( `project-${ project }`, ( collection ) => {
 			return collection.
-				getFilteredByGlob( `src/_posts/projects/${ project }/*.md` ).
+				getAll().
+				filter( ( item ) => {
+					return item.data.project === project && item.page.outputPath.endsWith( 'html' );
+				} ).
 				sort( ( a, b ) => {
 					return b.date - a.date;
 				} );
