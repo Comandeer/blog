@@ -1,7 +1,7 @@
+import { rm } from 'node:fs/promises';
 import { resolve as resolvePath } from 'node:path';
 import { cwd } from 'node:process';
 import { load } from 'cheerio';
-import { rimraf } from 'rimraf';
 import site from './src/_data/site.js';
 import { markdownIt } from './plugins/markdownIt.js';
 import { assetPipeline } from './plugins/assetPipeline.js';
@@ -33,7 +33,11 @@ export default function( eleventyConfig ) {
 			resolvePath( assetsPath, 'main.scss' )
 		];
 
-		await rimraf( pathsToRemove );
+		await Promise.all( pathsToRemove.map( ( pathToRemove ) => {
+			return rm( pathToRemove, {
+				force: true
+			} );
+		} ) );
 	} );
 
 	eleventyConfig.setLibrary( 'md', markdownIt );
