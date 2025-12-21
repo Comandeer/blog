@@ -6,7 +6,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "eslint eleventy.config.js",
+    "lint": "eslint eleventy.config.js dev/**/*.js plugins/**/*.js shortcodes/**/*.js src/assets/main.js",
     "clean": "node ./dev/clean.js",
     "start": "eleventy --serve",
     "prebuild": "pnpm run clean",

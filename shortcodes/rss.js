@@ -1,7 +1,6 @@
 import site from '../src/_data/site.js';
 
 export function rssLink() {
-	// eslint-disable-next-line @babel/no-invalid-this
 	const url = parsePageUrl( this.page.url );
 
 	if ( url === '' ) {
@@ -12,7 +11,6 @@ export function rssLink() {
 }
 
 export function rssLabel() {
-	// eslint-disable-next-line @babel/no-invalid-this
 	const url = parsePageUrl( this.page.url );
 
 	if ( url === '' ) {
