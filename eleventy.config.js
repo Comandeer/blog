@@ -1,4 +1,7 @@
+import { resolve as resolvePath } from 'node:path';
+import { cwd } from 'node:process';
 import { load } from 'cheerio';
+import { rimraf } from 'rimraf';
 import site from './src/_data/site.js';
 import { markdownIt } from './plugins/markdownIt.js';
 import { assetPipeline } from './plugins/assetPipeline.js';
@@ -17,11 +20,21 @@ const MORE_COMMENT_REGEX = /<!--\s*more\s*-->/;
  */
 // eslint-disable-next-line no-restricted-syntax
 export default function( eleventyConfig ) {
-	eleventyConfig.ignores.add( '/images/**' );
-	eleventyConfig.ignores.add( '/assets/main.{scss,src.js}' );
+	eleventyConfig.ignores.add( 'images/**' );
+	eleventyConfig.ignores.add( 'assets/main.{scss,src.js}' );
 	eleventyConfig.addWatchTarget( './src/_styles/**/*.scss' );
 
 	eleventyConfig.addPlugin( assetPipeline );
+
+	eleventyConfig.on( 'eleventy.after', async () => {
+		const assetsPath = resolvePath( cwd(), 'dist', 'assets' );
+		const pathsToRemove = [
+			resolvePath( assetsPath, 'main.js' ),
+			resolvePath( assetsPath, 'main.scss' )
+		];
+
+		await rimraf( pathsToRemove );
+	} );
 
 	eleventyConfig.setLibrary( 'md', markdownIt );
 
