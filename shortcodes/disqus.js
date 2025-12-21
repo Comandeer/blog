@@ -1,4 +1,4 @@
-import htmlmin from 'html-minifier-terser';
+import htmlmin from 'html-minifier-next';
 
 /**
  *
@@ -13,7 +13,7 @@ import htmlmin from 'html-minifier-terser';
  *
  * @param {Array<Comment>} comments
  * @param {boolean} [isSubThread=false]
- * @returns {string}
+ * @returns {Promise<string>}
  */
 export async function disqusShortCode( comments, isSubThread = false ) {
 	if ( comments.length === 0 ) {

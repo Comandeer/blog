@@ -1,4 +1,4 @@
-import htmlmin from 'html-minifier-terser';
+import htmlmin from 'html-minifier-next';
 import { imageShortCode } from './image.js';
 
 export function createFigureShortCode( markdownIt ) {

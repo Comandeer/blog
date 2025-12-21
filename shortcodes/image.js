@@ -3,7 +3,7 @@
 
 import path from 'node:path';
 import image from '@11ty/eleventy-img';
-import htmlmin from 'html-minifier-terser';
+import htmlmin from 'html-minifier-next';
 
 export async function imageShortCode(
 	src,

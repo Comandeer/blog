@@ -1,4 +1,4 @@
-import htmlmin from 'html-minifier-terser';
+import htmlmin from 'html-minifier-next';
 
 let currentId = 0;
 
