@@ -2,11 +2,17 @@
 	justify-content: center;
 	display: grid;
 	grid: max-content minmax(1.5rem, max-content) / max-content;
+	grid: max-content minmax(1.5rem, max-content) / minmax(min-content, max-content);
+}
+
+.figure__link {
+	text-align: center;
 }
 
 .figure__caption {
 	background-color: var(--secondary-bg);
 	margin-block: 0;
+	padding-inline: 0.5rem;
 	text-align: center;
 }
 
