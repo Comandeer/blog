@@ -24,8 +24,8 @@ importers:
         specifier: ^9.39.2
         version: 9.39.2
       html-minifier-next:
-        specifier: ^4.14.1
-        version: 4.14.1
+        specifier: ^4.14.3
+        version: 4.14.3
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -36,8 +36,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       sass:
-        specifier: ^1.96.0
-        version: 1.96.0
+        specifier: ^1.97.1
+        version: 1.97.1
       shiki:
         specifier: ^3.20.0
         version: 3.20.0
@@ -1270,6 +1270,10 @@ packages:
     resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
     engines: {node: '>=8'}
 
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
+
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
@@ -1564,8 +1568,8 @@ packages:
   header-case@2.0.4:
     resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
 
-  html-minifier-next@4.14.1:
-    resolution: {integrity: sha512-RlJcg960x9LmGd0Np51LhuH9YYnS+pVIgvTRbzyYo03amvPq/ll+is/jatdaPxxl4FLsL04qbbZdHXTscTIRAw==}
+  html-minifier-next@4.14.3:
+    resolution: {integrity: sha512-1HIdsTSkZA33FHaS9vJAFti2sE7AuY6k3s+EQW9sKP/biYJf/tHzqCpwpnK9WwFRf6JPxtizAJZr6lAp2WDIUg==}
     hasBin: true
     peerDependencies:
       '@swc/core': ^1.15.7
@@ -2153,8 +2157,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.96.0:
-    resolution: {integrity: sha512-8u4xqqUeugGNCYwr9ARNtQKTOj4KmYiJAVKXf2CTIivTCR51j96htbMKWDru8H5SaQWpyVgTfOF8Ylyf5pun1Q==}
+  sass@1.97.1:
+    resolution: {integrity: sha512-uf6HoO8fy6ClsrShvMgaKUn14f2EHQLQRtpsZZLeU/Mv0Q1K5P0+x2uvH6Cub39TVVbWNSrraUhDAoFph6vh0A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3899,6 +3903,8 @@ snapshots:
 
   detect-libc@2.0.4: {}
 
+  detect-libc@2.1.2: {}
+
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
@@ -4214,7 +4220,7 @@ snapshots:
       capital-case: 1.0.4
       tslib: 2.8.1
 
-  html-minifier-next@4.14.1:
+  html-minifier-next@4.14.3:
     dependencies:
       '@types/relateurl': 0.2.33
       change-case: 4.1.2
@@ -4387,7 +4393,7 @@ snapshots:
 
   lightningcss@1.30.2:
     dependencies:
-      detect-libc: 2.0.4
+      detect-libc: 2.1.2
     optionalDependencies:
       lightningcss-android-arm64: 1.30.2
       lightningcss-darwin-arm64: 1.30.2
@@ -4742,7 +4748,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.96.0:
+  sass@1.97.1:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.4
