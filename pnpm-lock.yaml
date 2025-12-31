@@ -24,8 +24,8 @@ importers:
         specifier: ^9.39.2
         version: 9.39.2
       html-minifier-next:
-        specifier: ^4.14.3
-        version: 4.14.3
+        specifier: ^4.16.3
+        version: 4.16.3
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -1568,8 +1568,8 @@ packages:
   header-case@2.0.4:
     resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
 
-  html-minifier-next@4.14.3:
-    resolution: {integrity: sha512-1HIdsTSkZA33FHaS9vJAFti2sE7AuY6k3s+EQW9sKP/biYJf/tHzqCpwpnK9WwFRf6JPxtizAJZr6lAp2WDIUg==}
+  html-minifier-next@4.16.3:
+    resolution: {integrity: sha512-pdol4+GcphzuO58xsxWZDLxrVh2CoinH7fRXEZUTSjsGUiwydGKYY86M3h8MBnj6LIVeydnwmPnbrykqajkuzQ==}
     hasBin: true
     peerDependencies:
       '@swc/core': ^1.15.7
@@ -2372,6 +2372,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -4220,7 +4221,7 @@ snapshots:
       capital-case: 1.0.4
       tslib: 2.8.1
 
-  html-minifier-next@4.14.3:
+  html-minifier-next@4.16.3:
     dependencies:
       '@types/relateurl': 0.2.33
       change-case: 4.1.2
