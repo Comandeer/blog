@@ -24,8 +24,8 @@ importers:
         specifier: ^9.39.2
         version: 9.39.2
       html-minifier-next:
-        specifier: ^4.17.0
-        version: 4.17.0
+        specifier: ^4.18.0
+        version: 4.18.0
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -45,8 +45,8 @@ importers:
         specifier: ^1.6.6
         version: 1.6.6
       terser:
-        specifier: ^5.44.1
-        version: 5.44.1
+        specifier: ^5.46.0
+        version: 5.46.0
 
 packages:
 
@@ -1563,8 +1563,8 @@ packages:
   header-case@2.0.4:
     resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
 
-  html-minifier-next@4.17.0:
-    resolution: {integrity: sha512-7REp/offCDTw5QdWd2D14vv5MsTslrakD1LT5Nnows2praQvuFkP/pjV3YwtE9H+xRG9Mjr32UDE9zS2s+YUaw==}
+  html-minifier-next@4.18.0:
+    resolution: {integrity: sha512-QXR5C3rnTaVPazLnDS+lOXbY7gww8HA9Be2Y7K7oNkEEJnC7T5knFo1K2C1e98eMRZRUWgDniYYEAOK7MOe12Q==}
     hasBin: true
     peerDependencies:
       '@swc/core': ^1.15.7
@@ -2260,8 +2260,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  terser@5.44.1:
-    resolution: {integrity: sha512-t/R3R/n0MSwnnazuPpPNVO60LX0SKL45pyl9YlvxIdkH0Of7D5qM2EVe+yASRIlY5pZ73nclYJfNANGWPwFDZw==}
+  terser@5.46.0:
+    resolution: {integrity: sha512-jTwoImyr/QbOWFFso3YoU3ik0jBBDJ6JTOQiy/J2YxVJdZCc+5u7skhNwiOR3FQIygFqVUPHl7qbbxtjW2K3Qg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -4213,7 +4213,7 @@ snapshots:
       capital-case: 1.0.4
       tslib: 2.8.1
 
-  html-minifier-next@4.17.0:
+  html-minifier-next@4.18.0:
     dependencies:
       '@types/relateurl': 0.2.33
       change-case: 4.1.2
@@ -4221,7 +4221,7 @@ snapshots:
       entities: 7.0.0
       lightningcss: 1.30.2
       relateurl: 0.2.7
-      terser: 5.44.1
+      terser: 5.46.0
 
   html-void-elements@3.0.0: {}
 
@@ -4876,7 +4876,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  terser@5.44.1:
+  terser@5.46.0:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.15.0
