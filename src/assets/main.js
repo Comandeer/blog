@@ -52,15 +52,22 @@ document.addEventListener( 'click', ( evt ) => {
 } );
 
 document.addEventListener( 'click', async ( evt ) => {
-	const isCopyButton = evt.target.closest( '.code__copy' );
+	const copyButton = evt.target.closest( '.code__copy' );
 
-	if ( !isCopyButton ) {
+	if ( !copyButton ) {
 		return;
 	}
 
-	const closestCode = evt.target.closest( '.code' ).querySelector( '.code__code' );
+	const closestCode = copyButton.closest( '.code' ).querySelector( '.code__code' );
 
 	await navigator.clipboard.writeText( closestCode.innerText );
+
+	// eslint-disable-next-line require-atomic-updates
+	copyButton.textContent = 'Skopiowano';
+
+	setTimeout( () => {
+		copyButton.textContent = 'Kopiuj';
+	}, 5000 );
 } );
 
 themeSwitcherInvoker.addEventListener( 'keydown', ( evt ) => {
