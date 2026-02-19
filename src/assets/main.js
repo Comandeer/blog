@@ -1,4 +1,4 @@
-/* global localStorage, HTMLElement, document, window, customElements */
+/* global HTMLElement, document, window, customElements */
 /**
  * @typedef CookiePreferences
  * @property {boolean} prefs
