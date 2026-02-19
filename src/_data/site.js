@@ -13,6 +13,7 @@ export default {
 		refleksje: 'Refleksje',
 		'standardy-sieciowe': 'Standardy sieciowe',
 		wspolpraca: 'Współpraca',
+		'platna-wspolpraca': 'Płatna współpraca',
 		'daj-sie-poznac-2017': 'Daj się poznać 2017',
 		'adwent-2025': 'Adwent 2025'
 	},
