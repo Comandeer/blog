@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+	<html class="no-js" lang="pl" prefix="og: http://ogp.me/ns#" vocab="http://schema.org" style="background-image: url( /assets/piekno-reklam/reklama.webp );">
+	  {% include 'head' %}
+	  <body>
+		{% include 'header' %}
+		<main id="tresc" style="background: var( --primary-bg );">
+			<style>
+				ad- {
+					inline-size: 100%;
+					aspect-ratio: 1 / 0.2;
+				}
+			</style>
+			<article class="post" typeof="BlogPosting">
+
+				<header class="post__header header">
+				  <h1 class="header__heading" property="name headline">{{ title }}</h1>
+				  {%  include 'post-metadata' date=page.date author=author tags=tags project=project %}
+				</header>
+
+				<div class="post__content" property="articleBody">
+				  {{ content }}
+				</div>
+
+				{% if comments %}
+				  {% include 'comments' %}
+				{% endif %}
+			</article>
+			{% if project %}
+				{%  include 'project-navigation' project=project %}
+			{% endif %}
+		</main>
+		<script>
+			customElements.define( 'ad-', class extends HTMLElement {
+				connectedCallback() {
+					const iframe = document.createElement( 'iframe' );
+
+					iframe.srcdoc = `<!DOCTYPE html>
+						<html lang="pl">
+							<meta charset="UTF-8">
+							<title>Reklama</title>
+							<body style="background: white;">
+							<h1 style="font=size: 100rem;text-align: center;">REKLAMA</h1>
+					`;
+					iframe.width = '100%';
+					iframe.height = '100%';
+					this.append( iframe );
+				}
+			} );
+
+			customElements.define( 'code-ad', class extends HTMLElement {
+				connectedCallback() {
+					const style = document.createElement( 'style' );
+					const button = document.createElement( 'button' );
+
+					button.classList.add( 'close' );
+					button.textContent = '×';
+					button.addEventListener( 'click', () => {
+						this.classList.add( 'closed' );
+					} );
+
+					style.textContent = `@scope {
+						:scope {
+							position: relative;
+
+							&:not(.closed)::after {
+								position: absolute;
+								inset: 0;
+								background: var( --primary-bg );
+								font-size: 100px;
+								color: var( --primary );
+								overflow: hidden;
+								content: 'REKLAMA';
+								z-index: 2;
+								text-align: center;
+							}
+
+							.close {
+								position: absolute;
+								z-index: 3;
+							}
+
+							&.closed .close {
+								display: none;
+							}
+						}
+					}`;
+
+					this.prepend( style, button );
+
+				}
+			} );
+		</script>
+		{% include 'footer' %}
+	  </body>
+	</html>
