@@ -22,14 +22,14 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@comandeer/eslint-config": "^0.18.0",
     "cheerio": "^1.2.0",
-    "eslint": "^10.1.0",
-    "html-minifier-next": "^5.2.2",
+    "eslint": "^10.2.0",
+    "html-minifier-next": "^6.0.0",
     "markdown-it": "^14.1.1",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-link-attributes": "^4.0.1",
-    "sass": "^1.98.0",
+    "sass": "^1.99.0",
     "shiki": "^4.0.2",
-    "slugify": "^1.6.8",
+    "slugify": "^1.6.9",
     "terser": "^5.46.1"
   },
   "engines": {
