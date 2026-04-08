@@ -19,7 +19,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root[data-theme=auto] {
+	:root:where([data-theme=auto], :not([data-theme=light])) {
 		--primary: #cacaca;
 		--secondary: #fdfdfd;
 		--primary-bg: #111;
