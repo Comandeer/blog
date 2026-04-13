@@ -23,7 +23,7 @@
     "@comandeer/eslint-config": "^0.18.0",
     "cheerio": "^1.2.0",
     "eslint": "^10.2.0",
-    "html-minifier-next": "^6.0.0",
+    "html-minifier-next": "^6.1.2",
     "markdown-it": "^14.1.1",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-link-attributes": "^4.0.1",
