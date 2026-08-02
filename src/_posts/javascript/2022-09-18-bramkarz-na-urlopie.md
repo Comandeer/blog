@@ -50,7 +50,11 @@ Na sam początek wczytujemy moduł `node:module` (1). Następnie zapisujemy sobi
 
 [Ten przykład również można zobaczyć na CodeSandboxie](https://codesandbox.io/s/stupefied-heisenberg-y3qqx8?file=/loader.js).
 
-<p   class="note">Na CodeSandboxie rezultat jest widoczny najlepiej po odpaleniu nowego terminalu i wpisaniu w nim komendy <code>npm start</code>. Przykłady można też ściągnąć jako plik <code>.zip</code> i odpalić lokalnie.</p>
+{% note %}
+
+Na CodeSandboxie rezultat jest widoczny najlepiej po odpaleniu nowego terminalu i wpisaniu w nim komendy <code>npm start</code>. Przykłady można też ściągnąć jako plik <code>.zip</code> i odpalić lokalnie.
+
+{% endnote %}
 
 Tylko że tutaj trafiłem na kolejny problem: mój projekt ma zależności. Większość z nich stworzył Sindre Sorhus, który [porzucił wsparcie dla CJS jakiś czas temu](https://scribe.rip/sindre-sorhus/hello-modules-d1010b4e777b). I jak moduły CJS da się wczytać wewnątrz ESM, tak w drugą stronę już nie bardzo. Owszem, są na to odpowiednie haki, np. używanie [dynamicznych importów](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import), ale to rodzi kolejne problemy (np. [konieczność zmiany konfiguracji Rollupa](https://rollupjs.org/guide/en/#renderdynamicimport)). I to był ten moment, gdy stwierdziłem, że odpuszczam. Zbyt dużo problemów jak na projekt, który jest zwykłym eksperymentem.
 ## I to by było na tyle
