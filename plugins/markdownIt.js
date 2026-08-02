@@ -10,6 +10,7 @@ const langs = {
 	'diff': 'Git diff',
 	'html': 'HTML',
 	'html-derivative': 'HTML',
+	'ini': 'INI',
 	'javascript': 'JavaScript',
 	'json': 'JSON',
 	'jsx': 'JSX',
