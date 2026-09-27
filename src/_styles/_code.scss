@@ -13,6 +13,7 @@
 	padding-inline-start: 0.5rem;
 	font-size: 1.25rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -21,9 +22,38 @@
 }
 
 .shiki {
-	padding: 1rem;
 	border: 1px var(--primary) solid;
 	tab-size: 4;
+
+	container: code-block / inline-size;
+
+	.line:first-child {
+		counter-reset: code-line;
+	}
+
+	.line::before {
+		counter-increment: code-line;
+		content: counter( code-line ) / '';
+		display: inline-block;
+		position: sticky;
+		inset-inline-start: 0;
+		inline-size: 4ch;
+		border-inline-end: 1px solid;
+		margin-inline-end: 0.5ch;
+		padding-inline-end: 0.5ch;
+		background-color: inherit;
+		text-align: end;
+	}
+
+	@container ( inline-size < 20ch ) {
+		.line::before {
+			display: none;
+		}
+	}
+
+	.line:last-child:empty::before {
+		display: none;
+	}
 }
 
 .code__code .shiki {
@@ -32,15 +62,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	[data-theme=auto] .shiki,
-	[data-theme=auto] .shiki span {
+	[data-theme=auto] :where(.shiki, .shiki span) {
 	  color: var(--shiki-dark) !important;
 	  background-color: var(--shiki-dark-bg) !important;
 	}
 }
 
-[data-theme=dark] .shiki,
-[data-theme=dark] .shiki span {
+[data-theme=dark] :where(.shiki, .shiki span) {
 	color: var(--shiki-dark) !important;
 	background-color: var(--shiki-dark-bg) !important;
 }
