@@ -175,6 +175,9 @@ importers:
       '@comandeer/eslint-config':
         specifier: ^0.18.0
         version: 0.18.0(eslint@10.11.0)(typescript@5.4.5)
+      '@shikijs/markdown-it':
+        specifier: ^4.4.3
+        version: 4.4.3
       cheerio:
         specifier: ^1.2.0
         version: 1.2.0
@@ -196,9 +199,6 @@ importers:
       sass:
         specifier: ^1.105.0
         version: 1.105.0
-      shiki:
-        specifier: ^4.4.3
-        version: 4.4.3
       slugify:
         specifier: ^1.6.9
         version: 1.6.9
@@ -617,6 +617,15 @@ packages:
   '@shikijs/langs@4.4.3':
     resolution: {integrity: sha512-ePic0yfAJGOF83D5wBHK/00EjK65oahBYxFk5epgq33WRv7X9UuxLEV8PtR0szC0z8dl7INIpIodB99JRFlR+A==}
     engines: {node: '>=20'}
+
+  '@shikijs/markdown-it@4.4.3':
+    resolution: {integrity: sha512-VcMgQA4Y7jEHAt4ehOAHPP9LchYXQ71jyLmw3fxDJYq9xdsD11iZT48SxNiPTDx99NFks10F4iY95Xwtj+e13Q==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      markdown-it-async: ^2.2.0
+    peerDependenciesMeta:
+      markdown-it-async:
+        optional: true
 
   '@shikijs/primitive@4.4.3':
     resolution: {integrity: sha512-m0wBeLDQDeIxRdUmrCPdQqfuUamDwRL5isCfYbguKD6NiaKpVbsv+3J81DyIKgNW5h4WAIIr8T4EkgQrBBxvaQ==}
@@ -2315,6 +2324,11 @@ snapshots:
   '@shikijs/langs@4.4.3':
     dependencies:
       '@shikijs/types': 4.4.3
+
+  '@shikijs/markdown-it@4.4.3':
+    dependencies:
+      markdown-it: 14.3.2
+      shiki: 4.4.3
 
   '@shikijs/primitive@4.4.3':
     dependencies:

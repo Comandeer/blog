@@ -2,23 +2,25 @@
 	border: 1px var(--primary) solid;
 	margin-block: 1rem;
 	margin-inline: 0;
-}
 
-.code__caption {
-	background-color: var(--secondary-bg);
-	margin-block: 0;
-}
+	.code__caption {
+		background-color: var(--secondary-bg);
+		margin-block: 0;
+		padding-inline-start: 0.5rem;
+		font-size: 1.25rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-.code__caption {
-	padding-inline-start: 0.5rem;
-	font-size: 1.25rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
+		a {
+			color: var(--secondary);
+		}
+	}
 
-.code__caption a {
-	color: var(--secondary);
+	.code__code .shiki {
+		border: none;
+		margin: 0;
+	}
 }
 
 .shiki {
@@ -56,19 +58,19 @@
 	}
 }
 
-.code__code .shiki {
-	border: none;
-	margin: 0;
+:where(.shiki, .shiki span) {
+	color: var(--shiki-light);
+	background-color: var(--shiki-light-bg);
 }
 
 @media (prefers-color-scheme: dark) {
 	[data-theme=auto] :where(.shiki, .shiki span) {
-	  color: var(--shiki-dark) !important;
-	  background-color: var(--shiki-dark-bg) !important;
+	  color: var(--shiki-dark);
+	  background-color: var(--shiki-dark-bg);
 	}
 }
 
 [data-theme=dark] :where(.shiki, .shiki span) {
-	color: var(--shiki-dark) !important;
-	background-color: var(--shiki-dark-bg) !important;
+	color: var(--shiki-dark);
+	background-color: var(--shiki-dark-bg);
 }

@@ -1,10 +1,10 @@
 import MarkdownIt from 'markdown-it';
 import markdownItAnchor from 'markdown-it-anchor';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
-import { createHighlighter } from 'shiki';
+import markdownItShiki from '@shikijs/markdown-it';
 import slugify from 'slugify';
 
-const langs = {
+const CODE_LANGS = {
 	'bash': 'Bash',
 	'css': 'CSS',
 	'diff': 'Git diff',
@@ -27,14 +27,6 @@ const langs = {
 	'xml': 'XML',
 	'yaml': 'YAML'
 };
-
-const highlighter = await createHighlighter( {
-	themes: [
-		'github-light',
-		'github-dark'
-	],
-	langs: Object.keys( langs )
-} );
 
 const SLUG_PLACEHOLDER = '™™©©®®';
 
@@ -69,16 +61,7 @@ export const markdownIt = new MarkdownIt ( {
 	html: true,
 	breaks: true,
 	linkify: true,
-	typographer: true,
-	highlight: ( code, lang ) => {
-		return highlighter.codeToHtml( code, {
-			lang,
-			themes: {
-				light: 'github-light',
-				dark: 'github-dark'
-			}
-		} );
-	}
+	typographer: true
 } ).use( markdownItAnchor, {
 	slugify: ( str ) => {
 		str = str.
@@ -110,6 +93,14 @@ export const markdownIt = new MarkdownIt ( {
 			}
 		}
 	] ).
+	use( await markdownItShiki( {
+		langs: Object.keys( CODE_LANGS ),
+		themes: {
+			light: 'github-light-high-contrast',
+			dark: 'github-dark-high-contrast'
+		},
+		defaultColor: null
+	} ) ).
 	use( markdownItCodeBlock );
 
 /**
@@ -126,7 +117,7 @@ function markdownItCodeBlock( markdownIt ) {
 
 		return `<figure class="code" typeof="SoftwareSourceCode">
 			<figcaption class="code__caption">
-				<span class="code__title" property="programmingLanguage">${ langs[ lang ] ?? '' }</span>
+				<span class="code__title" property="programmingLanguage">${ CODE_LANGS[ lang ] ?? '' }</span>
 				<button class="code__copy">Kopiuj</button>
 			</figcaption>
 			<div class="code__code" translate="no" property="text">
