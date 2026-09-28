@@ -38,7 +38,7 @@
 			<updated>{{ post.date | rfc_date }}</updated>
 			<id>{{ site.url }}{{ post.url | cfUrl }}</id>
 			{% if post.data.description %}
-				<summary><![CDATA[{{ post.data.description }}]]></summary>
+				<summary type="html"><![CDATA[{{ post.data.description }}]]></summary>
 			{% endif %}
 			<content type="html"><![CDATA[{{ post | rss_content }}]]></content>
 		</entry>
