@@ -5,14 +5,14 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5em;
-}
 
-.post-list__post {
-	border-block-end: 1px solid var(--primary);
-}
+	.post-list__post {
+		border-block-end: 1px solid var(--primary);
 
-.post-list__post:last-child {
-	border-block-end: none;
+		&:last-child {
+			border-block-end: none;
+		}
+	}
 }
 
 .rss-subscribe__link {

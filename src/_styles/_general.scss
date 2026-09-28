@@ -42,10 +42,10 @@ main {
 
 a {
 	color: var(--primary);
-}
 
-a:hover {
-	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 button {
@@ -53,19 +53,19 @@ button {
 	background: var(--primary-bg);
 	color: var(--primary);
 	border: 1px var(--primary) solid;
-}
 
-button:hover {
-	background: var(--secondary-bg);
-}
+	&:hover {
+		background: var(--secondary-bg);
+	}
 
-button:active {
-	background: var(--primary);
-	color: var(--primary-bg);
-}
+	&:active {
+		background: var(--primary);
+		color: var(--primary-bg);
+	}
 
-button:focus-visible {
-	outline-offset: 2px;
+	&:focus-visible {
+		outline-offset: 2px;
+	}
 }
 
 img {

@@ -56,15 +56,15 @@
 .theme-switcher__option {
 	display: block;
 	inline-size: 100%;
-}
 
-.theme-switcher__option:focus {
-	outline: 2px var( --secondary ) solid;
-}
+	&:focus {
+		outline: 2px var( --secondary ) solid;
+	}
 
-.theme-switcher__option[aria-checked=true]:before {
-	content: '✓';
-	font-weight: bold;
-	font-size: 1.1em;
-	margin-inline-end: 0.25em;
+	&[aria-checked=true]:before {
+		content: '✓';
+		font-weight: bold;
+		font-size: 1.1em;
+		margin-inline-end: 0.25em;
+	}
 }

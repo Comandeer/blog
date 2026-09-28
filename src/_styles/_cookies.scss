@@ -6,12 +6,12 @@
 	background-color: var( --primary-bg );
 	color: var( --secondary );
 	max-inline-size: 80ch;
-}
 
-.cookie-dialog__close {
-	float: inline-end;
-}
+	.cookie-dialog__close {
+		float: inline-end;
+	}
 
-.cookie-dialog__name {
-	clear: both;
+	.cookie-dialog__name {
+		clear: both;
+	}
 }

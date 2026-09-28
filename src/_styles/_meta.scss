@@ -5,35 +5,35 @@
 	gap: 0.25em;
 	border-inline-start: 4px var(--primary) solid;
     padding-inline-start: 0.5em;
-}
 
-.meta__item {
-	margin-block-start: 0;
-}
+	.meta__item {
+		margin-block-start: 0;
 
-.meta__item::before {
-	content: '•';
-	margin-inline-end: 0.25em;
-}
+		&::before {
+			content: '•';
+			margin-inline-end: 0.25em;
+		}
 
-.meta__item:first-child::before {
-	content: '';
-}
+		&:first-child::before {
+			content: '';
+		}
+	}
 
-.meta__icon {
-	fill: transparent;
-	stroke: var(--secondary);
-	inline-size: 1.2rem;
-	block-size: 1.2rem;
-	vertical-align: text-bottom;
-	aspect-ratio: 1;
-}
+	.meta__icon {
+		fill: transparent;
+		stroke: var(--secondary);
+		inline-size: 1.2rem;
+		block-size: 1.2rem;
+		vertical-align: text-bottom;
+		aspect-ratio: 1;
+	}
 
-.meta__value {
-	font-style: normal;
-	margin-inline-start: 0;
-}
+	.meta__value {
+		font-style: normal;
+		margin-inline-start: 0;
 
-.meta__value:has( + .meta__value )::after {
-	content: ', ';
+		&:has( + .meta__value )::after {
+			content: ', ';
+		}
+	}
 }

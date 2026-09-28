@@ -1,4 +1,5 @@
 code {
+	font-family: var(--font-family-code);
 	background: var(--secondary-bg);
 	padding: 0.25em;
 	border-radius: 5px;
@@ -8,12 +9,12 @@ code {
 pre {
 	max-inline-size: 100%;
 	overflow: auto;
-}
 
-pre>code {
-	padding: 0;
-	background: none;
-	border-radius: 0;
+	> code {
+		padding: 0;
+		background: none;
+		border-radius: 0;
+	}
 }
 
 // Loosely based on https://dylanatsmith.com/wrote/styling-the-kbd-element
@@ -39,9 +40,9 @@ blockquote {
 
 table {
 	border-collapse: collapse;
-}
 
-th, td {
-	border: 1px var(--primary) solid;
-	padding: 0.5rem;
+	th, td {
+		border: 1px var(--primary) solid;
+		padding: 0.5rem;
+	}
 }
