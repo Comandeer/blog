@@ -176,8 +176,8 @@ importers:
         specifier: ^0.18.0
         version: 0.18.0(eslint@10.11.0)(typescript@5.4.5)
       '@shikijs/markdown-it':
-        specifier: ^4.4.3
-        version: 4.4.3
+        specifier: ^4.5.0
+        version: 4.5.0
       cheerio:
         specifier: ^1.2.0
         version: 1.2.0
@@ -185,8 +185,8 @@ importers:
         specifier: ^10.11.0
         version: 10.11.0
       html-minifier-next:
-        specifier: ^8.5.3
-        version: 8.5.3
+        specifier: ^8.10.2
+        version: 8.10.2
       markdown-it:
         specifier: ^15.0.2
         version: 15.0.2
@@ -197,8 +197,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       sass:
-        specifier: ^1.105.0
-        version: 1.105.0
+        specifier: ^1.105.1
+        version: 1.105.1
       slugify:
         specifier: ^1.6.9
         version: 1.6.9
@@ -602,24 +602,24 @@ packages:
     resolution: {integrity: sha512-Jhlb+0zYez1T1yXUQs3F1qAtFuJljBVNdy9TKmLDauAXkxsOXopKYOyQ5Wm6SvP3fycav0GviX4Y15WWhGetMw==}
     engines: {node: '>=14.0.0'}
 
-  '@shikijs/core@4.4.3':
-    resolution: {integrity: sha512-QCR4q2ZO/ILJEuwiBMel4wdcTDb1JGwfjKTxPDF6x8ixOaluPrVqIn06C99AcRPhmYlBR56d/Fb+GN58GzExpg==}
+  '@shikijs/core@4.5.0':
+    resolution: {integrity: sha512-6CIgwq+bt2JZ3OSjb/nBkkwEf/CfpHcbam+Mg5Pllco7HAGRQ2/EFhZrrJtbyNTgKwknfVS+llsXGygiDGwJWw==}
     engines: {node: '>=20'}
 
-  '@shikijs/engine-javascript@4.4.3':
-    resolution: {integrity: sha512-FbOjFJp9VLdo1Wevs10BBtVxiTWwNLqZh5Gkhjgda/ioL15YOgeSl9n+6XMa3qRlPQzfhFNe641SrynFHYG0nQ==}
+  '@shikijs/engine-javascript@4.5.0':
+    resolution: {integrity: sha512-Ed6UdEj84LyYkwnxM5CvSMWAD+id9ExTYri0/+x41U9zrgNifPSS9lZm0JqBP0VfYI8yr8tY5nbNq9+p9R0kFA==}
     engines: {node: '>=20'}
 
-  '@shikijs/engine-oniguruma@4.4.3':
-    resolution: {integrity: sha512-EcOQkxdxGQrc1Row/cC2c96/v1dbZqGnEVu1qTuT/MJmp6+cXCvQussowVmCv5Tqr3KuY3c7IbM6HTW3LJ1k9w==}
+  '@shikijs/engine-oniguruma@4.5.0':
+    resolution: {integrity: sha512-dKVmbJecVdB9recl8a/CU4jdpNXyjJQrIcesIkpS70s5HS02ohpnCSpMUbotPnEUzbAcLQ+S4hwZYbkBBiTcJw==}
     engines: {node: '>=20'}
 
-  '@shikijs/langs@4.4.3':
-    resolution: {integrity: sha512-ePic0yfAJGOF83D5wBHK/00EjK65oahBYxFk5epgq33WRv7X9UuxLEV8PtR0szC0z8dl7INIpIodB99JRFlR+A==}
+  '@shikijs/langs@4.5.0':
+    resolution: {integrity: sha512-wwBTqwduXSz0X4v9Qa2EWeFaYJEw1clCncWjoRNQRbVDu3SPRTRWucnouYapKj3b8Q+sk/41Vbc4B5c8nuYzLA==}
     engines: {node: '>=20'}
 
-  '@shikijs/markdown-it@4.4.3':
-    resolution: {integrity: sha512-VcMgQA4Y7jEHAt4ehOAHPP9LchYXQ71jyLmw3fxDJYq9xdsD11iZT48SxNiPTDx99NFks10F4iY95Xwtj+e13Q==}
+  '@shikijs/markdown-it@4.5.0':
+    resolution: {integrity: sha512-LOrNiEv0FMymu4bjql+tOl/nT927Z5pXgDNfE1G4hI6PJhi41/s5zdUH6EhNlMPcEhUF41F6RxMUqnFyRg06IA==}
     engines: {node: '>=20'}
     peerDependencies:
       markdown-it-async: ^2.2.0
@@ -627,16 +627,16 @@ packages:
       markdown-it-async:
         optional: true
 
-  '@shikijs/primitive@4.4.3':
-    resolution: {integrity: sha512-m0wBeLDQDeIxRdUmrCPdQqfuUamDwRL5isCfYbguKD6NiaKpVbsv+3J81DyIKgNW5h4WAIIr8T4EkgQrBBxvaQ==}
+  '@shikijs/primitive@4.5.0':
+    resolution: {integrity: sha512-UM7ShlA8oz0OWxLLO8BmO9Ip6fVqdkt8yF0EH7nOCqHfrx1eEAzF0ZUVK7L+I8NEgeu1PEWSRlxaiPPeCb4iDg==}
     engines: {node: '>=20'}
 
-  '@shikijs/themes@4.4.3':
-    resolution: {integrity: sha512-w8UHjeUnIR965KMWJHUPXOc2mNJUnK3vpVLYLvw5IYU2mnTTJ89E24OrJDBNiJDQ0qzb0tc4l7mrIXx5cFeIyw==}
+  '@shikijs/themes@4.5.0':
+    resolution: {integrity: sha512-zGb87H3UBbpuI4yoh5UguB1XbU+2BDU3kflM7UfZ+Cy2hWo9lBtqjSVK20gmLY6ukYl040hAypGXMgud9vul8Q==}
     engines: {node: '>=20'}
 
-  '@shikijs/types@4.4.3':
-    resolution: {integrity: sha512-UEJxmRR++MAGR6hugn0vgVS2W/6lWAts84FFSrnlH9sP0LNol7E5+NQ792pH8liWUhyMyjhTgSUH3k7iD7tc5g==}
+  '@shikijs/types@4.5.0':
+    resolution: {integrity: sha512-drtPrtD8N0DENyD2cyt6Ajy+IWsiCLgMxODwLTpvH1UsN6a9jf90tNTPjqwHvA+0Lzu9e0txk8DjfqH1p9UJRw==}
     engines: {node: '>=20'}
 
   '@shikijs/vscode-textmate@10.0.2':
@@ -1197,8 +1197,8 @@ packages:
   hookified@2.2.0:
     resolution: {integrity: sha512-p/LgFzRN5FeoD3DLS6bkUapeye6E4SI6yJs6KetENd18S+FBthqYq2amJUWpt5z0EQwwHemidjY5OqJGEKm5uA==}
 
-  html-minifier-next@8.5.3:
-    resolution: {integrity: sha512-KCpMJENWMEhujHHn4cWnOTzGQCXGrsA2rTIxNyDZuca9uWonBiqW2b55NissJy59CtQLzMm+Pww3XLlW9hOLCQ==}
+  html-minifier-next@8.10.2:
+    resolution: {integrity: sha512-5kG7QRuIzB5kxSxnKGowqDp5HAHXR+Mqtayt/l7IBbATVfpTMLX81k8cJVHgLRYuNmnY7P2Po5f2BLpjTFCb/g==}
     engines: {node: '>=22.13'}
     hasBin: true
     peerDependencies:
@@ -1689,8 +1689,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.105.0:
-    resolution: {integrity: sha512-4EjSuRTyG8M4yRXXY1PT9OUV5zz23xBxJkbIAprohKHqf6HOU4MCpE3U3vAC+iO1gxobBjESNbcj8rYAQZWnyA==}
+  sass@1.105.1:
+    resolution: {integrity: sha512-1CnAWPyrrnVQzXGB/DUep1vYCKCm1CIBr+YxjjiW6wk9qtzemnGP4qicH56T2F9S4Hjtv/Ne3jDz8JqfdDU4oA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -1734,8 +1734,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@4.4.3:
-    resolution: {integrity: sha512-Mb/GvXPHBAXdgGIcnfU5L3ldpn1XcxrGkPHwqgRx17/I2XRfqlFKk2vGkHWINn1kdXvzJZeuO3is6I9KLPFm0g==}
+  shiki@4.5.0:
+    resolution: {integrity: sha512-OcRW72ngQvc+MSVWBRIovC/BTW589iUE/Vxav7VeM4RcY9MUjqB+IR6ILG1k9nuW6LiG/nct9uma4/MBtnZbmQ==}
     engines: {node: '>=20'}
 
   slash@3.0.0:
@@ -2302,45 +2302,45 @@ snapshots:
 
   '@rgrove/parse-xml@4.2.3': {}
 
-  '@shikijs/core@4.4.3':
+  '@shikijs/core@4.5.0':
     dependencies:
-      '@shikijs/primitive': 4.4.3
-      '@shikijs/types': 4.4.3
+      '@shikijs/primitive': 4.5.0
+      '@shikijs/types': 4.5.0
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.5
       hast-util-to-html: 9.0.5
 
-  '@shikijs/engine-javascript@4.4.3':
+  '@shikijs/engine-javascript@4.5.0':
     dependencies:
-      '@shikijs/types': 4.4.3
+      '@shikijs/types': 4.5.0
       '@shikijs/vscode-textmate': 10.0.2
       oniguruma-to-es: 4.3.6
 
-  '@shikijs/engine-oniguruma@4.4.3':
+  '@shikijs/engine-oniguruma@4.5.0':
     dependencies:
-      '@shikijs/types': 4.4.3
+      '@shikijs/types': 4.5.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@shikijs/langs@4.4.3':
+  '@shikijs/langs@4.5.0':
     dependencies:
-      '@shikijs/types': 4.4.3
+      '@shikijs/types': 4.5.0
 
-  '@shikijs/markdown-it@4.4.3':
+  '@shikijs/markdown-it@4.5.0':
     dependencies:
-      markdown-it: 14.3.2
-      shiki: 4.4.3
+      markdown-it: 15.0.2
+      shiki: 4.5.0
 
-  '@shikijs/primitive@4.4.3':
+  '@shikijs/primitive@4.5.0':
     dependencies:
-      '@shikijs/types': 4.4.3
+      '@shikijs/types': 4.5.0
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.5
 
-  '@shikijs/themes@4.4.3':
+  '@shikijs/themes@4.5.0':
     dependencies:
-      '@shikijs/types': 4.4.3
+      '@shikijs/types': 4.5.0
 
-  '@shikijs/types@4.4.3':
+  '@shikijs/types@4.5.0':
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.5
@@ -2960,7 +2960,7 @@ snapshots:
 
   hookified@2.2.0: {}
 
-  html-minifier-next@8.5.3:
+  html-minifier-next@8.10.2:
     dependencies:
       commander: 15.0.0
       entities: 8.1.0
@@ -3391,7 +3391,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.105.0:
+  sass@1.105.1:
     dependencies:
       chokidar: 5.0.0
       immutable: 5.1.9
@@ -3466,14 +3466,14 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@4.4.3:
+  shiki@4.5.0:
     dependencies:
-      '@shikijs/core': 4.4.3
-      '@shikijs/engine-javascript': 4.4.3
-      '@shikijs/engine-oniguruma': 4.4.3
-      '@shikijs/langs': 4.4.3
-      '@shikijs/themes': 4.4.3
-      '@shikijs/types': 4.4.3
+      '@shikijs/core': 4.5.0
+      '@shikijs/engine-javascript': 4.5.0
+      '@shikijs/engine-oniguruma': 4.5.0
+      '@shikijs/langs': 4.5.0
+      '@shikijs/themes': 4.5.0
+      '@shikijs/types': 4.5.0
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.5
 
