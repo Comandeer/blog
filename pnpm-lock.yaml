@@ -1757,8 +1757,8 @@ packages:
   uc.micro@3.0.0:
     resolution: {integrity: sha512-U3PppEkleoTnIfi8BozMx3yju3qc/L6SwqWo2Sw+54PX+PX0q9I+r1Um5HCmqD7n9VDX5/v3vQH/AjA6deDdtw==}
 
-  undici@7.19.1:
-    resolution: {integrity: sha512-Gpq0iNm5M6cQWlyHQv9MV+uOj1jWk7LpkoE5vSp/7zjb4zMdAcUD+VL5y0nH4p9EbUklq00eVIIX/XcDHzu5xg==}
+  undici@7.30.2:
+    resolution: {integrity: sha512-mLyPQnHwUxaM/rideoK/+KL8DaAJLRl4aBCfmX444aCSLnIaomqPLtNRe2jdCYcsk5wZzXrDIQC8ZeYNRAYyIA==}
     engines: {node: '>=20.18.1'}
 
   unist-util-is@6.0.1:
@@ -2529,7 +2529,7 @@ snapshots:
       parse5: 7.3.0
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
-      undici: 7.19.1
+      undici: 7.30.2
       whatwg-mimetype: 4.0.0
 
   chokidar@4.0.3:
@@ -3412,7 +3412,7 @@ snapshots:
 
   uc.micro@3.0.0: {}
 
-  undici@7.19.1: {}
+  undici@7.30.2: {}
 
   unist-util-is@6.0.1:
     dependencies:
