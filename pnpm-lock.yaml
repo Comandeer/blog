@@ -184,9 +184,9 @@ importers:
       eslint:
         specifier: ^10.14.0
         version: 10.14.0
-      html-minifier-next:
-        specifier: ^9.1.2
-        version: 9.1.2
+      html-minifier:
+        specifier: ^5.4.0
+        version: 5.4.0
       markdown-it:
         specifier: ^15.0.3
         version: 15.0.3
@@ -860,8 +860,8 @@ packages:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
 
-  commander@15.0.0:
-    resolution: {integrity: sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg==}
+  commander@15.1.0:
+    resolution: {integrity: sha512-cgnQ88TRrWcC7pVq46RzJVRMktu3W2RcbnoidnfBsl1bmDCBwJS/udcIZpKoCrbAYYaCqsz1yZCVIgbIaU3ddQ==}
     engines: {node: '>=22.12.0'}
 
   commander@2.20.3:
@@ -1166,8 +1166,8 @@ packages:
   hookified@2.2.0:
     resolution: {integrity: sha512-p/LgFzRN5FeoD3DLS6bkUapeye6E4SI6yJs6KetENd18S+FBthqYq2amJUWpt5z0EQwwHemidjY5OqJGEKm5uA==}
 
-  html-minifier-next@9.1.2:
-    resolution: {integrity: sha512-51a1Thb6AiyDf4Bj0ulPFk0IEsTnKAr5wuTxM5K6KOVl8cEiL1BNTQzw8sXwA1CbIkL6rMIOa9AtwA/LjAnKaA==}
+  html-minifier@5.4.0:
+    resolution: {integrity: sha512-2/FyKe9K8MVxF3sKt54SNRx8RZI9tdeYDGnYZnAqU2D7qpzw8g271+BNL4QZrRWX7eAnCQwmwpL+nKnl6tBKrQ==}
     engines: {node: '>=22.13'}
     hasBin: true
     peerDependencies:
@@ -1719,6 +1719,11 @@ packages:
 
   terser@5.51.2:
     resolution: {integrity: sha512-bWnjSNscmuI+GJze6ZupnHP8G/cTcsJF+bXCeQknk2SHQsgbNJnLrqiH9jZ2W4STPVXH2mDKKRX3iwPhc9Cn/Q==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  terser@5.51.4:
+    resolution: {integrity: sha512-VPi1CkDvCWLGUVIToctNBG+NdHbSXwOPjHJnQ3pdB0XknaldnI76wSkAFOGxV2ZdkzOP5d6gpQ5c58XvDghRvw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2546,7 +2551,7 @@ snapshots:
 
   commander@11.1.0: {}
 
-  commander@15.0.0: {}
+  commander@15.1.0: {}
 
   commander@2.20.3: {}
 
@@ -2861,13 +2866,13 @@ snapshots:
 
   hookified@2.2.0: {}
 
-  html-minifier-next@9.1.2:
+  html-minifier@5.4.0:
     dependencies:
-      commander: 15.0.0
+      commander: 15.1.0
       entities: 9.0.0
       lightningcss: 1.33.0
       svgo: 4.1.0
-      terser: 5.51.2
+      terser: 5.51.4
 
   html-void-elements@3.0.0: {}
 
@@ -3380,6 +3385,13 @@ snapshots:
       sax: 1.6.1
 
   terser@5.51.2:
+    dependencies:
+      '@jridgewell/source-map': 0.3.11
+      acorn: 8.18.0
+      commander: 2.20.3
+      source-map-support: 0.5.21
+
+  terser@5.51.4:
     dependencies:
       '@jridgewell/source-map': 0.3.11
       acorn: 8.18.0
