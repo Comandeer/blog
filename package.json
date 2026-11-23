@@ -23,14 +23,14 @@
     "@comandeer/eslint-config": "^0.18.0",
     "@shikijs/markdown-it": "^4.6.0",
     "cheerio": "^1.2.0",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "html-minifier": "^5.4.0",
     "markdown-it": "^15.0.3",
     "markdown-it-anchor": "^10.1.0",
     "markdown-it-link-attributes": "^4.0.1",
     "sass": "^1.108.2",
     "slugify": "^1.6.9",
-    "terser": "^5.51.2"
+    "terser": "^5.51.3"
   },
   "engines": {
     "node": "26",
